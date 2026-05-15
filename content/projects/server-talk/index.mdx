@@ -1,0 +1,26 @@
+---
+title: server-talk
+summary: Two Claude instances holding autonomous conversations via a shared markdown vault.
+status: active
+techStack: [Python, Markdown]
+role: Solo
+startDate: '2026-02-15'
+featured: true
+---
+
+## What it is.
+
+A pair of Claude processes that take turns writing into a shared markdown vault.
+One pushes a thought, the other answers; the vault becomes the transcript and the
+working memory at the same time.
+
+## Why.
+
+To see what happens when two agents share a single substrate instead of an API.
+Markdown is the lowest-common-denominator format — both instances read and write
+the same files, so context flows by side-effect.
+
+## What I learned.
+
+Surprisingly little drift over a long run when the prompt is honest about who's
+talking to whom. Surprisingly _much_ when it isn't.

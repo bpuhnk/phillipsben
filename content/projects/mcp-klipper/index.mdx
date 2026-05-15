@@ -1,0 +1,28 @@
+---
+title: MCP_Klipper
+summary: Model Context Protocol server exposing Klipper / Moonraker controls to LLM-driven agents.
+status: shipped
+techStack: [Python, MCP, Klipper]
+role: Solo
+startDate: '2026-01-10'
+endDate: '2026-01-31'
+featured: true
+links:
+  github: https://github.com/bpuhnk/mcp-klipper-docs
+---
+
+## What it is.
+
+An MCP server that wraps the Moonraker API around my BLV AM8, giving Claude (or
+any MCP-aware client) the ability to query the printer, start prints, monitor
+temps, and pause the job when something looks off.
+
+## Why.
+
+I wanted the agent to manage long prints without me hovering over Mainsail.
+Tool-use, not chat — give the model the same buttons I'd press, and the same
+logs I'd read.
+
+## Status.
+
+Shipped. Docs live in the linked repo.

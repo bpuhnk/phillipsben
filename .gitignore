@@ -1,0 +1,13 @@
+node_modules
+.next
+.next-build
+out
+.DS_Store
+.env*.local
+.env
+public/resume.pdf
+public/sitemap*.xml
+public/robots.txt
+next-env.d.ts
+tsconfig.tsbuildinfo
+.claude/settings.local.json

@@ -1,0 +1,155 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import SectionHead from '@/components/section-head';
+import ProjectCard from '@/components/project-card';
+import { getFeaturedProjects } from '@/lib/content';
+
+export const metadata: Metadata = {
+  title: 'Ben Phillips — Engineer',
+  description: 'Software for things that actually have to work.',
+  alternates: { canonical: '/' },
+};
+
+export default async function Landing() {
+  const featured = await getFeaturedProjects(3);
+
+  return (
+    <>
+      {/* HERO — variant A */}
+      <section className="section" style={{ paddingTop: 88, paddingBottom: 56 }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 320px',
+            gap: 64,
+            alignItems: 'end',
+          }}
+        >
+          <div>
+            <div className="kicker">
+              <span style={{ color: 'var(--accent)' }}>●</span>
+              &nbsp; AVAILABLE FOR SELECT WORK · MAY 2026
+            </div>
+            <h1 className="display" style={{ fontSize: 132, marginTop: 24, marginBottom: 28 }}>
+              Software for<br />
+              things that <i>actually<br />have to work.</i>
+            </h1>
+            <p className="lede" style={{ maxWidth: '38ch' }}>
+              Full-stack engineer, twenty years deep in .NET and desktop apps —
+              now building agentic systems where they belong: on the factory floor,
+              in the workshop, on your own machine.
+            </p>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 18, paddingBottom: 12 }}>
+            <div className="meta">CURRENTLY</div>
+            <div style={{ borderTop: '1px solid var(--rule)', paddingTop: 16 }}>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, lineHeight: 1.15, marginBottom: 6 }}>
+                Building <i>Hermes-Agent</i> on a home Ubuntu box.
+              </div>
+              <div className="meta">See /now →</div>
+            </div>
+            <div style={{ borderTop: '1px solid var(--rule)', paddingTop: 16 }}>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, lineHeight: 1.15, marginBottom: 6 }}>
+                Tuning a <i>BLV AM8</i>, finally dialed.
+              </div>
+              <div className="meta">First clean 0.16mm benchy in ~9 min.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* tech strip */}
+      <section
+        className="section tight"
+        style={{
+          borderTop: '1px solid var(--rule-2)',
+          borderBottom: '1px solid var(--rule-2)',
+          paddingTop: 22,
+          paddingBottom: 22,
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            fontFamily: 'var(--font-mono)',
+            fontSize: 11.5,
+            color: 'var(--ink-3)',
+            letterSpacing: '.06em',
+            flexWrap: 'wrap',
+            gap: 16,
+          }}
+        >
+          <span>.NET · 20 YRS</span>
+          <span>WPF · WINFORMS · ELECTRON</span>
+          <span>AGENTIC PROGRAMMING</span>
+          <span>ESP32 · RPi · ARDUINO</span>
+          <span>LOCAL LLMs · P100 · OLLAMA</span>
+          <span>SE USA</span>
+        </div>
+      </section>
+
+      {/* WHAT'S HERE */}
+      <section className="section">
+        <SectionHead title="What's on the site." idx="§ 01 / GUIDE" />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40 }}>
+          {[
+            { n: '/bio', t: 'Biography', d: 'The twenty-year version. Industries, roles, tools, and a short version for the recruiter in a hurry.', href: '/bio' },
+            { n: '/projects', t: 'Projects', d: 'Completed and active work. Each entry has a write-up, the constraints, and what I learned.', href: '/projects' },
+            { n: '/now', t: 'Now', d: "What I'm focused on this month. Updated as it changes. A snapshot, not a feed.", href: '/now' },
+            { n: '/hobbies', t: 'Hobbies', d: "3D printers I've modded, smart-home tinkering, a local-AI homelab, and family.", href: '/hobbies' },
+            { n: '/uses', t: 'Uses', d: 'Hardware, software, models, filaments. The boring details that take years to settle on.', href: '/uses' },
+            { n: '/contact', t: 'Contact', d: 'Email, calendar, résumé. The fastest way to reach me. No forms with twelve fields.', href: '/contact' },
+          ].map((c) => (
+            <Link
+              href={c.href}
+              key={c.n}
+              style={{ display: 'block', borderTop: '1px solid var(--ink)', paddingTop: 18 }}
+            >
+              <div className="meta" style={{ marginBottom: 12, color: 'var(--accent)' }}>{c.n}</div>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 32, lineHeight: 1, marginBottom: 10 }}>
+                {c.t} →
+              </h3>
+              <p style={{ fontSize: 13.5, color: 'var(--ink-2)' }}>{c.d}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* RECENT */}
+      <section className="section muted">
+        <div className="section-head">
+          <h2>Recent work.</h2>
+          <Link href="/projects" className="meta" style={{ color: 'var(--ink-2)' }}>All projects →</Link>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          {featured.map((p) => (
+            <ProjectCard key={p.frontmatter.slug} project={p} />
+          ))}
+        </div>
+      </section>
+
+      {/* PHILOSOPHY */}
+      <section className="section dark">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
+          <div>
+            <div className="kicker">§ 02 &nbsp;·&nbsp; HOW I WORK</div>
+            <p className="meta" style={{ color: 'rgba(250,248,244,.5)', marginTop: 20 }}>
+              <Link href="/bio">Read more in /bio →</Link>
+            </p>
+          </div>
+          <div>
+            <p style={{ fontFamily: 'var(--font-display)', fontSize: 44, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+              I'm less interested in which framework
+              than in <i style={{ color: '#E8B895' }}>what the seam looks like</i> when
+              the people who run the line take it over,
+              and what it costs us when something fails
+              at 3 a.m.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

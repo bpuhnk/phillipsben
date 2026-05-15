@@ -1,0 +1,17 @@
+services:
+  phillipsben-com:
+    build: .
+    container_name: phillipsben-com
+    restart: unless-stopped
+    environment:
+      - NEXT_PUBLIC_PLAUSIBLE_DOMAIN=${NEXT_PUBLIC_PLAUSIBLE_DOMAIN:-}
+      - SITE_URL=${SITE_URL:-https://phillipsben.com}
+    networks:
+      - tunnel
+    expose:
+      - "3000"
+
+networks:
+  tunnel:
+    external: true
+    name: ${CF_TUNNEL_NETWORK:-cloudflare-tunnel}
