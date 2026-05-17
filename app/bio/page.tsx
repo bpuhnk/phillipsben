@@ -72,13 +72,11 @@ export default function BioPage() {
               whether the network is up or not.
             </p>
             <div className="meta" style={{ marginBottom: 12 }}>QUICK FACTS</div>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: 14, color: 'var(--ink-2)', maxWidth: '46ch' }}>
-              <li style={{ padding: '10px 0', borderTop: '1px solid var(--rule-2)' }}>41 years old · Southeast USA</li>
-              <li style={{ padding: '10px 0', borderTop: '1px solid var(--rule-2)' }}>Married 20 years · two teenagers · one Jack Russell</li>
-              <li style={{ padding: '10px 0', borderTop: '1px solid var(--rule-2)' }}>Christian; tries to live like it</li>
-              <li style={{ padding: '10px 0', borderTop: '1px solid var(--rule-2)', borderBottom: '1px solid var(--rule-2)' }}>
-                Works in C#, TypeScript, Python; speaks fluent legacy
-              </li>
+            <ul className="bio-quick-facts">
+              <li>41 years old · Southeast USA</li>
+              <li>Married 20 years · two teenagers · one Jack Russell</li>
+              <li>Christian; tries to live like it</li>
+              <li>Works in C#, TypeScript, Python; speaks fluent legacy</li>
             </ul>
           </div>
           <div className="bio-hero-img">
@@ -114,12 +112,12 @@ export default function BioPage() {
 
       <section className="section muted">
         <SectionHead title="What I'm good at." idx="§ 03 / SKILLS" />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+        <div className="bio-skills-grid">
           {skills.map((s) => (
-            <div key={s.t} style={{ borderTop: '1px solid var(--rule)', paddingTop: 18 }}>
-              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 24, marginBottom: 8 }}>{s.t}</h4>
-              <p style={{ fontSize: 13.5, color: 'var(--ink-2)', marginBottom: 14 }}>{s.d}</p>
-              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+            <div key={s.t} className="bio-skill">
+              <h4>{s.t}</h4>
+              <p>{s.d}</p>
+              <div className="bio-skill-tags">
                 {s.tags.map((t) => <Chip key={t}>{t}</Chip>)}
               </div>
             </div>
@@ -128,14 +126,14 @@ export default function BioPage() {
       </section>
 
       <section className="section">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64 }}>
+        <div className="bio-family-band">
           <div>
             <div className="kicker">§ 04 &nbsp;·&nbsp; OFF THE CLOCK</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 60, lineHeight: 1, marginTop: 16 }}>
+            <h2 className="bio-family-band-head">
               The <i>rest of it.</i>
             </h2>
           </div>
-          <p style={{ fontFamily: 'var(--font-display)', fontSize: 26, lineHeight: 1.4, color: 'var(--ink-2)' }}>
+          <p className="bio-family-band-copy">
             I've been married twenty years. We have a daughter who's nineteen,
             a son who's seventeen, and a nine-year-old Jack Russell who runs
             the house. I'm a Christian — that shows up in how I work as much as
@@ -143,7 +141,7 @@ export default function BioPage() {
             mean it when we say we like the quiet life.
           </p>
         </div>
-        <div style={{ marginTop: 56, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+        <div className="bio-cta-row m-cta-stack">
           <a href="/resume.pdf" className="nav-cta" download>Download résumé (PDF)</a>
           <Link href="/now" className="nav-cta ghost">Read /now →</Link>
         </div>

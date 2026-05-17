@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function UsesPage() {
   return (
-    <>
+    <div className="uses-page">
       <section className="section" style={{ paddingBottom: 56 }}>
         <div className="kicker">§ 01 &nbsp;·&nbsp; USES &nbsp;·&nbsp; THE BORING DETAILS</div>
         <h1 className="display display-xxl" style={{ marginTop: 24, marginBottom: 28 }}>
@@ -25,7 +25,7 @@ export default function UsesPage() {
         </p>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section uses-dev" style={{ paddingTop: 0 }}>
         <SectionHead title="Development." idx="§ 02" />
         <DefList
           rows={[
@@ -37,9 +37,9 @@ export default function UsesPage() {
         />
       </section>
 
-      <section className="section muted">
+      <section className="section muted uses-hw">
         <SectionHead title="Hardware." idx="§ 03" />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+        <div className="uses-hw-grid">
           {[
             {
               k: 'DESK',
@@ -62,16 +62,13 @@ export default function UsesPage() {
               ],
             },
           ].map(({ k, items }) => (
-            <div key={k}>
-              <div className="meta" style={{ marginBottom: 14 }}>{k}</div>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <div key={k} className="uses-hw-block">
+              <div className="meta uses-hw-label">{k}</div>
+              <ul className="uses-hw-list">
                 {items.map(([kk, v]) => (
-                  <li
-                    key={kk}
-                    style={{ display: 'grid', gridTemplateColumns: '140px 1fr', gap: 16, padding: '14px 0', borderTop: '1px solid var(--rule-2)' }}
-                  >
+                  <li key={kk} className="uses-hw-row">
                     <span className="meta">{kk.toUpperCase()}</span>
-                    <span style={{ fontSize: 14, color: 'var(--ink-2)' }}>{v}</span>
+                    <span className="uses-hw-val">{v}</span>
                   </li>
                 ))}
               </ul>
@@ -80,9 +77,9 @@ export default function UsesPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section uses-models">
         <SectionHead title="Models & local AI." idx="§ 04" />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="uses-models-grid">
           {[
             { n: 'Gemma', r: 'fast / short tasks', d: 'Summaries, classification, quick rewrites. The default.' },
             { n: 'Llama 3', r: 'code & reasoning', d: 'Anything that needs a real chain of thought, and most of the code.' },
@@ -91,18 +88,18 @@ export default function UsesPage() {
             { n: 'ComfyUI', r: 'images', d: 'Anything image-shaped. Nodes everywhere.' },
             { n: 'KoboldCPP / SillyTavern', r: 'experiments', d: 'For when an idea is weird enough to need its own sandbox.' },
           ].map((m) => (
-            <div key={m.n} style={{ borderTop: '1px solid var(--rule)', paddingTop: 16 }}>
-              <div className="meta" style={{ color: 'var(--accent)', marginBottom: 10 }}>{m.r.toUpperCase()}</div>
-              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 28, marginBottom: 8 }}>{m.n}</h4>
-              <p style={{ fontSize: 13.5, color: 'var(--ink-2)' }}>{m.d}</p>
+            <div key={m.n} className="uses-models-row">
+              <div className="meta uses-models-role">{m.r.toUpperCase()}</div>
+              <h4 className="uses-models-name">{m.n}</h4>
+              <p className="uses-models-desc">{m.d}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="section muted">
+      <section className="section muted uses-workshop">
         <SectionHead title="Workshop." idx="§ 05" />
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+        <ul className="uses-workshop-list">
           {[
             ['PRINTERS', 'BLV AM8 (Anet A8 chassis), Ender 3, Creality K1'],
             ['SLICER', 'OrcaSlicer · profiles per machine in source control, naturally'],
@@ -110,16 +107,13 @@ export default function UsesPage() {
             ['MICROCONTROLLERS', 'ESP32 (S3, C3), Pi Pico W, the occasional Arduino Nano'],
             ['BENCH', 'A Hakko iron, a Saleae Logic 8, more multimeters than is reasonable'],
           ].map(([k, v]) => (
-            <li
-              key={k}
-              style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 24, padding: '18px 0', borderTop: '1px solid var(--rule-2)' }}
-            >
+            <li key={k} className="uses-workshop-row">
               <span className="meta">{k}</span>
-              <span style={{ fontSize: 14.5, color: 'var(--ink-2)' }}>{v}</span>
+              <span className="uses-workshop-val">{v}</span>
             </li>
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }

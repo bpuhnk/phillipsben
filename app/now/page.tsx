@@ -30,9 +30,10 @@ export default async function NowPage() {
         </p>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section now-working" style={{ paddingTop: 0 }}>
         <SectionHead title="Working on." idx="§ 02" />
         <DefList
+          className="now-working-dl"
           rows={fm.working.map((item) => ({
             dt: item.kind,
             dd: (
@@ -48,12 +49,12 @@ export default async function NowPage() {
 
       <section className="section muted">
         <SectionHead title="Reading & learning." idx="§ 03" />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+        <div className="now-reading">
           {fm.reading.map((r) => (
-            <div key={`${r.kind}-${r.title}`} style={{ borderTop: '1px solid var(--rule)', paddingTop: 16 }}>
-              <div className="meta" style={{ marginBottom: 10 }}>{r.kind}</div>
-              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 24, lineHeight: 1.15, marginBottom: 6 }}>{r.title}</h4>
-              <p style={{ fontSize: 13, color: 'var(--ink-2)' }}>{r.note}</p>
+            <div key={`${r.kind}-${r.title}`} className="now-reading-item">
+              <div className="meta now-reading-tag">{r.kind}</div>
+              <h4 className="now-reading-title">{r.title}</h4>
+              <p className="now-reading-note">{r.note}</p>
             </div>
           ))}
         </div>

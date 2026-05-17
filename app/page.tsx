@@ -53,15 +53,7 @@ export default async function Landing() {
       </section>
 
       {/* tech strip */}
-      <section
-        className="section tight"
-        style={{
-          borderTop: '1px solid var(--rule-2)',
-          borderBottom: '1px solid var(--rule-2)',
-          paddingTop: 22,
-          paddingBottom: 22,
-        }}
-      >
+      <section className="section tight landing-tech-strip-section">
         <div className="tech-strip">
           <span>.NET · 20 YRS</span>
           <span>WPF · WINFORMS · ELECTRON</span>
@@ -75,7 +67,7 @@ export default async function Landing() {
       {/* WHAT'S HERE */}
       <section className="section">
         <SectionHead title="What's on the site." idx="§ 01 / GUIDE" />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40 }}>
+        <div className="landing-whats-here">
           {[
             { n: '/bio', t: 'Biography', d: 'The twenty-year version. Industries, roles, tools, and a short version for the recruiter in a hurry.', href: '/bio' },
             { n: '/projects', t: 'Projects', d: 'Completed and active work. Each entry has a write-up, the constraints, and what I learned.', href: '/projects' },
@@ -84,16 +76,10 @@ export default async function Landing() {
             { n: '/uses', t: 'Uses', d: 'Hardware, software, models, filaments. The boring details that take years to settle on.', href: '/uses' },
             { n: '/contact', t: 'Contact', d: 'Email, calendar, résumé. The fastest way to reach me. No forms with twelve fields.', href: '/contact' },
           ].map((c) => (
-            <Link
-              href={c.href}
-              key={c.n}
-              style={{ display: 'block', borderTop: '1px solid var(--ink)', paddingTop: 18 }}
-            >
-              <div className="meta" style={{ marginBottom: 12, color: 'var(--accent)' }}>{c.n}</div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 32, lineHeight: 1, marginBottom: 10 }}>
-                {c.t} →
-              </h3>
-              <p style={{ fontSize: 13.5, color: 'var(--ink-2)' }}>{c.d}</p>
+            <Link href={c.href} key={c.n} className="landing-whats-here-item">
+              <div className="meta wh-kicker">{c.n}</div>
+              <h3 className="wh-title">{c.t} →</h3>
+              <p className="wh-desc">{c.d}</p>
             </Link>
           ))}
         </div>
@@ -105,7 +91,7 @@ export default async function Landing() {
           <h2>Recent work.</h2>
           <Link href="/projects" className="meta" style={{ color: 'var(--ink-2)' }}>All projects →</Link>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="landing-recent-grid">
           {featured.map((p) => (
             <ProjectCard key={p.frontmatter.slug} project={p} />
           ))}
@@ -114,7 +100,7 @@ export default async function Landing() {
 
       {/* PHILOSOPHY */}
       <section className="section dark">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, alignItems: 'start' }}>
+        <div className="landing-philosophy">
           <div>
             <div className="kicker">§ 02 &nbsp;·&nbsp; HOW I WORK</div>
             <p className="meta" style={{ color: 'rgba(250,248,244,.5)', marginTop: 20 }}>
@@ -122,7 +108,7 @@ export default async function Landing() {
             </p>
           </div>
           <div>
-            <p style={{ fontFamily: 'var(--font-display)', fontSize: 44, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+            <p className="landing-philosophy-quote">
               I'm less interested in which framework
               than in <i style={{ color: '#E8B895' }}>what the seam looks like</i> when
               the people who run the line take it over,

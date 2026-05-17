@@ -35,6 +35,12 @@ export default function ProjectCard({ project, variant = 'grid' }: { project: Pr
             ) : null}
             {status}
           </span>
+          {frontmatter.role ? (
+            <>
+              <span>·</span>
+              <span>{frontmatter.role.split('—')[0].trim().toUpperCase()}</span>
+            </>
+          ) : null}
         </div>
         <h3 className="title">{frontmatter.title}</h3>
         <p className="desc">{frontmatter.summary}</p>

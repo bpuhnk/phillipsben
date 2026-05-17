@@ -82,6 +82,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           <div>
             <DefList
               narrow
+              className="project-meta-dl"
               rows={[
                 ...(fm.role ? [{ dt: 'Role', dd: fm.role }] : []),
                 { dt: 'Stack', dd: fm.techStack.join(', ') },
@@ -99,7 +100,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       </section>
 
       <section className="section" style={{ paddingTop: 24, paddingBottom: 32 }}>
-        <ImagePlaceholder label={`Hero — ${fm.title} · 16:9 photograph`} height={520} />
+        <ImagePlaceholder label={`Hero — ${fm.title} · 16:9 photograph`} height={520} className="project-hero-img" />
         <div className="meta" style={{ marginTop: 12 }}>FIG. 01 — {year}.</div>
       </section>
 
@@ -119,16 +120,16 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           <div className="proj-nav">
             {prev ? (
               <Link href={`/projects/${prev.frontmatter.slug}`} className="proj-nav-prev">
-                <div className="meta" style={{ marginBottom: 8 }}>← PREVIOUS</div>
-                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 32 }}>{prev.frontmatter.title}</h4>
-                <p style={{ fontSize: 13, color: 'var(--ink-2)', marginTop: 6 }}>{prev.frontmatter.summary}</p>
+                <div className="meta proj-nav-label">← PREVIOUS</div>
+                <h4 className="proj-nav-title">{prev.frontmatter.title}</h4>
+                <p className="proj-nav-desc">{prev.frontmatter.summary}</p>
               </Link>
             ) : <span />}
             {next ? (
               <Link href={`/projects/${next.frontmatter.slug}`} className="proj-nav-next">
-                <div className="meta" style={{ marginBottom: 8 }}>NEXT →</div>
-                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 32 }}>{next.frontmatter.title}</h4>
-                <p style={{ fontSize: 13, color: 'var(--ink-2)', marginTop: 6 }}>{next.frontmatter.summary}</p>
+                <div className="meta proj-nav-label">NEXT →</div>
+                <h4 className="proj-nav-title">{next.frontmatter.title}</h4>
+                <p className="proj-nav-desc">{next.frontmatter.summary}</p>
               </Link>
             ) : <span />}
           </div>

@@ -2,11 +2,21 @@ import type { ReactNode } from 'react';
 
 export type DefRow = { dt: ReactNode; dd: ReactNode };
 
-export default function DefList({ rows, narrow }: { rows: DefRow[]; narrow?: boolean }) {
+export default function DefList({
+  rows,
+  narrow,
+  className,
+}: {
+  rows: DefRow[];
+  narrow?: boolean;
+  className?: string;
+}) {
+  const cls = ['deflist', className].filter(Boolean).join(' ');
+  const rowCls = ['def', narrow ? 'narrow' : ''].filter(Boolean).join(' ');
   return (
-    <dl className="deflist">
+    <dl className={cls}>
       {rows.map((r, i) => (
-        <div className="def" key={i} style={narrow ? { gridTemplateColumns: '110px 1fr' } : undefined}>
+        <div className={rowCls} key={i}>
           <dt>{r.dt}</dt>
           <dd>{r.dd}</dd>
         </div>

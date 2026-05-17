@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function HobbiesPage() {
   return (
-    <>
+    <div className="hobbies-page">
       <section className="section" style={{ paddingBottom: 56 }}>
         <div className="kicker">§ 01 &nbsp;·&nbsp; HOBBIES &nbsp;·&nbsp; OFF THE CLOCK</div>
         <h1 className="display display-xxl" style={{ marginTop: 24, marginBottom: 28 }}>
@@ -27,22 +27,22 @@ export default function HobbiesPage() {
       </section>
 
       <section
-        className="section tight"
+        className="section tight hobbies-index-strip"
         style={{ paddingTop: 18, paddingBottom: 18, borderTop: '1px solid var(--rule-2)', borderBottom: '1px solid var(--rule-2)' }}
       >
-        <div style={{ display: 'flex', gap: 48, fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--ink-3)', letterSpacing: '.06em', flexWrap: 'wrap' }}>
-          <span>① &nbsp; 3D PRINTING</span>
-          <span>② &nbsp; EMBEDDED & SMART HOME</span>
-          <span>③ &nbsp; LOCAL AI</span>
-          <span>④ &nbsp; FAMILY & FAITH</span>
+        <div className="hobbies-index-strip-inner">
+          <a href="#printing">① &nbsp; 3D PRINTING</a>
+          <a href="#embedded">② &nbsp; EMBEDDED & SMART HOME</a>
+          <a href="#local-ai">③ &nbsp; LOCAL AI</a>
+          <a href="#family">④ &nbsp; FAMILY & FAITH</a>
         </div>
       </section>
 
-      <section className="section">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'start' }}>
+      <section id="printing" className="section">
+        <div className="hobbies-printing-hero">
           <div>
             <span className="meta" style={{ color: 'var(--accent)' }}>① &nbsp; PRINTING</span>
-            <h2 className="display-xl" style={{ marginTop: 16, marginBottom: 22 }}>
+            <h2 className="display-xl hobbies-h2" style={{ marginTop: 16, marginBottom: 22 }}>
               Three printers,<br />
               <i>one ongoing</i><br />
               <i>argument</i> about<br />
@@ -57,7 +57,7 @@ export default function HobbiesPage() {
           <ImagePlaceholder label="The print farm — three machines on a steel bench · ambient afternoon light" ratio="4 / 3" />
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginTop: 56 }}>
+        <div className="hobbies-printer-grid">
           {[
             { n: 'Anet A8 → BLV AM8', m: 'Linear rails, aluminum extrusions, Marlin 2', s: 'Heavily modified', y: '2018 → today', img: 'BLV AM8 · build-plate close-up' },
             { n: 'Creality Ender 3', m: 'Klipper, BLTouch, Sprite extruder', s: 'The reliable one', y: '2020 → today', img: 'Ender 3 · running a 30hr print' },
@@ -78,11 +78,11 @@ export default function HobbiesPage() {
         </div>
       </section>
 
-      <section className="section muted">
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 64, alignItems: 'start' }}>
+      <section id="embedded" className="section muted">
+        <div className="hobbies-embedded-hero">
           <div>
             <span className="meta" style={{ color: 'var(--accent)' }}>② &nbsp; EMBEDDED & SMART HOME</span>
-            <h2 className="display-xl" style={{ marginTop: 16, marginBottom: 22 }}>
+            <h2 className="display-xl hobbies-h2" style={{ marginTop: 16, marginBottom: 22 }}>
               A house that<br />
               <i>knows things</i> —<br />
               but doesn't<br />
@@ -94,13 +94,13 @@ export default function HobbiesPage() {
               where the soldering iron lives. Everything talks MQTT, locally,
               over my own broker.
             </p>
-            <div style={{ display: 'flex', gap: 8, marginTop: 22, flexWrap: 'wrap' }}>
+            <div className="hobbies-embedded-chips">
               {['ESP32', 'ESPHome', 'Home Assistant', 'MQTT', 'Arduino', 'Raspberry Pi 5', 'KiCad', 'Soldering by lamp'].map((t) => (
                 <Chip key={t}>{t}</Chip>
               ))}
             </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+          <div className="hobbies-embedded-grid">
             <ImagePlaceholder label="Breadboard close-up · LED test rig" ratio="1 / 1" />
             <ImagePlaceholder label="Enclosure print fresh off the K1" ratio="1 / 1" />
             <ImagePlaceholder label="Garage occupancy radar board" ratio="1 / 1" />
@@ -109,11 +109,11 @@ export default function HobbiesPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64 }}>
+      <section id="local-ai" className="section">
+        <div className="hobbies-ai-hero">
           <div>
             <span className="meta" style={{ color: 'var(--accent)' }}>③ &nbsp; LOCAL AI</span>
-            <h2 className="display-xl" style={{ marginTop: 16, marginBottom: 22 }}>
+            <h2 className="display-xl hobbies-h2" style={{ marginTop: 16, marginBottom: 22 }}>
               A Pascal-era<br />
               GPU running<br />
               the future<br />
@@ -132,16 +132,16 @@ export default function HobbiesPage() {
           </div>
           <div>
             <ImagePlaceholder label="The home rack — P100 visible, doors open, a labelled cable run · 4:3" ratio="4 / 3" />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, marginTop: 24, borderTop: '1px solid var(--rule-2)', borderBottom: '1px solid var(--rule-2)' }}>
+            <div className="hobbies-ai-stats m-stat-grid">
               {[
                 { k: 'GPU', v: 'P100 16GB' },
                 { k: 'RAM', v: '64 GB' },
                 { k: 'MODELS', v: '7' },
                 { k: 'POWER', v: '~180W' },
               ].map((s) => (
-                <div key={s.k} style={{ padding: '18px 16px', borderRight: '1px solid var(--rule-2)' }}>
-                  <div className="meta" style={{ marginBottom: 6 }}>{s.k}</div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 28, letterSpacing: '-0.02em' }}>{s.v}</div>
+                <div key={s.k} className="hobbies-ai-stat">
+                  <div className="meta">{s.k}</div>
+                  <div className="hobbies-ai-stat-val">{s.v}</div>
                 </div>
               ))}
             </div>
@@ -149,7 +149,7 @@ export default function HobbiesPage() {
         </div>
       </section>
 
-      <section className="section dark" style={{ padding: 0 }}>
+      <section id="family" className="section dark" style={{ padding: 0 }}>
         <div className="family-band">
           <div className="family-band-img">
             <Image
@@ -160,11 +160,12 @@ export default function HobbiesPage() {
               sizes="(max-width: 720px) 100vw, 50vw"
               priority={false}
             />
-            <div className="meta" style={{ position: 'absolute', bottom: 18, left: 22, color: 'rgba(255,255,255,.7)', textTransform: 'uppercase' }}>
+            <div className="meta family-band-fig-overlay">
               Fig. — with my son, December 2025.
             </div>
           </div>
           <div className="family-band-copy">
+            <div className="meta family-band-fig-inline">FIG. — WITH MY SON, DECEMBER 2025.</div>
             <div className="kicker">④ &nbsp;·&nbsp; FAMILY & FAITH</div>
             <p className="display-m" style={{ marginTop: 22 }}>
               Married twenty years, a daughter in college, a son
@@ -181,6 +182,6 @@ export default function HobbiesPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
