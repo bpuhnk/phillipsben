@@ -2,19 +2,20 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Chip from '@/components/chip';
 import ImagePlaceholder from '@/components/image-placeholder';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Hobbies',
   description: '3D printers I have modded, smart-home tinkering, a local-AI homelab, and family.',
-  alternates: { canonical: '/hobbies' },
-};
+  path: '/hobbies',
+});
 
 export default function HobbiesPage() {
   return (
     <>
       <section className="section" style={{ paddingBottom: 56 }}>
         <div className="kicker">§ 01 &nbsp;·&nbsp; HOBBIES &nbsp;·&nbsp; OFF THE CLOCK</div>
-        <h1 className="display" style={{ fontSize: 132, marginTop: 24, marginBottom: 28 }}>
+        <h1 className="display display-xxl" style={{ marginTop: 24, marginBottom: 28 }}>
           The reasons<br />
           the <i>garage light</i><br />
           is on at <i>11pm.</i>
@@ -41,7 +42,7 @@ export default function HobbiesPage() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'start' }}>
           <div>
             <span className="meta" style={{ color: 'var(--accent)' }}>① &nbsp; PRINTING</span>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 72, lineHeight: 0.98, marginTop: 16, marginBottom: 22 }}>
+            <h2 className="display-xl" style={{ marginTop: 16, marginBottom: 22 }}>
               Three printers,<br />
               <i>one ongoing</i><br />
               <i>argument</i> about<br />
@@ -81,7 +82,7 @@ export default function HobbiesPage() {
         <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 64, alignItems: 'start' }}>
           <div>
             <span className="meta" style={{ color: 'var(--accent)' }}>② &nbsp; EMBEDDED & SMART HOME</span>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 72, lineHeight: 0.98, marginTop: 16, marginBottom: 22 }}>
+            <h2 className="display-xl" style={{ marginTop: 16, marginBottom: 22 }}>
               A house that<br />
               <i>knows things</i> —<br />
               but doesn't<br />
@@ -112,7 +113,7 @@ export default function HobbiesPage() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64 }}>
           <div>
             <span className="meta" style={{ color: 'var(--accent)' }}>③ &nbsp; LOCAL AI</span>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 72, lineHeight: 0.98, marginTop: 16, marginBottom: 22 }}>
+            <h2 className="display-xl" style={{ marginTop: 16, marginBottom: 22 }}>
               A Pascal-era<br />
               GPU running<br />
               the future<br />
@@ -149,22 +150,23 @@ export default function HobbiesPage() {
       </section>
 
       <section className="section dark" style={{ padding: 0 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.25fr 1fr', alignItems: 'stretch', minHeight: 640 }}>
-          <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="family-band">
+          <div className="family-band-img">
             <Image
               src="/images/ben-matt-lights.jpeg"
               alt="Ben and his son at a holiday light display, fist-bumping between two stone thrones lit in green, blue and red."
               width={1200}
               height={900}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              sizes="(max-width: 720px) 100vw, 50vw"
+              priority={false}
             />
             <div className="meta" style={{ position: 'absolute', bottom: 18, left: 22, color: 'rgba(255,255,255,.7)', textTransform: 'uppercase' }}>
               Fig. — with my son, December 2025.
             </div>
           </div>
-          <div style={{ padding: '88px 64px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="family-band-copy">
             <div className="kicker">④ &nbsp;·&nbsp; FAMILY & FAITH</div>
-            <p style={{ fontFamily: 'var(--font-display)', fontSize: 42, lineHeight: 1.15, letterSpacing: '-0.02em', marginTop: 22 }}>
+            <p className="display-m" style={{ marginTop: 22 }}>
               Married twenty years, a daughter in college, a son
               nearly there, a dog who is unreasonably opinionated
               about supper. We're Christians, southerners, and

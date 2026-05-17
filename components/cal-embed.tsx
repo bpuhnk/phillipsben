@@ -1,7 +1,11 @@
 'use client';
 
-import { useEffect } from 'react';
-import Cal, { getCalApi } from '@calcom/embed-react';
+import dynamic from 'next/dynamic';
+import { useEffect, useRef, useState } from 'react';
+
+const CalInline = dynamic(() => import('./cal-inline'), { ssr: false });
+
+const HEIGHT = 620;
 
 export default function CalEmbed({
   calLink = 'bpuhnk/30min',
@@ -10,12 +14,29 @@ export default function CalEmbed({
   calLink?: string;
   namespace?: string;
 }) {
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
   useEffect(() => {
-    (async () => {
-      const cal = await getCalApi({ namespace });
-      cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
-    })();
-  }, [namespace]);
+    if (shouldLoad) return;
+    const el = sentinelRef.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === 'undefined') {
+      setShouldLoad(true);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setShouldLoad(true);
+          obs.disconnect();
+        }
+      },
+      { rootMargin: '400px 0px' },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [shouldLoad]);
 
   return (
     <>
@@ -24,12 +45,16 @@ export default function CalEmbed({
           Book on cal.com →
         </a>
       </noscript>
-      <Cal
-        namespace={namespace}
-        calLink={calLink}
-        style={{ width: '100%', height: '620px', overflow: 'scroll' }}
-        config={{ layout: 'month_view' }}
-      />
+      <div ref={sentinelRef} style={{ width: '100%', minHeight: HEIGHT }}>
+        {shouldLoad ? (
+          <CalInline calLink={calLink} namespace={namespace} height={HEIGHT} />
+        ) : (
+          <div
+            aria-hidden
+            style={{ width: '100%', height: HEIGHT, background: 'var(--bg-2)' }}
+          />
+        )}
+      </div>
     </>
   );
 }

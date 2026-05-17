@@ -1,19 +1,20 @@
 import type { Metadata } from 'next';
 import SectionHead from '@/components/section-head';
 import DefList from '@/components/def-list';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Uses',
   description: 'Hardware, software, models, filaments. The boring details that take years to settle on.',
-  alternates: { canonical: '/uses' },
-};
+  path: '/uses',
+});
 
 export default function UsesPage() {
   return (
     <>
       <section className="section" style={{ paddingBottom: 56 }}>
         <div className="kicker">§ 01 &nbsp;·&nbsp; USES &nbsp;·&nbsp; THE BORING DETAILS</div>
-        <h1 className="display" style={{ fontSize: 124, marginTop: 24, marginBottom: 28 }}>
+        <h1 className="display display-xxl" style={{ marginTop: 24, marginBottom: 28 }}>
           Tools that survived<br />
           <i>five years</i> of<br />
           opinions.

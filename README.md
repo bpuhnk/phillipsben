@@ -39,20 +39,31 @@ no published host port. Point your Cloudflare tunnel at
   `index.mdx`. Frontmatter is validated in `lib/content.ts` (Zod). Set
   `featured: true` to surface on the landing page.
 
+## Analytics
+
+Cloudflare Web Analytics is the chosen provider. Because traffic is already
+proxied through Cloudflare Tunnel, server-side metrics work automatically —
+enable in the Cloudflare dashboard (Analytics → Web Analytics → Add site) for
+`phillipsben.com`. No script tag required. The `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`
+env hook in `app/layout.tsx` stays as a dormant opt-in if you ever want to
+switch.
+
 ## Decisions reference
 
-Locked decisions live in
-`nimbalyst-local/plans/grill-me-until-we-adaptive-nova.md`. Ben must rotate the
-Cal.com API key that was pasted in chat; the embed widget does not need it.
+Phased rollout plan lives in `plans/mobile-plan/` (overview + numbered phase
+docs).
 
 ## Pre-launch checklist
 
 - [ ] Rotate exposed Cal.com API key.
-- [ ] Drop `public/og.png` (1200×630) — referenced by `app/layout.tsx`.
 - [ ] Confirm `cal.com/bpuhnk/30min` slot exists.
 - [ ] Confirm `contact@phillipsben.com` mailbox.
 - [ ] Confirm docker network `${CF_TUNNEL_NETWORK}` is attached to the tunnel.
+- [ ] On server: `git pull && docker compose up -d --build`.
+- [ ] Enable Cloudflare Web Analytics for `phillipsben.com`.
+- [ ] Smoke-test from a phone on cellular (not LAN-cached).
 
 ## Out of scope (v2)
 
-Blog, RSS, Mastodon, dark mode, contact form, the seven dropped mockup projects.
+Blog, Mastodon, dark mode, contact form, the seven dropped mockup projects.
+(RSS shipped — `/feed.xml`. OG images are generated dynamically per route.)

@@ -2,16 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-const items = [
-  { label: 'Index', href: '/' },
-  { label: 'Bio', href: '/bio' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Now', href: '/now' },
-  { label: 'Hobbies', href: '/hobbies' },
-  { label: 'Uses', href: '/uses' },
-  { label: 'Contact', href: '/contact' },
-];
+import { navItems } from '@/lib/nav-items';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -22,7 +13,7 @@ export default function Nav() {
         ben phillips<i>&nbsp;/ engineer</i>
       </Link>
       <div className="nav-links">
-        {items.map((it) => {
+        {navItems.map((it) => {
           const active =
             it.href === '/' ? pathname === '/' : pathname?.startsWith(it.href);
           return (

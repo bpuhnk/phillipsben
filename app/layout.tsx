@@ -1,8 +1,10 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Instrument_Serif, Geist, Geist_Mono } from 'next/font/google';
 import Script from 'next/script';
 import Nav from '@/components/nav';
+import MNav from '@/components/m-nav';
 import Footer from '@/components/footer';
+import MFoot from '@/components/m-foot';
 import './globals.css';
 
 const instrumentSerif = Instrument_Serif({
@@ -42,14 +44,16 @@ export const metadata: Metadata = {
     description: 'Software for things that actually have to work.',
     type: 'website',
     url: siteUrl,
-    images: ['/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ben Phillips — Engineer',
     description: 'Software for things that actually have to work.',
-    images: ['/og.png'],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#FAF8F4',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -57,9 +61,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${instrumentSerif.variable} ${geist.variable} ${geistMono.variable}`}>
       <body>
+        <a href="#main" className="skip-link">Skip to content</a>
         <Nav />
-        <main>{children}</main>
+        <MNav />
+        <main id="main">{children}</main>
         <Footer />
+        <MFoot />
         {plausibleDomain && (
           <Script
             defer

@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import ProjectFilters from '@/components/project-filters';
 import { getAllProjects } from '@/lib/content';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Projects',
   description: 'Active and shipped work — professional and personal — with write-ups, constraints, and what broke.',
-  alternates: { canonical: '/projects' },
-};
+  path: '/projects',
+});
 
 export default async function ProjectsPage() {
   const projects = await getAllProjects();
@@ -16,8 +17,8 @@ export default async function ProjectsPage() {
     <>
       <section className="section" style={{ paddingBottom: 48 }}>
         <div className="kicker">§ 01 &nbsp;·&nbsp; PROJECTS</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 64, marginTop: 24, alignItems: 'end' }}>
-          <h1 className="display" style={{ fontSize: 104 }}>
+        <div className="projects-header">
+          <h1 className="display display-xl">
             The work — <i>professional,<br />personal,</i> and the odd thing<br />in between.
           </h1>
           <p className="lede" style={{ maxWidth: '42ch' }}>

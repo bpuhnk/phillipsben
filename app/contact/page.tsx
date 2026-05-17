@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import SectionHead from '@/components/section-head';
 import CalEmbed from '@/components/cal-embed';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Contact',
   description: 'Email, a calendar slot, a résumé. No contact form with twelve fields.',
-  alternates: { canonical: '/contact' },
-};
+  path: '/contact',
+});
 
 export default function ContactPage() {
   return (
@@ -16,7 +17,7 @@ export default function ContactPage() {
           <span style={{ color: 'var(--accent)' }}>●</span>
           &nbsp; OPEN TO INTERESTING WORK · MAY 2026
         </div>
-        <h1 className="display" style={{ fontSize: 144, marginTop: 24, marginBottom: 32 }}>
+        <h1 className="display display-xxl" style={{ marginTop: 24, marginBottom: 32 }}>
           Let's <i>talk.</i>
         </h1>
         <p className="lede" style={{ maxWidth: '46ch' }}>

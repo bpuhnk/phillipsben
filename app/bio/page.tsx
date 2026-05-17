@@ -5,12 +5,13 @@ import SectionHead from '@/components/section-head';
 import Stats from '@/components/stats';
 import Timeline from '@/components/timeline';
 import Chip from '@/components/chip';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Bio',
   description: 'Full-stack software engineer, almost twenty years in .NET. The long version of the résumé.',
-  alternates: { canonical: '/bio' },
-};
+  path: '/bio',
+});
 
 const careerRows = [
   {
@@ -59,11 +60,11 @@ export default function BioPage() {
     <>
       <section className="section" style={{ paddingBottom: 64 }}>
         <div className="kicker">§ 01 &nbsp;·&nbsp; BIOGRAPHY</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.35fr 1fr', gap: 56, marginTop: 24, alignItems: 'start' }}>
+        <h1 className="display display-xl" style={{ marginTop: 24, marginBottom: 32, maxWidth: '14ch' }}>
+          A long résumé, <i>told slowly.</i>
+        </h1>
+        <div className="bio-hero">
           <div>
-            <h1 className="display" style={{ fontSize: 104, marginBottom: 40, maxWidth: '14ch' }}>
-              A long résumé, <i>told slowly.</i>
-            </h1>
             <p className="lede" style={{ maxWidth: '44ch', marginBottom: 48 }}>
               I'm Ben Phillips — a full-stack software engineer who has spent
               almost twenty years inside the .NET ecosystem, mostly building
@@ -80,7 +81,7 @@ export default function BioPage() {
               </li>
             </ul>
           </div>
-          <div style={{ position: 'relative', alignSelf: 'stretch', display: 'flex', justifyContent: 'center' }}>
+          <div className="bio-hero-img">
             <Image
               src="/images/ben-fullbody.png"
               alt="Ben Phillips, in a tan blazer and snowflake-print tie."

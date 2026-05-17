@@ -51,17 +51,9 @@ export default function ProjectFilters({ projects }: Props) {
 
   return (
     <>
-      <section
-        className="section tight"
-        style={{
-          paddingTop: 24,
-          paddingBottom: 24,
-          borderTop: '1px solid var(--rule-2)',
-          borderBottom: '1px solid var(--rule-2)',
-        }}
-      >
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
-          <span className="meta" style={{ marginRight: 8 }}>FILTER —</span>
+      <section className="filter-bar">
+        <div className="filter-bar-inner">
+          <span className="meta filter-bar-label">FILTER —</span>
           <button
             type="button"
             className={`chip ${!status ? 'solid' : ''}`}
@@ -79,9 +71,7 @@ export default function ProjectFilters({ projects }: Props) {
               {s[0].toUpperCase() + s.slice(1)} · {counts[s] ?? 0}
             </button>
           ))}
-          {allTags.length > 0 ? (
-            <span style={{ width: 1, height: 18, background: 'var(--rule)', margin: '0 8px' }} />
-          ) : null}
+          {allTags.length > 0 ? <span className="filter-sep" /> : null}
           {allTags.map((t) => (
             <button
               key={t}
@@ -101,7 +91,7 @@ export default function ProjectFilters({ projects }: Props) {
             Nothing matches. <button type="button" className="chip" onClick={() => router.replace('/projects')}>Clear filters</button>
           </p>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, rowGap: 56 }}>
+          <div className="project-grid">
             {filtered.map((p) => (
               <ProjectCard key={p.frontmatter.slug} project={p} />
             ))}

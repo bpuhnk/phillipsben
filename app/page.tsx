@@ -3,12 +3,13 @@ import Link from 'next/link';
 import SectionHead from '@/components/section-head';
 import ProjectCard from '@/components/project-card';
 import { getFeaturedProjects } from '@/lib/content';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Ben Phillips — Engineer',
   description: 'Software for things that actually have to work.',
-  alternates: { canonical: '/' },
-};
+  path: '/',
+});
 
 export default async function Landing() {
   const featured = await getFeaturedProjects(3);
@@ -17,20 +18,13 @@ export default async function Landing() {
     <>
       {/* HERO — variant A */}
       <section className="section" style={{ paddingTop: 88, paddingBottom: 56 }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 320px',
-            gap: 64,
-            alignItems: 'end',
-          }}
-        >
+        <div className="landing-hero">
           <div>
             <div className="kicker">
               <span style={{ color: 'var(--accent)' }}>●</span>
               &nbsp; AVAILABLE FOR SELECT WORK · MAY 2026
             </div>
-            <h1 className="display" style={{ fontSize: 132, marginTop: 24, marginBottom: 28 }}>
+            <h1 className="display display-xxl" style={{ marginTop: 24, marginBottom: 28 }}>
               Software for<br />
               things that <i>actually<br />have to work.</i>
             </h1>
@@ -40,7 +34,7 @@ export default async function Landing() {
               in the workshop, on your own machine.
             </p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 18, paddingBottom: 12 }}>
+          <div className="landing-currently">
             <div className="meta">CURRENTLY</div>
             <div style={{ borderTop: '1px solid var(--rule)', paddingTop: 16 }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, lineHeight: 1.15, marginBottom: 6 }}>
@@ -68,19 +62,7 @@ export default async function Landing() {
           paddingBottom: 22,
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            fontFamily: 'var(--font-mono)',
-            fontSize: 11.5,
-            color: 'var(--ink-3)',
-            letterSpacing: '.06em',
-            flexWrap: 'wrap',
-            gap: 16,
-          }}
-        >
+        <div className="tech-strip">
           <span>.NET · 20 YRS</span>
           <span>WPF · WINFORMS · ELECTRON</span>
           <span>AGENTIC PROGRAMMING</span>

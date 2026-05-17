@@ -2,10 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import type { ComponentProps, ReactNode } from 'react';
 import Chip from '@/components/chip';
 import ImagePlaceholder from '@/components/image-placeholder';
 import DefList from '@/components/def-list';
-import { getAllProjects, getProjectBySlug } from '@/lib/content';
+import ProjectToc from '@/components/project-toc';
+import { getAllProjects, getProjectBySlug, getProjectNeighbors } from '@/lib/content';
+import { extractH2, slugify } from '@/lib/toc';
+import { pageMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   const all = await getAllProjects();
@@ -16,45 +20,61 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
   if (!project) return {};
-  return {
+  return pageMetadata({
     title: project.frontmatter.title,
     description: project.frontmatter.summary,
-    alternates: { canonical: `/projects/${slug}` },
-  };
+    path: `/projects/${slug}`,
+  });
 }
+
+function flatten(node: ReactNode): string {
+  if (node == null || typeof node === 'boolean') return '';
+  if (typeof node === 'string' || typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(flatten).join('');
+  if (typeof node === 'object' && 'props' in (node as object)) {
+    return flatten((node as { props: { children?: ReactNode } }).props.children);
+  }
+  return '';
+}
+
+const mdxComponents = {
+  h2: ({ children, ...props }: ComponentProps<'h2'>) => (
+    <h2 id={slugify(flatten(children))} {...props}>
+      {children}
+    </h2>
+  ),
+};
 
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
   if (!project) notFound();
 
-  const all = await getAllProjects();
-  const idx = all.findIndex((p) => p.frontmatter.slug === slug);
-  const prev = idx > 0 ? all[idx - 1] : null;
-  const next = idx >= 0 && idx < all.length - 1 ? all[idx + 1] : null;
+  const { prev, next } = await getProjectNeighbors(slug);
 
   const fm = project.frontmatter;
   const year = fm.startDate.slice(0, 4);
+  const toc = extractH2(project.content);
 
   return (
     <>
       <section className="section tight" style={{ paddingTop: 22, paddingBottom: 18 }}>
         <div className="meta">
-          <Link href="/projects">PROJECTS</Link>
+          <Link href="/projects">← PROJECTS</Link>
           &nbsp;/&nbsp;
           <span style={{ color: 'var(--ink)' }}>{fm.title.toUpperCase()}</span>
         </div>
       </section>
 
       <section className="section" style={{ paddingTop: 16 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 64 }}>
+        <div className="project-hero">
           <div>
             <div style={{ display: 'flex', gap: 8, marginBottom: 28, flexWrap: 'wrap' }}>
               <Chip pulse={fm.status === 'active'}>{fm.status.toUpperCase()}</Chip>
               <Chip>{year}</Chip>
               {fm.role ? <Chip>{fm.role.split('—')[0].trim()}</Chip> : null}
             </div>
-            <h1 className="display" style={{ fontSize: 96, marginBottom: 28 }}>
+            <h1 className="display display-xl" style={{ marginBottom: 28 }}>
               {fm.title}
             </h1>
             <p className="lede" style={{ maxWidth: '40ch' }}>{fm.summary}</p>
@@ -83,32 +103,29 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         <div className="meta" style={{ marginTop: 12 }}>FIG. 01 — {year}.</div>
       </section>
 
+      <ProjectToc items={toc} variant="dock" />
+
       <section className="section" style={{ paddingTop: 32 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: 48 }}>
-          <aside style={{ position: 'sticky', top: 24, alignSelf: 'start' }}>
-            <div className="meta" style={{ marginBottom: 16 }}>CONTENTS</div>
-            <p className="meta" style={{ color: 'var(--ink-2)' }}>
-              Status: <span style={{ color: 'var(--accent)' }}>{fm.status}</span>
-            </p>
-          </aside>
+        <div className="project-body">
+          <ProjectToc items={toc} variant="aside" />
           <article className="prose">
-            <MDXRemote source={project.content} />
+            <MDXRemote source={project.content} components={mdxComponents} />
           </article>
         </div>
       </section>
 
       {(prev || next) && (
         <section className="section muted">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+          <div className="proj-nav">
             {prev ? (
-              <Link href={`/projects/${prev.frontmatter.slug}`}>
+              <Link href={`/projects/${prev.frontmatter.slug}`} className="proj-nav-prev">
                 <div className="meta" style={{ marginBottom: 8 }}>← PREVIOUS</div>
                 <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 32 }}>{prev.frontmatter.title}</h4>
                 <p style={{ fontSize: 13, color: 'var(--ink-2)', marginTop: 6 }}>{prev.frontmatter.summary}</p>
               </Link>
             ) : <span />}
             {next ? (
-              <Link href={`/projects/${next.frontmatter.slug}`} style={{ textAlign: 'right' }}>
+              <Link href={`/projects/${next.frontmatter.slug}`} className="proj-nav-next">
                 <div className="meta" style={{ marginBottom: 8 }}>NEXT →</div>
                 <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 32 }}>{next.frontmatter.title}</h4>
                 <p style={{ fontSize: 13, color: 'var(--ink-2)', marginTop: 6 }}>{next.frontmatter.summary}</p>

@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Not found',
+  description: 'This page is still on the print bed.',
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (
@@ -6,10 +13,10 @@ export default function NotFound() {
       <div className="meta" style={{ letterSpacing: '.14em', marginBottom: 28 }}>
         HTTP/404 &nbsp;·&nbsp; NOT FOUND
       </div>
-      <h1 className="display" style={{ fontSize: 280, marginBottom: 28, letterSpacing: '-0.04em' }}>
+      <h1 className="display" style={{ fontSize: 'clamp(120px, 32vw, 280px)', marginBottom: 28, letterSpacing: '-0.04em' }}>
         4<i>0</i>4
       </h1>
-      <p style={{ fontFamily: 'var(--font-display)', fontSize: 44, lineHeight: 1.2, maxWidth: '22ch', margin: '0 auto 36px' }}>
+      <p className="display-m" style={{ maxWidth: '22ch', margin: '0 auto 36px' }}>
         This page is still <i>on the print bed.</i>
       </p>
       <p style={{ fontSize: 15, color: 'var(--ink-2)', maxWidth: '52ch', margin: '0 auto 40px' }}>

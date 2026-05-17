@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { z } from 'zod';
+import { z, type ZodSchema } from 'zod';
+
 export const projectFrontmatterSchema = z.object({
   title: z.string(),
   slug: z.string(),
@@ -25,6 +26,18 @@ export type ProjectFrontmatter = z.infer<typeof projectFrontmatterSchema>;
 export type Project = { frontmatter: ProjectFrontmatter; content: string };
 
 const PROJECTS_DIR = path.join(process.cwd(), 'content', 'projects');
+const NOW_DIR = path.join(process.cwd(), 'content', 'now');
+
+function parseOrThrow<T>(schema: ZodSchema<T>, data: unknown, file: string): T {
+  const result = schema.safeParse(data);
+  if (!result.success) {
+    const issues = result.error.issues
+      .map((i) => `  - ${i.path.join('.') || '(root)'}: ${i.message}`)
+      .join('\n');
+    throw new Error(`Invalid front-matter in ${file}:\n${issues}`);
+  }
+  return result.data;
+}
 
 async function readProject(slug: string): Promise<Project | null> {
   const file = path.join(PROJECTS_DIR, slug, 'index.mdx');
@@ -35,7 +48,7 @@ async function readProject(slug: string): Promise<Project | null> {
     return null;
   }
   const parsed = matter(raw);
-  const fm = projectFrontmatterSchema.parse({ ...parsed.data, slug });
+  const fm = parseOrThrow(projectFrontmatterSchema, { ...parsed.data, slug }, file);
   return { frontmatter: fm, content: parsed.content };
 }
 
@@ -56,4 +69,78 @@ export async function getFeaturedProjects(limit = 3): Promise<Project[]> {
   const all = await getAllProjects();
   const featured = all.filter((p) => p.frontmatter.featured);
   return (featured.length ? featured : all).slice(0, limit);
+}
+
+export async function getProjectNeighbors(
+  slug: string,
+): Promise<{ prev: Project | null; next: Project | null }> {
+  const all = await getAllProjects();
+  const idx = all.findIndex((p) => p.frontmatter.slug === slug);
+  if (idx === -1) return { prev: null, next: null };
+  return {
+    prev: idx > 0 ? all[idx - 1] : null,
+    next: idx < all.length - 1 ? all[idx + 1] : null,
+  };
+}
+
+const nowItemSchema = z.object({
+  kind: z.string(),
+  title: z.string(),
+  body: z.string(),
+  meta: z.string().optional(),
+});
+
+const nowReadingSchema = z.object({
+  kind: z.string(),
+  title: z.string(),
+  note: z.string(),
+});
+
+export const nowFrontmatterSchema = z.object({
+  date: z.coerce.date(),
+  updatedLabel: z.string(),
+  timezone: z.string().default('America/Chicago'),
+  working: z.array(nowItemSchema).default([]),
+  reading: z.array(nowReadingSchema).default([]),
+  notWorking: z.string(),
+});
+
+export type NowFrontmatter = z.infer<typeof nowFrontmatterSchema>;
+export type NowEntry = { slug: string; frontmatter: NowFrontmatter; content: string };
+
+async function readNow(filename: string): Promise<NowEntry | null> {
+  const file = path.join(NOW_DIR, filename);
+  let raw: string;
+  try {
+    raw = await fs.readFile(file, 'utf8');
+  } catch {
+    return null;
+  }
+  const parsed = matter(raw);
+  const fm = parseOrThrow(nowFrontmatterSchema, parsed.data, file);
+  return { slug: filename.replace(/\.mdx?$/, ''), frontmatter: fm, content: parsed.content };
+}
+
+async function getAllNow(): Promise<NowEntry[]> {
+  let files: string[];
+  try {
+    files = await fs.readdir(NOW_DIR);
+  } catch {
+    return [];
+  }
+  const md = files.filter((f) => /\.mdx?$/.test(f));
+  const entries = await Promise.all(md.map((f) => readNow(f)));
+  return entries
+    .filter((e): e is NowEntry => e !== null)
+    .sort((a, b) => b.frontmatter.date.getTime() - a.frontmatter.date.getTime());
+}
+
+export async function getLatestNow(): Promise<NowEntry | null> {
+  const all = await getAllNow();
+  return all[0] ?? null;
+}
+
+export async function getNowArchive(): Promise<NowEntry[]> {
+  const all = await getAllNow();
+  return all.slice(1);
 }
