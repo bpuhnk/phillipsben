@@ -5,7 +5,7 @@ backend:
   auth_type: pkce
   # Replace with the Client ID from your registered GitHub OAuth App
   # (Settings → Developer settings → OAuth Apps; callback: https://phillipsben.com/admin/)
-  app_id: REPLACE_WITH_GITHUB_OAUTH_CLIENT_ID
+  app_id: Ov23lipGhivEsARgbUfN
 
 # Saves go straight to `main`. Enable editorial_workflow later if drafts are wanted.
 publish_mode: simple
