@@ -2,10 +2,9 @@ backend:
   name: github
   repo: bPuhnk/phillipsben
   branch: main
-  auth_type: pkce
-  # Replace with the Client ID from your registered GitHub OAuth App
-  # (Settings → Developer settings → OAuth Apps; callback: https://phillipsben.com/admin/)
-  app_id: Ov23lipGhivEsARgbUfN
+  auth_type: implicit
+  base_url: https://sveltia-cms-auth.ben-phillips1.workers.dev
+  auth_endpoint: auth
 
 # Saves go straight to `main`. Enable editorial_workflow later if drafts are wanted.
 publish_mode: simple
