@@ -1,19 +1,16 @@
 # syntax=docker/dockerfile:1.7
 
-# ─── deps stage ────────────────────────────────────────────────────────
-FROM node:24-alpine AS deps
+# ─── builder stage (Playwright image for PDF generation) ───────────────
+# NOTE: deps and builder must share the same base (glibc) so native .node
+# binaries (lightningcss, etc.) match the runtime libc. Do NOT use alpine
+# for the deps stage — musl binaries break on the noble/glibc builder.
+FROM mcr.microsoft.com/playwright:v1.60.0-noble AS builder
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci --no-audit --no-fund
-
-# ─── builder stage (Playwright image for PDF generation) ───────────────
-FROM mcr.microsoft.com/playwright:v1.60.0-noble AS builder
-WORKDIR /app
-# Node 24 should already be on the playwright noble image; verify if you bump.
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN npm run build -- --webpack
 
 # ─── runner stage ──────────────────────────────────────────────────────
 FROM node:24-alpine AS runner
