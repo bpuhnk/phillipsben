@@ -3,14 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { navItems } from '@/lib/nav-items';
+import type { NavData } from '@/lib/site-schemas';
 
-export default function Nav() {
+export default function Nav({ data }: { data: NavData }) {
   const pathname = usePathname();
   return (
     <nav className="nav no-print">
       <Link href="/" className="nav-brand">
         <span className="dot" />
-        ben phillips<i>&nbsp;/ engineer</i>
+        {data.brand}<i>{data.brandSuffix}</i>
       </Link>
       <div className="nav-links">
         {navItems.map((it) => {
@@ -23,8 +24,8 @@ export default function Nav() {
           );
         })}
       </div>
-      <a href="/resume.pdf" className="nav-cta" download>
-        Resume
+      <a href={data.ctaHref} className="nav-cta" download>
+        {data.ctaLabel}
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.4">
           <path d="M2 8L8 2M8 2H4M8 2V6" />
         </svg>

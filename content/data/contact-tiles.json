@@ -1,0 +1,26 @@
+[
+  {
+    "kicker": "① &nbsp; EMAIL",
+    "headline": "contact@<br />phillipsben.<i>com</i>",
+    "body": "I read everything. I usually reply inside two days, faster if it's interesting.",
+    "href": "mailto:contact@phillipsben.com",
+    "variant": "light",
+    "download": false
+  },
+  {
+    "kicker": "② &nbsp; CALENDAR",
+    "headline": "Book a <i>30-min</i><br />chat →",
+    "body": "Tuesdays & Thursdays, US Central. No agenda needed. Camera optional.",
+    "href": "#book",
+    "variant": "light",
+    "download": false
+  },
+  {
+    "kicker": "③ &nbsp; RÉSUMÉ",
+    "headline": "Download <i>PDF</i><br />résumé →",
+    "body": "One page. Two if you count the cover. Updated May 2026.",
+    "href": "/resume.pdf",
+    "variant": "dark",
+    "download": true
+  }
+]

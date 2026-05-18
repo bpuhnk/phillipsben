@@ -5,6 +5,8 @@ import Nav from '@/components/nav';
 import MNav from '@/components/m-nav';
 import Footer from '@/components/footer';
 import MFoot from '@/components/m-foot';
+import { getSiteData } from '@/lib/site-content';
+import { navSchema } from '@/lib/site-schemas';
 import './globals.css';
 
 const instrumentSerif = Instrument_Serif({
@@ -56,13 +58,14 @@ export const viewport: Viewport = {
   themeColor: '#FAF8F4',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+  const navData = await getSiteData('nav', navSchema);
   return (
     <html lang="en" className={`${instrumentSerif.variable} ${geist.variable} ${geistMono.variable}`}>
       <body>
         <a href="#main" className="skip-link">Skip to content</a>
-        <Nav />
+        <Nav data={navData} />
         <MNav />
         <main id="main">{children}</main>
         <Footer />

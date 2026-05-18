@@ -1,0 +1,8 @@
+[
+  { "t": "Desktop applications", "d": "WPF, WinForms, Electron. Single-window apps that have to stay running through a shift change.", "tags": ["WPF", "XAML", "Electron", "WinForms", "MAUI"] },
+  { "t": "Services & integrations", "d": "C#, ASP.NET, message buses, SQL Server, talking to PLCs and gauges that pre-date my career.", "tags": ["ASP.NET", "gRPC", "RabbitMQ", "SQL Server", "OPC"] },
+  { "t": "Agentic & local AI", "d": "Designing systems where the agent is part of the architecture, not a chatbot bolted on the side.", "tags": ["Hermes-Agent", "Ollama", "ComfyUI", "KoboldCPP", "P100"] },
+  { "t": "Architecture & seams", "d": "Boring interfaces between teams, ownership boundaries, who owns what when something breaks.", "tags": ["DDD", "Event sourcing", "CQRS", "Modular monolith"] },
+  { "t": "Embedded & smart home", "d": "ESP32, Arduino, Raspberry Pi. Tying physical things to dashboards and back again.", "tags": ["ESP32", "Arduino", "RPi", "MQTT", "ESPHome"] },
+  { "t": "Legacy whisperer", "d": "Reading VB6, Access databases, undocumented binary protocols. Replacing them without breaking the line.", "tags": ["VB6", "Access", "COM", "Legacy SQL", "Migrations"] }
+]

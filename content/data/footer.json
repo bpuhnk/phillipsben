@@ -1,0 +1,33 @@
+{
+  "brand": "ben phillips",
+  "tagline": "Engineer, tinkerer, husband, dad. Building from a small town in the Southeast.",
+  "sections": [
+    {
+      "heading": "Sections",
+      "links": [
+        { "label": "Bio", "href": "/bio" },
+        { "label": "Projects", "href": "/projects" },
+        { "label": "Now", "href": "/now" },
+        { "label": "Hobbies", "href": "/hobbies" },
+        { "label": "Uses", "href": "/uses" }
+      ]
+    },
+    {
+      "heading": "Around the web",
+      "links": [
+        { "label": "GitHub ↗", "href": "https://github.com/bPuhnk", "external": true },
+        { "label": "LinkedIn ↗", "href": "https://www.linkedin.com/in/ben-phillips-332a4826/", "external": true }
+      ]
+    },
+    {
+      "heading": "Working",
+      "links": [
+        { "label": "contact@phillipsben.com", "href": "mailto:contact@phillipsben.com" },
+        { "label": "Download résumé (PDF)", "href": "/resume.pdf", "download": true },
+        { "label": "Book a 30-min chat", "href": "/contact" }
+      ]
+    }
+  ],
+  "copyright": "© {year} Ben Phillips · phillipsben.com",
+  "colophon": "Colophon · Hand-built, no tracking"
+}

@@ -1,0 +1,239 @@
+backend:
+  name: github
+  repo: bPuhnk/bio
+  branch: main
+  auth_type: pkce
+  # Replace with the Client ID from your registered GitHub OAuth App
+  # (Settings → Developer settings → OAuth Apps; callback: https://<domain>/admin/)
+  app_id: REPLACE_WITH_GITHUB_OAUTH_CLIENT_ID
+
+# Saves go straight to `main`. Enable editorial_workflow later if drafts are wanted.
+publish_mode: simple
+
+media_folder: public/images
+public_folder: /images
+
+site_url: https://phillipsben.com
+display_url: https://phillipsben.com
+
+collections:
+  # ──────────────────────────────────────────────────────────────
+  # Site copy — MDX files with frontmatter
+  # ──────────────────────────────────────────────────────────────
+  - name: site
+    label: Site copy
+    files:
+      - name: home
+        label: Home page
+        file: content/site/home.mdx
+        format: frontmatter
+        extension: mdx
+        fields:
+          - { name: kicker, label: Kicker (top bar), widget: string }
+          - { name: headline, label: Hero headline (HTML allowed), widget: text }
+          - { name: tagline, label: Hero tagline, widget: text }
+          - { name: currentlyLabel, label: '"Currently" label', widget: string, default: 'CURRENTLY' }
+          - name: currently
+            label: Currently doing
+            widget: list
+            fields:
+              - { name: title, label: Title (HTML allowed), widget: string }
+              - { name: meta, label: Meta line, widget: string }
+          - { name: whatsHereTitle, label: "What's here — title", widget: string }
+          - { name: whatsHereIdx, label: "What's here — index", widget: string }
+          - { name: recentTitle, label: 'Recent work — title', widget: string }
+          - { name: recentMoreLabel, label: 'Recent work — "more" label', widget: string }
+          - { name: philosophyKicker, label: 'Philosophy kicker', widget: string }
+          - { name: philosophyReadMoreLabel, label: 'Philosophy "read more" label', widget: string }
+          - { name: philosophyReadMoreHref, label: 'Philosophy "read more" href', widget: string }
+          - { name: philosophyQuote, label: 'Philosophy quote (HTML allowed)', widget: text }
+          - { name: body, label: 'Body (optional MDX)', widget: markdown, required: false }
+
+      - name: bio
+        label: Bio page
+        file: content/site/bio.mdx
+        format: frontmatter
+        extension: mdx
+        fields:
+          - { name: kicker, label: Kicker, widget: string }
+          - { name: headline, label: Headline (HTML allowed), widget: string }
+          - { name: lede, label: Lede paragraph, widget: text }
+          - { name: quickFactsLabel, label: 'Quick facts label', widget: string, default: 'QUICK FACTS' }
+          - name: quickFacts
+            label: Quick facts
+            widget: list
+            field: { name: item, label: Fact, widget: string }
+          - name: heroImage
+            label: Hero image
+            widget: object
+            fields:
+              - { name: src, label: Image path, widget: string }
+              - { name: alt, label: Alt text, widget: string }
+              - { name: caption, label: Caption, widget: string }
+              - { name: width, label: Width, widget: number, default: 440 }
+              - { name: height, label: Height, widget: number, default: 880 }
+          - name: stats
+            label: Stats
+            widget: list
+            fields:
+              - { name: num, label: Number (HTML allowed), widget: string }
+              - { name: lbl, label: Label, widget: string }
+          - { name: timelineTitle, label: 'Timeline title', widget: string }
+          - { name: timelineIdx, label: 'Timeline index', widget: string }
+          - { name: skillsTitle, label: 'Skills title', widget: string }
+          - { name: skillsIdx, label: 'Skills index', widget: string }
+          - { name: familyKicker, label: 'Family kicker', widget: string }
+          - { name: familyHead, label: 'Family heading (HTML allowed)', widget: string }
+          - { name: familyCopy, label: 'Family copy', widget: text }
+          - { name: ctaDownloadLabel, label: 'CTA — download label', widget: string }
+          - { name: ctaNowLabel, label: 'CTA — now label', widget: string }
+          - { name: body, label: 'Body (optional MDX)', widget: markdown, required: false }
+
+      - name: contact
+        label: Contact page
+        file: content/site/contact.mdx
+        format: frontmatter
+        extension: mdx
+        fields:
+          - { name: kicker, label: Kicker (HTML allowed), widget: string }
+          - { name: headline, label: Headline (HTML allowed), widget: string }
+          - { name: lede, label: Lede paragraph, widget: text }
+          - { name: bookSectionTitle, label: 'Booking section title', widget: string }
+          - { name: bookSectionIdx, label: 'Booking section index', widget: string }
+          - { name: calLink, label: 'Cal.com link', widget: string }
+          - { name: calNamespace, label: 'Cal.com namespace', widget: string }
+          - { name: elsewhereTitle, label: 'Elsewhere section title', widget: string }
+          - { name: elsewhereIdx, label: 'Elsewhere section index', widget: string }
+          - { name: honestKicker, label: 'Honest notes kicker', widget: string }
+          - name: honestNotes
+            label: Honest notes
+            widget: list
+            field: { name: note, label: Note (HTML allowed), widget: text }
+          - { name: body, label: 'Body (optional MDX)', widget: markdown, required: false }
+
+  # ──────────────────────────────────────────────────────────────
+  # Structured data — JSON files
+  # ──────────────────────────────────────────────────────────────
+  - name: data
+    label: Site data
+    files:
+      - name: home_tech_strip
+        label: 'Home — tech strip chips'
+        file: content/data/home-tech-strip.json
+        format: json
+        fields:
+          - name: items
+            label: Chips
+            widget: list
+            field: { name: chip, label: Chip text, widget: string }
+
+      - name: home_cards
+        label: 'Home — "What''s on the site" cards'
+        file: content/data/home-cards.json
+        format: json
+        fields:
+          - name: items
+            label: Cards
+            widget: list
+            fields:
+              - { name: n, label: 'Kicker (e.g. /bio)', widget: string }
+              - { name: t, label: Title, widget: string }
+              - { name: d, label: Description, widget: text }
+              - { name: href, label: Link, widget: string }
+
+      - name: bio_career
+        label: 'Bio — career timeline'
+        file: content/data/bio-career.json
+        format: json
+        fields:
+          - name: items
+            label: Rows
+            widget: list
+            fields:
+              - { name: y, label: Year/range, widget: string }
+              - { name: h, label: Heading, widget: string }
+              - { name: s, label: Subtitle, widget: string }
+              - { name: p, label: Paragraph, widget: text }
+
+      - name: bio_skills
+        label: 'Bio — skills'
+        file: content/data/bio-skills.json
+        format: json
+        fields:
+          - name: items
+            label: Skills
+            widget: list
+            fields:
+              - { name: t, label: Title, widget: string }
+              - { name: d, label: Description, widget: text }
+              - name: tags
+                label: Tags
+                widget: list
+                field: { name: tag, label: Tag, widget: string }
+
+      - name: contact_tiles
+        label: 'Contact — primary tiles'
+        file: content/data/contact-tiles.json
+        format: json
+        fields:
+          - name: items
+            label: Tiles
+            widget: list
+            fields:
+              - { name: kicker, label: 'Kicker (HTML allowed)', widget: string }
+              - { name: headline, label: 'Headline (HTML allowed)', widget: text }
+              - { name: body, label: Body, widget: text }
+              - { name: href, label: Link, widget: string }
+              - name: variant
+                label: Variant
+                widget: select
+                options: [light, dark]
+                default: light
+              - { name: download, label: Force download?, widget: boolean, default: false }
+
+      - name: contact_elsewhere
+        label: 'Contact — elsewhere links'
+        file: content/data/contact-elsewhere.json
+        format: json
+        fields:
+          - name: items
+            label: Links
+            widget: list
+            fields:
+              - { name: kicker, label: Kicker, widget: string }
+              - { name: value, label: Display value, widget: string }
+              - { name: desc, label: Description, widget: text }
+              - { name: href, label: URL, widget: string }
+
+      - name: footer
+        label: Footer
+        file: content/data/footer.json
+        format: json
+        fields:
+          - { name: brand, label: Brand, widget: string }
+          - { name: tagline, label: Tagline, widget: text }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: links
+                label: Links
+                widget: list
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: href, label: Href, widget: string }
+                  - { name: external, label: External?, widget: boolean, default: false }
+                  - { name: download, label: Download?, widget: boolean, default: false }
+          - { name: copyright, label: 'Copyright (use {year} for current year)', widget: string }
+          - { name: colophon, label: Colophon, widget: string }
+
+      - name: nav
+        label: Top nav
+        file: content/data/nav.json
+        format: json
+        fields:
+          - { name: brand, label: Brand, widget: string }
+          - { name: brandSuffix, label: 'Brand suffix (italicized)', widget: string }
+          - { name: ctaLabel, label: 'CTA label', widget: string }
+          - { name: ctaHref, label: 'CTA href', widget: string }

@@ -1,0 +1,8 @@
+[
+  { "n": "/bio", "t": "Biography", "d": "The twenty-year version. Industries, roles, tools, and a short version for the recruiter in a hurry.", "href": "/bio" },
+  { "n": "/projects", "t": "Projects", "d": "Completed and active work. Each entry has a write-up, the constraints, and what I learned.", "href": "/projects" },
+  { "n": "/now", "t": "Now", "d": "What I'm focused on this month. Updated as it changes. A snapshot, not a feed.", "href": "/now" },
+  { "n": "/hobbies", "t": "Hobbies", "d": "3D printers I've modded, smart-home tinkering, a local-AI homelab, and family.", "href": "/hobbies" },
+  { "n": "/uses", "t": "Uses", "d": "Hardware, software, models, filaments. The boring details that take years to settle on.", "href": "/uses" },
+  { "n": "/contact", "t": "Contact", "d": "Email, calendar, résumé. The fastest way to reach me. No forms with twelve fields.", "href": "/contact" }
+]
