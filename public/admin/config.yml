@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bPuhnk/phillipsben
   branch: main
-  auth_type: implicit
+  auth_type: pkce
   base_url: https://sveltia-cms-auth.ben-phillips1.workers.dev
   auth_endpoint: auth
 
