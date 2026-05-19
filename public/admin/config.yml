@@ -86,6 +86,16 @@ collections:
           - { name: ctaNowLabel, label: 'CTA — now label', widget: string }
           - { name: body, label: 'Body (optional MDX)', widget: markdown, required: false }
 
+      - name: dashboard
+        label: Dashboard page (hero copy)
+        file: content/site/dashboard.mdx
+        format: frontmatter
+        extension: mdx
+        fields:
+          - { name: kicker, label: Kicker (HTML allowed), widget: string }
+          - { name: headline, label: Hero headline (HTML allowed), widget: text }
+          - { name: lede, label: Lede paragraph, widget: text }
+
       - name: contact
         label: Contact page
         file: content/site/contact.mdx
@@ -224,6 +234,22 @@ collections:
                   - { name: download, label: Download?, widget: boolean, default: false }
           - { name: copyright, label: 'Copyright (use {year} for current year)', widget: string }
           - { name: colophon, label: Colophon, widget: string }
+
+      - name: dashboard_currently
+        label: 'Dashboard — currently / reading (manual)'
+        file: content/data/dashboard-currently.json
+        format: json
+        fields:
+          - { name: updatedAt, label: 'Updated at (ISO 8601 UTC, e.g. 2026-05-18T06:00:00Z)', widget: string }
+          - { name: focus, label: 'Focus paragraph (overwritten daily by Hermes)', widget: text }
+          - name: reading
+            label: 'Currently reading'
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: author, label: Author, widget: string }
+              - { name: url, label: URL (optional), widget: string, required: false }
+              - { name: coverUrl, label: Cover image URL (optional), widget: string, required: false }
 
       - name: nav
         label: Top nav

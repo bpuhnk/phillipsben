@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-05-18T06:00:00Z",
+  "nowPlaying": null,
+  "recent": [
+    {
+      "track": "Reckoner",
+      "artist": "Radiohead",
+      "albumArt": null,
+      "url": "https://open.spotify.com/track/0",
+      "playedAt": "2026-05-18T05:42:00Z"
+    },
+    {
+      "track": "Black Star",
+      "artist": "Radiohead",
+      "albumArt": null,
+      "url": "https://open.spotify.com/track/1",
+      "playedAt": "2026-05-18T05:38:00Z"
+    },
+    {
+      "track": "Teardrop",
+      "artist": "Massive Attack",
+      "albumArt": null,
+      "url": "https://open.spotify.com/track/2",
+      "playedAt": "2026-05-18T05:33:00Z"
+    },
+    {
+      "track": "Strobe",
+      "artist": "deadmau5",
+      "albumArt": null,
+      "url": "https://open.spotify.com/track/3",
+      "playedAt": "2026-05-18T05:23:00Z"
+    },
+    {
+      "track": "Avril 14th",
+      "artist": "Aphex Twin",
+      "albumArt": null,
+      "url": "https://open.spotify.com/track/4",
+      "playedAt": "2026-05-18T05:21:00Z"
+    }
+  ]
+}

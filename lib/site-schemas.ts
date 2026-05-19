@@ -142,6 +142,95 @@ export const navSchema = z.object({
   ctaHref: z.string(),
 });
 
+// ── Dashboard ────────────────────────────────────────────────
+// Five JSON payloads, all Hermes-owned except dashboard-currently
+// (manual via /admin).
+
+export const dashboardFrontmatterSchema = z.object({
+  kicker: z.string(),
+  headline: z.string(),
+  lede: z.string(),
+});
+
+const isoDateTime = z.string().datetime({ offset: true });
+
+export const dashboardClaudeSchema = z.object({
+  updatedAt: isoDateTime,
+  summary: z.string(),
+  highlights: z
+    .array(z.object({ repo: z.string(), oneLiner: z.string() }))
+    .default([]),
+});
+
+export const dashboardGithubSchema = z.object({
+  updatedAt: isoDateTime,
+  weekStart: z.string(),
+  totals: z.object({
+    commits: z.number().int().nonnegative(),
+    prs: z.number().int().nonnegative(),
+    repos: z.number().int().nonnegative(),
+    activeDays: z.number().int().nonnegative(),
+  }),
+  repos: z
+    .array(
+      z.object({
+        name: z.string(),
+        url: z.string().url(),
+        commits: z.number().int().nonnegative(),
+        summary: z.string(),
+      }),
+    )
+    .default([]),
+});
+
+export const dashboardNewsSchema = z.object({
+  updatedAt: isoDateTime,
+  items: z
+    .array(
+      z.object({
+        title: z.string(),
+        url: z.string().url(),
+        source: z.string(),
+        points: z.number().int().nonnegative().default(0),
+        whyItMatters: z.string(),
+      }),
+    )
+    .max(5),
+});
+
+export const dashboardCurrentlySchema = z.object({
+  updatedAt: isoDateTime,
+  focus: z.string(),
+  reading: z.object({
+    title: z.string(),
+    author: z.string(),
+    url: z.string().url().nullable().default(null),
+    coverUrl: z.string().url().nullable().default(null),
+  }),
+});
+
+const spotifyTrackBase = {
+  track: z.string(),
+  artist: z.string(),
+  albumArt: z.string().url().nullable().default(null),
+  url: z.string().url(),
+};
+
+export const dashboardSpotifySchema = z.object({
+  updatedAt: isoDateTime,
+  nowPlaying: z.object(spotifyTrackBase).nullable().default(null),
+  recent: z
+    .array(z.object({ ...spotifyTrackBase, playedAt: isoDateTime }))
+    .default([]),
+});
+
+export type DashboardFrontmatter = z.infer<typeof dashboardFrontmatterSchema>;
+export type DashboardClaude = z.infer<typeof dashboardClaudeSchema>;
+export type DashboardGithub = z.infer<typeof dashboardGithubSchema>;
+export type DashboardNews = z.infer<typeof dashboardNewsSchema>;
+export type DashboardCurrently = z.infer<typeof dashboardCurrentlySchema>;
+export type DashboardSpotify = z.infer<typeof dashboardSpotifySchema>;
+
 export type HomeFrontmatter = z.infer<typeof homeFrontmatterSchema>;
 export type BioFrontmatter = z.infer<typeof bioFrontmatterSchema>;
 export type ContactFrontmatter = z.infer<typeof contactFrontmatterSchema>;

@@ -1,0 +1,40 @@
+{
+  "updatedAt": "2026-05-18T06:00:00Z",
+  "items": [
+    {
+      "title": "Show HN: We replaced our whole RAG pipeline with a 200-line script",
+      "url": "https://news.ycombinator.com/item?id=00000001",
+      "source": "Hacker News",
+      "points": 1240,
+      "whyItMatters": "Counter-evidence to the framework-pile-on trend in retrieval — worth reading for anyone building search."
+    },
+    {
+      "title": "Anthropic releases Claude Opus 4.7 with extended thinking by default",
+      "url": "https://news.ycombinator.com/item?id=00000002",
+      "source": "Hacker News",
+      "points": 980,
+      "whyItMatters": "Changes the cost calculus for agent loops; cached reads no longer cheap if extended thinking is on."
+    },
+    {
+      "title": "On-device LLMs are eating the long tail of inference",
+      "url": "https://news.ycombinator.com/item?id=00000003",
+      "source": "Hacker News",
+      "points": 720,
+      "whyItMatters": "Relevant for any product where latency or privacy beat raw model quality."
+    },
+    {
+      "title": "A practical guide to evaluating coding agents",
+      "url": "https://news.ycombinator.com/item?id=00000004",
+      "source": "Hacker News",
+      "points": 615,
+      "whyItMatters": "Best evals overview I've seen this year — uses real PR-merge rate, not synthetic benchmarks."
+    },
+    {
+      "title": "Why our team stopped using vector databases",
+      "url": "https://news.ycombinator.com/item?id=00000005",
+      "source": "Hacker News",
+      "points": 540,
+      "whyItMatters": "Spicy take, but the BM25-as-baseline argument is hard to refute for small corpora."
+    }
+  ]
+}

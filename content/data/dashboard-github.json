@@ -1,0 +1,30 @@
+{
+  "updatedAt": "2026-05-18T06:00:00Z",
+  "weekStart": "2026-05-11",
+  "totals": {
+    "commits": 23,
+    "prs": 4,
+    "repos": 3,
+    "activeDays": 6
+  },
+  "repos": [
+    {
+      "name": "bpuhnk/phillipsben",
+      "url": "https://github.com/bpuhnk/phillipsben",
+      "commits": 14,
+      "summary": "Mobile-layout-v2 phases 1-8 landed; site copy moved into git-tracked content with the /admin CMS; began dashboard scaffold."
+    },
+    {
+      "name": "bpuhnk/hermes-agent",
+      "url": "https://github.com/bpuhnk/hermes-agent",
+      "commits": 7,
+      "summary": "Added cron module + secret store; first pass on the GitHub feed for dashboard.phillipsben.com."
+    },
+    {
+      "name": "bpuhnk/klipper-config",
+      "url": "https://github.com/bpuhnk/klipper-config",
+      "commits": 2,
+      "summary": "Tuned input shaper, retuned pressure advance for the BLV AM8."
+    }
+  ]
+}

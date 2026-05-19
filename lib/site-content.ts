@@ -6,9 +6,21 @@ import {
   homeFrontmatterSchema,
   bioFrontmatterSchema,
   contactFrontmatterSchema,
+  dashboardFrontmatterSchema,
+  dashboardClaudeSchema,
+  dashboardGithubSchema,
+  dashboardNewsSchema,
+  dashboardCurrentlySchema,
+  dashboardSpotifySchema,
   type HomeFrontmatter,
   type BioFrontmatter,
   type ContactFrontmatter,
+  type DashboardFrontmatter,
+  type DashboardClaude,
+  type DashboardGithub,
+  type DashboardNews,
+  type DashboardCurrently,
+  type DashboardSpotify,
 } from './site-schemas';
 
 const SITE_DIR = path.join(process.cwd(), 'content', 'site');
@@ -29,12 +41,14 @@ type CopyMap = {
   home: HomeFrontmatter;
   bio: BioFrontmatter;
   contact: ContactFrontmatter;
+  dashboard: DashboardFrontmatter;
 };
 
 const copySchemas = {
   home: homeFrontmatterSchema,
   bio: bioFrontmatterSchema,
   contact: contactFrontmatterSchema,
+  dashboard: dashboardFrontmatterSchema,
 } as const;
 
 export async function getSiteCopy<K extends keyof CopyMap>(
@@ -57,4 +71,28 @@ export async function getSiteData<T>(name: string, schema: ZodSchema<T>): Promis
     throw new Error(`Invalid JSON in ${file}: ${(err as Error).message}`);
   }
   return parseOrThrow(schema, data, file);
+}
+
+export type DashboardData = {
+  claude: DashboardClaude;
+  github: DashboardGithub;
+  news: DashboardNews;
+  currently: DashboardCurrently;
+  spotify: DashboardSpotify;
+  lastUpdated: string;
+};
+
+export async function getDashboardData(): Promise<DashboardData> {
+  const [claude, github, news, currently, spotify] = await Promise.all([
+    getSiteData('dashboard-claude', dashboardClaudeSchema),
+    getSiteData('dashboard-github', dashboardGithubSchema),
+    getSiteData('dashboard-news', dashboardNewsSchema),
+    getSiteData('dashboard-currently', dashboardCurrentlySchema),
+    getSiteData('dashboard-spotify', dashboardSpotifySchema),
+  ]);
+  const lastUpdated = [claude, github, news, currently, spotify]
+    .map((d) => d.updatedAt)
+    .sort()
+    .at(-1)!;
+  return { claude, github, news, currently, spotify, lastUpdated };
 }
