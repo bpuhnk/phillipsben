@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-19T04:44:00Z",
-  "focus": "Hermes is live doing daily dashboard refreshes — next up is Phase 3, wiring the Claude activity feed. Ongoing: mopping up mobile layout edge cases in the phillipsben site.",
+  "updatedAt": "2026-05-19T05:36:00Z",
+  "focus": "Shipping Phase 3 of the dashboard — Claude's own work summaries are now piped in daily from the pop-os memory snapshot. Also wrapped up the GPU coordination proxy on the homelab side: KoboldCPP, ComfyUI, and Hermes services now take turns on the P100 without OOM.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

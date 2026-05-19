@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-19T04:44:00Z",
+  "updatedAt": "2026-05-19T05:36:00Z",
   "items": [
     {
       "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
@@ -9,32 +9,32 @@
       "whyItMatters": "98% token reduction on code search is a real loop-cost win — worth dropping into any agent that currently greps large repos."
     },
     {
-      "title": "We stopped AI bot spam in our GitHub repo using Git's –author flag",
-      "url": "https://archestra.ai/blog/only-responsible-ai",
+      "title": "I don't think AI will make your processes go faster",
+      "url": "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster/",
       "source": "Hacker News",
-      "points": 440,
-      "whyItMatters": "Simple, already-available lever for any OSS maintainer drowning in AI-generated bot PRs — no infra required."
+      "points": 657,
+      "whyItMatters": "The constraint is usually coordination overhead, not raw compute — a useful stress-test for anyone selling AI as a throughput multiplier."
     },
     {
       "title": "Apple Silicon costs more than OpenRouter",
       "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
       "source": "Hacker News",
       "points": 335,
-      "whyItMatters": "Concrete energy/cost numbers for local vs cloud inference — the gap is narrower than most assume once idle power is factored in."
+      "whyItMatters": "Concrete energy/cost numbers for local vs cloud inference — the gap is narrower than assumed once idle power is factored in."
     },
     {
       "title": "Anthropic acquires Stainless",
       "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "source": "Hacker News",
-      "points": 393,
-      "whyItMatters": "Stainless generates typed SDK wrappers — bringing that in-house likely means tighter API versioning and faster multi-language SDK releases."
+      "points": 407,
+      "whyItMatters": "Stainless auto-generates typed SDK wrappers — in-house likely means tighter API versioning and faster multi-language SDK releases from Anthropic."
     },
     {
-      "title": "I don't think AI will make your processes go faster",
-      "url": "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster/",
+      "title": "Linux security mailing list 'almost unmanageable'",
+      "url": "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633",
       "source": "Hacker News",
-      "points": 657,
-      "whyItMatters": "The constraint is usually coordination overhead, not raw compute — solid stress-test for anyone selling AI as a throughput multiplier."
+      "points": 202,
+      "whyItMatters": "AI-generated CVE submissions flooding kernel security triagers — a preview of the signal-to-noise problem every OSS project will face."
     }
   ]
 }

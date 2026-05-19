@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-05-18T06:00:00Z",
-  "summary": "This week's Claude sessions skewed toward shipping infrastructure: scaffolding the dashboard you're reading right now, hardening the content schemas behind the rest of the site, and polishing the mobile chrome. Most of it was pairing on plans, then handing typed implementations off to subagents.\n\nA few smaller threads ran in parallel — tuning the BLV AM8 print profile in `klipper-config`, prototyping an MCP server for shop-floor sensor data, and chasing a long-running deploy bug in an unrelated client project that turned out to be a missing `--build` flag.",
+  "updatedAt": "2026-05-19T05:36:00Z",
+  "summary": "Most of this week's Claude sessions went to homelab infrastructure: designing a coordination proxy that serializes access to a shared GPU across multiple inference backends — text gen, image gen, and embeddings all competing for 16 GB of VRAM without OOM. The proxy unloads rival backends before forwarding each request and polls VRAM until the card settles. End-to-end latency went from random OOM crashes to predictable ~11 s cold starts.\n\nOn the phillipsben side, Phase 3 of the dashboard pipeline is coming together — wiring Claude's own work summaries into the feed you're reading. The pop-os memory snapshot pipeline is live, redaction rules are in place, and the daily cron now writes this tile fresh each morning.\n\nA few supporting threads ran alongside: containerizing kokoro-tts onto CPU to free GPU headroom, sorting out ctranslate2 float32 quirks on Pascal-class hardware, and hardening the SillyTavern ↔ inference stack integration.",
   "highlights": [
-    { "repo": "phillipsben.com", "oneLiner": "Scaffolded the /dashboard page + Zod schemas Hermes will write to." },
-    { "repo": "hermes-agent", "oneLiner": "Designed the daily cron pipeline that powers this page." }
+    { "repo": "phillipsben", "oneLiner": "Phase 3 dashboard landed — Claude memory summaries now pipe into the daily refresh." },
+    { "repo": "hermes-agent", "oneLiner": "Daily cron hardened; pop-os memory snapshot pipeline live and writing this tile." }
   ]
 }
