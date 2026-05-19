@@ -1,7 +1,7 @@
 # Hermes runbook — daily dashboard refresh
 
 **This is your operational source of truth.** Re-read it every run; Ben
-edits it here in the bio repo rather than touching your cron config.
+edits it here in the phillipsben repo rather than touching your cron config.
 
 You are an instance of Claude Code running on host01. Cron fires you at
 06:00 daily with a one-line prompt: *"Refresh the phillipsben.com
@@ -11,8 +11,9 @@ dashboard. Follow `plans/dashboard-plan/HERMES.md` in the bio repo."*
 
 Hermes's environment must have:
 
-- `git` configured with a deploy key that can push to `bPuhnk/phillipsben:main`,
-  scoped (ideally) to `content/data/dashboard-*.json` only.
+- Deploy key with write access to `bpuhnk/phillipsben` installed at
+  `~/.ssh/id_ed25519_bio`, with SSH alias `github-phillipsben` configured
+  in `~/.ssh/config` (already set up on host01).
 - `node` ≥ 20 (for the validator).
 - `python3` ≥ 3.10 (for the fetchers).
 - Env vars: `GITHUB_TOKEN` (read:user + public_repo), `GITHUB_LOGIN=bPuhnk`.
@@ -22,8 +23,8 @@ Hermes's environment must have:
 ### 1. Clone or pull bio
 
 ```sh
-cd /var/lib/hermes/work
-[ -d phillipsben ] || git clone git@github.com:bPuhnk/phillipsben.git
+mkdir -p ~/work && cd ~/work
+[ -d phillipsben ] || git clone git@github-phillipsben:bpuhnk/phillipsben.git
 cd phillipsben && git fetch && git checkout main && git reset --hard origin/main
 npm install --no-audit --no-fund   # only if package-lock changed
 ```
