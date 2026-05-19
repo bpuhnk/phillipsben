@@ -24,7 +24,7 @@ from datetime import datetime, timedelta, timezone
 GRAPHQL_URL = "https://api.github.com/graphql"
 
 QUERY = """
-query($login: String!, $from: DateTime!, $to: DateTime!) {
+query($login: String!, $from: GitTimestamp!, $to: GitTimestamp!) {
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
       totalCommitContributions
