@@ -24,7 +24,11 @@ from datetime import datetime, timedelta, timezone
 GRAPHQL_URL = "https://api.github.com/graphql"
 
 QUERY = """
-query($login: String!, $from: GitTimestamp!, $to: GitTimestamp!) {
+query(
+  $login: String!,
+  $from: DateTime!, $to: DateTime!,
+  $gitFrom: GitTimestamp!, $gitTo: GitTimestamp!
+) {
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
       totalCommitContributions
@@ -41,7 +45,7 @@ query($login: String!, $from: GitTimestamp!, $to: GitTimestamp!) {
           defaultBranchRef {
             target {
               ... on Commit {
-                history(first: 20, since: $from, until: $to) {
+                history(first: 20, since: $gitFrom, until: $gitTo) {
                   nodes { messageHeadline committedDate }
                 }
               }
@@ -90,10 +94,16 @@ def main() -> int:
     week_ago = now - timedelta(days=7)
     iso = lambda dt: dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    timestamp = iso(now)
+    timestamp_week_ago = iso(week_ago)
     data = graphql(
         token,
         QUERY,
-        {"login": login, "from": iso(week_ago), "to": iso(now)},
+        {
+            "login": login,
+            "from": timestamp_week_ago, "to": timestamp,
+            "gitFrom": timestamp_week_ago, "gitTo": timestamp,
+        },
     )
     cc = data["user"]["contributionsCollection"]
 
