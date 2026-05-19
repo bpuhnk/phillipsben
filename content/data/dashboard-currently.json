@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-19T05:36:00Z",
-  "focus": "Shipping Phase 3 of the dashboard — Claude's own work summaries are now piped in daily from the pop-os memory snapshot. Also wrapped up the GPU coordination proxy on the homelab side: KoboldCPP, ComfyUI, and Hermes services now take turns on the P100 without OOM.",
+  "updatedAt": "2026-05-19T05:44:00Z",
+  "focus": "Wrapping up Phase 4 Spotify plumbing and the daily Hermes refresh loop — the dashboard now pulls live GitHub, news, and Claude summaries each morning. Also chasing down a GraphQL DateTime edge case in the GitHub fetcher that slipped past yesterday's run.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

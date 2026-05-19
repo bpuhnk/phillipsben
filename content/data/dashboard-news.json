@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-19T05:36:00Z",
+  "updatedAt": "2026-05-19T05:43:50Z",
   "items": [
     {
       "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
       "url": "https://github.com/MinishLab/semble",
       "source": "Hacker News",
       "points": 429,
-      "whyItMatters": "98% token reduction on code search is a real loop-cost win — worth dropping into any agent that currently greps large repos."
-    },
-    {
-      "title": "I don't think AI will make your processes go faster",
-      "url": "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster/",
-      "source": "Hacker News",
-      "points": 657,
-      "whyItMatters": "The constraint is usually coordination overhead, not raw compute — a useful stress-test for anyone selling AI as a throughput multiplier."
+      "whyItMatters": "Semantic code search built for agent tool-call budgets — swaps grep's verbosity for embedding-based retrieval at 2% the token cost."
     },
     {
       "title": "Apple Silicon costs more than OpenRouter",
       "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
       "source": "Hacker News",
-      "points": 335,
-      "whyItMatters": "Concrete energy/cost numbers for local vs cloud inference — the gap is narrower than assumed once idle power is factored in."
+      "points": 336,
+      "whyItMatters": "Measured energy cost breakdown that flips the \"run it locally for free\" assumption — useful data point before sizing any self-hosted inference stack."
     },
     {
       "title": "Anthropic acquires Stainless",
       "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "source": "Hacker News",
-      "points": 407,
-      "whyItMatters": "Stainless auto-generates typed SDK wrappers — in-house likely means tighter API versioning and faster multi-language SDK releases from Anthropic."
+      "points": 408,
+      "whyItMatters": "Stainless auto-generates typed SDKs from OpenAPI specs; Anthropic owning the toolchain means tighter SDK quality and potentially a new standard for API client generation."
     },
     {
       "title": "Linux security mailing list 'almost unmanageable'",
       "url": "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633",
       "source": "Hacker News",
       "points": 202,
-      "whyItMatters": "AI-generated CVE submissions flooding kernel security triagers — a preview of the signal-to-noise problem every OSS project will face."
+      "whyItMatters": "Concrete signal that AI-generated bug reports at scale break human review pipelines — a real constraint to factor into any agent-driven code-analysis workflow."
+    },
+    {
+      "title": "The last six months in LLMs in five minutes",
+      "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
+      "source": "Hacker News",
+      "points": 159,
+      "whyItMatters": "Simon Willison's concise H2-2025 recap — densely linked, cuts through hype, covers evals and tooling shifts worth knowing before planning any new LLM feature."
     }
   ]
 }
