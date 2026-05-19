@@ -13,6 +13,7 @@ import {
   dashboardNewsSchema,
   dashboardCurrentlySchema,
   dashboardSpotifySchema,
+  dashboardConfigSchema,
 } from '../../lib/site-schemas';
 
 const SCHEMAS = {
@@ -21,6 +22,7 @@ const SCHEMAS = {
   'dashboard-news': dashboardNewsSchema,
   'dashboard-currently': dashboardCurrentlySchema,
   'dashboard-spotify': dashboardSpotifySchema,
+  'dashboard-config': dashboardConfigSchema,
 } as const;
 
 const file = process.argv[2];

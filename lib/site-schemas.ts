@@ -224,12 +224,20 @@ export const dashboardSpotifySchema = z.object({
     .default([]),
 });
 
+// Phase 3 — Hermes-only input file. Owned by Ben (via /admin), read by
+// Hermes during the daily redaction step. Not loaded by the dashboard page.
+export const dashboardConfigSchema = z.object({
+  claudeTopicsAllowlist: z.array(z.string()).default([]),
+  claudeRedactionRules: z.array(z.string()).default([]),
+});
+
 export type DashboardFrontmatter = z.infer<typeof dashboardFrontmatterSchema>;
 export type DashboardClaude = z.infer<typeof dashboardClaudeSchema>;
 export type DashboardGithub = z.infer<typeof dashboardGithubSchema>;
 export type DashboardNews = z.infer<typeof dashboardNewsSchema>;
 export type DashboardCurrently = z.infer<typeof dashboardCurrentlySchema>;
 export type DashboardSpotify = z.infer<typeof dashboardSpotifySchema>;
+export type DashboardConfig = z.infer<typeof dashboardConfigSchema>;
 
 export type HomeFrontmatter = z.infer<typeof homeFrontmatterSchema>;
 export type BioFrontmatter = z.infer<typeof bioFrontmatterSchema>;

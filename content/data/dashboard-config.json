@@ -1,0 +1,22 @@
+{
+  "claudeTopicsAllowlist": [
+    "phillipsben.com",
+    "phillipsben",
+    "hermes-agent",
+    "BLV AM8",
+    "klipper-config",
+    "MCP_Klipper",
+    "Claude-Orbiter",
+    "BudgetTracker"
+  ],
+  "claudeRedactionRules": [
+    "Strip absolute filesystem paths (/home, /Users, /var, /etc, /opt). Replace with generic descriptions.",
+    "Strip API keys, OAuth tokens, bearer tokens, and any long opaque identifier strings.",
+    "Strip URLs to internal services, local IPs, and hostnames other than phillipsben.com.",
+    "Strip emails, phone numbers, and physical addresses.",
+    "Strip names of clients, employers, or coworkers. Refer to them as 'a client' or 'a colleague'.",
+    "Strip names of any project NOT in claudeTopicsAllowlist. Use 'a client project', 'internal tooling', or 'an experiment' instead.",
+    "Skip anything that would be embarrassing if a recruiter, current client, or hiring manager read it.",
+    "Skip half-formed ideas, frustration vents, or work-in-progress that hasn't shipped publicly yet."
+  ]
+}

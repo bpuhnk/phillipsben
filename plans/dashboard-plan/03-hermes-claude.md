@@ -1,12 +1,33 @@
 # Phase 3 — Hermes: Claude memory summarization
 
-Generate the "Recent Claude Work" section from `~/.claude/projects/*/memory/`
-files. Higher risk because memories may contain client names, credentials,
-internal URLs, and half-formed ideas. Ships only after Phase 2 is stable.
+Generate the "Recent Claude Work" section from Claude Code memory files
+across **two hosts**: pop-os (primary, where the substantive GPU/dev work
+happens) and host01 (secondary, mostly Hermes-meta and host01↔pop-os
+interactions). Higher risk because memories may contain client names,
+credentials, internal URLs, and half-formed ideas. Ships only after Phase
+2 is stable.
 
 ## Inputs
 
-- Memory files modified in the last 7 days under `~/.claude/projects/*/memory/`.
+Two memory sources, both visible inside the Hermes container:
+
+- **pop-os (primary)** — daily rsync snapshot at
+  `~/snapshots/claude-memory/pop-os/projects/*/memory/*.md`. Refreshed by
+  a host01 cron at `05:45 UTC` that pulls `bpuhnk@pop-os:~/.claude/projects/`
+  over a dedicated SSH key (`~/.ssh/id_ed25519_popos` inside the
+  container, alias `pop-os`). If the snapshot is stale (rsync failed),
+  Hermes should still proceed using whatever the last successful snapshot
+  contains — log the staleness in the audit record.
+- **host01 (secondary)** — live read from `~/.claude/projects/*/memory/*.md`
+  (already bind-mounted into the container as part of the gateway setup;
+  this is also where Hermes's own agent memories live, so it doubles as
+  the "what did Hermes itself do" source). Use this primarily for context
+  about interactions between hosts — deploy plumbing, Hermes-side
+  decisions — not as a co-equal source. **Weight pop-os memories more
+  heavily** in the summary; host01 should be supporting detail at most.
+
+In both cases, only consider files modified in the last 7 days.
+
 - `content/data/dashboard-config.json` (new file, owned by Ben, edited
   manually) containing an allowlist:
   ```json

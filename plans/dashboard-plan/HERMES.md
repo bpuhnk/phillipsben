@@ -88,7 +88,82 @@ keep `reading` as-is, update only `updatedAt` and `focus`.
 
 #### `dashboard-claude.json`
 
-**Phase 3 only.** In Phase 2 leave this file untouched.
+Summarize Ben's recent Claude work for a public audience. Inputs come from
+**two memory sources**, both visible inside your container:
+
+| Source       | Path                                                   | Weight     |
+|--------------|--------------------------------------------------------|------------|
+| **pop-os**   | `~/snapshots/claude-memory/pop-os/projects/*/memory/*.md` | **Primary** |
+| **host01**   | `~/.claude/projects/*/memory/*.md` (live)                | Supporting |
+
+Only consider files modified in the last 7 days (`find … -mtime -7`).
+
+**pop-os is the primary source** — that's where Ben's substantive dev work
+happens. host01 memories cover Hermes-meta and host01↔pop-os plumbing;
+weight them lightly, mostly for cross-host context.
+
+If the pop-os snapshot is stale (no rsync run since yesterday), proceed
+anyway with whatever the last snapshot has — but note `(snapshot stale,
+last sync YYYY-MM-DD)` at the end of the `summary` so readers know.
+
+**Read the allowlist first:**
+
+```sh
+cat content/data/dashboard-config.json
+```
+
+It has two fields you must honor:
+
+- `claudeTopicsAllowlist` — projects you MAY name explicitly. Anything not
+  on this list must be referred to generically ("a client project,"
+  "internal tooling," "an experiment").
+- `claudeRedactionRules` — additional rules to apply. Read them carefully
+  and follow each one.
+
+**Redaction prompt (use as your system instruction when drafting):**
+
+> You are summarizing Ben's recent work with Claude for his PUBLIC
+> dashboard. Output 2-4 short paragraphs of markdown in Ben's voice
+> (conversational, dry, verbs over adjectives, no exclamation points).
+>
+> RULES:
+> 1. Only mention projects by name if they appear in `claudeTopicsAllowlist`.
+>    For everything else, use generic phrasing.
+> 2. Apply every rule in `claudeRedactionRules` verbatim.
+> 3. Weight pop-os memories heavily; host01 is supporting context only.
+> 4. Skip anything that would be embarrassing if a recruiter or current
+>    client read it.
+> 5. Also output a `highlights` array of `{repo, oneLiner}` for items
+>    where `repo` is in the allowlist. Cap at 4.
+
+**Safety net — regex sweep BEFORE writing the file.** If your draft
+`summary` matches any of these, redact and redraft:
+
+| Pattern                          | Catches                          |
+|----------------------------------|----------------------------------|
+| `[A-Za-z0-9_-]{32,}`             | likely tokens, hashes, JWTs      |
+| `sk-[A-Za-z0-9-]{20,}`           | OpenAI / Anthropic key prefixes  |
+| `gh[pousr]_[A-Za-z0-9]{20,}`     | GitHub token prefixes            |
+| `/(home\|Users\|var\|etc\|opt)/` | absolute filesystem paths        |
+| `\b\d{1,3}(\.\d{1,3}){3}\b`      | IPv4 addresses                   |
+| `[\w.+-]+@[\w-]+\.[\w.-]+`       | email addresses                  |
+
+If a match is unavoidable (e.g. discussing a public hostname like
+`phillipsben.com`), document why in the audit record.
+
+**Audit record.** Append a one-line entry to
+`~/.hermes/audit/dashboard-claude.jsonl`:
+
+```json
+{"date":"2026-05-19","sources":{"popOsFiles":12,"host01Files":3,"popOsStale":false},"summaryChars":820,"highlightsCount":3,"regexHits":[]}
+```
+
+This is local to Hermes (not committed) — gives Ben a way to spot-check
+what's been published over time.
+
+#### `dashboard-config.json`
+
+Read-only for you. Ben edits this via `/admin`. Never write to it.
 
 #### `dashboard-spotify.json`
 
@@ -99,7 +174,8 @@ keep `reading` as-is, update only `updatedAt` and `focus`.
 Before committing, every file you wrote must pass:
 
 ```sh
-for f in content/data/dashboard-{github,news,currently}.json; do
+# Phase 2 + 3 files (everything except spotify, which is Phase 4)
+for f in content/data/dashboard-{github,news,currently,claude}.json; do
   npx tsx scripts/dashboard/validate.ts "$f" || exit 1
 done
 ```
@@ -150,6 +226,8 @@ Ben's site voice across all sections:
 ## Out-of-scope (do not do these)
 
 - Touch any file outside `content/data/dashboard-{github,news,currently,claude,spotify}.json`.
+  In particular, **never write to `content/data/dashboard-config.json`** —
+  that's Ben's allowlist, edited via `/admin`.
 - Edit `lib/site-schemas.ts` even if validation feels too strict — that's
   a code change, ask Ben.
 - Open a PR or run any GitHub Action manually.
@@ -164,5 +242,8 @@ Ben's site voice across all sections:
 | Validate one file                 | `npx tsx scripts/dashboard/validate.ts <file>` |
 | Fetch GitHub activity             | `python3 scripts/dashboard/fetch_github.py`    |
 | Fetch HN candidates               | `python3 scripts/dashboard/fetch_news.py`      |
+| Read the allowlist                | `cat content/data/dashboard-config.json`       |
+| List recent pop-os memories       | `find ~/snapshots/claude-memory/pop-os/projects -name '*.md' -mtime -7` |
+| List recent host01 memories       | `find ~/.claude/projects -name '*.md' -mtime -7` |
 | See the schemas                   | `lib/site-schemas.ts` (search "Dashboard")     |
 | See the page that consumes this   | `app/dashboard/page.tsx`                       |

@@ -251,6 +251,20 @@ collections:
               - { name: url, label: URL (optional), widget: string, required: false }
               - { name: coverUrl, label: Cover image URL (optional), widget: string, required: false }
 
+      - name: dashboard_config
+        label: 'Dashboard — Hermes redaction config (allowlist)'
+        file: content/data/dashboard-config.json
+        format: json
+        fields:
+          - name: claudeTopicsAllowlist
+            label: 'Topics Hermes may name explicitly in the Claude summary'
+            widget: list
+            field: { name: topic, label: Topic, widget: string }
+          - name: claudeRedactionRules
+            label: 'Redaction rules (one per line, fed verbatim to the LLM)'
+            widget: list
+            field: { name: rule, label: Rule, widget: text }
+
       - name: nav
         label: Top nav
         file: content/data/nav.json
