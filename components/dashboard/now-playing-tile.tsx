@@ -26,19 +26,33 @@ export default function NowPlayingTile({ spotify }: { spotify: DashboardSpotify 
   return (
     <div>
       <div className="meta">{caption}</div>
-      <a
-        href={headline.url}
-        style={{
-          display: 'block',
-          marginTop: 12,
-          fontFamily: 'var(--font-display)',
-          fontSize: 22,
-          lineHeight: 1.15,
-        }}
-      >
-        {headline.track}
-      </a>
-      <div className="meta" style={{ marginTop: 4 }}>{headline.artist}</div>
+      <div style={{ display: 'flex', gap: 14, marginTop: 12, alignItems: 'flex-start' }}>
+        {headline.albumArt ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={headline.albumArt}
+            alt={`${headline.track} album art`}
+            width={64}
+            height={64}
+            style={{ flex: '0 0 auto', borderRadius: 2, display: 'block' }}
+            loading="lazy"
+          />
+        ) : null}
+        <div style={{ minWidth: 0 }}>
+          <a
+            href={headline.url}
+            style={{
+              display: 'block',
+              fontFamily: 'var(--font-display)',
+              fontSize: 22,
+              lineHeight: 1.15,
+            }}
+          >
+            {headline.track}
+          </a>
+          <div className="meta" style={{ marginTop: 4 }}>{headline.artist}</div>
+        </div>
+      </div>
       {rest.length > 0 ? (
         <ul
           style={{

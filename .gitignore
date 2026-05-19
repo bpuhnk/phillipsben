@@ -13,3 +13,5 @@ tsconfig.tsbuildinfo
 .claude/settings.local.json
 nimbalyst-local/
 Bio.zip
+__pycache__/
+*.pyc

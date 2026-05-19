@@ -16,7 +16,8 @@ Hermes's environment must have:
   in `~/.ssh/config` (already set up on host01).
 - `node` ≥ 20 (for the validator).
 - `python3` ≥ 3.10 (for the fetchers).
-- Env vars: `GITHUB_TOKEN` (read:user + public_repo), `GITHUB_LOGIN=bPuhnk`.
+- Env vars: `GITHUB_TOKEN` (read:user + public_repo), `GITHUB_LOGIN=bPuhnk`,
+  `SPOTIFY_CLIENT_ID`, `SPOTIFY_REFRESH_TOKEN` (Phase 4).
 
 ## Workflow
 
@@ -168,15 +169,36 @@ Read-only for you. Ben edits this via `/admin`. Never write to it.
 
 #### `dashboard-spotify.json`
 
-**Phase 4 only.** In Phase 2 leave this file untouched.
+Run the Spotify fetcher directly into the file — it produces fully-formed
+JSON, no LLM step needed:
+
+```sh
+SPOTIFY_CLIENT_ID="$SPOTIFY_CLIENT_ID" \
+SPOTIFY_REFRESH_TOKEN="$SPOTIFY_REFRESH_TOKEN" \
+  python3 scripts/dashboard/fetch_spotify.py > content/data/dashboard-spotify.json
+```
+
+Failure handling:
+- Non-zero exit → script already refused to write a partial payload.
+  Leave the existing file alone.
+- 401 from Spotify on token refresh → the refresh token has been revoked.
+  Alert Ben; he'll re-run `scripts/dashboard/spotify_auth.py` locally to
+  capture a fresh one.
+
+**One-time setup (Ben, not Hermes):**
+
+1. Register an app at https://developer.spotify.com/dashboard with
+   redirect URI exactly `http://127.0.0.1:8888/callback`.
+2. Locally: `SPOTIFY_CLIENT_ID=xxx python3 scripts/dashboard/spotify_auth.py`
+3. Copy the printed refresh token into Hermes's secret store as
+   `SPOTIFY_REFRESH_TOKEN` along with `SPOTIFY_CLIENT_ID`.
 
 ### 4. Validate
 
 Before committing, every file you wrote must pass:
 
 ```sh
-# Phase 2 + 3 files (everything except spotify, which is Phase 4)
-for f in content/data/dashboard-{github,news,currently,claude}.json; do
+for f in content/data/dashboard-{github,news,currently,claude,spotify}.json; do
   npx tsx scripts/dashboard/validate.ts "$f" || exit 1
 done
 ```
@@ -243,6 +265,7 @@ Ben's site voice across all sections:
 | Validate one file                 | `npx tsx scripts/dashboard/validate.ts <file>` |
 | Fetch GitHub activity             | `python3 scripts/dashboard/fetch_github.py`    |
 | Fetch HN candidates               | `python3 scripts/dashboard/fetch_news.py`      |
+| Fetch Spotify (writes file directly) | `python3 scripts/dashboard/fetch_spotify.py > content/data/dashboard-spotify.json` |
 | Read the allowlist                | `cat content/data/dashboard-config.json`       |
 | List recent pop-os memories       | `find ~/snapshots/claude-memory/pop-os/projects -name '*.md' -mtime -7` |
 | List recent host01 memories       | `find ~/.claude/projects -name '*.md' -mtime -7` |
