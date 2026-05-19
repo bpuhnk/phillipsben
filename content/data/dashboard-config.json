@@ -17,6 +17,7 @@
     "Strip names of clients, employers, or coworkers. Refer to them as 'a client' or 'a colleague'.",
     "Strip names of any project NOT in claudeTopicsAllowlist. Use 'a client project', 'internal tooling', or 'an experiment' instead.",
     "Skip anything that would be embarrassing if a recruiter, current client, or hiring manager read it.",
-    "Skip half-formed ideas, frustration vents, or work-in-progress that hasn't shipped publicly yet."
+    "Skip half-formed ideas, frustration vents, or work-in-progress that hasn't shipped publicly yet.",
+    "NEVER mention the strings 'Transaxle Manufacturing of America' or 'TMA' anywhere in the output. If work relates to that employer, refer to it generically as 'a manufacturing client' or omit the context entirely."
   ]
 }

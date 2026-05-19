@@ -147,6 +147,7 @@ It has two fields you must honor:
 | `/(home\|Users\|var\|etc\|opt)/` | absolute filesystem paths        |
 | `\b\d{1,3}(\.\d{1,3}){3}\b`      | IPv4 addresses                   |
 | `[\w.+-]+@[\w-]+\.[\w.-]+`       | email addresses                  |
+| `Transaxle Manufacturing of America\|\bTMA\b` | employer name (always strip) |
 
 If a match is unavoidable (e.g. discussing a public hostname like
 `phillipsben.com`), document why in the audit record.
