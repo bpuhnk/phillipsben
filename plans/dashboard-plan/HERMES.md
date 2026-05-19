@@ -11,11 +11,11 @@ dashboard. Follow `plans/dashboard-plan/HERMES.md` in the bio repo."*
 
 Hermes's environment must have:
 
-- `git` configured with a deploy key that can push to `bpuhnk/phillipsben:main`,
+- `git` configured with a deploy key that can push to `bPuhnk/phillipsben:main`,
   scoped (ideally) to `content/data/dashboard-*.json` only.
 - `node` ≥ 20 (for the validator).
 - `python3` ≥ 3.10 (for the fetchers).
-- Env vars: `GITHUB_TOKEN` (read:user + public_repo), `GITHUB_LOGIN=bpuhnk`.
+- Env vars: `GITHUB_TOKEN` (read:user + public_repo), `GITHUB_LOGIN=bPuhnk`.
 
 ## Workflow
 
@@ -23,7 +23,7 @@ Hermes's environment must have:
 
 ```sh
 cd /var/lib/hermes/work
-[ -d phillipsben ] || git clone git@github.com:bpuhnk/phillipsben.git
+[ -d phillipsben ] || git clone git@github.com:bPuhnk/phillipsben.git
 cd phillipsben && git fetch && git checkout main && git reset --hard origin/main
 npm install --no-audit --no-fund   # only if package-lock changed
 ```

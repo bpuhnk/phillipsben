@@ -9,20 +9,20 @@
   },
   "repos": [
     {
-      "name": "bpuhnk/phillipsben",
-      "url": "https://github.com/bpuhnk/phillipsben",
+      "name": "bPuhnk/phillipsben",
+      "url": "https://github.com/bPuhnk/phillipsben",
       "commits": 14,
       "summary": "Mobile-layout-v2 phases 1-8 landed; site copy moved into git-tracked content with the /admin CMS; began dashboard scaffold."
     },
     {
-      "name": "bpuhnk/hermes-agent",
-      "url": "https://github.com/bpuhnk/hermes-agent",
+      "name": "bPuhnk/hermes-agent",
+      "url": "https://github.com/bPuhnk/hermes-agent",
       "commits": 7,
       "summary": "Added cron module + secret store; first pass on the GitHub feed for dashboard.phillipsben.com."
     },
     {
-      "name": "bpuhnk/klipper-config",
-      "url": "https://github.com/bpuhnk/klipper-config",
+      "name": "bPuhnk/klipper-config",
+      "url": "https://github.com/bPuhnk/klipper-config",
       "commits": 2,
       "summary": "Tuned input shaper, retuned pressure advance for the BLV AM8."
     }
