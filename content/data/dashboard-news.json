@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-18T06:00:00Z",
+  "updatedAt": "2026-05-19T04:44:00Z",
   "items": [
     {
-      "title": "Show HN: We replaced our whole RAG pipeline with a 200-line script",
-      "url": "https://news.ycombinator.com/item?id=00000001",
+      "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+      "url": "https://github.com/MinishLab/semble",
       "source": "Hacker News",
-      "points": 1240,
-      "whyItMatters": "Counter-evidence to the framework-pile-on trend in retrieval — worth reading for anyone building search."
+      "points": 429,
+      "whyItMatters": "98% token reduction on code search is a real loop-cost win — worth dropping into any agent that currently greps large repos."
     },
     {
-      "title": "Anthropic releases Claude Opus 4.7 with extended thinking by default",
-      "url": "https://news.ycombinator.com/item?id=00000002",
+      "title": "We stopped AI bot spam in our GitHub repo using Git's –author flag",
+      "url": "https://archestra.ai/blog/only-responsible-ai",
       "source": "Hacker News",
-      "points": 980,
-      "whyItMatters": "Changes the cost calculus for agent loops; cached reads no longer cheap if extended thinking is on."
+      "points": 440,
+      "whyItMatters": "Simple, already-available lever for any OSS maintainer drowning in AI-generated bot PRs — no infra required."
     },
     {
-      "title": "On-device LLMs are eating the long tail of inference",
-      "url": "https://news.ycombinator.com/item?id=00000003",
+      "title": "Apple Silicon costs more than OpenRouter",
+      "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
       "source": "Hacker News",
-      "points": 720,
-      "whyItMatters": "Relevant for any product where latency or privacy beat raw model quality."
+      "points": 335,
+      "whyItMatters": "Concrete energy/cost numbers for local vs cloud inference — the gap is narrower than most assume once idle power is factored in."
     },
     {
-      "title": "A practical guide to evaluating coding agents",
-      "url": "https://news.ycombinator.com/item?id=00000004",
+      "title": "Anthropic acquires Stainless",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "source": "Hacker News",
-      "points": 615,
-      "whyItMatters": "Best evals overview I've seen this year — uses real PR-merge rate, not synthetic benchmarks."
+      "points": 393,
+      "whyItMatters": "Stainless generates typed SDK wrappers — bringing that in-house likely means tighter API versioning and faster multi-language SDK releases."
     },
     {
-      "title": "Why our team stopped using vector databases",
-      "url": "https://news.ycombinator.com/item?id=00000005",
+      "title": "I don't think AI will make your processes go faster",
+      "url": "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster/",
       "source": "Hacker News",
-      "points": 540,
-      "whyItMatters": "Spicy take, but the BM25-as-baseline argument is hard to refute for small corpora."
+      "points": 657,
+      "whyItMatters": "The constraint is usually coordination overhead, not raw compute — solid stress-test for anyone selling AI as a throughput multiplier."
     }
   ]
 }

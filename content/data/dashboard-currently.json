@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-18T06:00:00Z",
-  "focus": "Shipping the public dashboard you're looking at, then wiring Hermes-Agent to refresh it daily. Side quest: dialing in the BLV AM8 for production-quality prints under 10 minutes.",
+  "updatedAt": "2026-05-19T04:44:00Z",
+  "focus": "Hermes is live doing daily dashboard refreshes — next up is Phase 3, wiring the Claude activity feed. Ongoing: mopping up mobile layout edge cases in the phillipsben site.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
