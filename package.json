@@ -8,7 +8,8 @@
     "postbuild": "next-sitemap && node scripts/generate-pdf.mjs",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate:dashboard": "tsx scripts/dashboard/validate.ts"
   },
   "dependencies": {
     "@calcom/embed-react": "1.5.3",
@@ -32,6 +33,7 @@
     "next-sitemap": "4.2.3",
     "playwright": "1.60.0",
     "tailwindcss": "4.3.0",
+    "tsx": "4.20.0",
     "typescript": "6.0.3"
   }
 }
