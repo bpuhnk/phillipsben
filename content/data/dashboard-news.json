@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-19T05:53:00Z",
+  "updatedAt": "2026-05-19T10:23:00Z",
   "items": [
     {
-      "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
-      "url": "https://github.com/MinishLab/semble",
+      "title": "The last six months in LLMs in five minutes",
+      "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
       "source": "Hacker News",
-      "points": 429,
-      "whyItMatters": "Semantic code search built for agent tool-call budgets — swaps grep's verbosity for embedding-based retrieval at 2% the token cost."
+      "points": 459,
+      "whyItMatters": "Simon Willison's concise H2-2025 recap — densely linked, covers evals and tooling shifts worth knowing before planning any new LLM feature."
     },
     {
       "title": "Anthropic acquires Stainless",
       "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "source": "Hacker News",
-      "points": 408,
+      "points": 455,
       "whyItMatters": "Stainless auto-generates typed SDKs from OpenAPI specs; Anthropic owning the toolchain signals tighter SDK quality and a possible new standard for API client generation."
+    },
+    {
+      "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+      "url": "https://github.com/MinishLab/semble",
+      "source": "Hacker News",
+      "points": 434,
+      "whyItMatters": "Semantic code search built for agent tool-call budgets — swaps grep's verbosity for embedding-based retrieval at 2% the token cost."
     },
     {
       "title": "Apple Silicon costs more than OpenRouter",
       "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
       "source": "Hacker News",
-      "points": 336,
+      "points": 344,
       "whyItMatters": "Measured energy cost breakdown that flips the 'run it locally for free' assumption — useful data before sizing any self-hosted inference stack."
     },
     {
       "title": "Linux security mailing list 'almost unmanageable'",
       "url": "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633",
       "source": "Hacker News",
-      "points": 202,
+      "points": 207,
       "whyItMatters": "Concrete signal that AI-generated bug reports at scale break human review pipelines — a real constraint to factor into any agent-driven code-analysis workflow."
-    },
-    {
-      "title": "The last six months in LLMs in five minutes",
-      "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
-      "source": "Hacker News",
-      "points": 161,
-      "whyItMatters": "Simon Willison's concise H2-2025 recap — densely linked, cuts through hype, covers evals and tooling shifts worth knowing before planning any new LLM feature."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-19T05:53:00Z",
-  "focus": "Finishing the Spotify plumbing and watching the daily refresh loop settle — the dashboard now pulls live GitHub, news, Claude summaries, and soon Spotify each morning. The week's commits went toward fixing edge cases in the GraphQL fetcher and locking down what does and doesn't appear in the Claude tile.",
+  "updatedAt": "2026-05-19T10:23:00Z",
+  "focus": "The GPU broker landed this week — a FastAPI proxy that serializes P100 access across KoboldCPP, ComfyUI, and ollama, with SillyTavern confirmed working end-to-end from a separate LAN machine. Also wired a model-name rewrite so ST doesn't show 'inactive' in the model list when kobold has idle-unloaded. On the phillipsben side, the daily dashboard refresh is stable and running each morning.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
