@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-19T05:44:00Z",
-  "focus": "Wrapping up Phase 4 Spotify plumbing and the daily Hermes refresh loop — the dashboard now pulls live GitHub, news, and Claude summaries each morning. Also chasing down a GraphQL DateTime edge case in the GitHub fetcher that slipped past yesterday's run.",
+  "updatedAt": "2026-05-19T05:53:00Z",
+  "focus": "Finishing the Spotify plumbing and watching the daily refresh loop settle — the dashboard now pulls live GitHub, news, Claude summaries, and soon Spotify each morning. The week's commits went toward fixing edge cases in the GraphQL fetcher and locking down what does and doesn't appear in the Claude tile.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

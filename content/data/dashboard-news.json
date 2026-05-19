@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-19T05:43:50Z",
+  "updatedAt": "2026-05-19T05:53:00Z",
   "items": [
     {
       "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
@@ -9,18 +9,18 @@
       "whyItMatters": "Semantic code search built for agent tool-call budgets — swaps grep's verbosity for embedding-based retrieval at 2% the token cost."
     },
     {
-      "title": "Apple Silicon costs more than OpenRouter",
-      "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
-      "source": "Hacker News",
-      "points": 336,
-      "whyItMatters": "Measured energy cost breakdown that flips the \"run it locally for free\" assumption — useful data point before sizing any self-hosted inference stack."
-    },
-    {
       "title": "Anthropic acquires Stainless",
       "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "source": "Hacker News",
       "points": 408,
-      "whyItMatters": "Stainless auto-generates typed SDKs from OpenAPI specs; Anthropic owning the toolchain means tighter SDK quality and potentially a new standard for API client generation."
+      "whyItMatters": "Stainless auto-generates typed SDKs from OpenAPI specs; Anthropic owning the toolchain signals tighter SDK quality and a possible new standard for API client generation."
+    },
+    {
+      "title": "Apple Silicon costs more than OpenRouter",
+      "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
+      "source": "Hacker News",
+      "points": 336,
+      "whyItMatters": "Measured energy cost breakdown that flips the 'run it locally for free' assumption — useful data before sizing any self-hosted inference stack."
     },
     {
       "title": "Linux security mailing list 'almost unmanageable'",
@@ -33,7 +33,7 @@
       "title": "The last six months in LLMs in five minutes",
       "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
       "source": "Hacker News",
-      "points": 159,
+      "points": 161,
       "whyItMatters": "Simon Willison's concise H2-2025 recap — densely linked, cuts through hype, covers evals and tooling shifts worth knowing before planning any new LLM feature."
     }
   ]
