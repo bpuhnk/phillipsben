@@ -31,10 +31,11 @@ export default function ResumePrint() {
           Summary
         </h2>
         <p style={{ fontSize: 12 }}>
-          Full-stack software engineer with ~20 years inside the .NET ecosystem,
-          building desktop applications and services for places where uptime
-          matters more than novelty. Currently focused on agentic systems and
-          local AI infrastructure.
+          Full-stack software engineer with sixteen years building .NET
+          software — desktop applications, services, and integrations for places
+          where uptime matters more than novelty. Recent work spans solutions
+          architecture, IT/OT integration, and production AI: an in-house LLM
+          assistant and a set of MCP servers for safe LLM access to internal systems.
         </p>
       </section>
 
@@ -43,14 +44,12 @@ export default function ResumePrint() {
           Experience
         </h2>
         {[
-          { y: '2024 — Now', h: 'Architect, Software Engineering', s: 'Heavy industrial · current role',
-            p: 'Architecture across desktop, services, and an agentic layer for routing, summarization, and anomaly review.' },
-          { y: '2018 — 2024', h: 'Senior Software Engineer', s: 'Transaxle manufacturing',
-            p: 'Built and maintained a WPF + service-bus stack for line-side QC, gauge integration, and traceability.' },
-          { y: '2012 — 2018', h: 'Software Engineer', s: 'Industrial aggregates',
-            p: 'Plant-level applications for production reporting, weighbridge integration, dispatch.' },
-          { y: '2007 — 2012', h: 'Developer', s: 'Mixed contract & in-house',
-            p: 'WinForms apps for small businesses. Learned how to ship to people who will call on a Sunday.' },
+          { y: '2018 — Now', h: 'Application Developer', s: 'Tier-1 transaxle supplier (manufacturing)',
+            p: 'Sole primary developer across a 25+ application portfolio. Drove source control, dev environment, and framework modernization from a 2018 .NET 3.5 starting point. Recent: solutions architecture, IT/OT integration, in-house LLM assistant and MCP servers. Certified ISO 9001:2015 internal QMS auditor.' },
+          { y: '2014 — 2018', h: 'Software Developer', s: 'Oldcastle Materials Group (now CRH)',
+            p: 'Middleware applications, then the QuoteToCash Silverlight sales system, then telematics integration on MuleSoft with BA / PM / business owners. Promoted junior → mid-level.' },
+          { y: '2010 — 2014', h: 'IT Support & Junior .NET Developer', s: 'Sturgis Web Services',
+            p: 'First professional .NET role. SSIS / ETL pipelines for county tax-payment data; direct work with county staff nationwide on data import.' },
         ].map((r) => (
           <div key={r.y} style={{ marginBottom: 12, paddingBottom: 10, borderBottom: '1px solid var(--rule-2)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
@@ -70,12 +69,12 @@ export default function ResumePrint() {
           Skills
         </h2>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: 11.5 }}>
-          <li><strong>Desktop:</strong> WPF, XAML, WinForms, Electron, MAUI</li>
-          <li><strong>Services:</strong> ASP.NET, gRPC, RabbitMQ, SQL Server, OPC</li>
-          <li><strong>Agentic / Local AI:</strong> Hermes-Agent, Ollama, ComfyUI, KoboldCPP, Pascal-era GPUs</li>
-          <li><strong>Architecture:</strong> DDD, event sourcing, CQRS, modular monolith</li>
-          <li><strong>Embedded:</strong> ESP32, Arduino, Raspberry Pi, MQTT, ESPHome</li>
-          <li><strong>Legacy:</strong> VB6, Access, COM, legacy SQL — replaced without breaking the line</li>
+          <li><strong>Desktop:</strong> WinForms, WPF, Blazor Server, Electron, WebView2</li>
+          <li><strong>Services &amp; integration:</strong> C#, VB.NET, ASP.NET Core, SignalR, RabbitMQ, SQL Server, EF Core</li>
+          <li><strong>AI &amp; LLM:</strong> Ollama, Gemma, OpenWebUI, MCP, RAG, AD-gated access</li>
+          <li><strong>Architecture:</strong> multi-tier systems, distributed monitoring, IT/OT bridge, profile-based delivery</li>
+          <li><strong>Platform &amp; libraries:</strong> Serilog, NuGet, .NET Standard 2.0, shared API contracts, PLC comms</li>
+          <li><strong>Quality &amp; process:</strong> ISO 9001:2015 internal QMS audit</li>
         </ul>
       </section>
 
@@ -84,10 +83,10 @@ export default function ResumePrint() {
           Selected Projects
         </h2>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: 11.5 }}>
-          <li style={{ marginBottom: 6 }}><strong>Hermes-Agent</strong> — home agent server (Python, FastAPI, Ollama).</li>
-          <li style={{ marginBottom: 6 }}><strong>Claude-Orbiter</strong> — desktop orchestration app for Claude agents (TS, Electron).</li>
-          <li style={{ marginBottom: 6 }}><strong>MCP_Klipper</strong> — MCP server exposing Klipper/Moonraker to LLM agents.</li>
-          <li style={{ marginBottom: 6 }}><strong>BLV AM8</strong> — full Anet A8 → linear-rail AM8 conversion (Marlin 2).</li>
+          <li style={{ marginBottom: 6 }}><strong>TMA.MCP</strong> — MCP servers giving LLM clients auth-gated access to internal AD, databases, and files (C#, Active Directory).</li>
+          <li style={{ marginBottom: 6 }}><strong>Cervi</strong> — in-house RAG LLM assistant for service-ticket triage, deployed CPU-only (Ollama, Gemma, RAG).</li>
+          <li style={{ marginBottom: 6 }}><strong>TMAToolbar</strong> — workstation appbar rebuilt into a four-tier system across ~100 machines (.NET 8, React, SignalR).</li>
+          <li style={{ marginBottom: 6 }}><strong>QIA</strong> — shop-floor quality inspection app; 8 lines, ~900 units/day, 6→1 line-agnostic refactor (VB.NET, WinForms, PLC).</li>
         </ul>
       </section>
 

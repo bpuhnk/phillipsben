@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     template: '%s · Ben Phillips',
   },
   description:
-    'Full-stack software engineer, twenty years deep in .NET. Building desktop apps, services, and agentic systems for the factory floor.',
+    'Full-stack software engineer, sixteen years deep in .NET. Building desktop apps, services, and agentic systems for the factory floor.',
   openGraph: {
     title: 'Ben Phillips — Engineer',
     description: 'Software for things that actually have to work.',

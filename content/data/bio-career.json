@@ -1,10 +1,26 @@
-{
-  "items": [
-    {
-      "y": "2008 - 2009",
-      "h": "York County Internship w/ MIS Dept.",
-      "s": "County Government",
-      "p": "Got my ears wet in .Net 3.5 building ASP.Net Web Forms for the York County Fire Dept. and simple desktop applications for other County departments."
-    }
-  ]
-}
+[
+  {
+    "y": "2018 — now",
+    "h": "Application Developer",
+    "s": "Tier-1 transaxle supplier to a major agricultural / outdoor-equipment OEM",
+    "p": "Sole primary developer for eight years. Walked into a codebase with no source control, no dev environment, and .NET 3.5 — drove TFS adoption, stood up a real dev environment, and built or rescued most of the company's 25+ application portfolio. Recent focus is solutions architecture, IT/OT integration, and the early AI surface: the company's first in-house LLM assistant and a small set of Model Context Protocol servers for safe LLM access to internal systems. Certified internal QMS Auditor (ISO 9001:2015) since 2018."
+  },
+  {
+    "y": "2018",
+    "h": "Supplier Portal — contract → full-time",
+    "s": "Same employer · entry path",
+    "p": "Originally hired as a contractor to build the company's external-facing Supplier Portal — an HTML / CSS / JavaScript web app letting domestic and foreign suppliers view their own records, occurrences, and PPM data. Converted to full-time the same year, then pivoted into the internal manufacturing-software portfolio."
+  },
+  {
+    "y": "2014 — 2018",
+    "h": "Software Developer",
+    "s": "Oldcastle Materials Group (now CRH)",
+    "p": "Started as a junior developer on middleware applications at one of the world's largest aggregate producers. Moved to QuoteToCash, the Silverlight sales-quoting system used by reps across the country, then was promoted to mid-level and put on the Telematics team — building out telematics integration in MuleSoft alongside the BA, PM, and business owners. We parted ways in 2018 when the company relocated its IT department."
+  },
+  {
+    "y": "2010 — 2014",
+    "h": "IT Support & Junior .NET Developer",
+    "s": "Sturgis Web Services · county tax-payment processing",
+    "p": "My first professional .NET role — half IT support, half development. I owned the ETL side: SSIS pipelines importing county tax-payment data, and the back-and-forth with county staff across the country on getting their data in clean. The support half taught me early what it costs when the people relying on your software can't do their job without it."
+  }
+]

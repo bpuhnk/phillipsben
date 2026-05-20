@@ -11,7 +11,7 @@ import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Bio',
-  description: 'Full-stack software engineer, almost twenty years in .NET. The long version of the résumé.',
+  description: 'Full-stack software engineer, sixteen years in .NET. The long version of the résumé.',
   path: '/bio',
 });
 

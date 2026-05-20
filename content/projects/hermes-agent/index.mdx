@@ -1,45 +1,62 @@
 ---
 title: Hermes-Agent
-summary: A home agent server orchestrating local models for tool-use, indexing, and routine automations on my Ubuntu box.
+summary: Nous Research's hermes-agent, deployed as the cron-driven worker that pulls my GitHub activity, my own notes, and the day's AI news into the dashboard on this site.
 status: active
-techStack: [Python, FastAPI, Ollama, Postgres]
-role: Solo — design, code, deploy
+techStack: [Python, hermes-agent, Cron, SQLite, GitHub API]
+role: Solo — deploy, configure, integrate
 startDate: '2026-01-15'
 featured: true
 ---
 
 ## ① The problem.
 
-I do a lot of small, repeatable things at the edges of my day — summarizing the
-week, drafting a project log, tagging photos, kicking off a print, reminding
-myself to log a service hour for the dog. None of them are hard. All of them
-add up.
-
-The catch is that I don't want them in someone else's data center. Some of it
-is family stuff; some is unfinished work I'd rather not type into a hosted box.
-So the question became: how cheap is it, in 2026, to run a useful agent at
-home — and what would I actually trust it to do?
+The dashboard on this site updates itself every morning. Something has to do the
+updating — pull what I committed yesterday, read back over the last week of my own
+notes, scan the day's AI news, decide what's worth showing, and write it all
+somewhere the site can render. I didn't want to build that agent from scratch.
+A cron job that calls an LLM, keeps memory, and doesn't fall over unattended is a
+solved problem in 2026. The interesting work is what you point one at, not
+rebuilding the loop.
 
 ## ② Approach.
 
-One small FastAPI service per capability, an event log in Postgres,
-a router that picks the right local model for the job. Gemma for the lightweight
-work, Llama for anything reasoning-heavy, a Mythos variant for narrative drafting.
+The agent is [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) —
+an open-source self-improving agent with a built-in cron scheduler, persistent
+memory, and tool-use. It runs on the same Ubuntu box as everything else, on a
+6:30 AM schedule.
+
+Honest scope up front: I didn't build hermes-agent. What's mine is everything
+around it — the cron design, the knowledge base it reads, the prompts that decide
+what's worth surfacing, the redaction rules that keep things off the public page,
+and the wiring that turns its output into the JSON this site renders.
 
 ## ③ What's in the box.
 
-- **GPU** — NVIDIA Tesla P100, 16 GB. Pascal-era, cheap on the used market, surprisingly capable for 7B–13B models with quantization.
-- **Models** — Gemma · Llama · Mythos, routed by task.
-- **Front-ends** — SillyTavern · ComfyUI · KoboldCPP · Ollama. Each tool is good at one thing. The agent decides which one to call.
+Each morning the agent does three jobs:
+
+- **GitHub review** — pulls my commits and comments since the last run and summarizes the activity per repo.
+- **Memory analysis** — reads a rolling seven days of my own Claude Code notes off this machine and distills what I was actually working on.
+- **News curation** — pulls ~25 candidate AI / dev articles and ranks them down to the five worth reading, against a stated list of what I care about.
+
+The output lands as a handful of JSON files the site reads when it renders. The
+agent owns the data; the site just shows it.
 
 ## ④ What broke.
 
-Pretty much everything you'd expect: VRAM exhaustion the first time I asked it
-to keep two models warm, queue starvation when batched requests came in faster
-than the slowest model, a memorable Sunday where the router happily called itself.
-The fixes were boring, which is the goal.
+The redaction was the part that mattered and the part that bit. The memory step
+reads my working notes, and my working notes name my employer. The first runs
+cheerfully wrote that name into a public summary. The fix was a redaction pass
+with an explicit blocklist that runs before anything reaches the page — boring,
+and exactly the kind of thing you want to get wrong in private and never in public.
+
+The GitHub pull had a quieter bug: the activity query and the contribution query
+wanted timestamps in two different formats, and handing both the same one silently
+returned the wrong window. Splitting them fixed a dashboard that had been
+confidently reporting the wrong week.
 
 ## ⑤ Where it's going.
 
-Tool-use this month. Then a small set of well-defined integrations — file search,
-calendar, shop sensors — without losing the plot.
+More inputs as they earn their place — the now-playing strip is recent, and the
+obvious next ones are reading state and a weekly summary of whatever the small
+career assistant I'm building for this site ends up logging. The rule stays the
+same: the agent gathers and proposes; the redaction layer and I decide what's public.
