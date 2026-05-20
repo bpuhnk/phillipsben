@@ -19,7 +19,7 @@ export default function ResumePrint() {
           Ben Phillips
         </h1>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '.1em', color: 'var(--ink-3)', textTransform: 'uppercase' }}>
-          Architect / Software Engineer · .NET · Agentic Systems · Southeast USA
+          Solutions Architect · .NET · IT/OT Integration · Southeast USA
         </p>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--ink-2)', marginTop: 8 }}>
           contact@phillipsben.com · phillipsben.com · github.com/bPuhnk · linkedin.com/in/ben-phillips-332a4826
