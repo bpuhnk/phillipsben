@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-05-19T10:23:00Z",
-  "weekStart": "2026-05-12",
+  "updatedAt": "2026-05-20T10:02:22Z",
+  "weekStart": "2026-05-13",
   "totals": {
-    "commits": 13,
+    "commits": 23,
     "prs": 0,
     "repos": 1,
-    "activeDays": 4
+    "activeDays": 5
   },
   "repos": [
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 13,
-      "summary": "Shipped Phase 4 Spotify plumbing; fixed GraphQL DateTime vars, normalized login casing, and blocked employer name from Claude summaries."
+      "commits": 23,
+      "summary": "Rewrote bio and résumé, published five project pages, shipped Spotify and Claude memory dashboard phases, and fixed daily refresh plumbing."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-19T10:23:00Z",
-  "focus": "The GPU broker landed this week — a FastAPI proxy that serializes P100 access across KoboldCPP, ComfyUI, and ollama, with SillyTavern confirmed working end-to-end from a separate LAN machine. Also wired a model-name rewrite so ST doesn't show 'inactive' in the model list when kobold has idle-unloaded. On the phillipsben side, the daily dashboard refresh is stable and running each morning.",
+  "updatedAt": "2026-05-20T10:04:00Z",
+  "focus": "Rounding out the phillipsben site — résumé got a title update and IT/OT integration lead, and five project pages shipped this week. The GPU broker on pop-os is stable with SillyTavern confirmed working end-to-end; lock logic is tighter after last week's reload-storm fix.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

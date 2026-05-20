@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-19T10:23:00Z",
+  "updatedAt": "2026-05-20T10:04:00Z",
   "items": [
+    {
+      "title": "I've joined Anthropic",
+      "url": "https://twitter.com/karpathy/status/2056753169888334312",
+      "source": "Hacker News",
+      "points": 1320,
+      "whyItMatters": "Karpathy returning to frontier AI research at Anthropic is a meaningful signal about where serious ML work is converging."
+    },
+    {
+      "title": "Gemini 3.5 Flash",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "source": "Hacker News",
+      "points": 784,
+      "whyItMatters": "Another fast, cheap frontier model in the mix — worth benchmarking against Sonnet for latency-sensitive agentic pipelines."
+    },
     {
       "title": "The last six months in LLMs in five minutes",
       "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
       "source": "Hacker News",
-      "points": 459,
-      "whyItMatters": "Simon Willison's concise H2-2025 recap — densely linked, covers evals and tooling shifts worth knowing before planning any new LLM feature."
+      "points": 754,
+      "whyItMatters": "Willison's compressed recaps are consistently accurate — good calibration check on what actually shipped vs. what was noise."
+    },
+    {
+      "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+      "url": "https://github.com/antoinezambelli/forge",
+      "source": "Hacker News",
+      "points": 482,
+      "whyItMatters": "Concrete numbers on guardrail impact for small models doing tool use — directly applicable if you're running local inference for agents."
     },
     {
       "title": "Anthropic acquires Stainless",
       "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "source": "Hacker News",
-      "points": 455,
-      "whyItMatters": "Stainless auto-generates typed SDKs from OpenAPI specs; Anthropic owning the toolchain signals tighter SDK quality and a possible new standard for API client generation."
-    },
-    {
-      "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
-      "url": "https://github.com/MinishLab/semble",
-      "source": "Hacker News",
-      "points": 434,
-      "whyItMatters": "Semantic code search built for agent tool-call budgets — swaps grep's verbosity for embedding-based retrieval at 2% the token cost."
-    },
-    {
-      "title": "Apple Silicon costs more than OpenRouter",
-      "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
-      "source": "Hacker News",
-      "points": 344,
-      "whyItMatters": "Measured energy cost breakdown that flips the 'run it locally for free' assumption — useful data before sizing any self-hosted inference stack."
-    },
-    {
-      "title": "Linux security mailing list 'almost unmanageable'",
-      "url": "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633",
-      "source": "Hacker News",
-      "points": 207,
-      "whyItMatters": "Concrete signal that AI-generated bug reports at scale break human review pipelines — a real constraint to factor into any agent-driven code-analysis workflow."
+      "points": 525,
+      "whyItMatters": "Stainless builds auto-generated SDKs — Anthropic acquiring them suggests tighter, first-party SDK tooling for the Claude API is coming."
     }
   ]
 }
