@@ -15,3 +15,6 @@ nimbalyst-local/
 Bio.zip
 __pycache__/
 *.pyc
+
+# Private career/job-search planning — never commit to this public repo
+plans/work-machine-handoff-*/
