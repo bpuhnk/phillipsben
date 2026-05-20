@@ -1,8 +1,8 @@
 ---
 title: Switchboard
-summary: A FastAPI service that hot-swaps models in and out of a single 16 GB Tesla P100 so a stack of local-LLM front-ends can share one GPU without fighting over it.
+summary: A FastAPI service that arbitrates a single 16 GB Tesla P100 — checking VRAM, evicting what's resident, and routing each request to the right backend so a stack of local-AI front-ends can share one GPU without fighting over it.
 status: active
-techStack: [Python, FastAPI, Ollama, CUDA, Tesla P100]
+techStack: [Python, FastAPI, Ollama, KoboldCPP, CUDA, Tesla P100]
 role: Solo — design, code, deploy
 startDate: '2026-05-12'
 featured: false
@@ -11,44 +11,47 @@ featured: false
 ## ① The problem.
 
 I have one GPU — a 16 GB Tesla P100, Pascal-era, cheap on the used market — and
-more things that want to use it than fit on it at once. SillyTavern wants a chat
-model. ComfyUI wants an image model. KoboldCPP wants something else again.
-Sixteen gigabytes does not hold all of that at the same time, and swapping by
-hand — unload this, load that, remember what was where — got old in about a day.
+more jobs that want it than fit on it at once. SillyTavern wants a chat-and-narration
+model. ComfyUI wants an image model. An OCR pass wants a vision model. Sixteen
+gigabytes does not hold all of that at the same time, and swapping by hand —
+unload this, load that, remember what was where — got old in about a day.
 
 ## ② Approach.
 
 A small FastAPI service in front of the GPU that owns the one question nothing
-else should have to answer: *what's loaded right now.* The front-ends don't load
-models; they ask the switchboard for one. It loads what was requested, evicts
-whatever has to go to make room, and hands back an endpoint. One service holds the
-state, so nothing else has to.
+else should have to answer: *what's loaded right now.* A request comes in, the
+switchboard checks VRAM, clears whatever's resident if it has to, routes the
+payload to the right backend — Ollama or KoboldCPP — and lets that model have the
+full card. Without that clear-first step you can't run more than one model in a
+single flow on 16 GB; with it, a pipeline can hand off between models that would
+never co-reside.
 
-The model choice is per-job: a small Gemma for lightweight chat, a larger Llama
-for anything that needs to reason, a Mythos variant for narrative drafting. The
-front-ends stay dumb about the GPU; the switchboard stays dumb about what the
-front-ends are for. That seam is the whole design.
+The models are picked per job: Gemma 4 (e4b) for image recognition and OCR,
+Mistral Nemo for SillyTavern chat and narration, and a general-purpose model on
+Ollama for everything else. The front-ends stay dumb about the GPU; the
+switchboard stays dumb about what the front-ends are for. That seam is the whole
+design.
 
 ## ③ What's in the box.
 
 - **GPU** — NVIDIA Tesla P100, 16 GB. Pascal, no tensor cores, surprisingly game for 7B–13B models with quantization.
-- **Switchboard** — a FastAPI service that loads, evicts, and routes. It tracks what's resident, serializes loads so two requests can't both try to claim VRAM, and exposes a plain endpoint per model.
-- **Runtime** — Ollama underneath, doing the actual model serving.
-- **Front-ends** — SillyTavern, ComfyUI, KoboldCPP, each pointed at the switchboard instead of the GPU directly.
+- **Switchboard** — a FastAPI service that checks VRAM, clears whatever's resident when a different model is needed, and routes each request to the backend that serves it. It serializes loads so two requests can't both try to claim the card at once.
+- **Backends** — Ollama and KoboldCPP. The switchboard hands each payload to whichever one serves the requested model.
+- **Models** — Gemma 4 (e4b) for image recognition and OCR, Mistral Nemo for chat and narration, and a general model on Ollama for everything else.
+- **Front-ends** — SillyTavern and ComfyUI point at the switchboard rather than the GPU directly. Each backend's native endpoint stays exposed too, so I can bypass the switchboard and talk to a model directly when I want.
 
 ## ④ What broke.
 
 Pretty much everything VRAM-shaped, the first time. Asking it to keep two models
 warm at once was the first wall — two 13B models do not co-reside in 16 GB no
 matter how politely you ask. The fix was admitting the GPU holds one big thing at
-a time and making eviction a first-class operation instead of an accident.
+a time and making the clear-before-load step a first-class operation instead of an
+accident.
 
 Then the queue: batched requests arriving faster than the slowest load could
 finish meant a fast request could sit behind a slow one for no reason. Serializing
-the loads, but letting inference run concurrent once a model was resident, bought
-most of that back. And there was a memorable Sunday where a misrouted call had the
-switchboard load a model to answer a request to itself. The fixes were boring,
-which is the goal.
+the loads — but letting inference run concurrent once a model was resident — bought
+most of that back. The fixes were boring, which is the goal.
 
 ## ⑤ Where it's going.
 
