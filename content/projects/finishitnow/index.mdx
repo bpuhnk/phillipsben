@@ -1,0 +1,41 @@
+---
+title: FinishItNow
+summary: A Blazor Server Kanban that pulls tasks from TFS, the internal Service Request system, and manual entries into one board — the company's first real task tracker.
+status: active
+techStack: [.NET 8, Blazor Server, EF Core 8, MudBlazor, SQL Server, CQRS, Microsoft Teams]
+role: Solo
+startDate: '2026-01-01'
+---
+
+## ① The problem.
+
+Work was scattered. Engineering tasks lived in TFS. End-user requests lived in the Service Request system. Personal commitments lived in notebooks, sticky notes, and OneNote pages of varying staleness. There was no single place where someone could see *everything they were responsible for this week* — let alone something a team could share.
+
+The company had never had a real task tracker. The opportunity wasn't to install one off-the-shelf; it was to build the thing that integrated cleanly with the internal sources of truth already in use.
+
+## ② Approach.
+
+A Blazor Server app, CQRS data access, multi-source aggregation. Tasks from TFS, tasks from Service Requests, tasks entered manually — all flow into the same board with the same UI affordances. Microsoft Teams integration on the outbound side so task updates show up where conversations already happen.
+
+Authorization is Windows / Negotiate with Active Directory group roles. Multi-user collaboration with Owner / Editor / Viewer scopes. Cycle and lead-time analytics. Cumulative flow diagram. Drag-drop with WIP limits, subtasks, bulk actions, keyboard shortcuts. The full Kanban surface, not a stub.
+
+## ③ What's in the box.
+
+- **Stack** — .NET 8, Blazor Interactive Server, MudBlazor, EF Core 8, SQL Server.
+- **CQRS** — separate read/write paths so the board can scale across multiple aggregation sources without read queries fighting write paths.
+- **Aggregation** — TFS adapter, ServiceRequests adapter, manual entry. New sources are an adapter, not a schema change.
+- **Auth** — Windows / Negotiate, AD-group roles (Admin / User), per-task Owner / Editor / Viewer scopes for collaboration.
+- **Teams integration** — task updates fan out as Teams messages where the team conversation already lives.
+- **Test discipline** — 164 unit + component + integration tests passing at the initial check-in, not added after the fact.
+
+AI coding assistance was a meaningful part of delivery velocity. The architecture, integration decisions, and CQRS shape are mine.
+
+## ④ What broke.
+
+The aggregation seam was harder than it looked. TFS and the Service Request system don't agree on *what a task is*. They have different identity, different state machines, different ideas about who can edit what. The first cut tried to normalize them into a single canonical task and lost information in both directions. The cut that's running now preserves the source-system fingerprint on every aggregated task — you can see where it came from, and edits route back to the source system rather than mutating the local cache. Boring decision; it's the one that made the board trustworthy.
+
+The Teams integration also had a quiet first month where it would post about updates the user had just made themselves — noise nobody wanted. The fix was filtering on actor identity at the notification layer; obvious in retrospect, not in the spec.
+
+## ⑤ Where it's going.
+
+Currently in beta — about 5 users tracking ~120 tasks. Most are using it for Service Request lifecycle tracking and personal work, which validates the multi-source premise. The path to enterprise rollout is straightforward from here: more adapters, broader rollout, and a few more cuts of the cumulative flow diagram for managers who think in throughput.

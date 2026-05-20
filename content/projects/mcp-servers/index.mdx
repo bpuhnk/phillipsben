@@ -1,0 +1,43 @@
+---
+title: Internal MCP Servers
+summary: A small set of Model Context Protocol servers giving LLM clients auth-gated access to internal AD, databases, and file systems — without ever handing the model a connection string.
+status: active
+techStack: [MCP, Active Directory, SQL Server, C#, AI Infrastructure]
+role: Solo
+startDate: '2026-01-01'
+featured: true
+---
+
+## ① The problem.
+
+Once you have an in-house LLM assistant doing useful work (see [Cervi](/projects/cervi/)), the next obvious question is: can the model *do things* against internal systems, not just chat about them?
+
+The honest answers people reach for are bad. You can dump a connection string into the agent's context and let it write SQL. You can give it broad file-system access. You can build a parallel auth model that only the LLM uses. All of those collapse under any kind of audit — and they should.
+
+The better answer is the one that took a few years to standardize: a narrow, auth-gated protocol the model uses to *ask*, with the host system deciding what to expose. That's MCP.
+
+## ② Approach.
+
+One MCP server per concern. Each one is bounded by a config file (what it's allowed to touch) and gated by the same Active Directory identity that gates every other internal system. The model never sees credentials; it sees a list of tools it can call, and each call goes through the same identity-check the rest of the internal stack already does.
+
+The pattern is intentionally boring: AD is the source of truth for what humans *and* LLMs can reach. No parallel auth, no exception paths. If a human can't read the table, neither can the assistant calling on the human's behalf.
+
+## ③ What's in the box.
+
+Three servers, deliberately small:
+
+- **Active Directory MCP** — user authorization and user lookup. Lets an LLM-driven flow identity-check actions: *"is the caller in the group that's allowed to do this?"* — answered against the real AD the rest of the company already uses.
+- **Database lookup MCP** — config-file-gated per database (name, type, auth). The LLM gets a curated set of databases it can query; it never sees connection strings and never gets arbitrary SQL surface. New backends are an entry in the config, not a code change.
+- **LLM directory access MCP** — AD-gated file-system access for the LLM's own working directory. Per-user; bounded; auditable.
+
+Honest scope: I built the servers, the config-gating pattern, and the AD integration. The MCP protocol itself is Anthropic's. The LLM clients on the other end are off-the-shelf.
+
+## ④ What broke.
+
+The hard part isn't the wiring — it's picking the right grain. Make the tool surface too generic and the model burns turns guessing at it. Make it too specific and you've just rebuilt your business logic in tool-definition form. The right grain on Database lookup, for example, turned out to be *higher-level than "execute SQL" and lower-level than "summarize this entity"* — closer to "look up by these specific keys, return this specific shape." The model uses tools that look like that.
+
+The other surprise was how much of the actual security work is in the config schema, not the server code. Every "what if the model tries X" question becomes a question about what the config allows.
+
+## ⑤ Where it's going.
+
+More servers, as the practical use cases for [Cervi](/projects/cervi/) and other LLM-driven flows surface. The interesting candidates: an audit-data MCP that exposes ISO 9001 audit history read-only, and a Service Request MCP that would let the assistant move from triage ("file it here") to action ("filed it for you"). Both are gated on the same AD model already in place.

@@ -1,0 +1,42 @@
+---
+title: Cervi
+summary: An in-house LLM assistant that guides employees through filing service tickets correctly — running on a CPU-only commodity VM, no GPU, because that's the hardware that was already in the building.
+status: active
+techStack: [Ollama, Gemma 4, OpenWebUI, RAG, LLM, Self-hosted]
+role: Solo
+startDate: '2026-01-01'
+featured: true
+---
+
+## ① The problem.
+
+Ticket adoption had been quietly bad for years. The internal Service Request system was where work was supposed to land, and the queue routing depended on the filer picking the right section. People found it confusing, so they didn't use it — they walked over and asked someone instead. Training hadn't fixed it. Process docs hadn't fixed it. The cost wasn't dramatic on any given day; it was a slow drag that never showed up on a dashboard.
+
+The premise of this project: an assistant that meets people at the moment they're about to file a ticket, and just *tells them where the ticket belongs and how to describe the problem* — based on what good tickets in that area have looked like historically.
+
+## ② Approach.
+
+A retrieval-augmented chat assistant sitting on top of years of historical Service Request comments, curated into a structured knowledge base. The model isn't generating new policy; it's pattern-matching against tickets that were filed correctly and reflecting that back to the user.
+
+The hardware choice was deliberate. There was no dedicated AI infrastructure in the building, and getting budget for one without a working example was going to take a year. So this runs on a repurposed Nutanix VM — CPU-only, no GPU — specifically so the proof-of-concept can be pointed at the next budget conversation. The constraint is the point.
+
+## ③ What's in the box.
+
+- **Model** — Gemma 4 e4b, recent enough to behave well in RAG, small enough to run on CPU.
+- **Runtime** — Ollama for serving, OpenWebUI for chat surface and the RAG plumbing.
+- **Hardware** — Nutanix AHV VM, 12 vCPU Intel Xeon Icelake @ 2.9 GHz, 40 GB RAM, no GPU, ~600 GB SCSI. Windows Server 2025.
+- **Knowledge base** — built by me from the actual Service Request comment history: per-section keyword lists, descriptions, short context summaries, do's and don'ts. The ingestion pipeline that turns ticket comments into KB documents is the part I actually wrote.
+- **System prompt** — defines the persona and the bounds. Cervi triages and guides; it doesn't file tickets on the user's behalf.
+- **Access** — surfaced as a one-click button in [the workstation toolbar](/projects/workstation-toolbar/) so non-technical users don't have to hunt for a browser tab.
+
+What I did *not* build: OpenWebUI itself, the RAG / vector-search runtime, or the Gemma model. I built the ingestion pipeline, the KB content, the system prompt, the hardware deployment, and the integration surface. It's an honest configured-and-curated deployment, not a from-scratch RAG.
+
+## ④ What broke.
+
+The first cut of the KB was structured the way the *engineer* thought about Service Requests — by system, by team, by data flow. It was wrong. People searching for help don't think in those categories; they think in *symptoms* ("the label printer is doing the wrong thing", "I can't badge in") and in *who they'd normally walk over to.* The second cut reorganized the KB around how people actually describe the problem out loud. That's the cut that started moving adoption.
+
+CPU-only inference also has a temper. Long contexts and large retrievals are slow enough to break the user's patience. Trimming the retrieved context aggressively — and tuning the system prompt to not encourage long-form answers — bought back the latency that made the assistant feel responsive instead of awkward.
+
+## ⑤ Where it's going.
+
+Adoption is up ≥20% in the first month. That's the proof-of-concept signal that should unlock dedicated AI hardware. Once that lands, two next moves are obvious: expand the KB beyond Service Requests (onboarding docs, audit prep, work instructions), and let Cervi move from *telling you where to file* to *filing it for you* via a Service Request MCP server (see [Internal MCP Servers](/projects/mcp-servers/)). Both are gated on the same AD identity model already in place.

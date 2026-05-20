@@ -1,0 +1,47 @@
+---
+title: Workstation Toolbar
+summary: A workstation appbar deployed to ~100 machines plant-wide — inherited from another developer's prototype and rebuilt into a four-tier system in about three weeks.
+status: active
+techStack: [VB.NET, .NET Framework 4.7.2, ASP.NET Core 8, React, SignalR, EF Core, SQL Server, WinForms, Active Directory]
+role: Solo
+startDate: '2026-03-01'
+featured: true
+---
+
+## ① The problem.
+
+Every shop-floor workstation and most office machines needed quick access to the same dozen-or-so internal apps, web tools, Office documents, and one-off actions. A simple appbar pinned to the screen edge had existed for about a year — built and maintained by another developer, deployed to a growing number of machines — but the configuration story was painful. Adding or changing a button meant a client-side redeploy. Profiles per workstation role (shop floor vs. office vs. line-startup) weren't really a thing; everyone got the same buttons and ignored what didn't apply.
+
+I inherited the codebase in March 2026. The brief was simple: keep it working everywhere it's already deployed, give IT a real admin surface, and stop requiring a redeploy for config changes.
+
+## ② Approach.
+
+Rebuilt into four tiers, each with a single job:
+
+1. **Thin WinForms client** on every workstation — appbar, button rendering, action execution.
+2. **Config API + SignalR hub** — workstations subscribe; config changes fan out in realtime.
+3. **Admin SPA** — React on top of ASP.NET Core .NET 8, EF Core, Windows / Negotiate auth, AD-group authorization. Full CRUD across config, profiles, buttons, workstations, icons, audit.
+4. **SQL** — schema with idempotent migrations so production deploys are safe to re-run.
+
+Profile-based delivery so the buttons match the workstation role: shop-floor standard (OEE entries, downtime monitoring, immediate line stoppage), line startup (quick-launch for apps that need to come up after a restart), office personnel (web wrappers + Office docs), and an AI assistant button that opens [Cervi](/projects/cervi/) inline. Config-only edits invalidate workstation caches *without redeploying clients*, via a SHA-256 version hash that includes API-call signatures.
+
+AI coding assistance was a meaningful part of delivery velocity over those three weeks. The architecture, the security threat-modeling, and the rollout strategy are mine.
+
+## ③ What's in the box.
+
+- **Client** — VB.NET WinForms appbar (.NET 4.7.2), WebView2 for embedded browser actions, Windows 11 acrylic styling, touch-readability tweaks, SignalR client with auto-reconnect, ApiCallExecutor with cancellation, fire-and-forget audit, JSON config fallback when the API is unreachable.
+- **Admin app** — ASP.NET Core .NET 8 + React SPA. EF Core with profile/button/workstation junctions. Negotiate auth + CORS with credentials + AD-group authorization. Controllers for Config, Profiles, Buttons, Workstations, Icons, Audit, ButtonTypes.
+- **Realtime** — SignalR `ToolbarHub` with per-workstation join/leave and a notification service that fans out on any profile / workstation / button change.
+- **SQL** — `ToolbarConfig` schema (profiles, buttons, workstations, icons, audit), `V10_ApiCallParity.sql` idempotent migration.
+
+## ④ What broke.
+
+The most interesting decision was something I *didn't* ship: a browser-side **Test** endpoint that would have let an admin click "test this API call" from the React UI. Convenient. Also a textbook server-side request forgery vector if not bounded carefully, and a place where admin credentials could leak into a browser-trusted code path. I descoped it. The Test surface still exists — in the WinForms client, where the threat model is tighter and the auditing is direct.
+
+The other surprise was the cache invalidation. Earlier passes tried timestamp-based invalidation and got bitten by clock skew across workstations. The version-hash approach (SHA-256 over config + API call signatures) is content-addressable, so a change anywhere reliably invalidates everywhere. Boring, robust, and the kind of thing that turned out to matter once we had real workstations live.
+
+Finally — the migration strategy. Idempotent SQL migrations sound like overkill until the first time a deploy partially completes and someone has to re-run it on Monday morning. `V10_ApiCallParity.sql` checks before it adds. That decision predates most of the production headaches it would have caused otherwise.
+
+## ⑤ Where it's going.
+
+Now the default surface for ~100 machines, both shop floor and office. The next moves are more profile types as new workstation roles come online, and a wider set of API-call actions so the toolbar can drive more than just *launch this app* — things like "kick off a stop-ship escalation" or "open this part record in the ERP with one click." The architecture absorbs them as config entries; no client redeploy needed.

@@ -1,0 +1,47 @@
+---
+title: QIA
+summary: The shop-floor Quality Inspection App — eight years of sole ownership, ~900 units a day, three continuous shifts without a restart, and a 6-to-1 refactor that rolled out during operator breaks.
+status: active
+techStack: [VB.NET, WinForms, DevExpress, SQL Server, PLC, Intuitive ERP, WAVE, Manufacturing]
+role: Solo
+startDate: '2018-01-01'
+---
+
+## ① The problem.
+
+Every transaxle this plant ships passes through a Quality Inspection station before it leaves the line. Eight assembly lines, one inspection workstation per line, roughly nine hundred units a day. The app at that workstation has to retrieve functional-test results, drive serialization and laser etching, handle rework, talk to the ERP, talk to the telematics system that tracks every container leaving the dock, and — most importantly — *catch the bad units the operators try to push through.* It has done that, on every line, for the last eight years. It has caught hundreds.
+
+The uptime requirement isn't a service-level target on a slide. It's three continuous shifts without restart. If this app goes down mid-shift, the line stops or units start shipping that shouldn't have.
+
+When I inherited it in 2018, it was six separate applications — one per line, each with its own config, its own build, its own way of being slightly different from the others. Adding a feature meant editing six codebases. Adding a line meant forking a seventh.
+
+## ② Approach.
+
+The first big move was to collapse all six into one line-agnostic application. A factory pattern keyed on machine name and assembly line, with the process steps decoupled from the line definition. Each line plugs in as a configuration entry rather than a code fork. New lines are new entries.
+
+That was the structural call. The second big move, a few years later, was the async transition — taking a long-lived single-threaded UI with PLC reads, ERP queries, and printer calls happening on the main thread, and pulling all of that into proper async/await without breaking the operator's flow or the 24-hour-shift uptime.
+
+Both of those happened *before AI coding assistance existed*. There were no internal examples of async/await in the codebase to copy from. No senior engineer to ask. The learning happened the hard way — through deadlocks, sync-context surprises, and a lot of iteration. I credit this stretch with most of what I know about architecture.
+
+## ③ What's in the box.
+
+- **Client** — VB.NET WinForms on every line, DevExpress controls, multi-line specialization for variants (UV / UV-Gearbox / UV-PokaYoke) via the same factory.
+- **Database** — SQL Server, parameterized everywhere, multiple databases (shop-floor, Intuitive ERP, QIA-specific tables). UI configuration extracted into a database-driven `ApplicationManager` schema so menus and line configs don't require a redeploy.
+- **PLC** — direct integration with the X20 PLCs that drive each line, via a shared in-house wrapper around the Automated Solutions ASComm library.
+- **Integrations** — Intuitive ERP (part-number validation, backflush, sales-order lookup), the PAS production-automation system (traveler / serial lookup, six-digit serial corrections), WAVE container/shipment telematics (signaling "this unit may not ship" or "this unit is associated to this RTI"), the in-house label-printing library, and the Packout API.
+- **Build** — a `lib/` folder vendoring strategy added in 2026: ten-plus sibling in-house DLLs are pinned alongside QIA so the build no longer needs sibling project sources. The CI pipeline (TFS) builds it standalone.
+- **Companion API** — a parallel ASP.NET Web API rewrite (`QualityInspectionApi`) covering the same inspection workflow as an HTTP surface. Live in production on 2 of the 8 lines and on track for full adoption by end-of-2026.
+
+## ④ What broke.
+
+The 6-to-1 refactor needed to roll out to every line without scheduled downtime. There was no maintenance window. The plan: do it during operator breaks. Operators take 15-minute breaks one line at a time; in that window, uninstall the old per-line build, install the new line-agnostic build, smoke-test, and be ready before they come back. One line per break. The UI was intentionally unchanged, so when the operator returned the screen looked the same and the workflow felt the same. Across all six lines, total unplanned downtime came in around **fifteen minutes — combined.**
+
+When the plant later added two more assembly lines and went from six to eight, the factory architecture absorbed them with **zero downtime and no code forks.** New lines plugged in as new factory entries. That's the payoff the original refactor was built for.
+
+The async transition broke in different and more interesting ways. The first version deadlocked under load because of how WinForms' sync context interacts with `.GetAwaiter().GetResult()` in legacy call paths. The fix was a slow, careful pass through every blocking call to push it onto the right side of the async boundary — and to stop mixing the two patterns in the same method. The lesson, which has informed every async-heavy project since, is that the cost of half-converting a codebase is higher than the cost of either leaving it sync or converting it fully.
+
+## ⑤ Where it's going.
+
+The architectural direction is clear: from WinForms monolith to API-backed workflow. `QualityInspectionApi` is the backend; the client surface is gradually being pulled toward it. Two of the eight lines are already on the API path with the rest of the migration tracking to end-of-2026. The architectural call to drop RabbitMQ from the API in favor of direct HTTP — fewer moving parts, easier to debug a third-shift incident — has been validated by live operation.
+
+The eight-year sole-ownership stretch is the kind of thing that's hard to fake. It's also the thing that taught me most of what I know about building software that *has to keep working* — which is the whole reason this site exists.

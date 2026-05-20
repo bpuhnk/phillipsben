@@ -83,9 +83,9 @@ export default function ResumePrint() {
           Selected Projects
         </h2>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: 11.5 }}>
-          <li style={{ marginBottom: 6 }}><strong>TMA.MCP</strong> — MCP servers giving LLM clients auth-gated access to internal AD, databases, and files (C#, Active Directory).</li>
+          <li style={{ marginBottom: 6 }}><strong>Internal MCP Servers</strong> — MCP servers giving LLM clients auth-gated access to internal AD, databases, and files (C#, Active Directory).</li>
           <li style={{ marginBottom: 6 }}><strong>Cervi</strong> — in-house RAG LLM assistant for service-ticket triage, deployed CPU-only (Ollama, Gemma, RAG).</li>
-          <li style={{ marginBottom: 6 }}><strong>TMAToolbar</strong> — workstation appbar rebuilt into a four-tier system across ~100 machines (.NET 8, React, SignalR).</li>
+          <li style={{ marginBottom: 6 }}><strong>Workstation Toolbar</strong> — workstation appbar rebuilt into a four-tier system across ~100 machines (.NET 8, React, SignalR).</li>
           <li style={{ marginBottom: 6 }}><strong>QIA</strong> — shop-floor quality inspection app; 8 lines, ~900 units/day, 6→1 line-agnostic refactor (VB.NET, WinForms, PLC).</li>
         </ul>
       </section>
