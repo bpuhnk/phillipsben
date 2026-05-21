@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SectionHead from '@/components/section-head';
 import ProjectCard from '@/components/project-card';
+import AskBand from '@/components/assistant/ask-band';
 import { getFeaturedProjects } from '@/lib/content';
 import { getSiteCopy, getSiteData } from '@/lib/site-content';
-import { homeTechStripSchema, homeCardsSchema } from '@/lib/site-schemas';
+import { homeTechStripSchema, homeCardsSchema, assistantSchema } from '@/lib/site-schemas';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
@@ -14,11 +15,12 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default async function Landing() {
-  const [featured, copy, techStrip, cards] = await Promise.all([
+  const [featured, copy, techStrip, cards, assistant] = await Promise.all([
     getFeaturedProjects(3),
     getSiteCopy('home'),
     getSiteData('home-tech-strip', homeTechStripSchema),
     getSiteData('home-cards', homeCardsSchema),
+    getSiteData('assistant', assistantSchema),
   ]);
   const fm = copy.frontmatter;
 
@@ -54,6 +56,9 @@ export default async function Landing() {
           </div>
         </div>
       </section>
+
+      {/* TALK TO VIRTUAL ME — loud entry to the assistant */}
+      <AskBand config={assistant} />
 
       {/* tech strip */}
       <section className="section tight landing-tech-strip-section">

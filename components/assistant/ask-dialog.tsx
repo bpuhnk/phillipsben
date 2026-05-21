@@ -31,8 +31,8 @@ interface AskDialogProps {
   open: boolean;
   onClose: () => void;
   config: Assistant;
-  /** If set when the dialog opens, this question is sent automatically. */
-  initialQuestion?: string | null;
+  /** A new nonce auto-sends `q` (lets the band seed each question robustly). */
+  submission?: { q: string; nonce: number } | null;
   /** Focus is restored here on close (the band's input/button). */
   triggerRef?: RefObject<HTMLElement | null>;
 }
@@ -44,19 +44,23 @@ export default function AskDialog({
   open,
   onClose,
   config,
-  initialQuestion,
+  submission,
   triggerRef,
 }: AskDialogProps) {
   const [mounted, setMounted] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState('');
   const [status, setStatus] = useState<Status>('idle');
+  // Bumped when a stream finishes — re-evaluates the seed effect so a question
+  // that arrived mid-stream (queued) dispatches once the current one is done.
+  const [streamTick, setStreamTick] = useState(0);
 
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
   const bodyRef = useRef<HTMLDivElement | null>(null);
   const lastQuestionRef = useRef<string>('');
-  const autoSentRef = useRef(false);
+  const lastNonceRef = useRef(0);
+  const inFlightRef = useRef(false);
 
   const streaming = status === 'streaming';
   const userTurns = messages.filter((m) => m.role === 'user').length;
@@ -72,7 +76,9 @@ export default function AskDialog({
   const send = useCallback(
     async (raw: string) => {
       const text = raw.trim();
-      if (!text || status === 'streaming') return;
+      // Guard on a ref, not captured `status` (which goes stale in this closure).
+      if (!text || inFlightRef.current) return;
+      inFlightRef.current = true;
 
       lastQuestionRef.current = text;
       const history: Msg[] = [...messages, { role: 'user', content: text }];
@@ -154,21 +160,27 @@ export default function AskDialog({
         fail(
           "Something interrupted that answer. Try again, or reach Ben via the contact page.",
         );
+      } finally {
+        inFlightRef.current = false;
+        setStreamTick((t) => t + 1);
       }
     },
-    [messages, status],
+    [messages],
   );
 
-  // Auto-send the seeded question once, when opened with one.
+  // Send each new seeded submission exactly once (keyed by nonce), so the band
+  // can seed a fresh question whether the dialog was already open or not.
   useEffect(() => {
-    if (open && initialQuestion && !autoSentRef.current) {
-      autoSentRef.current = true;
-      void send(initialQuestion);
+    if (
+      open &&
+      submission &&
+      submission.nonce !== lastNonceRef.current &&
+      !inFlightRef.current
+    ) {
+      lastNonceRef.current = submission.nonce;
+      void send(submission.q);
     }
-    if (!open) {
-      autoSentRef.current = false;
-    }
-  }, [open, initialQuestion, send]);
+  }, [open, submission, send, streamTick]);
 
   // Body scroll lock (mirror m-nav).
   useEffect(() => {
