@@ -32,7 +32,7 @@ STYLE = (
 )
 NEGATIVE = (
     "text, words, letters, numbers, watermark, signature, logo, ui, screenshot, "
-    "people, faces, hands, robot, mascot, cartoon, 3d render, glossy, plastic, "
+    "people, faces, hands, figure, silhouette, robot, mascot, cartoon, 3d render, glossy, plastic, "
     "neon, saturated, vibrant rainbow colors, cluttered, busy, low quality, blurry, "
     "photograph, photographic, photorealistic, realistic, architecture, building, "
     "columns, pillars, interior, room, furniture, perspective depth, shadows, "
@@ -53,6 +53,38 @@ SUBJECTS = {
         "an abstract flat technical diagram of fine ink lines, a row of identical small repeated "
         "marks with precise tick marks and calibration notches, even rhythm and repetition, "
         "measurement and exacting precision, flat hand-drawn linework"
+    ),
+    "workstation-toolbar": (
+        "a clean horizontal rail with a few evenly spaced nodes, fine signal lines fanning out "
+        "from it to a wide grid of many small identical points, one configuration distributed in "
+        "sync to many machines, flat hand-drawn linework"
+    ),
+    "claude-orbiter": (
+        "concentric orbital rings with small marks traveling along them around a central point, "
+        "a few gently branching paths, the sense of watching many processes orbit at once, "
+        "flat hand-drawn linework"
+    ),
+    "finishitnow": (
+        "many small marks and short lines arriving in three dense loose clusters from the left, "
+        "converging and combining into a set of several neat evenly-spaced horizontal lanes on the "
+        "right, dense flowing abstract diagram of multiple sources merging into one ordered board, "
+        "flat hand-drawn linework"
+    ),
+    "hermes-agent": (
+        "many small scattered fragments on one side drawn through a narrowing funnel into a single "
+        "clean distilled line on the other side, the idea of summarizing many things into one "
+        "report, flat hand-drawn linework"
+    ),
+    "mcp-servers": (
+        "a single thin vertical dividing line down the middle with three small gaps in it, a field "
+        "of scattered small dots on the left, fine lines passing from the left only through the "
+        "gaps to reach a tidy ordered column of points on the right, abstract flat diagram, "
+        "hand-drawn linework"
+    ),
+    "server-talk": (
+        "two distinct lines approaching from opposite sides and interleaving turn by turn into a "
+        "single shared central band, a dialogue written into one common substrate, "
+        "flat hand-drawn linework"
     ),
 }
 
