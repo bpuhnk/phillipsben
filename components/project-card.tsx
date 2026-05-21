@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Chip from './chip';
 import ImagePlaceholder from './image-placeholder';
@@ -13,7 +14,17 @@ export default function ProjectCard({ project, variant = 'grid' }: { project: Pr
   return (
     <Link href={`/projects/${frontmatter.slug}`} className={`proj-card ${variant === 'horizontal' ? 'horizontal' : variant === 'minimal' ? 'minimal' : ''}`}>
       <div className="img">
-        <ImagePlaceholder label={`${frontmatter.title} — hero shot`} />
+        {frontmatter.heroImage ? (
+          <Image
+            src={frontmatter.heroImage.src}
+            alt={frontmatter.heroImage.alt}
+            fill
+            sizes="(max-width: 880px) 100vw, 33vw"
+            style={{ objectFit: 'cover' }}
+          />
+        ) : (
+          <ImagePlaceholder label={`${frontmatter.title} — hero shot`} />
+        )}
       </div>
       <div className="body">
         <div className="row">

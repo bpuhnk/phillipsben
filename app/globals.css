@@ -258,7 +258,7 @@ p { margin: 0; }
   overflow: hidden; transition: border-color .15s;
 }
 .proj-card:hover { border-color: var(--rule); }
-.proj-card .img { aspect-ratio: 16 / 10; background: var(--bg-2); }
+.proj-card .img { aspect-ratio: 16 / 10; background: var(--bg-2); position: relative; overflow: hidden; }
 .proj-card .body { padding: 22px 22px 24px; }
 .proj-card .row {
   display: flex; gap: 8px; align-items: center;
