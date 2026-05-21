@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-21T10:12:00Z",
+  "updatedAt": "2026-05-21T11:23:00Z",
   "items": [
     {
       "title": "I've joined Anthropic",
       "url": "https://twitter.com/karpathy/status/2056753169888334312",
       "source": "Hacker News",
       "points": 1412,
-      "whyItMatters": "Karpathy at Anthropic is a direct signal about where serious alignment-focused engineering talent is concentrating — worth tracking."
-    },
-    {
-      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "source": "Hacker News",
-      "points": 1173,
-      "whyItMatters": "Concrete evidence of LLMs doing novel mathematical discovery, not just pattern-matching — the bar just moved for what 'reasoning' means."
+      "whyItMatters": "Karpathy rejoining Anthropic shifts the talent map — worth tracking for anyone building on top of Claude or watching frontier research direction."
     },
     {
       "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
       "url": "https://github.com/antoinezambelli/forge",
       "source": "Hacker News",
-      "points": 654,
-      "whyItMatters": "A 46-point accuracy lift from structured guardrails alone on an 8B model — directly applicable to anyone building agents on smaller open-weights models."
+      "points": 657,
+      "whyItMatters": "Concrete data that structured output guardrails, not model size, are the leverage point for reliable agentic task completion — directly applicable to production agent pipelines."
+    },
+    {
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "source": "Hacker News",
+      "points": 1207,
+      "whyItMatters": "First credible instance of a model doing original math research, not just solving existing problems — the bar for 'what AI can replace' just moved."
     },
     {
       "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
       "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
       "source": "Hacker News",
-      "points": 845,
-      "whyItMatters": "Extension marketplace supply-chain attacks are the new dependency confusion — audit your installed extensions if you use VSCode in CI or shared environments."
+      "points": 880,
+      "whyItMatters": "Supply-chain attack via the editor extension ecosystem — any shop running extensions with repo access should audit their allow-list immediately."
     },
     {
-      "title": "Gemini 3.5 Flash: frontier intelligence with action",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "title": "Learnings from 100K lines of Rust with AI (2025)",
+      "url": "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html",
       "source": "Hacker News",
-      "points": 940,
-      "whyItMatters": "Google's fastest-tier model now has native tool-use and long context baked in — raises the floor for what 'cheap API call' can do in production agentic pipelines."
+      "points": 154,
+      "whyItMatters": "Spec-driven development with AI at scale — the contract-first workflow described here maps well to how agentic coding assistants stay coherent over large codebases."
     }
   ]
 }

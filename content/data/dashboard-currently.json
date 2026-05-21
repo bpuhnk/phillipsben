@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-21T10:12:00Z",
-  "focus": "Shipping the public site assistant — six phases from scratch to live, including adversarial prompt hardening and model cost-tiering. The phillipsben repo had 29 commits this week across the full hero band, chat overlay, /ask route, knowledge pack, and a flagship write-up for the project page.",
+  "updatedAt": "2026-05-21T11:23:00Z",
+  "focus": "Shipping the site assistant is done — all six phases landed and pushed. This week is cleanup and review: the human adversarial pass, committing the Switchboard-side Modelfile changes, and deciding whether to write the launch post.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

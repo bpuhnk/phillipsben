@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-05-21T10:12:00Z",
-  "summary": "The bulk of recent pop-os sessions went into homelab GPU coordination. The broker serializing P100 access across the text-gen and image-gen backends is fully operational — SillyTavern confirmed end-to-end, lock logic tightened after a reload-storm regression by switching from an allowlist of safe paths to an enumerated set of mutating endpoints. That change brought five parallel version pings down to 33ms total.\n\nThe inference stack is otherwise stable. Each P100 consumer has its own idle-unload configuration, and the broker handles eviction before forwarding mutating requests so no service OOMs another. TTS moved to CPU entirely after VRAM accounting made it unnecessary to keep it on the GPU.\n\nOn phillipsben, the big push this week was the site assistant: six phases from zero to live, covering the /ask API route, build-time knowledge pack with redaction, chat overlay, hero call-to-action band, and adversarial prompt hardening with model cost-tiering. Flagship write-up committed. (snapshot stale, last sync 2026-05-19)",
+  "updatedAt": "2026-05-21T11:23:00Z",
+  "summary": "The headline this week is the phillipsben site assistant going fully live. Six phases, start to finish: a build-time knowledge pack (~12k tokens of site content, with a redaction guard that makes confidential leaks structurally impossible), a `/ask` API route with pluggable LLM backend and per-IP rate limiting, a streaming chat overlay with focus-trap and mobile layout, a loud hero band with chip shortcuts, and adversarial hardening. The battery ran 16/16 with zero leaks — fabrication, off-topic, prompt-injection, and open-relay attempts all handled cleanly. The flagship write-up at `/projects/site-assistant/` shipped last, so the bot can answer questions about itself.\n\nThe backend decision was a deliberate engineering call: the local Tesla P100 option exists and is wired (via Switchboard), but warm prefill latency on the P100 sits around 10s with full context, cold around 48s. Claude Haiku was chosen as the default for responsiveness, with the local path kept as an opt-in.\n\nOn the homelab side, Switchboard (the FastAPI proxy that serializes GPU access across KoboldCPP, ComfyUI, and Ollama) got its site-assistant endpoint wired in the same push — priority-aware lock, bearer auth, warm fast-path, and a `429 preempt_timeout` safety valve so the site falls back to Haiku instead of hanging. A side investigation into routing Gemma 4 (26B MoE) through llama.cpp for expert offloading was scoped and deferred — it needs a custom CUDA container for sm_60 and a new eviction strategy in the broker.",
   "highlights": [
-    { "repo": "phillipsben", "oneLiner": "Site assistant shipped end-to-end across six phases — knowledge pack, chat overlay, hero band, and adversarial hardening all live." },
-    { "repo": "hermes-agent", "oneLiner": "Daily cron stable; pop-os memory snapshot pipeline live and writing this tile each morning." }
+    {
+      "repo": "phillipsben",
+      "oneLiner": "Site assistant shipped end-to-end — knowledge pack, chat overlay, hero band, adversarial hardening (16/16), and flagship write-up all live on main."
+    },
+    {
+      "repo": "hermes-agent",
+      "oneLiner": "Daily dashboard cron stable; pop-os memory snapshot syncing fresh each morning."
+    }
   ]
 }
