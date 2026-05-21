@@ -24,3 +24,6 @@ plans/personal-assistant/
 
 # Anonymized assistant query log (runtime data, not source)
 data/ask-log.jsonl
+
+# ComfyUI scratch (raw candidates; committed assets live in public/)
+scripts/comfy/out/

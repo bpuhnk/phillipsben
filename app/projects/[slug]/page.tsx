@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -100,7 +101,20 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       </section>
 
       <section className="section" style={{ paddingTop: 24, paddingBottom: 32 }}>
-        <ImagePlaceholder label={`Hero — ${fm.title} · 16:9 photograph`} height={520} className="project-hero-img" />
+        {fm.heroImage ? (
+          <figure className="project-hero-photo">
+            <Image
+              src={fm.heroImage.src}
+              alt={fm.heroImage.alt}
+              width={1344}
+              height={768}
+              sizes="(max-width: 980px) 100vw, 980px"
+              priority
+            />
+          </figure>
+        ) : (
+          <ImagePlaceholder label={`Hero — ${fm.title} · 16:9 photograph`} height={520} className="project-hero-img" />
+        )}
         <div className="meta" style={{ marginTop: 12 }}>FIG. 01 — {year}.</div>
       </section>
 

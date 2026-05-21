@@ -20,6 +20,12 @@ export const projectFrontmatterSchema = z.object({
     })
     .optional(),
   cover: z.string().optional(),
+  heroImage: z
+    .object({
+      src: z.string(),
+      alt: z.string(),
+    })
+    .optional(),
 });
 
 export type ProjectFrontmatter = z.infer<typeof projectFrontmatterSchema>;
