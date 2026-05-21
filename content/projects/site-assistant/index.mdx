@@ -1,0 +1,74 @@
+---
+title: Talk to Virtual Me
+summary: A bounded career assistant on this site that answers questions about my work — grounded only in what's published here, with hard refusal and redaction bounds, and a backend it can't talk its way around.
+status: active
+techStack: [Next.js, TypeScript, Claude Haiku, Ollama, Switchboard, SSE]
+role: Solo — design, code, deploy
+startDate: '2026-05-21'
+featured: true
+---
+
+## ① The problem.
+
+A portfolio gets a thirty-second skim — index, bio, a project or two, gone. I
+wanted a way for the hiring manager who's actually interested to ask the real
+questions — "what's his IT/OT experience?", "is he a fit for a Solutions
+Architect role?" — and get a straight, grounded answer instead of more prose to
+scroll past. The catch is that a bot which invents a project, or claims a skill I
+don't have, is worse than no bot at all. The whole thing only earns its place if
+it's honest, so honesty is the part I actually engineered.
+
+## ② Approach.
+
+The corpus — my projects, bio, résumé, the /now page, plus one hand-written
+narrative — is about eleven thousand tokens. That fits in a modern context window
+whole, so there's no vector database and no retrieval step to get subtly wrong:
+the site assembles the entire prompt at build time — system rules, the full
+knowledge pack, the conversation — and hands it to a model whose only job is to
+generate the next answer. Everything that defines the bot's behavior lives in my
+repository, version-controlled, not baked into weights or scattered across an
+external index.
+
+## ③ Keeping it honest.
+
+Three bounds, in order of how much they matter:
+
+- It answers **only** from the provided content, and says "I don't know — here's
+  the contact page" when the answer isn't there. No outside knowledge, no
+  guessing about salary or availability.
+- It **declines anything off-topic.** It isn't a general chatbot; it'll politely
+  refuse to write your poem and point you back to what it can actually cover.
+- It **never names my current employer** — and that one isn't enforced by asking
+  the model nicely. A build step scans the assembled knowledge pack and fails the
+  build if the name ever leaks in, so the model literally can't reveal what it was
+  never handed. I spent an afternoon trying to break it — direct questions,
+  "ignore your instructions," a forged system message claiming the rules were
+  switched off — and it held every time, on every model I ran.
+
+## ④ The backend call.
+
+I built this to run on my own hardware. [Switchboard](/projects/switchboard/), my
+GPU broker, sits in front of a 16 GB Tesla P100 in a closet and was meant to host
+exactly this. Then I measured. Prefilling an eleven-thousand-token prompt on a
+Pascal-era card takes about ten seconds warm and the better part of a minute when
+the model has been evicted — and the small local models that fit either followed
+the bounds loosely or, in one case, were quietly being fed a truncated prompt
+because the default context window was a fraction of what the pack needed. A
+larger local model grounded well once I fixed the context, but still wandered
+off-topic more than I'd ship.
+
+So I made the call I'd make for a client: the live assistant defaults to **Claude
+Haiku**, which answers in under a second with the static pack prompt-cached, and
+the P100 path stays wired as an option and a fallback. The provider is one
+environment variable. Choosing the right tool for the constraint is the job;
+running it on my own GPU just to say I did isn't.
+
+## ⑤ What it is, and isn't.
+
+This is home-grown — its own small codebase, not the
+[hermes-agent](/projects/hermes-agent/) framework that drives the dashboard on
+this site, and not [Cervi](/projects/cervi/), the assistant I built at work. It's
+the same *shape* as Cervi — a bounded, retrieval-grounded assistant with a
+curated knowledge base and system-prompted bounds — rebuilt here in the open so
+you can poke at it instead of taking my word for it. Which is the whole point:
+scroll up, open it, and try to catch it in a lie.
