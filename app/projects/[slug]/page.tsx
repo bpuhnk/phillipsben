@@ -106,9 +106,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             <Image
               src={fm.heroImage.src}
               alt={fm.heroImage.alt}
-              width={1344}
-              height={768}
+              fill
               sizes="(max-width: 980px) 100vw, 980px"
+              style={{ objectFit: 'cover' }}
               priority
             />
           </figure>

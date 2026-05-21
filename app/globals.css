@@ -241,15 +241,17 @@ p { margin: 0; }
 .imgph span { position: relative; z-index: 1; max-width: 70%; }
 .imgph.dark { background: var(--ink); color: var(--ink-3); }
 
-/* real hero image — same editorial frame as the placeholder (rule + radius) */
+/* real hero image — banner crop, same editorial frame as the placeholder */
 .project-hero-photo {
   margin: 0;
+  position: relative;
+  aspect-ratio: 21 / 9;
   border: 1px solid var(--rule);
   border-radius: 4px;
   overflow: hidden;
   background: var(--bg);
 }
-.project-hero-photo img { display: block; width: 100%; height: auto; }
+.project-hero-photo img { object-fit: cover; }
 
 /* ── project card ─────────────────────────────── */
 .proj-card {
@@ -821,6 +823,7 @@ p { margin: 0; }
   .project-hero h1 { font-size: 56px; letter-spacing: -0.025em; }
   .project-hero .lede { font-size: 17px; }
   .project-hero-img { height: auto; aspect-ratio: 16 / 9; }
+  .project-hero-photo { aspect-ratio: 16 / 9; }
   .project-body { grid-template-columns: 1fr; gap: 0; }
 
   .project-meta-dl .def,
