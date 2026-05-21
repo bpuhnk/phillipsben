@@ -130,9 +130,10 @@ export default function HobbiesPage() {
               wrapped by my Hermes-Agent on top.
             </p>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--ink-2)', maxWidth: '38ch', marginTop: 14 }}>
-              I run Gemma for fast work, Llama-3 for code and reasoning, Mythos
-              for anything that needs a voice. The point isn't to beat the
-              hosted models — it's that nothing leaves the house.
+              I run Gemma 4 for fast work and Nemo for longer conversations, with
+              smaller models handling speech-to-text, text-to-speech, embeddings,
+              and image generation. The point isn't to beat the hosted models —
+              it's that nothing leaves the house.
             </p>
           </div>
           <div>
@@ -146,7 +147,7 @@ export default function HobbiesPage() {
               {[
                 { k: 'GPU', v: 'P100 16GB' },
                 { k: 'RAM', v: '64 GB' },
-                { k: 'MODELS', v: '7' },
+                { k: 'MODALITIES', v: '5' },
                 { k: 'POWER', v: '~180W' },
               ].map((s) => (
                 <div key={s.k} className="hobbies-ai-stat">
