@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-20T10:04:00Z",
+  "updatedAt": "2026-05-21T10:12:00Z",
   "items": [
     {
       "title": "I've joined Anthropic",
       "url": "https://twitter.com/karpathy/status/2056753169888334312",
       "source": "Hacker News",
-      "points": 1320,
-      "whyItMatters": "Karpathy returning to frontier AI research at Anthropic is a meaningful signal about where serious ML work is converging."
+      "points": 1412,
+      "whyItMatters": "Karpathy at Anthropic is a direct signal about where serious alignment-focused engineering talent is concentrating — worth tracking."
     },
     {
-      "title": "Gemini 3.5 Flash",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
       "source": "Hacker News",
-      "points": 784,
-      "whyItMatters": "Another fast, cheap frontier model in the mix — worth benchmarking against Sonnet for latency-sensitive agentic pipelines."
-    },
-    {
-      "title": "The last six months in LLMs in five minutes",
-      "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
-      "source": "Hacker News",
-      "points": 754,
-      "whyItMatters": "Willison's compressed recaps are consistently accurate — good calibration check on what actually shipped vs. what was noise."
+      "points": 1173,
+      "whyItMatters": "Concrete evidence of LLMs doing novel mathematical discovery, not just pattern-matching — the bar just moved for what 'reasoning' means."
     },
     {
       "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
       "url": "https://github.com/antoinezambelli/forge",
       "source": "Hacker News",
-      "points": 482,
-      "whyItMatters": "Concrete numbers on guardrail impact for small models doing tool use — directly applicable if you're running local inference for agents."
+      "points": 654,
+      "whyItMatters": "A 46-point accuracy lift from structured guardrails alone on an 8B model — directly applicable to anyone building agents on smaller open-weights models."
     },
     {
-      "title": "Anthropic acquires Stainless",
-      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
+      "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
       "source": "Hacker News",
-      "points": 525,
-      "whyItMatters": "Stainless builds auto-generated SDKs — Anthropic acquiring them suggests tighter, first-party SDK tooling for the Claude API is coming."
+      "points": 845,
+      "whyItMatters": "Extension marketplace supply-chain attacks are the new dependency confusion — audit your installed extensions if you use VSCode in CI or shared environments."
+    },
+    {
+      "title": "Gemini 3.5 Flash: frontier intelligence with action",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "source": "Hacker News",
+      "points": 940,
+      "whyItMatters": "Google's fastest-tier model now has native tool-use and long context baked in — raises the floor for what 'cheap API call' can do in production agentic pipelines."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-20T10:04:00Z",
-  "focus": "Rounding out the phillipsben site — résumé got a title update and IT/OT integration lead, and five project pages shipped this week. The GPU broker on pop-os is stable with SillyTavern confirmed working end-to-end; lock logic is tighter after last week's reload-storm fix.",
+  "updatedAt": "2026-05-21T10:12:00Z",
+  "focus": "Shipping the public site assistant — six phases from scratch to live, including adversarial prompt hardening and model cost-tiering. The phillipsben repo had 29 commits this week across the full hero band, chat overlay, /ask route, knowledge pack, and a flagship write-up for the project page.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

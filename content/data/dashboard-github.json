@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-05-20T10:02:22Z",
-  "weekStart": "2026-05-13",
+  "updatedAt": "2026-05-21T10:10:47Z",
+  "weekStart": "2026-05-14",
   "totals": {
-    "commits": 23,
+    "commits": 29,
     "prs": 0,
     "repos": 1,
-    "activeDays": 5
+    "activeDays": 6
   },
   "repos": [
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 23,
-      "summary": "Rewrote bio and résumé, published five project pages, shipped Spotify and Claude memory dashboard phases, and fixed daily refresh plumbing."
+      "commits": 29,
+      "summary": "Site assistant shipped across six phases — hero band, chat overlay, /ask route, knowledge pack, and adversarial hardening all landed."
     }
   ]
 }
