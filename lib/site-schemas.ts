@@ -106,6 +106,33 @@ export const contactTilesSchema = z.array(
   }),
 );
 
+export const resumeSchema = z.object({
+  header: z.object({
+    name: z.string(),
+    title: z.string(),
+    contact: z.string(),
+  }),
+  summary: z.string(),
+  experience: z.array(
+    z.object({ y: z.string(), h: z.string(), s: z.string(), p: z.string() }),
+  ),
+  skills: z.array(z.object({ label: z.string(), body: z.string() })),
+  selectedProjects: z.array(z.object({ name: z.string(), desc: z.string() })),
+});
+
+export const assistantSchema = z.object({
+  band: z.object({
+    kicker: z.string(),
+    headline: z.string(),
+    placeholder: z.string(),
+    suggestedQuestions: z.array(z.string()).min(1),
+  }),
+  systemPrompt: z.string(),
+  disclaimer: z.string(),
+  refusal: z.string(),
+  turnCap: z.number().int().positive().default(5),
+});
+
 export const contactElsewhereSchema = z.array(
   z.object({
     kicker: z.string(),
@@ -249,3 +276,5 @@ export type BioCareer = z.infer<typeof bioCareerSchema>;
 export type BioSkills = z.infer<typeof bioSkillsSchema>;
 export type ContactTiles = z.infer<typeof contactTilesSchema>;
 export type ContactElsewhere = z.infer<typeof contactElsewhereSchema>;
+export type Resume = z.infer<typeof resumeSchema>;
+export type Assistant = z.infer<typeof assistantSchema>;

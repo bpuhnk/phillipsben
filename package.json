@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build:pack": "tsx scripts/build-knowledge-pack.ts",
+    "prebuild": "tsx scripts/build-knowledge-pack.ts",
     "build": "next build",
     "postbuild": "next-sitemap && node scripts/generate-pdf.mjs",
     "start": "next start",

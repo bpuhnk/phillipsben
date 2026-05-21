@@ -1,0 +1,42 @@
+{
+  "header": {
+    "name": "Ben Phillips",
+    "title": "Solutions Architect · .NET · IT/OT Integration · Southeast USA",
+    "contact": "contact@phillipsben.com · phillipsben.com · github.com/bPuhnk · linkedin.com/in/ben-phillips-332a4826"
+  },
+  "summary": "Full-stack software engineer with sixteen years building .NET software — desktop applications, services, and integrations for places where uptime matters more than novelty. Recent work spans solutions architecture, IT/OT integration, and production AI: an in-house LLM assistant and a set of MCP servers for safe LLM access to internal systems.",
+  "experience": [
+    {
+      "y": "2018 — Now",
+      "h": "Application Developer",
+      "s": "Tier-1 transaxle supplier (manufacturing)",
+      "p": "Sole primary developer across a 25+ application portfolio. Drove source control, dev environment, and framework modernization from a 2018 .NET 3.5 starting point. Recent: solutions architecture, IT/OT integration, in-house LLM assistant and MCP servers. Certified ISO 9001:2015 internal QMS auditor."
+    },
+    {
+      "y": "2014 — 2018",
+      "h": "Software Developer",
+      "s": "Oldcastle Materials Group (now CRH)",
+      "p": "Middleware applications, then the QuoteToCash Silverlight sales system, then telematics integration on MuleSoft with BA / PM / business owners. Promoted junior → mid-level."
+    },
+    {
+      "y": "2010 — 2014",
+      "h": "IT Support & Junior .NET Developer",
+      "s": "Sturgis Web Services",
+      "p": "First professional .NET role. SSIS / ETL pipelines for county tax-payment data; direct work with county staff nationwide on data import."
+    }
+  ],
+  "skills": [
+    { "label": "Desktop", "body": "WinForms, WPF, Blazor Server, Electron, WebView2" },
+    { "label": "Services & integration", "body": "C#, VB.NET, ASP.NET Core, SignalR, RabbitMQ, SQL Server, EF Core" },
+    { "label": "AI & LLM", "body": "Ollama, Gemma, OpenWebUI, MCP, RAG, AD-gated access" },
+    { "label": "Architecture", "body": "multi-tier systems, distributed monitoring, IT/OT bridge, profile-based delivery" },
+    { "label": "Platform & libraries", "body": "Serilog, NuGet, .NET Standard 2.0, shared API contracts, PLC comms" },
+    { "label": "Quality & process", "body": "ISO 9001:2015 internal QMS audit" }
+  ],
+  "selectedProjects": [
+    { "name": "Internal MCP Servers", "desc": "MCP servers giving LLM clients auth-gated access to internal AD, databases, and files (C#, Active Directory)." },
+    { "name": "Cervi", "desc": "in-house RAG LLM assistant for service-ticket triage, deployed CPU-only (Ollama, Gemma, RAG)." },
+    { "name": "Workstation Toolbar", "desc": "workstation appbar rebuilt into a four-tier system across ~100 machines (.NET 8, React, SignalR)." },
+    { "name": "QIA", "desc": "shop-floor quality inspection app; 8 lines, ~900 units/day, 6→1 line-agnostic refactor (VB.NET, WinForms, PLC)." }
+  ]
+}
