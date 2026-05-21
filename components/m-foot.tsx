@@ -32,7 +32,7 @@ export default function MFoot() {
       </a>
       <div className="m-foot-bottom">
         <span>© {new Date().getFullYear()} BEN PHILLIPS</span>
-        <span>HAND-BUILT, NO TRACKING</span>
+        <span>HUMAN + AGENTS · ANONYMOUS ANALYTICS</span>
       </div>
     </footer>
   );
