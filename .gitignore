@@ -18,3 +18,9 @@ __pycache__/
 
 # Private career/job-search planning — never commit to this public repo
 plans/work-machine-handoff-*/
+# Assistant plan docs discuss the employer by name in the honesty-rails sections
+# — keep them local so the forbidden strings never reach this public repo.
+plans/personal-assistant/
+
+# Anonymized assistant query log (runtime data, not source)
+data/ask-log.jsonl
