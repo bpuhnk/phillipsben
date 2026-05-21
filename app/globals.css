@@ -241,6 +241,16 @@ p { margin: 0; }
 .imgph span { position: relative; z-index: 1; max-width: 70%; }
 .imgph.dark { background: var(--ink); color: var(--ink-3); }
 
+/* duotoned real photo — same editorial frame as the placeholder it replaces */
+.duo-photo {
+  position: relative;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.duo-photo img { object-fit: cover; }
+
 /* real hero image — banner crop, same editorial frame as the placeholder */
 .project-hero-photo {
   margin: 0;

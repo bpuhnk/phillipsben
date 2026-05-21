@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Chip from '@/components/chip';
-import ImagePlaceholder from '@/components/image-placeholder';
+import DuoPhoto from '@/components/duo-photo';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
@@ -54,17 +54,22 @@ export default function HobbiesPage() {
               prints things I forgot I needed by morning.
             </p>
           </div>
-          <ImagePlaceholder label="The print farm — three machines on a steel bench · ambient afternoon light" ratio="4 / 3" />
+          <DuoPhoto
+            src="/images/hobbies/printing-hero.webp"
+            alt="Three 3D printers on a steel workbench in afternoon light."
+            label="The print farm — three machines on a steel bench · ambient afternoon light"
+            ratio="4 / 3"
+          />
         </div>
 
         <div className="hobbies-printer-grid">
           {[
-            { n: 'Anet A8 → BLV AM8', m: 'Linear rails, aluminum extrusions, Marlin 2', s: 'Heavily modified', y: '2018 → today', img: 'BLV AM8 · build-plate close-up' },
-            { n: 'Creality Ender 3', m: 'Klipper, BLTouch, Sprite extruder', s: 'The reliable one', y: '2020 → today', img: 'Ender 3 · running a 30hr print' },
-            { n: 'Creality K1', m: 'Stock firmware, fast benchies', s: 'The fast one', y: '2024 → today', img: 'K1 · enclosure-light glowing red' },
+            { n: 'Anet A8 → BLV AM8', m: 'Linear rails, aluminum extrusions, Marlin 2', s: 'Heavily modified', y: '2018 → today', file: 'am8', alt: 'Close-up of the BLV AM8 build plate.', img: 'BLV AM8 · build-plate close-up' },
+            { n: 'Creality Ender 3', m: 'Klipper, BLTouch, Sprite extruder', s: 'The reliable one', y: '2020 → today', file: 'ender3', alt: 'The Ender 3 mid-way through a long print.', img: 'Ender 3 · running a 30hr print' },
+            { n: 'Creality K1', m: 'Stock firmware, fast benchies', s: 'The fast one', y: '2024 → today', file: 'k1', alt: 'The Creality K1 with its enclosure light glowing.', img: 'K1 · enclosure-light glowing red' },
           ].map((p) => (
             <div key={p.n} className="proj-card" style={{ border: '1px solid var(--rule-2)' }}>
-              <ImagePlaceholder label={p.img} ratio="4 / 3" />
+              <DuoPhoto src={`/images/hobbies/${p.file}.webp`} alt={p.alt} label={p.img} ratio="4 / 3" />
               <div className="body">
                 <div className="row">
                   <span>{p.y}</span><span>·</span>
@@ -101,10 +106,10 @@ export default function HobbiesPage() {
             </div>
           </div>
           <div className="hobbies-embedded-grid">
-            <ImagePlaceholder label="Breadboard close-up · LED test rig" ratio="1 / 1" />
-            <ImagePlaceholder label="Enclosure print fresh off the K1" ratio="1 / 1" />
-            <ImagePlaceholder label="Garage occupancy radar board" ratio="1 / 1" />
-            <ImagePlaceholder label="Home Assistant dashboard · dim mode" ratio="1 / 1" />
+            <DuoPhoto src="/images/hobbies/breadboard.webp" alt="Breadboard with an LED test rig wired up." label="Breadboard close-up · LED test rig" ratio="1 / 1" />
+            <DuoPhoto src="/images/hobbies/enclosure.webp" alt="A freshly printed electronics enclosure off the K1." label="Enclosure print fresh off the K1" ratio="1 / 1" />
+            <DuoPhoto src="/images/hobbies/radar.webp" alt="The ESP32 mmWave garage-occupancy radar board." label="Garage occupancy radar board" ratio="1 / 1" />
+            <DuoPhoto src="/images/hobbies/home-assistant.webp" alt="A Home Assistant dashboard in dim mode." label="Home Assistant dashboard · dim mode" ratio="1 / 1" />
           </div>
         </div>
       </section>
@@ -131,7 +136,12 @@ export default function HobbiesPage() {
             </p>
           </div>
           <div>
-            <ImagePlaceholder label="The home rack — P100 visible, doors open, a labelled cable run · 4:3" ratio="4 / 3" />
+            <DuoPhoto
+              src="/images/hobbies/rack.webp"
+              alt="The home server rack with the P100 GPU visible and a labelled cable run."
+              label="The home rack — P100 visible, doors open, a labelled cable run · 4:3"
+              ratio="4 / 3"
+            />
             <div className="hobbies-ai-stats m-stat-grid">
               {[
                 { k: 'GPU', v: 'P100 16GB' },
