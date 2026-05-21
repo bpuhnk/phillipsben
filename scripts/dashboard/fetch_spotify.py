@@ -5,14 +5,21 @@ to stdout (matches dashboardSpotifySchema).
 
 Env:
   SPOTIFY_CLIENT_ID      App client ID from developer.spotify.com.
-  SPOTIFY_REFRESH_TOKEN  Long-lived token captured by spotify_auth.py.
+  SPOTIFY_TOKEN_FILE     Path to a file holding the current refresh token.
+                         Spotify's PKCE flow ROTATES the refresh token on
+                         every refresh (returns a new one, revokes the old),
+                         so the live token must be persisted between runs.
+                         This file is the source of truth: read at start,
+                         rewritten after each refresh.
+  SPOTIFY_REFRESH_TOKEN  Bootstrap-only fallback, used when the token file
+                         doesn't exist yet (e.g. first run after re-auth).
 
 Exits 0 on success (output is valid JSON), 1 on any failure WITHOUT
 emitting partial data. Hermes treats a non-zero exit as "leave
 yesterday's dashboard-spotify.json untouched."
 
 Usage:
-  SPOTIFY_CLIENT_ID=xxx SPOTIFY_REFRESH_TOKEN=yyy \\
+  SPOTIFY_CLIENT_ID=xxx SPOTIFY_TOKEN_FILE=/opt/data/secrets/spotify_refresh_token \\
     python3 scripts/dashboard/fetch_spotify.py > content/data/dashboard-spotify.json
 """
 from __future__ import annotations
@@ -33,7 +40,52 @@ def err(msg: str) -> None:
     print(f"fetch_spotify: {msg}", file=sys.stderr)
 
 
-def refresh_access_token(client_id: str, refresh_token: str) -> str:
+def _token_file() -> str | None:
+    path = os.environ.get("SPOTIFY_TOKEN_FILE")
+    return os.path.expanduser(path) if path else None
+
+
+def load_refresh_token() -> str | None:
+    """Prefer the rotating token file; fall back to SPOTIFY_REFRESH_TOKEN for
+    first-run bootstrap (the file won't exist until the first refresh)."""
+    path = _token_file()
+    if path and os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as fh:
+                tok = fh.read().strip()
+            if tok:
+                return tok
+        except OSError as e:
+            err(f"could not read token file {path}: {e}")
+    return os.environ.get("SPOTIFY_REFRESH_TOKEN")
+
+
+def save_refresh_token(token: str) -> None:
+    """Persist a rotated refresh token atomically with 0600 perms. If no token
+    file is configured this is a no-op WITH a warning — rotation then can't
+    survive and the next run will fail until re-auth."""
+    path = _token_file()
+    if not path:
+        err("SPOTIFY_TOKEN_FILE not set — cannot persist rotated refresh token; "
+            "next run will fail with 'Refresh token revoked' until re-auth")
+        return
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp = f"{path}.tmp"
+    fd = os.open(tmp, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    try:
+        os.write(fd, (token + "\n").encode())
+    finally:
+        os.close(fd)
+    os.replace(tmp, path)
+
+
+def refresh_access_token(client_id: str, refresh_token: str) -> tuple[str, str | None]:
+    """Mint a 1-hour access token. Returns (access_token, new_refresh_token).
+
+    Spotify's PKCE flow rotates the refresh token: the response carries a new
+    refresh_token and the supplied one is revoked. The caller MUST persist the
+    new token, or the next run breaks.
+    """
     body = urllib.parse.urlencode({
         "grant_type": "refresh_token",
         "refresh_token": refresh_token,
@@ -49,7 +101,7 @@ def refresh_access_token(client_id: str, refresh_token: str) -> str:
     token = data.get("access_token")
     if not token:
         raise RuntimeError(f"no access_token in refresh response: {data}")
-    return token
+    return token, data.get("refresh_token")
 
 
 def get_json(url: str, access_token: str) -> dict | None:
@@ -91,16 +143,22 @@ def map_track(item: dict) -> dict:
 
 def main() -> int:
     client_id = os.environ.get("SPOTIFY_CLIENT_ID")
-    refresh_token = os.environ.get("SPOTIFY_REFRESH_TOKEN")
+    refresh_token = load_refresh_token()
     if not client_id or not refresh_token:
-        err("SPOTIFY_CLIENT_ID and SPOTIFY_REFRESH_TOKEN must be set")
+        err("SPOTIFY_CLIENT_ID and a refresh token "
+            "(via SPOTIFY_TOKEN_FILE or SPOTIFY_REFRESH_TOKEN) must be set")
         return 2
 
     try:
-        access = refresh_access_token(client_id, refresh_token)
+        access, new_refresh = refresh_access_token(client_id, refresh_token)
     except Exception as e:
         err(f"token refresh failed: {e}")
         return 1
+
+    # Persist the rotated token NOW, before the playback calls — Spotify has
+    # already revoked the old one, so a later failure must not lose the new.
+    if new_refresh and new_refresh != refresh_token:
+        save_refresh_token(new_refresh)
 
     now_playing: dict | None = None
     try:
