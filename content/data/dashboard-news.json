@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-21T11:23:00Z",
+  "updatedAt": "2026-05-21T16:55:39Z",
   "items": [
-    {
-      "title": "I've joined Anthropic",
-      "url": "https://twitter.com/karpathy/status/2056753169888334312",
-      "source": "Hacker News",
-      "points": 1412,
-      "whyItMatters": "Karpathy rejoining Anthropic shifts the talent map — worth tracking for anyone building on top of Claude or watching frontier research direction."
-    },
-    {
-      "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
-      "url": "https://github.com/antoinezambelli/forge",
-      "source": "Hacker News",
-      "points": 657,
-      "whyItMatters": "Concrete data that structured output guardrails, not model size, are the leverage point for reliable agentic task completion — directly applicable to production agent pipelines."
-    },
     {
       "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
       "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
       "source": "Hacker News",
-      "points": 1207,
-      "whyItMatters": "First credible instance of a model doing original math research, not just solving existing problems — the bar for 'what AI can replace' just moved."
+      "points": 1331,
+      "whyItMatters": "First credible case of a model generating original mathematical research — the bar for what 'AI assistance' means in knowledge work just moved."
+    },
+    {
+      "title": "Gemini 3.5 Flash",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "source": "Hacker News",
+      "points": 943,
+      "whyItMatters": "Flash-tier models keep compressing the cost/quality frontier — worth benchmarking against Haiku for any latency-sensitive production route."
     },
     {
       "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
       "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
       "source": "Hacker News",
-      "points": 880,
-      "whyItMatters": "Supply-chain attack via the editor extension ecosystem — any shop running extensions with repo access should audit their allow-list immediately."
+      "points": 986,
+      "whyItMatters": "Supply-chain attack via the editor extension ecosystem — any team running extensions with repo write access should audit their allow-list now."
+    },
+    {
+      "title": "Qwen3.7-Max: The Agent Frontier",
+      "url": "https://qwen.ai/blog?id=qwen3.7",
+      "source": "Hacker News",
+      "points": 681,
+      "whyItMatters": "A genuinely capable open-weight model aimed at agentic tasks — a real option for self-hosted pipelines that need long-context reasoning without an API bill."
     },
     {
       "title": "Learnings from 100K lines of Rust with AI (2025)",
       "url": "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html",
       "source": "Hacker News",
-      "points": 154,
-      "whyItMatters": "Spec-driven development with AI at scale — the contract-first workflow described here maps well to how agentic coding assistants stay coherent over large codebases."
+      "points": 165,
+      "whyItMatters": "Spec-driven development with AI at scale — the contract-first workflow here maps directly to how agentic coding stays coherent across large codebases."
     }
   ]
 }
