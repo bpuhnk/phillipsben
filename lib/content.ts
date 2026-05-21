@@ -89,24 +89,18 @@ export async function getProjectNeighbors(
   };
 }
 
-const nowItemSchema = z.object({
-  kind: z.string(),
-  title: z.string(),
-  body: z.string(),
-  meta: z.string().optional(),
-});
-
 const nowReadingSchema = z.object({
   kind: z.string(),
   title: z.string(),
   note: z.string(),
 });
 
+// The long-form "field note" is the markdown body of each entry (NowEntry.content).
+// The dashboard owns live status; /now is the reflective counterpart.
 export const nowFrontmatterSchema = z.object({
   date: z.coerce.date(),
   updatedLabel: z.string(),
   timezone: z.string().default('America/Chicago'),
-  working: z.array(nowItemSchema).default([]),
   reading: z.array(nowReadingSchema).default([]),
   notWorking: z.string(),
 });
@@ -127,7 +121,7 @@ async function readNow(filename: string): Promise<NowEntry | null> {
   return { slug: filename.replace(/\.mdx?$/, ''), frontmatter: fm, content: parsed.content };
 }
 
-async function getAllNow(): Promise<NowEntry[]> {
+export async function getAllNow(): Promise<NowEntry[]> {
   let files: string[];
   try {
     files = await fs.readdir(NOW_DIR);
@@ -149,4 +143,9 @@ export async function getLatestNow(): Promise<NowEntry | null> {
 export async function getNowArchive(): Promise<NowEntry[]> {
   const all = await getAllNow();
   return all.slice(1);
+}
+
+export async function getNowBySlug(slug: string): Promise<NowEntry | null> {
+  const all = await getAllNow();
+  return all.find((e) => e.slug === slug) ?? null;
 }

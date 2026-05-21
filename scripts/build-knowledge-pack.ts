@@ -135,9 +135,9 @@ async function buildPack(): Promise<string> {
   if (now) {
     parts.push('\n---\n## Currently (from /now)\n');
     parts.push(`As of ${now.frontmatter.updatedLabel}:`);
-    for (const w of now.frontmatter.working) {
-      parts.push(`- ${w.title}: ${w.body}`);
-    }
+    // Strip MDX comments ({/* ... */}) — editorial notes, not content for the assistant.
+    const fieldNote = now.content.replace(/\{\/\*[\s\S]*?\*\/\}/g, '').trim();
+    if (fieldNote) parts.push(fieldNote);
     parts.push(`Not working on: ${now.frontmatter.notWorking.trim()}`);
   }
 

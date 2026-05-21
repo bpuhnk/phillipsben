@@ -380,6 +380,21 @@ p { margin: 0; }
 .now-reading-title { font-family: var(--font-display); font-size: 24px; line-height: 1.15; margin-bottom: 6px; }
 .now-reading-note { font-size: 13px; color: var(--ink-2); }
 
+/* now page — long-form field note */
+.now-field { max-width: 60ch; }
+.now-field p { font-size: 17px; line-height: 1.7; color: var(--ink-2); }
+.now-field p + p { margin-top: 1.1em; }
+.now-field em, .now-field i { color: var(--ink); }
+
+/* now page — earlier-notes archive */
+.now-archive { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
+.now-archive-row { border-bottom: 1px solid var(--rule); }
+.now-archive-row a { display: flex; align-items: baseline; justify-content: space-between; padding: 18px 0; color: var(--ink); text-decoration: none; transition: color 0.15s ease; }
+.now-archive-row a:hover { color: var(--accent); }
+.now-archive-date { font-family: var(--font-display); font-size: 22px; line-height: 1.1; color: inherit; }
+.now-archive-arrow { font-family: var(--font-mono); color: var(--ink-3); }
+.now-archive-row a:hover .now-archive-arrow { color: var(--accent); }
+
 /* ── fluid-type tiers ────────────────────────── */
 .display-xxl { font-family: var(--font-display); font-weight: 400; font-size: clamp(48px, 8vw, 132px); line-height: 0.96; letter-spacing: -0.025em; }
 .display-xl  { font-family: var(--font-display); font-weight: 400; font-size: clamp(40px, 6.4vw, 96px);  line-height: 0.98; letter-spacing: -0.02em; }
@@ -857,10 +872,8 @@ p { margin: 0; }
   .proj-card .img { aspect-ratio: 16 / 9; }
 
   /* now */
-  .now-working .def { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
-  .now-working .def dt { font-size: 10px; }
-  .now-working .def dd h5 { font-family: var(--font-display); font-size: 20px; line-height: 1.15; margin-bottom: 6px; }
-  .now-working .def dd p { font-size: 13.5px; }
+  .now-field p { font-size: 16px; }
+  .now-archive-date { font-size: 19px; }
 
   .now-reading { grid-template-columns: 1fr; gap: 0; }
   .now-reading-item { padding: 16px 0; }
