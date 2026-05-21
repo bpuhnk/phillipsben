@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build:pack": "tsx scripts/build-knowledge-pack.ts",
-    "prebuild": "tsx scripts/build-knowledge-pack.ts",
+    "prebuild": "tsx scripts/build-knowledge-pack.ts && tsx scripts/check-heroes.ts",
     "build": "next build",
     "postbuild": "next-sitemap && node scripts/generate-pdf.mjs",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "validate:dashboard": "tsx scripts/dashboard/validate.ts"
+    "validate:dashboard": "tsx scripts/dashboard/validate.ts",
+    "heroes:check": "tsx scripts/check-heroes.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.1",
