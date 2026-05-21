@@ -5,7 +5,7 @@ import ProjectCard from '@/components/project-card';
 import AskBand from '@/components/assistant/ask-band';
 import { getFeaturedProjects } from '@/lib/content';
 import { getSiteCopy, getSiteData } from '@/lib/site-content';
-import { homeTechStripSchema, homeCardsSchema, assistantSchema } from '@/lib/site-schemas';
+import { homeTechStripSchema, homeCardsSchema, assistantSchema, dashboardCurrentlySchema } from '@/lib/site-schemas';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
@@ -15,12 +15,13 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default async function Landing() {
-  const [featured, copy, techStrip, cards, assistant] = await Promise.all([
+  const [featured, copy, techStrip, cards, assistant, currently] = await Promise.all([
     getFeaturedProjects(3),
     getSiteCopy('home'),
     getSiteData('home-tech-strip', homeTechStripSchema),
     getSiteData('home-cards', homeCardsSchema),
     getSiteData('assistant', assistantSchema),
+    getSiteData('dashboard-currently', dashboardCurrentlySchema),
   ]);
   const fm = copy.frontmatter;
 
@@ -42,18 +43,18 @@ export default async function Landing() {
               dangerouslySetInnerHTML={{ __html: fm.tagline }}
             />
           </div>
-          <div className="landing-currently">
+          {/* Mirrors the dashboard's Currently (single source of truth, edited via /admin). */}
+          <Link href="/dashboard" className="landing-currently">
             <div className="meta">{fm.currentlyLabel}</div>
-            {fm.currently.map((c, i) => (
-              <div key={i} style={{ borderTop: '1px solid var(--rule)', paddingTop: 16 }}>
-                <div
-                  style={{ fontFamily: 'var(--font-display)', fontSize: 22, lineHeight: 1.15, marginBottom: 6 }}
-                  dangerouslySetInnerHTML={{ __html: c.title }}
-                />
-                <div className="meta">{c.meta}</div>
-              </div>
-            ))}
-          </div>
+            <p className="landing-currently-focus">{currently.focus}</p>
+            <div className="landing-currently-reading">
+              <span className="meta">READING</span>
+              <span>{currently.reading.title} — {currently.reading.author}</span>
+            </div>
+            <span className="meta landing-currently-link">
+              Updated {new Date(currently.updatedAt).toISOString().slice(0, 10)} · on the dashboard →
+            </span>
+          </Link>
         </div>
       </section>
 
