@@ -336,7 +336,7 @@ export default function AskDialog({
             <p className="ask-nudge">
               Let&rsquo;s keep this focused — for anything deeper,{' '}
               <Link href="/contact#book" onClick={close}>
-                book a 30-min chat →
+                book a 15-min chat →
               </Link>
             </p>
           ) : (
@@ -379,7 +379,7 @@ export default function AskDialog({
           <p className="meta ask-disclaimer">
             {config.disclaimer}{' '}
             <Link href="/contact#book" onClick={close}>
-              Book a 30-min chat →
+              Book a 15-min chat →
             </Link>
           </p>
         </footer>

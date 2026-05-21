@@ -24,7 +24,7 @@
       "links": [
         { "label": "contact@phillipsben.com", "href": "mailto:contact@phillipsben.com" },
         { "label": "Download résumé (PDF)", "href": "/resume.pdf", "download": true },
-        { "label": "Book a 30-min chat", "href": "/contact" }
+        { "label": "Book a 15-min chat", "href": "/contact" }
       ]
     }
   ],

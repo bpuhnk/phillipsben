@@ -8,8 +8,8 @@ const CalInline = dynamic(() => import('./cal-inline'), { ssr: false });
 const HEIGHT = 620;
 
 export default function CalEmbed({
-  calLink = 'bpuhnk/30min',
-  namespace = '30min',
+  calLink = 'bpuhnk/15min',
+  namespace = '15min',
 }: {
   calLink?: string;
   namespace?: string;
