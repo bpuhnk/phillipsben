@@ -33,13 +33,26 @@ STYLE = (
 NEGATIVE = (
     "text, words, letters, numbers, watermark, signature, logo, ui, screenshot, "
     "people, faces, hands, robot, mascot, cartoon, 3d render, glossy, plastic, "
-    "neon, saturated, vibrant rainbow colors, cluttered, busy, low quality, blurry"
+    "neon, saturated, vibrant rainbow colors, cluttered, busy, low quality, blurry, "
+    "photograph, photographic, photorealistic, realistic, architecture, building, "
+    "columns, pillars, interior, room, furniture, perspective depth, shadows, "
+    "wires, rods, tubes"
 )
 SUBJECTS = {
     "site-assistant": (
         "a sparse network of conversational threads and connected nodes, "
         "a few lines kept inside a clear bounded frame while others stop at its edge, "
         "the idea of an answer staying within known limits"
+    ),
+    "cervi": (
+        "scattered loose dots and short ink strokes on one side flowing along a few gentle "
+        "guiding curves and resolving into tidy evenly-spaced parallel rows on the other side, "
+        "abstract diagram of disorder becoming order, flat hand-drawn ink linework"
+    ),
+    "qia": (
+        "an abstract flat technical diagram of fine ink lines, a row of identical small repeated "
+        "marks with precise tick marks and calibration notches, even rhythm and repetition, "
+        "measurement and exacting precision, flat hand-drawn linework"
     ),
 }
 
