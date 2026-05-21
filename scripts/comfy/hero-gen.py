@@ -86,6 +86,13 @@ SUBJECTS = {
         "single shared central band, a dialogue written into one common substrate, "
         "flat hand-drawn linework"
     ),
+    "switchboard": (
+        "a field of many scattered small dots and short marks on the left, a single thin vertical "
+        "dividing line down the middle with one small gap, just one fine line passing from the left "
+        "through that single gap to reach a lone small mark on the right, the rest of the dots held "
+        "waiting on the left, generous empty space, abstract flat technical diagram, "
+        "hand-drawn linework"
+    ),
 }
 
 
