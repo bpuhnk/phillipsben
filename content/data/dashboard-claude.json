@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-05-21T16:55:39Z",
-  "summary": "The main event this week was the site assistant going fully live on phillipsben.com. Six phases end-to-end with Claude: a build-time knowledge pack (~12k tokens of site content) with a redaction guard that makes confidential leaks structurally impossible, a `/ask` API route with a pluggable LLM backend and per-IP rate limiting, a streaming chat overlay with focus-trap and mobile layout, a hero band with chip shortcuts, adversarial hardening, and a flagship write-up. The battery ran 16/16 with zero leaks — fabrication, off-topic, prompt-injection, and open-relay attempts all handled cleanly.\n\nThe backend decision was deliberate: the local Tesla P100 path exists and is wired (via Switchboard), but warm prefill latency on the P100 with the full context pack sits around 10s, cold around 48s. Claude Haiku was chosen as the default for responsiveness, with the local option kept as an opt-in.\n\nThis week shifted to post-launch cleanup — hero images generated and plumbed for all project pages via a pipeline that runs at build time, plus an invariant guard that fails the build if a project is missing art. The Switchboard-side Modelfile changes from the site-assistant work (new model entry, priority-aware lock) are staged but not yet committed in that repo.",
+  "updatedAt": "2026-05-22T10:02:28Z",
+  "summary": "Last week the site assistant went fully live on phillipsben.com — knowledge pack, streaming chat overlay, adversarial hardening, and the flagship write-up all shipped. This week shifted to post-launch cleanup and site polish.\n\nThe hero image pipeline landed: generated art for all project pages, plumbed through a build-time invariant guard that fails the build if a project is missing art. The `/now` page was restructured as a long-form field note with an archive. The hobbies section got nine palette-duotoned photo slots wired up. Home copy got another tightening pass — identity-line kicker, footer updated to reflect human + agent authorship, booking CTAs added throughout.\n\nOn the infrastructure side, Hermes's daily dashboard cron has been running stably, Spotify credentials refreshed and persisted, and the Currently panel on the home page now mirrors the dashboard as a single source of truth. (snapshot stale, last sync unknown)",
   "highlights": [
     {
       "repo": "phillipsben",
-      "oneLiner": "Site assistant shipped end-to-end — knowledge pack, streaming chat overlay, adversarial hardening (16/16), and flagship write-up all live."
+      "oneLiner": "Hero image pipeline live: generated art for all project pages, build-time invariant guard, and heroes:check helper added."
     },
     {
       "repo": "phillipsben",
-      "oneLiner": "Hero image pipeline landed: generated art for all project pages, build-time invariant guard, and heroes:check helper added."
+      "oneLiner": "/now restructured as a long-form field note with archive; hobbies gallery wired with 9 duotone photo slots."
     },
     {
       "repo": "hermes-agent",
-      "oneLiner": "Daily dashboard cron running stably; pop-os memory snapshot syncing fresh each morning."
+      "oneLiner": "Daily dashboard cron running stably; Spotify credentials refreshed and persisted."
     }
   ]
 }

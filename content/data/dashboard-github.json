@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-05-21T16:55:39Z",
-  "weekStart": "2026-05-14",
+  "updatedAt": "2026-05-22T10:02:28Z",
+  "weekStart": "2026-05-15",
   "totals": {
-    "commits": 33,
+    "commits": 42,
     "prs": 0,
     "repos": 1,
     "activeDays": 6
@@ -11,8 +11,8 @@
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 33,
-      "summary": "Post-launch cleanup: hero image pipeline for all project pages, build-time invariant guard, and UI polish after the site assistant went live."
+      "commits": 42,
+      "summary": "Restructured /now as a long-form field note, wired 9 duotone photo slots for the hobbies gallery, and tightened home copy after the site assistant launch."
     }
   ]
 }

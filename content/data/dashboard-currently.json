@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-21T16:55:39Z",
-  "focus": "The site assistant is live and the adversarial pass is done. This week shifted to cleanup — hero images generated and plumbed for all project pages, an invariant guard added to the build, and the Switchboard-side Modelfile changes that need committing on pop-os. Deciding whether to write the launch post.",
+  "updatedAt": "2026-05-22T10:02:28Z",
+  "focus": "The hero image pipeline is in and the /now page got a full restructure as a long-form field note. Working through site polish this week — hobbies gallery wired up, home copy tightened, footer and colophon updated. Sitting with whether to write the site-assistant launch post.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

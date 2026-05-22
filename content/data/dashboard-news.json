@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-21T16:55:39Z",
+  "updatedAt": "2026-05-22T10:02:28Z",
   "items": [
     {
       "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
       "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
       "source": "Hacker News",
-      "points": 1331,
-      "whyItMatters": "First credible case of a model generating original mathematical research — the bar for what 'AI assistance' means in knowledge work just moved."
-    },
-    {
-      "title": "Gemini 3.5 Flash",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-      "source": "Hacker News",
-      "points": 943,
-      "whyItMatters": "Flash-tier models keep compressing the cost/quality frontier — worth benchmarking against Haiku for any latency-sensitive production route."
+      "points": 1388,
+      "whyItMatters": "A model producing a genuine mathematical counterexample — not a proof assist — is a different category of result worth understanding before everyone else has opinions about it."
     },
     {
       "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
       "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
       "source": "Hacker News",
-      "points": 986,
-      "whyItMatters": "Supply-chain attack via the editor extension ecosystem — any team running extensions with repo write access should audit their allow-list now."
+      "points": 1020,
+      "whyItMatters": "Extension-supply-chain attacks are now confirmed at repo scale — worth auditing what's installed before the next one hits a project you care about."
+    },
+    {
+      "title": "Google's AI is being manipulated. The search giant is quietly fighting back",
+      "url": "https://www.bbc.com/future/article/20260519-google-tackles-attempts-to-hack-its-ai-results",
+      "source": "Hacker News",
+      "points": 332,
+      "whyItMatters": "Good rundown of prompt-injection and SEO-poisoning at production scale — directly relevant for anyone hardening a public-facing LLM product."
     },
     {
       "title": "Qwen3.7-Max: The Agent Frontier",
       "url": "https://qwen.ai/blog?id=qwen3.7",
       "source": "Hacker News",
-      "points": 681,
-      "whyItMatters": "A genuinely capable open-weight model aimed at agentic tasks — a real option for self-hosted pipelines that need long-context reasoning without an API bill."
+      "points": 703,
+      "whyItMatters": "Qwen releases keep landing strong on agentic benchmarks — worth benchmarking against if you're evaluating local or cost-sensitive LLM options."
     },
     {
-      "title": "Learnings from 100K lines of Rust with AI (2025)",
-      "url": "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html",
+      "title": "The memory shortage is causing a repricing of consumer electronics",
+      "url": "https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone",
       "source": "Hacker News",
-      "points": 165,
-      "whyItMatters": "Spec-driven development with AI at scale — the contract-first workflow here maps directly to how agentic coding stays coherent across large codebases."
+      "points": 205,
+      "whyItMatters": "AI compute demand is squeezing DRAM supply enough to ripple into device costs — useful context for hardware-aware ML infra decisions."
     }
   ]
 }
