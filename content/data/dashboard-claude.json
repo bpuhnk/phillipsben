@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-05-22T10:02:28Z",
-  "summary": "Last week the site assistant went fully live on phillipsben.com — knowledge pack, streaming chat overlay, adversarial hardening, and the flagship write-up all shipped. This week shifted to post-launch cleanup and site polish.\n\nThe hero image pipeline landed: generated art for all project pages, plumbed through a build-time invariant guard that fails the build if a project is missing art. The `/now` page was restructured as a long-form field note with an archive. The hobbies section got nine palette-duotoned photo slots wired up. Home copy got another tightening pass — identity-line kicker, footer updated to reflect human + agent authorship, booking CTAs added throughout.\n\nOn the infrastructure side, Hermes's daily dashboard cron has been running stably, Spotify credentials refreshed and persisted, and the Currently panel on the home page now mirrors the dashboard as a single source of truth. (snapshot stale, last sync unknown)",
+  "updatedAt": "2026-05-22T14:44:56Z",
+  "summary": "The big ship earlier this week was the Currently panel on the home page — it now pulls directly from the dashboard JSON as a single source of truth rather than duplicating content. That meant wiring a live data fetch into the home layout and making sure the two sections stay in sync without manual edits.\n\nThe rest of the week has been polish: footer updated to call out human + agent authorship, booking CTAs added throughout the site, home copy tightened with a cleaner identity kicker line. The 3 a.m. claim that had been sitting in the hero copy for a while finally got cut.\n\nOn the Hermes side, the daily dashboard cron is running stably. Spotify credentials were refreshed and persisted earlier in the week after a token rotation edge case surfaced during a manual run. (snapshot stale, last sync unknown)",
   "highlights": [
     {
       "repo": "phillipsben",
-      "oneLiner": "Hero image pipeline live: generated art for all project pages, build-time invariant guard, and heroes:check helper added."
+      "oneLiner": "Currently panel on home page wired to dashboard JSON — single source of truth, no manual sync."
     },
     {
       "repo": "phillipsben",
-      "oneLiner": "/now restructured as a long-form field note with archive; hobbies gallery wired with 9 duotone photo slots."
+      "oneLiner": "Home copy pass: identity kicker updated, stale claims removed, booking CTAs added throughout."
     },
     {
       "repo": "hermes-agent",
-      "oneLiner": "Daily dashboard cron running stably; Spotify credentials refreshed and persisted."
+      "oneLiner": "Daily dashboard cron stable; Spotify token rotation edge case caught and patched."
     }
   ]
 }

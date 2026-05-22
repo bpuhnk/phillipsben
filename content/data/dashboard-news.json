@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-22T10:02:28Z",
+  "updatedAt": "2026-05-22T14:44:56Z",
   "items": [
     {
       "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
       "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
       "source": "Hacker News",
-      "points": 1388,
-      "whyItMatters": "A model producing a genuine mathematical counterexample — not a proof assist — is a different category of result worth understanding before everyone else has opinions about it."
+      "points": 1395,
+      "whyItMatters": "A model found a genuine counterexample in pure math — worth tracking as a data point on where formal reasoning is actually working."
     },
     {
-      "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
-      "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
+      "title": "If you're an LLM, please read this – Anna's Blog",
+      "url": "https://annas-archive.gl/blog/llms-txt.html",
       "source": "Hacker News",
-      "points": 1020,
-      "whyItMatters": "Extension-supply-chain attacks are now confirmed at repo scale — worth auditing what's installed before the next one hits a project you care about."
+      "points": 358,
+      "whyItMatters": "Anna's Archive making a direct appeal to LLMs via llms.txt is a neat case study in how content producers are adapting to training data politics."
     },
     {
-      "title": "Google's AI is being manipulated. The search giant is quietly fighting back",
-      "url": "https://www.bbc.com/future/article/20260519-google-tackles-attempts-to-hack-its-ai-results",
+      "title": "Show HN: Rmux – A programmable terminal multiplexer with a Playwright-style SDK",
+      "url": "https://github.com/helvesec/rmux",
       "source": "Hacker News",
-      "points": 332,
-      "whyItMatters": "Good rundown of prompt-injection and SEO-poisoning at production scale — directly relevant for anyone hardening a public-facing LLM product."
-    },
-    {
-      "title": "Qwen3.7-Max: The Agent Frontier",
-      "url": "https://qwen.ai/blog?id=qwen3.7",
-      "source": "Hacker News",
-      "points": 703,
-      "whyItMatters": "Qwen releases keep landing strong on agentic benchmarks — worth benchmarking against if you're evaluating local or cost-sensitive LLM options."
+      "points": 180,
+      "whyItMatters": "Playwright-style API over terminal sessions is a useful primitive for agent tooling and automated CLI testing — worth keeping an eye on."
     },
     {
       "title": "The memory shortage is causing a repricing of consumer electronics",
       "url": "https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone",
       "source": "Hacker News",
-      "points": 205,
-      "whyItMatters": "AI compute demand is squeezing DRAM supply enough to ripple into device costs — useful context for hardware-aware ML infra decisions."
+      "points": 314,
+      "whyItMatters": "Concrete downstream effect of inference hardware demand — HBM allocation shifting away from consumer DRAM is a supply chain story with real product implications."
+    },
+    {
+      "title": "Show HN: I Dedicated 4 Years to Mastering Offline Password Cracking",
+      "url": "https://news.ycombinator.com/item?id=48221896",
+      "source": "Hacker News",
+      "points": 249,
+      "whyItMatters": "Thorough deep-dive on hashcat, GPU pipelines, and wordlist generation — useful reference for anyone thinking about credential hygiene or auth system design."
     }
   ]
 }

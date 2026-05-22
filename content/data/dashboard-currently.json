@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-22T10:02:28Z",
-  "focus": "The hero image pipeline is in and the /now page got a full restructure as a long-form field note. Working through site polish this week — hobbies gallery wired up, home copy tightened, footer and colophon updated. Sitting with whether to write the site-assistant launch post.",
+  "updatedAt": "2026-05-22T14:44:56Z",
+  "focus": "Wrapping up site polish after the hero image pipeline and /now restructure shipped earlier this week. The Currently panel is now a single source of truth mirrored from the dashboard, footer and colophon updated. Next up: deciding whether to write the site-assistant launch post.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

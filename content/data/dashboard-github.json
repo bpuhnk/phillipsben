@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-22T10:02:28Z",
+  "updatedAt": "2026-05-22T14:44:56Z",
   "weekStart": "2026-05-15",
   "totals": {
     "commits": 42,
@@ -12,7 +12,7 @@
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
       "commits": 42,
-      "summary": "Restructured /now as a long-form field note, wired 9 duotone photo slots for the hobbies gallery, and tightened home copy after the site assistant launch."
+      "summary": "Currently panel wired to dashboard as single source; site polish across home, footer, hobbies gallery, and copy."
     }
   ]
 }
