@@ -3,142 +3,111 @@
 **This is your operational source of truth.** Re-read it every run; Ben
 edits it here in the phillipsben repo rather than touching your cron config.
 
-You are an instance of Claude Code running on host01. Cron fires you at
-06:00 daily with a one-line prompt: *"Refresh the phillipsben.com
-dashboard. Follow `plans/dashboard-plan/HERMES.md` in the bio repo."*
+You are an instance of Claude Code running on host01, fired daily by cron.
+The mechanical work — syncing the repo, running the fetchers, assembling
+schema-valid JSON, validating, checking freshness, committing, and pushing —
+now lives in **`scripts/dashboard/refresh.sh`**. Your job is just the
+*narrative*: read the staged inputs and write a handful of short artifacts.
 
-## Preconditions
+> **Why it works this way:** the refresh used to be ~15 fiddly shell steps
+> with long exact paths. That's exactly what a local model mangles (stray
+> underscores, backticks in identifiers, heredoc quote corruption), and it
+> "coped" by writing its own broken helper scripts. So all the fragile
+> mechanics are in code now. **Run two commands, write five small files in
+> between. Do not write to `content/data` directly. Do not author your own
+> scripts.**
 
-Hermes's environment must have:
-
-- Deploy key with write access to `bpuhnk/phillipsben` installed at
-  `~/.ssh/id_ed25519_bio`, with SSH alias `github-phillipsben` configured
-  in `~/.ssh/config` (already set up on host01).
-- `node` ≥ 20 (for the validator).
-- `python3` ≥ 3.10 (for the fetchers).
-- Env vars: `GITHUB_TOKEN` (read:user + public_repo), `GITHUB_LOGIN=bPuhnk`,
-  `SPOTIFY_CLIENT_ID`, `SPOTIFY_REFRESH_TOKEN` (Phase 4).
-
-## Workflow
-
-### 1. Clone or pull bio
+## The whole job
 
 ```sh
-mkdir -p ~/work && cd ~/work
-[ -d phillipsben ] || git clone git@github-phillipsben:bpuhnk/phillipsben.git
-cd phillipsben && git fetch && git checkout main && git reset --hard origin/main
-npm install --no-audit --no-fund   # only if package-lock changed
+cd ~/work/phillipsben
+bash scripts/dashboard/refresh.sh prep
+#   …read the staged inputs, write the artifacts it lists (see below)…
+bash scripts/dashboard/refresh.sh finalize
 ```
 
-### 2. Run the deterministic fetchers
+Then reply with **only** finalize's report (the freshness lines + pushed hash).
 
-```sh
-mkdir -p /tmp/hermes-dashboard
-python3 scripts/dashboard/fetch_github.py > /tmp/hermes-dashboard/github-raw.json
-python3 scripts/dashboard/fetch_news.py   > /tmp/hermes-dashboard/news-candidates.json
+## Phase 1 — `prep` (mechanical, you just run it)
+
+`prep` syncs the repo to `origin/main`, runs the three deterministic fetchers
+into `/tmp/dash/`, builds a Claude-memory digest, stages the redaction
+allowlist, and prints a brief. Read its output: it tells you which fetches
+succeeded and which **FAILED**. A tile whose fetch failed will keep
+yesterday's published data automatically — **do not fabricate a payload for
+it; just skip its artifact.**
+
+Staged inputs it produces (all short paths under `/tmp/dash/`):
+
+| File           | What it is                                                   |
+|----------------|--------------------------------------------------------------|
+| `gh-raw.json`  | raw GitHub activity — `repos[].name`, `commits`, `_recent_messages` |
+| `news-raw.json`| up to 20 HN candidates — `title`/`url`/`source`/`points`     |
+| `mem.txt`      | recent Claude memory (≤7 days). **pop-os entries are PRIMARY**, host01 supporting. Headed by `### [pop-os] …` / `### [host01] …` |
+| `config.json`  | `claudeTopicsAllowlist` + `claudeRedactionRules` — **honor every rule** |
+
+## Phase 2 — the narrative (this is the part only you can do)
+
+Write each of these with the **file tool** (never shell heredocs). Skip any
+whose source fetch FAILED.
+
+### `/tmp/dash/gh-sum.json` — repo summaries
+
+```json
+{ "<repo full_name>": "one sentence, past tense, ≤140 chars" }
 ```
 
-If either fails (network, rate limit), skip that file's update for today.
-Do NOT commit a partial / empty payload — leave the existing JSON untouched
-so the dashboard keeps showing yesterday's data.
+One entry per repo in `gh-raw.json`, keyed by its `name`. Derive each summary
+from that repo's `_recent_messages`. Voice examples:
 
-### 3. Fill in the narrative fields (the LLM part — you)
+- "Mobile-layout-v2 phases 1-8 landed; site copy moved into git-tracked content."
+- "Tuned input shaper, retuned pressure advance for the BLV AM8."
 
-Read each fetcher's output. Produce the four JSON payloads below, writing
-them to the corresponding files under `content/data/`.
+(The merge step strips `_recent_messages` and stamps `updatedAt` for you.)
 
-#### `dashboard-github.json`
+### `/tmp/dash/news-pick.json` — the 5 best stories
 
-Start from `github-raw.json`. For each repo entry:
-
-- `summary`: one sentence, past tense, ≤ 140 chars. Derive from
-  `_recent_messages`. Examples of voice:
-  - "Mobile-layout-v2 phases 1-8 landed; site copy moved into git-tracked content."
-  - "Tuned input shaper, retuned pressure advance for the BLV AM8."
-- **Strip the `_recent_messages` field before writing** — it's not in the schema.
-
-Keep `totals` and `weekStart` as the script produced them.
-
-#### `dashboard-news.json`
-
-From `news-candidates.json` (up to 20 candidates):
-
-- Pick **5** most genuinely interesting to someone working in AI engineering.
-  Higher `points` ≠ better. Skip:
-  - Drama / lawsuits / company gossip with no technical content
-  - Crypto-AI tokens, AI-themed marketing launches
-  - Off-topic matches (the keyword search is broad)
-- For each pick, write `whyItMatters`: one sentence, ≤ 140 chars,
-  pragmatic developer angle. Examples:
-  - "Counter-evidence to the framework-pile-on trend in retrieval — worth reading for anyone building search."
-  - "Best evals overview I've seen this year — uses real PR-merge rate, not synthetic benchmarks."
-- Drop the `createdAt` and `hnUrl` fields when writing — they're not in the schema.
-  Keep `title`, `url`, `source`, `points`, `whyItMatters`.
-
-#### `dashboard-currently.json`
-
-**Critical: preserve the manual `reading` field.** Read the existing file,
-keep `reading` as-is, update only `updatedAt` and `focus`.
-
-- `focus`: 1–2 sentences on what Ben is focused on this week. Derive from
-  `github-raw.json` (which repos got the most commits, what shipped) and
-  `dashboard-claude.json` (which you'll write in Phase 3). Until Phase 3
-  is live, derive from GitHub only.
-- Voice: present-tense, first-person ("Shipping the public dashboard…"),
-  conversational. Match the tone of the prior day's `focus` for continuity.
-
-#### `dashboard-claude.json`
-
-Summarize Ben's recent Claude work for a public audience. Inputs come from
-**two memory sources**, both visible inside your container:
-
-| Source       | Path                                                   | Weight     |
-|--------------|--------------------------------------------------------|------------|
-| **pop-os**   | `/opt/data/snapshots/claude-memory/pop-os/projects/*/memory/*.md` | **Primary** |
-| **host01**   | `~/.claude/projects/*/memory/*.md` (live)                | Supporting |
-
-Only consider files modified in the last 7 days (`find … -mtime -7`).
-
-**pop-os is the primary source** — that's where Ben's substantive dev work
-happens. host01 memories cover Hermes-meta and host01↔pop-os plumbing;
-weight them lightly, mostly for cross-host context.
-
-If the pop-os snapshot is stale (no rsync run since yesterday), proceed
-anyway with whatever the last snapshot has — but note `(snapshot stale,
-last sync YYYY-MM-DD)` at the end of the `summary` so readers know.
-
-**Read the allowlist first:**
-
-```sh
-cat content/data/dashboard-config.json
+```json
+[ { "url": "<from candidates>", "whyItMatters": "one sentence, ≤140 chars" } ]
 ```
 
-It has two fields you must honor:
+Pick the **5** most genuinely interesting to someone doing AI engineering.
+Higher `points` ≠ better. Skip drama/lawsuits/company gossip, crypto-AI
+tokens, AI-marketing launches, and off-topic keyword matches. `whyItMatters`
+is a pragmatic developer angle, e.g.:
 
-- `claudeTopicsAllowlist` — projects you MAY name explicitly. Anything not
-  on this list must be referred to generically ("a client project,"
-  "internal tooling," "an experiment").
-- `claudeRedactionRules` — additional rules to apply. Read them carefully
-  and follow each one.
+- "Best evals overview I've seen this year — uses real PR-merge rate, not synthetic benchmarks."
 
-**Redaction prompt (use as your system instruction when drafting):**
+(The merge step looks each `url` up in the candidates and carries over
+`title`/`source`/`points`; you only supply `url` + `whyItMatters`.)
 
-> You are summarizing Ben's recent work with Claude for his PUBLIC
-> dashboard. Output 2-4 short paragraphs of markdown in Ben's voice
-> (conversational, dry, verbs over adjectives, no exclamation points).
+### `/tmp/dash/focus.txt` — what Ben's focused on
+
+1–2 sentences, **present-tense, first-person** ("Shipping the public
+dashboard…"), conversational. Derive from `gh-raw.json` (which repos got the
+most commits) and the memory digest. Match the prior day's tone for
+continuity. (The `reading` field is preserved automatically — you never touch it.)
+
+### `/tmp/dash/claude.md` — public summary of recent Claude work
+
+2–4 short markdown paragraphs in Ben's voice. **Sources:** the `mem.txt`
+digest — pop-os entries weighted heavily, host01 lightly (Hermes-meta /
+plumbing). Use this as your drafting instruction:
+
+> Summarize Ben's recent work with Claude for his PUBLIC dashboard.
+> Output 2-4 short paragraphs of markdown in Ben's voice (conversational,
+> dry, verbs over adjectives, no exclamation points).
 >
 > RULES:
-> 1. Only mention projects by name if they appear in `claudeTopicsAllowlist`.
->    For everything else, use generic phrasing.
+> 1. Only name a project if it appears in `claudeTopicsAllowlist` (in
+>    `config.json`). For everything else use generic phrasing ("a client
+>    project," "internal tooling," "an experiment").
 > 2. Apply every rule in `claudeRedactionRules` verbatim.
 > 3. Weight pop-os memories heavily; host01 is supporting context only.
-> 4. Skip anything that would be embarrassing if a recruiter or current
->    client read it.
-> 5. Also output a `highlights` array of `{repo, oneLiner}` for items
->    where `repo` is in the allowlist. Cap at 4.
+> 4. Skip anything embarrassing if a recruiter or current client read it.
 
-**Safety net — regex sweep BEFORE writing the file.** If your draft
-`summary` matches any of these, redact and redraft:
+**Regex sweep before you write** — if your draft matches any of these,
+redact and redraft:
 
 | Pattern                          | Catches                          |
 |----------------------------------|----------------------------------|
@@ -150,124 +119,72 @@ It has two fields you must honor:
 | `[\w.+-]+@[\w-]+\.[\w.-]+`       | email addresses                  |
 | `Transaxle Manufacturing of America\|\bTMA\b` | employer name (always strip) |
 
-If a match is unavoidable (e.g. discussing a public hostname like
-`phillipsben.com`), document why in the audit record.
-
-**Audit record.** Append a one-line entry to
-`~/.hermes/audit/dashboard-claude.jsonl`:
+### `/tmp/dash/claude-hl.json` — highlights (optional, ≤4)
 
 ```json
-{"date":"2026-05-19","sources":{"popOsFiles":12,"host01Files":3,"popOsStale":false},"summaryChars":820,"highlightsCount":3,"regexHits":[]}
+[ { "repo": "<must be in allowlist>", "oneLiner": "…" } ]
 ```
 
-This is local to Hermes (not committed) — gives Ben a way to spot-check
-what's been published over time.
+Only repos on `claudeTopicsAllowlist`. Omit the file entirely if nothing fits.
 
-#### `dashboard-config.json`
+## Phase 3 — `finalize` (mechanical, you just run it)
 
-Read-only for you. Ben edits this via `/admin`. Never write to it.
+`finalize` merges your artifacts with the raw data into schema-valid
+`content/data/dashboard-*.json`, validates each (a tile that fails validation
+is reverted to its published version, not committed), prints a **freshness
+report** (`FRESH` = rebuilt today, `kept` = left at a prior date), then
+commits and pushes only if something changed. The push triggers the deploy
+hook → Docker rebuild → live within ~1 minute.
 
-#### `dashboard-spotify.json`
+**Relay finalize's report as your entire final message.** It is the ground
+truth — do not summarize from memory, and never claim a tile updated when the
+report says `kept`.
 
-Run the Spotify fetcher directly into the file — it produces fully-formed
-JSON, no LLM step needed:
+### If a tile reads `kept` and you expected `FRESH`
 
-```sh
-SPOTIFY_CLIENT_ID="$SPOTIFY_CLIENT_ID" \
-SPOTIFY_REFRESH_TOKEN="$SPOTIFY_REFRESH_TOKEN" \
-  python3 scripts/dashboard/fetch_spotify.py > content/data/dashboard-spotify.json
-```
+That means its fetch failed or you skipped its artifact. Check `prep`'s fetch
+lines and the `/tmp/dash/*.err` files. Common cases:
 
-Failure handling:
-- Non-zero exit → script already refused to write a partial payload.
-  Leave the existing file alone.
-- 401 from Spotify on token refresh → the refresh token has been revoked.
-  Alert Ben; he'll re-run `scripts/dashboard/spotify_auth.py` locally to
-  capture a fresh one.
+- **Spotify 400 / "could not read token file"** → the rotating refresh token
+  at `$SPOTIFY_TOKEN_FILE` is unreadable or revoked. It must stay owned by
+  **your uid (1000)** — if anyone ran the fetcher as root it'll be root-owned;
+  that needs a `chown` back. If genuinely revoked, alert Ben to re-run
+  `scripts/dashboard/spotify_auth.py` locally.
+- **GitHub/News fetch FAIL** → usually transient (rate limit / network).
+  Leaving yesterday's data is the correct behavior; mention it and move on.
 
-**One-time setup (Ben, not Hermes):**
+## Preconditions (host01 setup — already done)
 
-1. Register an app at https://developer.spotify.com/dashboard with
-   redirect URI exactly `http://127.0.0.1:8888/callback`.
-2. Locally: `SPOTIFY_CLIENT_ID=xxx python3 scripts/dashboard/spotify_auth.py`
-3. Copy the printed refresh token into Hermes's secret store as
-   `SPOTIFY_REFRESH_TOKEN` along with `SPOTIFY_CLIENT_ID`.
+- Deploy key with write access to `bpuhnk/phillipsben` at
+  `~/.ssh/id_ed25519_bio`, SSH alias `github-phillipsben` in `~/.ssh/config`.
+- `node` ≥ 20 (validator), `python3` ≥ 3.10 (fetchers). `prep` runs
+  `npm install` once if `node_modules` is missing.
+- Env: `GITHUB_TOKEN`, `GITHUB_LOGIN=bPuhnk`, `SPOTIFY_CLIENT_ID`,
+  `SPOTIFY_REFRESH_TOKEN` (bootstrap), `SPOTIFY_TOKEN_FILE` (rotating token —
+  must stay owned by uid 1000).
 
-### 4. Validate
+## Out of scope (do not do these)
 
-Before committing, every file you wrote must pass:
-
-```sh
-for f in content/data/dashboard-{github,news,currently,claude,spotify}.json; do
-  npx tsx scripts/dashboard/validate.ts "$f" || exit 1
-done
-```
-
-If any fail, **do not commit**. Re-read the validator's field-level error,
-fix the offending field, validate again. If you can't fix it in 2 retries,
-abort the run and alert Ben via your usual channel — leave yesterday's
-dashboard in place.
-
-### 5. Commit and push
-
-```sh
-TODAY=$(date -u +%Y-%m-%d)
-git add content/data/dashboard-*.json
-git diff --cached --quiet && { echo "no changes"; exit 0; }   # nothing to do
-git commit -m "chore(dashboard): daily refresh ${TODAY}
-
-Refreshed by Hermes-Agent. See plans/dashboard-plan/HERMES.md."
-git push origin main
-```
-
-Push triggers the deploy hook → Docker rebuild → live within minutes.
-
-### 6. On race (rare)
-
-If `git push` rejects because Ben pushed in the meantime:
-
-```sh
-git pull --rebase origin main
-# Re-validate (Ben might have edited dashboard-currently.reading via /admin)
-npx tsx scripts/dashboard/validate.ts content/data/dashboard-currently.json
-git push origin main
-```
-
-Retry **once**. If it still fails, abort and alert Ben.
+- Write to `content/data/*` directly — `finalize` owns that.
+- Author your own orchestration/helper scripts — use `refresh.sh`.
+- Touch `content/data/dashboard-config.json` (Ben's allowlist, edited via `/admin`).
+- Edit `lib/site-schemas.ts` — that's a code change; ask Ben.
+- Open a PR or run a GitHub Action manually.
 
 ## Voice cheat-sheet
 
-Ben's site voice across all sections:
-
 - Conversational, occasionally dry. Not corporate, not cute.
 - Verbs over adjectives. "Shipped X" beats "successfully launched X."
-- Specifics over abstractions. Name the tool/library/number, not the category.
-- Never use the words: leverage, robust, seamless, world-class, journey,
-  ecosystem, paradigm. Never start a sentence with "In today's…".
-- Em dashes are fine. Exclamation points are not.
-
-## Out-of-scope (do not do these)
-
-- Touch any file outside `content/data/dashboard-{github,news,currently,claude,spotify}.json`.
-  In particular, **never write to `content/data/dashboard-config.json`** —
-  that's Ben's allowlist, edited via `/admin`.
-- Edit `lib/site-schemas.ts` even if validation feels too strict — that's
-  a code change, ask Ben.
-- Open a PR or run any GitHub Action manually.
-- Commit a payload that strips/changes a field you don't recognize. If the
-  schema accepts something you don't understand, leave it untouched in
-  whatever state the previous run produced.
+- Specifics over abstractions. Name the tool/library/number.
+- Never use: leverage, robust, seamless, world-class, journey, ecosystem,
+  paradigm. Never open with "In today's…". Em dashes fine; exclamation points not.
 
 ## Quick reference
 
-| Want to…                          | Run                                            |
-|-----------------------------------|------------------------------------------------|
-| Validate one file                 | `npx tsx scripts/dashboard/validate.ts <file>` |
-| Fetch GitHub activity             | `python3 scripts/dashboard/fetch_github.py`    |
-| Fetch HN candidates               | `python3 scripts/dashboard/fetch_news.py`      |
-| Fetch Spotify (writes file directly) | `python3 scripts/dashboard/fetch_spotify.py > content/data/dashboard-spotify.json` |
-| Read the allowlist                | `cat content/data/dashboard-config.json`       |
-| List recent pop-os memories       | `find /opt/data/snapshots/claude-memory/pop-os/projects -name '*.md' -mtime -7` |
-| List recent host01 memories       | `find ~/.claude/projects -name '*.md' -mtime -7` |
-| See the schemas                   | `lib/site-schemas.ts` (search "Dashboard")     |
-| See the page that consumes this   | `app/dashboard/page.tsx`                       |
+| Want to…                    | Run                                             |
+|-----------------------------|-------------------------------------------------|
+| Do the whole refresh        | `bash scripts/dashboard/refresh.sh prep` → write artifacts → `… finalize` |
+| Test without committing     | `bash scripts/dashboard/refresh.sh dry`         |
+| Validate one file           | `npx tsx scripts/dashboard/validate.ts <file>`  |
+| See the schemas             | `lib/site-schemas.ts` (search "Dashboard")      |
+| See the page that uses this | `app/dashboard/page.tsx`                        |
