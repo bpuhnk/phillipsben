@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-05-22T14:45:49Z",
+  "updatedAt": "2026-05-23T14:40:15Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "Clint Eastwood",
+      "artist": "Gorillaz, Del The Funky Homosapien",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851c73a7bb15f43bae86215934b",
+      "url": "https://open.spotify.com/track/7yMiX7n9SBvadzox8T5jzT",
+      "playedAt": "2026-05-22T17:16:08.470Z"
+    },
     {
       "track": "Gold Digger",
       "artist": "Kanye West, Jamie Foxx",
@@ -29,13 +36,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d00004851b7ded75d35cf4364ba3f5267",
       "url": "https://open.spotify.com/track/42GP0xKtkolBnmqQRvSllO",
       "playedAt": "2026-05-22T11:27:07.503Z"
-    },
-    {
-      "track": "Feel It Still",
-      "artist": "Portugal. The Man",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851af52c228c9619ff6298b08cd",
-      "url": "https://open.spotify.com/track/6QgjcU0zLnzq5OrUoSZ3OK",
-      "playedAt": "2026-05-22T11:20:34.157Z"
     }
   ]
 }
