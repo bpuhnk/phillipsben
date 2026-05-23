@@ -1,5 +1,10 @@
 {
-  "updatedAt": "2026-05-23T16:16:33Z",
+  "updatedAt": "2026-05-23T16:18:40Z",
   "summary": "Most of the Claude work this week went into making phillipsben.com dashboard refresh reliable. The daily job that updates this page runs on a local model, and it was tripping over the fiddly mechanical steps — so the fix was to hand it a real orchestrator: deterministic code does the fetching, schema assembly, validation, and a freshness check, and the model only writes the short narrative bits you're reading.\n\nOn the hermes-agent side, that meant tracing a deploy end-to-end: confirming the webhook rebuild was healthy, then proving only one tile had actually refreshed and finding why. A music service token sitting with the wrong file permissions turned out to be a self-inflicted snag from debugging, now fixed.\n\nThe throughline lately is treating an agent like any other production system — make the happy path boring, make failures loud, and stop trusting a \"looks done\" report when a one-line check can confirm it.",
-  "highlights": []
+  "highlights": [
+    {
+      "repo": "bpuhnk/phillipsben",
+      "oneLiner": "Implemented a deterministic dashboard refresh orchestrator and fixed pop-os memory snapshot paths."
+    }
+  ]
 }

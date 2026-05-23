@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-22T14:44:56Z",
-  "focus": "Wrapping up site polish after the hero image pipeline and /now restructure shipped earlier this week. The Currently panel is now a single source of truth mirrored from the dashboard, footer and colophon updated. Next up: deciding whether to write the site-assistant launch post.",
+  "updatedAt": "2026-05-23T16:18:40Z",
+  "focus": "Shipping a deterministic dashboard refresh orchestrator and refining how the site ingests pop-os memory snapshots.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

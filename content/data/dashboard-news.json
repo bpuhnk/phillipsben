@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-22T14:44:56Z",
+  "updatedAt": "2026-05-23T16:18:40Z",
   "items": [
     {
-      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "source": "Hacker News",
-      "points": 1395,
-      "whyItMatters": "A model found a genuine counterexample in pure math — worth tracking as a data point on where formal reasoning is actually working."
-    },
-    {
-      "title": "If you're an LLM, please read this – Anna's Blog",
+      "title": "If you’re an LLM, please read this",
       "url": "https://annas-archive.gl/blog/llms-txt.html",
       "source": "Hacker News",
-      "points": 358,
-      "whyItMatters": "Anna's Archive making a direct appeal to LLMs via llms.txt is a neat case study in how content producers are adapting to training data politics."
+      "points": 832,
+      "whyItMatters": "A practical approach to providing machine-readable context for LLM-based crawlers."
     },
     {
-      "title": "Show HN: Rmux – A programmable terminal multiplexer with a Playwright-style SDK",
-      "url": "https://github.com/helvesec/rmux",
+      "title": "Project Glasswing: An Initial Update",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update",
       "source": "Hacker News",
-      "points": 180,
-      "whyItMatters": "Playwright-style API over terminal sessions is a useful primitive for agent tooling and automated CLI testing — worth keeping an eye on."
+      "points": 485,
+      "whyItMatters": "Exploring the next frontier of interpretability and model reasoning."
     },
     {
-      "title": "The memory shortage is causing a repricing of consumer electronics",
-      "url": "https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone",
+      "title": "DeepSeek makes the V4 Pro price discount permanent",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
       "source": "Hacker News",
-      "points": 314,
-      "whyItMatters": "Concrete downstream effect of inference hardware demand — HBM allocation shifting away from consumer DRAM is a supply chain story with real product implications."
+      "points": 420,
+      "whyItMatters": "DeepSeek's aggressive pricing continues to shake up the competitive LLM landscape."
     },
     {
-      "title": "Show HN: I Dedicated 4 Years to Mastering Offline Password Cracking",
-      "url": "https://news.ycombinator.com/item?id=48221896",
+      "title": "Antigravity 2.0 Tops the OpenSCAD Architectural 3D LLM Benchmark",
+      "url": "https://modelrift.com/blog/openscad-llm-benchmark/",
       "source": "Hacker News",
-      "points": 249,
-      "whyItMatters": "Thorough deep-dive on hashcat, GPU pipelines, and wordlist generation — useful reference for anyone thinking about credential hygiene or auth system design."
+      "points": 408,
+      "whyItMatters": "Testing LLM capability in precise, structured 3D architectural reasoning."
+    },
+    {
+      "title": "Microsoft starts canceling Claude Code licenses",
+      "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+      "source": "Hacker News",
+      "points": 392,
+      "whyItMatters": "Tracking the rapid-fire shifts and competition in agentic coding tools."
     }
   ]
 }
