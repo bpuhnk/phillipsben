@@ -94,7 +94,7 @@ Summarize Ben's recent Claude work for a public audience. Inputs come from
 
 | Source       | Path                                                   | Weight     |
 |--------------|--------------------------------------------------------|------------|
-| **pop-os**   | `/home/administrator/.hermes/snapshots/claude-memory/pop-os/projects/*/memory/*.md` | **Primary** |
+| **pop-os**   | `/opt/data/snapshots/claude-memory/pop-os/projects/*/memory/*.md` | **Primary** |
 | **host01**   | `~/.claude/projects/*/memory/*.md` (live)                | Supporting |
 
 Only consider files modified in the last 7 days (`find … -mtime -7`).
@@ -267,7 +267,7 @@ Ben's site voice across all sections:
 | Fetch HN candidates               | `python3 scripts/dashboard/fetch_news.py`      |
 | Fetch Spotify (writes file directly) | `python3 scripts/dashboard/fetch_spotify.py > content/data/dashboard-spotify.json` |
 | Read the allowlist                | `cat content/data/dashboard-config.json`       |
-| List recent pop-os memories       | `find /home/administrator/.hermes/snapshots/claude-memory/pop-os/projects -name '*.md' -mtime -7` |
+| List recent pop-os memories       | `find /opt/data/snapshots/claude-memory/pop-os/projects -name '*.md' -mtime -7` |
 | List recent host01 memories       | `find ~/.claude/projects -name '*.md' -mtime -7` |
 | See the schemas                   | `lib/site-schemas.ts` (search "Dashboard")     |
 | See the page that consumes this   | `app/dashboard/page.tsx`                       |
