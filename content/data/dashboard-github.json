@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-05-22T14:44:56Z",
-  "weekStart": "2026-05-15",
+  "updatedAt": "2026-05-23T16:16:33Z",
+  "weekStart": "2026-05-16",
   "totals": {
-    "commits": 42,
+    "commits": 41,
     "prs": 0,
     "repos": 1,
-    "activeDays": 6
+    "activeDays": 5
   },
   "repos": [
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 42,
+      "commits": 41,
       "summary": "Currently panel wired to dashboard as single source; site polish across home, footer, hobbies gallery, and copy."
     }
   ]

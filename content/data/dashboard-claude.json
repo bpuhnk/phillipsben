@@ -1,18 +1,5 @@
 {
-  "updatedAt": "2026-05-22T14:44:56Z",
-  "summary": "The big ship earlier this week was the Currently panel on the home page — it now pulls directly from the dashboard JSON as a single source of truth rather than duplicating content. That meant wiring a live data fetch into the home layout and making sure the two sections stay in sync without manual edits.\n\nThe rest of the week has been polish: footer updated to call out human + agent authorship, booking CTAs added throughout the site, home copy tightened with a cleaner identity kicker line. The 3 a.m. claim that had been sitting in the hero copy for a while finally got cut.\n\nOn the Hermes side, the daily dashboard cron is running stably. Spotify credentials were refreshed and persisted earlier in the week after a token rotation edge case surfaced during a manual run. (snapshot stale, last sync unknown)",
-  "highlights": [
-    {
-      "repo": "phillipsben",
-      "oneLiner": "Currently panel on home page wired to dashboard JSON — single source of truth, no manual sync."
-    },
-    {
-      "repo": "phillipsben",
-      "oneLiner": "Home copy pass: identity kicker updated, stale claims removed, booking CTAs added throughout."
-    },
-    {
-      "repo": "hermes-agent",
-      "oneLiner": "Daily dashboard cron stable; Spotify token rotation edge case caught and patched."
-    }
-  ]
+  "updatedAt": "2026-05-23T16:16:33Z",
+  "summary": "Most of the Claude work this week went into making phillipsben.com dashboard refresh reliable. The daily job that updates this page runs on a local model, and it was tripping over the fiddly mechanical steps — so the fix was to hand it a real orchestrator: deterministic code does the fetching, schema assembly, validation, and a freshness check, and the model only writes the short narrative bits you're reading.\n\nOn the hermes-agent side, that meant tracing a deploy end-to-end: confirming the webhook rebuild was healthy, then proving only one tile had actually refreshed and finding why. A music service token sitting with the wrong file permissions turned out to be a self-inflicted snag from debugging, now fixed.\n\nThe throughline lately is treating an agent like any other production system — make the happy path boring, make failures loud, and stop trusting a \"looks done\" report when a one-line check can confirm it.",
+  "highlights": []
 }
