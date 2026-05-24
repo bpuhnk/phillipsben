@@ -1,0 +1,65 @@
+---
+title: Couch Presence Sensor
+summary: A presence sensor aimed at the living-room couch that pauses the TV when you get up and resumes when you sit back down — and the story of abandoning on-device vision for mmWave radar when vision couldn't handle a slouch.
+status: active
+techStack: [ESP-IDF, ESP32-S3, esp-dl, ESPHome, LD2450, mmWave, MQTT, Home Assistant]
+role: Solo — firmware, integration, deploy
+startDate: '2026-05-23'
+featured: false
+---
+
+## ① The problem.
+
+I want the TV to pause when I get off the couch and resume when I sit back down —
+no remote, no phone. The common sensors all miss the obvious case: PIR and most
+radar see *motion*, so a person sitting still to read scans as an empty room and the
+TV pauses on you. And my couch sits in the middle of the room — an island — so a
+room-level sensor can't tell "on the couch" from "walking past it."
+
+## ② Approach.
+
+First attempt: put the detection on a camera aimed tightly at the couch. A Seeed
+XIAO ESP32-S3 Sense running on-device person detection — esp-dl with Espressif's
+pedestrian-detect model — so "person in frame" means occupied, the still-person case
+that motion sensors fail at. Aiming tight at the couch dodges the island problem.
+The board feeds raw RGB565 frames to the model, debounces (one second to confirm
+presence, eight to confirm absence so a dropped frame doesn't pause you mid-show),
+and publishes ON/OFF to an MQTT topic. Home Assistant turns that into a binary
+sensor, and two automations pause and resume the LG webOS TV. Everything except the
+sensor itself — broker, binary sensor, automations, OTA, debug stream — is
+sensor-agnostic by design.
+
+## ③ What's in the box.
+
+- **Sensor (v1)** — XIAO ESP32-S3 Sense, OV2640, running esp-dl plus pedestrian-detect fully on-device. No frames leave the board; it publishes only ON/OFF.
+- **Messaging** — retained presence plus an availability last-will to the [self-hosted MQTT broker](/projects/mosquitto/).
+- **Home side** — a Home Assistant MQTT binary sensor and two automations driving an LG C5 OLED over webOS. The triggers use a bare `to: on/off` plus a playing/paused condition, so a sensor reboot blipping to `unavailable` doesn't wedge the resume.
+- **Debug** — an on-demand stream with the detection box drawn, a single-shot snapshot endpoint for remote framing, and HTTP OTA over dual partitions. Invaluable for aiming a headless camera from across the house.
+
+## ④ What broke.
+
+The vision model was the wrong sensing organ — and finding that out took two layers
+of debugging. First, it only works on *raw* RGB565 fed straight to the model: every
+JPEG-decode path I tried (three different decoders) returned zero detections, and
+aggressive sensor gain washed the frame flat green and starved it. Sane exposure
+bought me one good pause/resume cycle.
+
+But the deeper problem is the model itself. It's trained on upright pedestrians,
+scores a seated person at a marginal 0.74–0.81 against its 0.70 threshold, and
+largely *fails* on the postures a couch is for — slouched, leaning, lying down,
+hunched over a bowl. A dimming evening room tips it to zero. No threshold tuning
+fixes "this model has never seen a person lounging." So I'm pivoting the sensor to an
+LD2450 mmWave radar, which sees a body in any posture, in the dark, holding
+perfectly still. Because the plumbing was built sensor-agnostic, only the firmware's
+detection section changes — the broker, Home Assistant, and the automations are
+zero-touch.
+
+## ⑤ Where it's going.
+
+The LD2450 runs on a spare ESP32 WROOM under ESPHome's native component — radar needs
+only UART and WiFi, so it frees the camera-class S3 entirely (which got repurposed
+into a [rep counter](/projects/rep-counter/)). It publishes to the same MQTT topic,
+so Home Assistant never learns the organ transplant happened. The ready-to-flash plan
+and full ESPHome config are written and waiting on the board. Later: zone-based X/Y
+so "on the couch" is a literal box in the radar's field, and maybe gesture control
+once presence is rock-solid.

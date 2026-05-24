@@ -1,0 +1,68 @@
+---
+title: Rep Counter
+summary: An ESP32-S3 that watches a barbell and counts your reps on-device — tracking a colored Olympic plate as a fiducial through a top/bottom oscillation state machine, with no server and no ML model.
+status: active
+techStack: [C, ESP-IDF, ESP32-S3, OV2640, Computer Vision, HTTP, OTA]
+role: Solo — firmware, CV, deploy
+startDate: '2026-05-23'
+featured: false
+---
+
+## ① The problem.
+
+I wanted to count barbell reps and tag each set with a weight without wearing
+anything, pressing a button, or standing up a server. Phones and watches need a
+wearable or a tap between sets. Camera-plus-cloud-pose works but it's a lot of
+pipeline for "did the bar go up and come back down." I had a spare ESP32-S3 with a
+camera on it — freed up when the [couch sensor](/projects/couch-presence/) moved to
+radar — and I wanted the whole thing to live on the $15 board.
+
+## ② Approach.
+
+Instead of recognizing a human, recognize the plate. Olympic bumpers are
+color-coded by weight: a vivid, high-contrast disc is far easier for a tiny sensor
+to lock onto than a slouching body. The camera grabs RGB565 at 240×240, converts to
+HSV per pixel, matches the calibrated plate hue, and takes the centroid of the
+matched blob. As the bar travels, the blob rides up and down; an adaptive min/max
+envelope plus hysteresis zones — top below 0.30 of the range, bottom above 0.70 —
+turns that oscillation into a rep count, one rep per full round trip. It's
+direction-agnostic, so presses count on the up-return and deadlifts on the
+down-return, and half-reps don't count. Calibration is a single POST with the plate
+centered: it learns the hue and saves it to flash along with the set's weight.
+Classical color-blob CV, deliberately the opposite of the couch project's marginal
+machine learning.
+
+## ③ What's in the box.
+
+- **Board** — Seeed XIAO ESP32-S3 Sense: OV2640 camera, 8 MB PSRAM. The whole counter runs here; no companion app, no server.
+- **Tracker** — per-pixel HSV match against a calibrated plate hue, centroid plus matched-area, an adaptive envelope, hysteresis zones, and debounce/area/range guards so background noise doesn't tick the counter.
+- **Set logic** — the plate absent for more than eight seconds finalizes the set and logs it to an in-RAM ring buffer (the last 12 sets, each tagged with its weight).
+- **Dashboard** — a self-hosted page on port 80: a live stream with the tracked plate marked, a big rep counter, the recent-sets table, a weight field, and Calibrate / Reset. OTA reflashing rides the same HTTP server.
+- **Carried over from the couch firmware** — WiFi bring-up, dual HTTP servers, dual-OTA partitions, camera init. Dropped: esp-dl, the pedestrian model, and MQTT — about 75% of the app partition is now free.
+
+## ④ What broke.
+
+Color tracking lives or dies on the camera's auto white balance. The clean case — a
+blue plate against a plain wall in decent light — locked onto ~17% of the frame and
+counted 5/5 reps in a dim living room on the first try. Then I mounted a real bumper
+on a bar in a room with a teal white-balance cast, recalibrated, and the match
+ballooned to ~29% of the frame: it had learned the plate *and* the washed-out
+background. With the centroid anchored by static background, the bar barely moved
+it, and it missed 3/3 reps.
+
+The fix is half settings and half discipline. Settings: kill auto white balance and
+its gain so the camera stops neutralizing a big monochrome plate toward room color,
+push saturation up, and tighten the hue tolerance so only the vivid plate qualifies.
+Discipline: frame tight on the plate, plain background behind it, light on the plate
+face, rock-steady mount. I also learned the hard way that `fmt2rgb888` hands you BGR,
+not RGB — cosmetic here, since the hue match is self-consistent, but the labels in
+the calibration readout are swapped until a future flash relabels them.
+
+## ⑤ Where it's going.
+
+Phase 1 counts reps and tags weight; that's validated in the easy case and has a
+known, staged fix for the hard one, ready to ship the next time the board's at the
+rack. After that: reading the actual loaded weight from plate colors instead of one
+color per session, and eventually bodyweight lifts — which need body-motion or a
+small pose model rather than a fiducial. SD-card logging is parked behind the XIAO's
+finicky SD pins.

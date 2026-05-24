@@ -1,0 +1,54 @@
+---
+title: KoboldCPP
+summary: A containerized local LLM server that behaves like an appliance — one command to start, autostart on boot, and a five-minute idle-unload so it can share a single 16 GB GPU with the rest of the AI stack.
+status: active
+techStack: [Docker, KoboldCPP, CUDA, Tesla P100, GGUF]
+role: Solo — containerization, deploy
+startDate: '2026-05-18'
+featured: false
+---
+
+## ① The problem.
+
+KoboldCPP is what SillyTavern talks to for text generation. Run straight on the host
+it's a thing you babysit: a long command line, a model path, a GPU flag, and it sits
+on the card forever whether or not anyone's using it. On a box where one 16 GB Tesla
+P100 is shared by a text model, an image model, and a 26B assistant, a server that
+holds VRAM permanently is a server that OOMs everything else.
+
+## ② Approach.
+
+Wrap it in Docker so the whole configuration is a file, not a memorized command: the
+official `koboldai/koboldcpp` image, driven by a checked-in `.kcpps` config, a
+read-only mount of the GGUF model, and `restart: unless-stopped` so it comes back on
+boot. The key move is admin mode with a 300-second idle-unload: the model frees
+itself from VRAM after five idle minutes and reloads in ~5–15 s on the next request.
+That's what lets it coexist — when SillyTavern finishes a chat turn and hands off to
+the image model, Kobold has already let go of the card (and
+[Switchboard](/projects/switchboard/) evicts it outright when it hasn't). Pin it to
+the P100 by UUID and it never wanders onto the GTX 1660 that drives the desktop.
+
+## ③ What's in the box.
+
+- **Image** — official `koboldai/koboldcpp:latest`, no custom build.
+- **Config-as-code** — a `.kcpps` file mounted in, so the model, context size, and GPU layers live in version-controllable config rather than a shell command.
+- **Model** — a Q8 12B Nemo writing/roleplay finetune (~13 GB), mounted read-only from the host.
+- **Idle-unload** — admin mode plus `adminunloadtimeout: 300`; VRAM is released after five idle minutes and reloaded on demand. This is its half of the shared-GPU contract behind [Switchboard](/projects/switchboard/).
+- **Persistence** — a Docker volume for the workspace so the kobold binary isn't re-downloaded on every start; `restart: unless-stopped` plus an enabled docker service for boot autostart.
+
+## ④ What broke.
+
+Two config surprises, both from porting a host config into a container. The original
+config had `benchmark: "stdout"`, which makes Kobold run a benchmark and then *exit* —
+no server, the container just dies on boot. Blanking it fixed startup. And the GPU
+index is relative to the container: the host saw the P100 as device 1, but inside the
+container only the P100 is visible, so it's device 0 — the inherited
+`usecuda: [normal, 1, mmq]` pointed at a GPU that didn't exist in the container's
+view. Changed it to 0 and it bound correctly.
+
+## ⑤ Where it's going.
+
+It's a settled backend now — one of the things Switchboard arbitrates rather than a
+thing I touch. Changing models is editing one line in the `.kcpps` and restarting.
+The interesting question it raised — how do several GPU services share one card
+without fighting — is the one Switchboard ended up answering.

@@ -1,0 +1,54 @@
+---
+title: ComfyUI
+summary: A containerized ComfyUI for image generation pinned to the shared Tesla P100 — persistent models and custom nodes on an SSD, VRAM freed between runs so it can share the card, plus the slow host-RAM leak that took a while to catch.
+status: active
+techStack: [Docker, ComfyUI, PyTorch, CUDA, Tesla P100, SDXL]
+role: Solo — containerization, deploy
+startDate: '2026-05-18'
+featured: false
+---
+
+## ① The problem.
+
+ComfyUI is the image-generation half of a SillyTavern turn (and a standalone tool
+when I just want to make pictures). Run from a host virtualenv it's a sprawl: a
+Python environment that drifts, custom nodes with their own dependency trees, ~20 GB
+of models, and a process that pins the GPU. On a single shared 16 GB card it can't
+sit resident next to a 13 GB text model.
+
+## ② Approach.
+
+Containerize it, but keep everything stateful on disk. A PyTorch CUDA base image,
+with the ComfyUI repo, models, custom nodes, inputs, and outputs all bind-mounted
+from an SSD so nothing important lives inside the container. The entrypoint
+reinstalls requirements on every start — a no-op when they're satisfied — so a node
+installed through ComfyUI-Manager picks up its dependencies on the next restart
+without rebuilding the image. Pin it to the P100 by UUID and leave the GTX 1660 free
+for the desktop. Crucially, run with `--cache-none` so models are freed from VRAM
+between workflow runs — that's the price of admission for sharing the card.
+
+## ③ What's in the box.
+
+- **Base** — a `pytorch/pytorch` CUDA runtime image; ComfyUI bind-mounted as `/app` so the repo, ~20 GB of models, nodes, and outputs persist on the SSD.
+- **GPU** — pinned to the P100 by UUID; the GTX 1660 Super is deliberately left for display and desktop work.
+- **Self-healing deps** — the entrypoint reinstalls `requirements.txt` and every custom node's requirements on start, so Manager-installed nodes just work after a restart.
+- **VRAM discipline** — `--cache-none` frees models between runs, the trade being a few seconds of reload per workflow. Its half of the shared-GPU contract.
+- **Quality dividend** — because [Switchboard](/projects/switchboard/) evicts the text model before forwarding an image request, ComfyUI effectively gets the whole ~16 GB per request. No need for distilled/turbo checkpoints to fit alongside anything — I can run a full-quality SDXL finetune and only reach for Lightning when I specifically want ~3 s/image over quality.
+
+## ④ What broke.
+
+The slow one. `--cache-none` frees *VRAM*, not host RAM — and the ComfyUI process
+leaks anonymous host memory over long uptime. I watched it accumulate ~11 GB after 41
+hours, mostly swapped out while idle, which on a 31 GB box already hosting a 26B model
+drove swap to 100% and made everything thrash. It looks like a system-wide problem
+and it's one container. The fix is unglamorous — `docker restart comfyui` reclaims
+the ~11 GB instantly with no data loss, because all the state is on the SSD. The
+lesson is to check ComfyUI's resident and swapped memory first when the box starts
+thrashing.
+
+## ⑤ Where it's going.
+
+A stable backend behind Switchboard. The RAM leak wants a real fix or a scheduled
+restart rather than me noticing swap pressure; everything else — model swaps, new
+nodes — is just editing mounts and restarting. Like the text backend, the hard part
+wasn't ComfyUI itself but teaching it to share one GPU politely.

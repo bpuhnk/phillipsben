@@ -1,0 +1,55 @@
+---
+title: Home MQTT Backbone
+summary: A self-hosted Mosquitto broker on the home server — the small, boring message bus that lets ESP32 sensors and Home Assistant talk without any of them knowing about each other.
+status: active
+techStack: [Docker, Mosquitto, MQTT, Home Assistant]
+role: Solo — deploy
+startDate: '2026-05-23'
+featured: false
+---
+
+## ① The problem.
+
+The home-automation sensors I build — a [couch presence sensor](/projects/couch-presence/),
+with more to come — need to tell Home Assistant what they see, and Home Assistant
+needs to not care which device said it. Home Assistant here runs in Docker with no
+add-on store, so the usual one-click Mosquitto add-on isn't available. I needed a
+broker I own, that survives reboots, and that authenticates its clients.
+
+## ② Approach.
+
+Self-host Mosquitto in Docker next to everything else on the server: the
+`eclipse-mosquitto:2` image, `restart: unless-stopped`, config, data, and logs
+bind-mounted and owned by the broker's uid so retained messages and logs persist.
+Anonymous access off; a password file with one account per role — `homeassistant`
+for Home Assistant's MQTT integration, `xiao` for the sensor firmware. The decoupling
+is the whole point: a sensor publishes a retained ON/OFF to a topic plus an
+availability last-will, Home Assistant subscribes, and neither names the other. Swap
+the sensor's guts from a camera to a radar and the broker, the topic, and Home
+Assistant never notice.
+
+## ③ What's in the box.
+
+- **Broker** — `eclipse-mosquitto:2` in Docker, `restart: unless-stopped`, persistent config/data/log bind mounts owned by the broker uid.
+- **Port** — 1883 on the host. Home Assistant is host-networked, so it reaches the broker on localhost; LAN and WiFi devices reach it at the server's LAN address.
+- **Auth** — anonymous access disabled, a password file with per-role users. Credentials live in the broker and in the firmware's secrets, never in notes.
+- **First consumer** — the [couch presence sensor](/projects/couch-presence/) publishes retained presence plus an availability last-will here; Home Assistant turns the topic into a binary sensor.
+
+## ④ What broke.
+
+Nothing dramatic — which is the point of a message bus — but the decoupling earned
+its keep immediately. The availability last-will is what makes a sensor reboot or
+reflash *visible* instead of silently stale: when the couch sensor was reflashed into
+a different project entirely, its last-will fired offline and Home Assistant's binary
+sensor went `unavailable` rather than lying that someone was still on the couch. The
+consuming automations were written to gate on real on/off states plus a condition, so
+`unavailable` simply does nothing instead of misfiring.
+
+## ⑤ Where it's going.
+
+It's deliberately boring infrastructure, and it should stay that way. As more sensors
+come online — the mmWave couch radar, whatever's next — they're new topics and new
+password-file entries, not new plumbing. The broker is the seam that lets every
+home-automation project be swappable at the sensor end without touching Home
+Assistant, the same way [Switchboard](/projects/switchboard/) is the seam in front of
+the GPU.
