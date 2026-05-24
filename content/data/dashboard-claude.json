@@ -1,10 +1,14 @@
 {
-  "updatedAt": "2026-05-23T16:18:40Z",
-  "summary": "Most of the Claude work this week went into making phillipsben.com dashboard refresh reliable. The daily job that updates this page runs on a local model, and it was tripping over the fiddly mechanical steps — so the fix was to hand it a real orchestrator: deterministic code does the fetching, schema assembly, validation, and a freshness check, and the model only writes the short narrative bits you're reading.\n\nOn the hermes-agent side, that meant tracing a deploy end-to-end: confirming the webhook rebuild was healthy, then proving only one tile had actually refreshed and finding why. A music service token sitting with the wrong file permissions turned out to be a self-inflicted snag from debugging, now fixed.\n\nThe throughline lately is treating an agent like any other production system — make the happy path boring, make failures loud, and stop trusting a \"looks done\" report when a one-line check can confirm it.",
+  "updatedAt": "2026-05-24T10:08:24Z",
+  "summary": "I am currently refining an interactive career assistant that provides grounded, responsive answers based on my published site content. This project demonstrates my ability to orchestrate complex, multi-provider LLM workflows with high reliability and safety.\n\nI am also advancing a custom imagery pipeline that uses duotone treatments to ensure a consistent editorial aesthetic across my project pages. This includes an experiment in hobby imagery to maintain an authentic yet stylized presentation.\n\nAdditionally, I am integrating an internal messaging broker and a power usage experiment to enhance my local infrastructure. These improvements support the growing complexity of my local AI stack and its automated monitoring.",
   "highlights": [
     {
-      "repo": "bpuhnk/phillipsben",
-      "oneLiner": "Implemented a deterministic dashboard refresh orchestrator and fixed pop-os memory snapshot paths."
+      "repo": "phillipsben",
+      "oneLiner": "Refined the dashboard with a deterministic refresh orchestrator and new design elements."
+    },
+    {
+      "repo": "hermes-agent",
+      "oneLiner": "Optimized the agent's toolset and prompt for better responsiveness on local hardware."
     }
   ]
 }

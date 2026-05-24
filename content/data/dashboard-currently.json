@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-23T16:18:40Z",
-  "focus": "Shipping a deterministic dashboard refresh orchestrator and refining how the site ingests pop-os memory snapshots.",
+  "updatedAt": "2026-05-24T10:08:24Z",
+  "focus": "I am building a deterministic dashboard refresh orchestrator to ensure data freshness and implementing a robust redaction system for my portfolio.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

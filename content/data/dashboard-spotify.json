@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-05-23T16:15:57Z",
+  "updatedAt": "2026-05-24T10:01:15Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "Upside Down",
+      "artist": "Jack Johnson",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048511e0232d637e8313d3ef4923e",
+      "url": "https://open.spotify.com/track/6shRGWCtBUOPFLFTTqXZIC",
+      "playedAt": "2026-05-23T18:47:24.455Z"
+    },
+    {
+      "track": "Devil in Disguise",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851117ebf5e67defe3f175eaccc",
+      "url": "https://open.spotify.com/track/3MKhTroJs5GF9H7LqN9fiw",
+      "playedAt": "2026-05-23T18:44:41.833Z"
+    },
+    {
+      "track": "Give and Take",
+      "artist": "Poor Man's Poison",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851ed93d9bfa2b95b0ebd4a5546",
+      "url": "https://open.spotify.com/track/4pZos1A9cAsvHx5kj1O38W",
+      "playedAt": "2026-05-23T18:43:52.621Z"
+    },
+    {
+      "track": "3 O'Clock Things",
+      "artist": "AJR",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851e7a3a891ae555b0a46a131ed",
+      "url": "https://open.spotify.com/track/1gHvJW02LvPeywVfS6Els8",
+      "playedAt": "2026-05-23T18:40:13.928Z"
+    },
     {
       "track": "Clint Eastwood",
       "artist": "Gorillaz, Del The Funky Homosapien",
       "albumArt": "https://i.scdn.co/image/ab67616d00004851c73a7bb15f43bae86215934b",
       "url": "https://open.spotify.com/track/7yMiX7n9SBvadzox8T5jzT",
       "playedAt": "2026-05-22T17:16:08.470Z"
-    },
-    {
-      "track": "Gold Digger",
-      "artist": "Kanye West, Jamie Foxx",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851428d2255141c2119409a31b2",
-      "url": "https://open.spotify.com/track/1PS1QMdUqOal0ai3Gt7sDQ",
-      "playedAt": "2026-05-22T11:59:19.004Z"
-    },
-    {
-      "track": "Somebody That I Used To Know",
-      "artist": "Gotye, Kimbra",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e1d47c00ddecbfb810c807ed",
-      "url": "https://open.spotify.com/track/4wCmqSrbyCgxEXROQE6vtV",
-      "playedAt": "2026-05-22T11:34:20.473Z"
-    },
-    {
-      "track": "Ordinary",
-      "artist": "Alex Warren",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048518d18d73bbfc8985d52865edf",
-      "url": "https://open.spotify.com/track/2RkZ5LkEzeHGRsmDqKwmaJ",
-      "playedAt": "2026-05-22T11:30:15.061Z"
-    },
-    {
-      "track": "Welcome Home",
-      "artist": "Coheed and Cambria",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851b7ded75d35cf4364ba3f5267",
-      "url": "https://open.spotify.com/track/42GP0xKtkolBnmqQRvSllO",
-      "playedAt": "2026-05-22T11:27:07.503Z"
     }
   ]
 }
