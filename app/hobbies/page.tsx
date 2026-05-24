@@ -64,8 +64,8 @@ export default function HobbiesPage() {
 
         <div className="hobbies-printer-grid">
           {[
-            { n: 'Anet A8 → BLV AM8', m: 'Linear rails, aluminum extrusions, Marlin 2', s: 'Heavily modified', y: '2018 → today', file: 'am8', alt: 'Close-up of the BLV AM8 build plate.', img: 'BLV AM8 · build-plate close-up' },
-            { n: 'Creality Ender 3', m: 'Klipper, BLTouch, Sprite extruder', s: 'The reliable one', y: '2020 → today', file: 'ender3', alt: 'The Ender 3 mid-way through a long print.', img: 'Ender 3 · running a 30hr print' },
+            { n: 'Anet A8 → BLV AM8', m: 'Linear rails, aluminum extrusions, Klipper + Mainsail', s: 'Heavily modified', y: '2018 → today', file: 'am8', alt: 'Close-up of the BLV AM8 build plate.', img: 'BLV AM8 · build-plate close-up' },
+            { n: 'Creality Ender 3', m: 'Marlin, BLTouch, E3D hotend', s: 'The reliable one', y: '2020 → today', file: 'ender3', alt: 'The Ender 3 mid-way through a long print.', img: 'Ender 3 · running a 30hr print' },
             { n: 'Creality K1', m: 'Stock firmware, fast benchies', s: 'The fast one', y: '2024 → today', file: 'k1', alt: 'The Creality K1 with its enclosure light glowing.', img: 'K1 · enclosure-light glowing red' },
           ].map((p) => (
             <div key={p.n} className="proj-card" style={{ border: '1px solid var(--rule-2)' }}>
@@ -100,7 +100,7 @@ export default function HobbiesPage() {
               over my own broker.
             </p>
             <div className="hobbies-embedded-chips">
-              {['ESP32', 'ESPHome', 'Home Assistant', 'MQTT', 'Arduino', 'Raspberry Pi 5', 'KiCad', 'Soldering by lamp'].map((t) => (
+              {['ESP32', 'ESPHome', 'Home Assistant', 'MQTT', 'Arduino', 'Raspberry Pi 4', 'KiCad', 'Soldering by lamp'].map((t) => (
                 <Chip key={t}>{t}</Chip>
               ))}
             </div>
@@ -125,9 +125,9 @@ export default function HobbiesPage() {
               <i>in my closet.</i>
             </h2>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--ink-2)', maxWidth: '38ch' }}>
-              An NVIDIA P100 picked up cheap, a small Ubuntu box, and a stack
-              of front-ends — SillyTavern, ComfyUI, KoboldCPP, Ollama —
-              wrapped by my Hermes-Agent on top.
+              An NVIDIA P100 picked up cheap, riding shotgun in my Pop!_OS
+              workstation, and a stack of front-ends — SillyTavern, ComfyUI,
+              KoboldCPP, Ollama — fronted by my own Switchboard broker.
             </p>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--ink-2)', maxWidth: '38ch', marginTop: 14 }}>
               I run Gemma 4 for fast work and Nemo for longer conversations, with
@@ -139,14 +139,14 @@ export default function HobbiesPage() {
           <div>
             <DuoPhoto
               src="/images/hobbies/rack.webp"
-              alt="The home server rack with the P100 GPU visible and a labelled cable run."
-              label="The home rack — P100 visible, doors open, a labelled cable run · 4:3"
+              alt="The Pop!_OS workstation with the Tesla P100 card visible inside the open case."
+              label="The workstation — Tesla P100 visible inside the case · 4:3"
               ratio="4 / 3"
             />
             <div className="hobbies-ai-stats m-stat-grid">
               {[
                 { k: 'GPU', v: 'P100 16GB' },
-                { k: 'RAM', v: '64 GB' },
+                { k: 'RAM', v: '32 GB' },
                 { k: 'MODALITIES', v: '5' },
                 { k: 'POWER', v: '~180W' },
               ].map((s) => (
@@ -179,8 +179,10 @@ export default function HobbiesPage() {
             <div className="meta family-band-fig-inline">FIG. — WITH MY SON, DECEMBER 2025.</div>
             <div className="kicker">④ &nbsp;·&nbsp; FAMILY & FAITH</div>
             <p className="display-m" style={{ marginTop: 22 }}>
-              Married twenty years, a daughter in college, a son
-              nearly there, a dog who is unreasonably opinionated
+              Married twenty years. Our daughter spends her days
+              teaching other people's little ones now; our son is
+              still a teenager, in no particular hurry to be
+              otherwise; the dog stays unreasonably opinionated
               about supper. We're Christians, southerners, and
               quiet about both — we mostly just <i style={{ color: '#E8B895' }}>show up</i>.
             </p>
