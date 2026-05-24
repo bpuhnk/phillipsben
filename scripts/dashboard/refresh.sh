@@ -84,8 +84,12 @@ prep)
   fi
   echo "pop-os files (7d): $pop_n | host01: $h01_n | snapshot stale: $stale"
 
-  cp -f "$DATA/dashboard-config.json" "$STAGE/config.json" 2>/dev/null \
-    && echo "allowlist staged -> $STAGE/config.json"
+  echo "== allowlist =="
+  # claudeTopicsAllowlist auto-expands with every published project page
+  # (on-site => safe to name). Falls back to the raw config if the builder fails.
+  python3 "$SCRIPT_DIR/build_allowlist.py" \
+    || { cp -f "$DATA/dashboard-config.json" "$STAGE/config.json" 2>/dev/null \
+         && echo "allowlist staged (raw fallback) -> $STAGE/config.json"; }
 
   cat <<BRIEF
 

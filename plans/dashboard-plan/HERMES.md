@@ -44,7 +44,7 @@ Staged inputs it produces (all short paths under `/tmp/dash/`):
 | `gh-raw.json`  | raw GitHub activity — `repos[].name`, `commits`, `_recent_messages` |
 | `news-raw.json`| up to 20 HN candidates — `title`/`url`/`source`/`points`     |
 | `mem.txt`      | recent Claude memory (≤7 days). **pop-os entries are PRIMARY**, host01 supporting. Headed by `### [pop-os] …` / `### [host01] …` |
-| `config.json`  | `claudeTopicsAllowlist` + `claudeRedactionRules` — **honor every rule** |
+| `config.json`  | `claudeTopicsAllowlist` + `claudeRedactionRules` — **honor every rule**. The allowlist is auto-expanded at `prep` time with the title + slug of every published `content/projects/*` page (on-site ⇒ nameable), merged onto the static base in `dashboard-config.json`. So if a project has a page, you may name it. |
 
 ## Phase 2 — the narrative (this is the part only you can do)
 
