@@ -9,6 +9,11 @@ dashboard keeps yesterday's data instead of going blank). A single bad tile
 never aborts the others; we report per-tile status and exit non-zero only on
 a truly unexpected error.
 
+Idempotency: a tile is rewritten only when its content actually changed
+(comparison ignores `updatedAt`). An unchanged tile keeps its published file
+and timestamp, so re-running merge produces no git diff and a repeated
+finalize is a true no-op — the dashboard only redeploys on real changes.
+
 Inputs (under $DASH_STAGE):
   gh-raw.json    raw output of fetch_github.py
   gh-sum.json    {"<repo full_name>": "summary", ...}        (LLM)
@@ -60,6 +65,22 @@ def write_data(name, obj):
         fh.write("\n")
 
 
+def write_data_if_changed(name, obj):
+    """Write only if meaningful content changed, comparing the published file
+    against `obj` while ignoring `updatedAt`. If nothing changed, leave the
+    published file — and its existing timestamp — untouched, so re-running the
+    merge produces no git diff and finalize becomes a true no-op. Returns True
+    if the file was (re)written, False if it was left as-is."""
+    prev = load_json(_data(name))
+    if prev is not None:
+        def strip(d):
+            return {k: v for k, v in d.items() if k != "updatedAt"}
+        if strip(prev) == strip(obj):
+            return False
+    write_data(name, obj)
+    return True
+
+
 def build_github():
     raw = load_json(_stage("gh-raw.json"))
     if raw is None:
@@ -78,7 +99,7 @@ def build_github():
             "summary": str(summary).strip(),
         })
     totals = raw.get("totals", {})
-    write_data("dashboard-github.json", {
+    wrote = write_data_if_changed("dashboard-github.json", {
         "updatedAt": NOW,
         "weekStart": raw.get("weekStart") or prev.get("weekStart") or "",
         "totals": {
@@ -93,7 +114,7 @@ def build_github():
     detail = f"built {len(repos)} repo(s)"
     if missing:
         detail += f"; {len(missing)} missing summary (fell back/blank)"
-    return "build", detail
+    return ("build" if wrote else "nochange", detail)
 
 
 def build_news():
@@ -118,8 +139,8 @@ def build_news():
         })
     if not items:
         return "skip", "no picks matched candidates — kept published"
-    write_data("dashboard-news.json", {"updatedAt": NOW, "items": items})
-    return "build", f"built {len(items)} item(s)"
+    wrote = write_data_if_changed("dashboard-news.json", {"updatedAt": NOW, "items": items})
+    return ("build" if wrote else "nochange", f"built {len(items)} item(s)")
 
 
 def build_currently():
@@ -132,10 +153,10 @@ def build_currently():
     reading = prev.get("reading") or {
         "title": "", "author": "", "url": None, "coverUrl": None,
     }
-    write_data("dashboard-currently.json", {
+    wrote = write_data_if_changed("dashboard-currently.json", {
         "updatedAt": NOW, "focus": focus, "reading": reading,
     })
-    return "build", "built (reading preserved)"
+    return ("build" if wrote else "nochange", "built (reading preserved)")
 
 
 def build_claude():
@@ -147,18 +168,18 @@ def build_claude():
     for h in hls[:4]:
         if isinstance(h, dict) and h.get("repo") and h.get("oneLiner"):
             highlights.append({"repo": h["repo"], "oneLiner": h["oneLiner"]})
-    write_data("dashboard-claude.json", {
+    wrote = write_data_if_changed("dashboard-claude.json", {
         "updatedAt": NOW, "summary": summary, "highlights": highlights,
     })
-    return "build", f"built ({len(highlights)} highlight(s))"
+    return ("build" if wrote else "nochange", f"built ({len(highlights)} highlight(s))")
 
 
 def build_spotify():
     sp = load_json(_stage("spotify.json"))
     if sp is None:
         return "skip", "no spotify.json (fetch failed) — kept published"
-    write_data("dashboard-spotify.json", sp)  # already final-form
-    return "build", "built (fetcher output)"
+    wrote = write_data_if_changed("dashboard-spotify.json", sp)  # already final-form
+    return ("build" if wrote else "nochange", "built (fetcher output)")
 
 
 BUILDERS = [
