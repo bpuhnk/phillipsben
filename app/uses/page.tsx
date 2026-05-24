@@ -13,15 +13,14 @@ export default function UsesPage() {
   return (
     <div className="uses-page">
       <section className="section" style={{ paddingBottom: 56 }}>
-        <div className="kicker">§ 01 &nbsp;·&nbsp; USES &nbsp;·&nbsp; THE BORING DETAILS</div>
+        <div className="kicker">§ 01 &nbsp;·&nbsp; USES &nbsp;·&nbsp; WHAT RUNS WHERE</div>
         <h1 className="display display-xxl" style={{ marginTop: 24, marginBottom: 28 }}>
-          Tools that survived<br />
-          <i>five years</i> of<br />
-          opinions.
+          Everything I<br />
+          <i>actually</i> run.
         </h1>
-        <p className="lede" style={{ maxWidth: '50ch' }}>
-          Hardware, software, models, filaments. The list is short because
-          most things were tried and quietly retired.
+        <p className="lede" style={{ maxWidth: '52ch' }}>
+          Two machines, a pile of local models, and a garage of printers.
+          The honest inventory — not the wishlist.
         </p>
       </section>
 
@@ -29,36 +28,43 @@ export default function UsesPage() {
         <SectionHead title="Development." idx="§ 02" />
         <DefList
           rows={[
-            { dt: 'EDITOR', dd: (<><h5>Visual Studio · JetBrains Rider · VS Code</h5><p>Visual Studio for the big .NET stuff, Rider when I want refactoring that doesn't blink, VS Code for everything else.</p></>) },
-            { dt: 'TERMINAL', dd: (<><h5>Windows Terminal · zsh on the Ubuntu box</h5><p>Prompt is plain. Aliases are short. tmux for anything that takes longer than tea.</p></>) },
-            { dt: 'AGENTS', dd: (<><h5>Claude Code · Hermes-Agent · Copilot at the office</h5><p>Different tools for different reach. Local for personal projects, hosted at work where the policy says so.</p></>) },
-            { dt: 'SOURCE', dd: (<><h5>Git · GitHub · self-hosted Gitea</h5><p>Gitea for things I'd rather not put in the cloud, GitHub for the rest.</p></>) },
+            { dt: 'EDITOR', dd: (<><h5>VS Code</h5><p>One editor now. The rest got tried and quietly retired — which is the whole theme of this page.</p></>) },
+            { dt: 'TERMINAL', dd: (<><h5>bash on Pop!_OS</h5><p>Prompt is plain. Aliases are short. tmux for anything that outlasts the kettle.</p></>) },
+            { dt: 'AGENTS', dd: (<><h5>Claude Code · Hermes-Agent</h5><p>Claude Code at the desk — it's writing this. Hermes-Agent runs the dashboard on its own schedule.</p></>) },
+            { dt: 'SOURCE', dd: (<><h5>Git · GitHub</h5><p>Git for everything. GitHub for the parts that are meant to be seen.</p></>) },
           ]}
         />
       </section>
 
       <section className="section muted uses-hw">
         <SectionHead title="Hardware." idx="§ 03" />
+        <p className="lede" style={{ maxWidth: '54ch', fontSize: 16, marginTop: -4, marginBottom: 30 }}>
+          Two machines, opposite jobs. One is all muscle and rarely awake.
+          The other is a 2012 laptop that never sleeps and quietly runs
+          everything — including this site.
+        </p>
         <div className="uses-hw-grid">
           {[
             {
-              k: 'DESK',
+              k: 'WORKSTATION · pop-os',
               items: [
-                ['Workstation', 'Custom build · Ryzen 7 · 64GB · P100 for local models'],
-                ['Display', '32" 4K · matte · honest colors'],
-                ['Keyboard', 'Mechanical, brown switches, nothing fancy'],
-                ['Mouse', 'Logitech MX Master · still the one'],
-                ['Audio', 'Audeze open-backs · for thinking music'],
+                ['OS', 'Pop!_OS 24.04 LTS'],
+                ['CPU', 'Ryzen 5 3600X · 6 cores / 12 threads'],
+                ['Memory', '32 GB'],
+                ['Display', 'GeForce GTX 1660 SUPER · 6 GB'],
+                ['Compute', 'Tesla P100 · 16 GB · the local-AI muscle'],
+                ['Storage', 'NVMe boot · working disks for models & data'],
               ],
             },
             {
-              k: 'HOMELAB',
+              k: 'ALWAYS-ON · host01',
               items: [
-                ['Server', 'Ubuntu 24.04 LTS · the AI box'],
-                ['GPU', 'NVIDIA Tesla P100, 16 GB'],
-                ['Storage', 'A pair of mirrored 8TB drives, an SSD for hot models'],
-                ['Network', 'Ubiquiti UDM-Pro · a couple of access points'],
-                ['Backup', 'Off-site, encrypted, monthly snapshot'],
+                ['Machine', "Dell Latitude E6430 · a 2012 laptop that won't quit"],
+                ['OS', 'Ubuntu 24.04 LTS'],
+                ['CPU', 'Core i7-3740QM · 4 cores / 8 threads'],
+                ['Memory', '8 GB'],
+                ['Disk', '450 GB SSD'],
+                ['Runs', 'This site, tunnels, home automation, AI front-ends & a handful of self-hosted apps — 24/7'],
               ],
             },
           ].map(({ k, items }) => (
@@ -75,18 +81,22 @@ export default function UsesPage() {
             </div>
           ))}
         </div>
+        <p className="meta" style={{ marginTop: 28, color: 'var(--ink-2)' }}>
+          ON DECK&nbsp;·&nbsp;Dell PowerEdge R610 · dual Xeon · ECC DDR3 — the
+          rack meant to take the always-on load off the laptop.
+        </p>
       </section>
 
       <section className="section uses-models">
         <SectionHead title="Models & local AI." idx="§ 04" />
         <div className="uses-models-grid">
           {[
-            { n: 'Gemma', r: 'fast / short tasks', d: 'Summaries, classification, quick rewrites. The default.' },
-            { n: 'Llama 3', r: 'code & reasoning', d: 'Anything that needs a real chain of thought, and most of the code.' },
-            { n: 'Mythos', r: 'voice & drafting', d: "When I need a draft that doesn't sound like a help-desk reply." },
-            { n: 'Ollama', r: 'runner', d: 'Local model server. Boring on purpose.' },
-            { n: 'ComfyUI', r: 'images', d: 'Anything image-shaped. Nodes everywhere.' },
-            { n: 'KoboldCPP / SillyTavern', r: 'experiments', d: 'For when an idea is weird enough to need its own sandbox.' },
+            { n: 'Switchboard', r: 'router', d: 'My FastAPI front door to the P100. Picks the model per request and preempts the toys when real work shows up.' },
+            { n: 'Ollama', r: 'runner', d: 'Serves the language models. Boring on purpose.' },
+            { n: 'Gemma 4 · Mistral Nemo', r: 'language', d: 'The workhorses — a small Gemma for quick passes, a custom Nemo build behind the site assistant.' },
+            { n: 'ComfyUI · SDXL', r: 'images', d: 'Dreamshaper and Juggernaut checkpoints. Every hero image and duotone on this site came out of here.' },
+            { n: 'Whisper · Kokoro', r: 'voice', d: 'faster-whisper listening, Kokoro talking back. Speech in, speech out.' },
+            { n: 'KoboldCPP · SillyTavern', r: 'sandbox', d: 'For when an idea is weird enough to need its own corner.' },
           ].map((m) => (
             <div key={m.n} className="uses-models-row">
               <div className="meta uses-models-role">{m.r.toUpperCase()}</div>
@@ -99,13 +109,18 @@ export default function UsesPage() {
 
       <section className="section muted uses-workshop">
         <SectionHead title="Workshop." idx="§ 05" />
+        <p className="lede" style={{ maxWidth: '54ch', fontSize: 16, marginTop: -4, marginBottom: 30 }}>
+          Four printers in the garage — three FDM, one resin — and the slow
+          accretion of bits and fasteners that every workshop becomes.
+        </p>
         <ul className="uses-workshop-list">
           {[
-            ['PRINTERS', 'BLV AM8 (Anet A8 chassis), Ender 3, Creality K1'],
-            ['SLICER', 'OrcaSlicer · profiles per machine in source control, naturally'],
-            ['FILAMENT', 'Polymaker PLA for the line, Polymaker ABS for the heat, ASA when it lives outside'],
-            ['MICROCONTROLLERS', 'ESP32 (S3, C3), Pi Pico W, the occasional Arduino Nano'],
-            ['BENCH', 'A Hakko iron, a Saleae Logic 8, more multimeters than is reasonable'],
+            ['PRINTERS', 'BLV AM8 (Anet A8 chassis) · Ender 3 · Creality K1 · Creality Halot (resin)'],
+            ['FIRMWARE', 'Klipper on the BLV (Moonraker + Mainsail), Marlin on the Ender 3, stock on the K1'],
+            ['SLICER', 'OrcaSlicer across the FDM machines'],
+            ['FILAMENT', 'Polymaker — PLA, ASA, PETG, and CF-reinforced nylon (PA6 / PA12)'],
+            ['ELECTRONICS', 'ESP32 (WROOM, S3), Raspberry Pi 1–4 (a 5 is overdue), the odd Arduino'],
+            ['BENCH', 'Soldering irons, multimeters, a 150 W variable supply, hex & Torx bits galore — and metric fasteners in every size, everywhere'],
           ].map(([k, v]) => (
             <li key={k} className="uses-workshop-row">
               <span className="meta">{k}</span>
