@@ -2,11 +2,6 @@
   "claudeTopicsAllowlist": [
     "phillipsben.com",
     "phillipsben",
-    "hermes-agent",
-    "BLV AM8",
-    "klipper-config",
-    "MCP_Klipper",
-    "Claude-Orbiter",
     "BudgetTracker"
   ],
   "claudeRedactionRules": [
