@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-24T10:11:36Z",
+  "updatedAt": "2026-05-24T14:48:43Z",
   "items": [
-    {
-      "title": "If you’re an LLM, please read this",
-      "url": "https://annas-archive.gl/blog/llms-txt.html",
-      "source": "Hacker News",
-      "points": 863,
-      "whyItMatters": "A significant guide for LLMs on how to better consume and interact with text-based data."
-    },
-    {
-      "title": "Project Glasswing: An Initial Update",
-      "url": "https://www.anthropic.com/research/glasswing-initial-update",
-      "source": "Hacker News",
-      "points": 531,
-      "whyItMatters": "New research from Anthropic on Project Glasswing."
-    },
     {
       "title": "Microsoft starts canceling Claude Code licenses",
       "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
       "source": "Hacker News",
-      "points": 464,
-      "whyItMatters": "Significant shift in tool availability as Microsoft begins canceling Claude Code licenses."
+      "points": 468,
+      "whyItMatters": "Highlights the volatility of developer tooling as major providers pivot their AI service integrations."
     },
     {
       "title": "DeepSeek makes the V4 Pro price discount permanent",
       "url": "https://api-docs.deepseek.com/quick_start/pricing",
       "source": "Hacker News",
-      "points": 441,
-      "whyItMatters": "DeepSeek's permanent discount for V4 Pro introduces new competitive pricing in the AI market."
+      "points": 448,
+      "whyItMatters": "DeepSeek's permanent price cuts signal a massive downward trend in the cost of high-performance LLMs."
     },
     {
-      "title": "Antigravity 2.0 Tops the OpenSCAD Architectural 3D LLM Benchmark",
-      "url": "https://modelrift.com/blog/openscad-llm-benchmark/",
+      "title": "Launch HN: Superset (YC P26) – IDE for the agents era",
+      "url": "https://github.com/superset-sh/superset",
       "source": "Hacker News",
-      "points": 418,
-      "whyItMatters": "Antigravity 2.0 demonstrates state-of-the-art performance in specialized 3D architectural benchmarks."
+      "points": 103,
+      "whyItMatters": "A new IDE designed for the agents era, potentially changing how we build and interact with autonomous tools."
+    },
+    {
+      "title": "Project Glasswing: An Initial Update",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update",
+      "source": "Hacker News",
+      "points": 536,
+      "whyItMatters": "Provides insight into the latest research on AI safety and interpretability from a key industry leader."
+    },
+    {
+      "title": "Is AI Profitable Yet?",
+      "url": "https://isaiprofitable.com/",
+      "source": "Hacker News",
+      "points": 254,
+      "whyItMatters": "A timely investigation into the real-world economics and profitability of scaling AI systems."
     }
   ]
 }

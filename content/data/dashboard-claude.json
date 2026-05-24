@@ -1,14 +1,18 @@
 {
-  "updatedAt": "2026-05-24T10:11:36Z",
+  "updatedAt": "2026-05-24T14:48:43Z",
   "summary": "I am currently refining an interactive career assistant that provides grounded, responsive answers based on my published site content. This project demonstrates my ability to orchestrate complex, multi-provider LLM workflows with high reliability and safety.\n\nI am also advancing a custom imagery pipeline that uses duotone treatments to ensure a consistent editorial aesthetic across my project pages. This includes an experiment in hobby imagery to maintain an authentic yet stylized presentation.\n\nAdditionally, I am integrating an internal messaging broker and a power usage experiment to enhance my local infrastructure. These improvements support the growing complexity of my local AI stack and its automated monitoring.",
   "highlights": [
     {
-      "repo": "phillipsben",
-      "oneLiner": "Refined the dashboard with a deterministic refresh orchestrator and new design elements."
+      "repo": "Hermes-Agent",
+      "oneLiner": "An automated agent orchestrating multi-provider LLM workflows for dashboard and task automation."
     },
     {
-      "repo": "hermes-agent",
-      "oneLiner": "Optimized the agent's toolset and prompt for better responsiveness on local hardware."
+      "repo": "site-assistant",
+      "oneLiner": "A bounded, career-context career assistant grounded in published site content."
+    },
+    {
+      "repo": "Switchboard",
+      "oneLiner": "A custom model-swapping proxy providing a unified API for local and cloud LLM access."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-24T10:11:36Z",
+  "updatedAt": "2026-05-24T14:48:43Z",
   "weekStart": "2026-05-17",
   "totals": {
     "commits": 41,
@@ -12,7 +12,7 @@
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
       "commits": 41,
-      "summary": "Built a deterministic dashboard refresh orchestrator and freshness guard, and refined dashboard design and identity lines."
+      "summary": "Added BudgetTracker and project pages, slimmed Claude allowlist, and implemented a deterministic dashboard refresh with freshness guard."
     }
   ]
 }

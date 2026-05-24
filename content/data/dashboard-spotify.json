@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-05-24T10:01:15Z",
+  "updatedAt": "2026-05-24T14:40:45Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "The Hell Song",
+      "artist": "Sum 41",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515f897ffe64efe64404d7a8a6",
+      "url": "https://open.spotify.com/track/17XgxMFNzBYv38TEJRC18D",
+      "playedAt": "2026-05-24T14:16:39.076Z"
+    },
     {
       "track": "Upside Down",
       "artist": "Jack Johnson",
@@ -29,13 +36,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d00004851e7a3a891ae555b0a46a131ed",
       "url": "https://open.spotify.com/track/1gHvJW02LvPeywVfS6Els8",
       "playedAt": "2026-05-23T18:40:13.928Z"
-    },
-    {
-      "track": "Clint Eastwood",
-      "artist": "Gorillaz, Del The Funky Homosapien",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851c73a7bb15f43bae86215934b",
-      "url": "https://open.spotify.com/track/7yMiX7n9SBvadzox8T5jzT",
-      "playedAt": "2026-05-22T17:16:08.470Z"
     }
   ]
 }

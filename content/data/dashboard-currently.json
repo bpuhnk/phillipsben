@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-24T10:11:36Z",
-  "focus": "I am building a deterministic dashboard refresh orchestrator to ensure data freshness and implementing a robust redaction system for my portfolio.",
+  "updatedAt": "2026-05-24T14:48:43Z",
+  "focus": "I am focusing on refining the dashboard's automated refresh cycle and expanding the site's project pages. I am also working on improving the site-assistant's grounding with fresh project data.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
