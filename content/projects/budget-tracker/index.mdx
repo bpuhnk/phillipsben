@@ -1,0 +1,78 @@
+---
+title: BudgetTracker
+summary: A self-hosted personal-finance app, built like a real product — full-stack TypeScript over a deeply engineered SQL Server schema, with double-entry-correct transfers, receipt OCR, bank sync, a built-in ML layer, an LLM insights layer, and an append-only audit trail.
+status: active
+techStack: [React, TypeScript, Vite, Node.js, Express, SQL Server, Zustand, React Query, Zod, JWT, Docker, Plaid]
+role: Solo — full-stack design, build, deploy
+startDate: '2026-01-30'
+featured: false
+---
+
+## ① The problem.
+
+I wanted one place that actually told me where my money goes — and I wanted to
+own it. Not a spreadsheet I'd quietly stop updating, and not a SaaS app that holds
+my entire transaction history hostage behind a subscription and an export button. A
+self-hosted finance app on my own SQL Server, with the analytics I care about and
+none of the upsell. The catch I set myself was to build it like a real product, not
+a toy — auth, roles, an audit trail, backups, the works.
+
+## ② Approach.
+
+A disciplined full-stack TypeScript build. React, Vite, and Tailwind on the front,
+Zustand for client state and React Query for the server cache, Recharts for the
+graphs. Node and Express on the back, talking to SQL Server Express through a
+repository layer so controllers never touch raw SQL. Zod validates every request at
+the edge; JWT — short-lived access tokens plus refresh tokens — and bcrypt handle
+auth; three roles, admin / supervisor / viewer, gate who can do what. Everything
+runs in Docker: database, server, client, a proxy, and a db-init step that applies
+the migrations in order. "Deploy" is one compose file.
+
+The database is where the real work went. Forty-plus ordered migrations carry it
+from the first accounts table to the latest feature, and a lot of correctness lives
+in the schema itself rather than the app: views compute account balances (opening
+balance included), transfers are paired by a shared `TransferGroupId` so moving
+money between two accounts nets to zero instead of reading as income plus an
+expense, and the audit log is made append-only by triggers that refuse `UPDATE` and
+`DELETE` at the database level. Query Store is on so I can see what's slow.
+
+## ③ What's in the box.
+
+- **Core ledger** — accounts (typed, with opening balances), categories, and transactions with pagination, filtering, soft deletes, tags, notes, and paired transfers that net to zero.
+- **Analytics** — dashboard summary, spend-by-category, spend-over-time, and income-vs-expense, backed by SQL views and drawn with Recharts.
+- **Receipts + OCR** — upload a receipt, run it through Azure Form Recognizer's prebuilt-receipt model, capture line items as first-class transaction items, and keep the image. Itemized spending below the transaction line.
+- **Bank sync** — Plaid (and a Teller path) to link real accounts and pull transactions, plus a statement parser to import PDFs and CSVs when an aggregator won't cooperate.
+- **Built-in ML** — a server-side model layer for auto-categorizing transactions, flagging anomalies, and detecting recurring charges, behind a model registry and feature extractors.
+- **LLM insights** — a context-building layer and personas that let you ask questions about your own spending, with the conversations persisted.
+- **Budgets, goals, watchlists, subscriptions** — set category budgets, track savings goals, watch specific spend, and surface subscriptions you forgot you were paying for.
+- **Family accounts** — shared household finances across multiple users, role-gated.
+- **Auth + safety** — JWT access/refresh, bcrypt, RBAC, brute-force lockout, email password-reset tokens, a tamper-proof audit log with a retention policy, and a GDPR-style export/delete path.
+
+## ④ What broke.
+
+I don't have a commit history to narrate, but the schema's own evolution tells the
+story. Money math came first and got corrected fast: transfers and opening balances
+arrived as a "Phase 1.5" round of migrations once it was clear a transfer logged as
+two independent rows looked like phantom income — so balances moved into a database
+view and transfers got a shared group id. Receipt OCR was never clean; there's a
+migration whose only job is to start capturing the confidence score and error fields
+Azure's receipt model returns, because you can't trust an extraction you can't
+measure. Bank aggregation was painful enough that there are two integrations in the
+tree — Plaid and Teller, plus a debug service — the usual story of aggregator APIs
+that demo beautifully and fight you in production. Recurring-charge detection went
+through more than one approach, ending with a `DetectionStrategy` column so a pattern
+records how it was found. And the audit log got hardened in stages: first it exists,
+then triggers make it append-only (no `UPDATE`, no `DELETE`, SOX-style immutability),
+then a retention policy. The bluntest lesson is written down in a deployment
+checklist whose rule #1 is that `docker-compose down --volumes` will cheerfully
+delete your entire database — the backups and the "never use `--volumes`" rule are
+what came out of learning that the hard way.
+
+## ⑤ Where it's going.
+
+It's the deepest build in this list, and the migration log doubles as its roadmap —
+each feature is a dated step. What's still earning its keep rather than finished: the
+LLM insights layer, which is the most fun and the least essential, and bank-sync
+reliability, the part that has to be trustworthy enough that I'm not hand-correcting
+imports. Everything underneath — the ledger, the analytics, the audit trail — is the
+boring, solid base I wanted in the first place.
