@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-05-25T15:30:25Z",
+  "updatedAt": "2026-05-25T18:20:08Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "FAKE LAND",
+      "artist": "FAKE TYPE.",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b08b492470280d006fad58b7",
+      "url": "https://open.spotify.com/track/6sxV9tg9XvGZV0MIgzurqg",
+      "playedAt": "2026-05-25T16:50:02.298Z"
+    },
     {
       "track": "I Won't Give Up",
       "artist": "Jason Mraz",
@@ -29,13 +36,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d00004851bd8d74b33f8be9a6fef39e54",
       "url": "https://open.spotify.com/track/5it9RIRXDwiLpJKdce6Z7e",
       "playedAt": "2026-05-24T16:38:13.864Z"
-    },
-    {
-      "track": "Lucky",
-      "artist": "Jason Mraz, Colbie Caillat",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851125b1a330b6f6100ab19dbed",
-      "url": "https://open.spotify.com/track/0IktbUcnAGrvD03AWnz3Q8",
-      "playedAt": "2026-05-24T16:33:11.887Z"
     }
   ]
 }

@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-05-25T15:36:51Z",
-  "summary": "I am refining an interactive career assistant that provides grounded, responsive answers based on my published site content. This project demonstrates my ability to orchestrate complex, multi-provider LLM workflows with high reliability and safety.\n\nI am also advancing an automated imagery pipeline that uses duotone treatments to ensure a consistent editorial aesthetic across my project pages. This includes experiments with custom photography to maintain an authentic yet stylized presentation.\n\nAdditionally, I am integrating an internal messaging broker and a power usage experiment to enhance my local infrastructure. These improvements support the growing complexity of my local AI stack and its automated monitoring.",
+  "updatedAt": "2026-05-25T18:25:25Z",
+  "summary": "I've been building a career assistant for phillipsben.com — a \"Talk to Virtual Me\" bot that fields questions about my work using only what's published on the site. No vector database: the knowledge pack (~12k tokens) gets stuffed directly into context. The interesting constraint was keeping confidential details out structurally, not just instructionally — a build-time redaction guard assembles the pack before the model ever sees it, so there's nothing to leak. It passed a 16/16 adversarial battery on Claude Haiku: fabrication probes, prompt injection, off-topic deflection. Backend is pluggable; I benchmarked local inference on a Pascal-era P100 (~10s warm, ~48s cold prefill on the 11k pack) and chose Haiku as the default on latency, keeping the local stack as an opt-in.\n\nThe site's project pages each get a generated hero image. ComfyUI runs on that same P100, and I've built out a pipeline: generate an abstract editorial SDXL render, then duotone it to the site palette and drop it as a webp. The generative work turned out to be as much prompt engineering as anything else — literal nouns cue the wrong geometry (columns became architecture, \"message bus\" became a literal coach bus), and line-centric prompts drifted into diagonal curves. Dot-field and stipple prompts are far more reliable on this checkpoint. I've generated heroes for about a dozen projects now, the most stubborn of which took four or five seeds and a rewritten prompt to land.\n\nHermes, the agent that refreshes the phillipsben.com dashboard daily, runs its primary model as a local Gemma 4 26B on the P100 via a llama.cpp server I built and wired into a priority-aware proxy. Getting the dashboard cron stable took some work: a DRY repetition-penalty sampler corrupted repeated identifiers in tool calls (paths, filenames, the repo name), so the model kept mangling its own shell commands. Disabling DRY was necessary but not sufficient — the Q4 quantization still struggled with exact long paths in agentic runs, so I re-architected the refresh to keep exact filesystem paths out of the model's hands entirely. A deterministic shell script handles the plumbing; the model writes short prose artifacts and calls two commands.\n\nOn the hardware side, I traced a 30-minute hang in a Hermes voice session to a missing `--n-predict` cap on the llama.cpp server — no output ceiling meant a repetition loop generated 53,000 tokens over half an hour, holding the single P100 slot and queuing every follow-up. A 4096-token hard cap bounds the worst case to about two and a half minutes. I also found that the workstation's RAM had been running at DDR4-2133 (JEDEC default) instead of the kit's rated 3600 — flipping the DOCP profile in the BIOS lifted the model's decode speed by about 18%, which matters because the 26B slightly overflows the 16GB P100 and runs partly off system RAM.",
   "highlights": [
     {
-      "repo": "site-assistant",
-      "oneLiner": "A bounded career assistant that answers questions grounded in my site content."
+      "repo": "Talk to Virtual Me",
+      "oneLiner": "Bounded career assistant live on phillipsben.com — context-stuffed, adversarially tested 16/16"
     },
     {
-      "repo": "Switchboard",
-      "oneLiner": "A FastAPI proxy that serializes access to the P100 GPU."
+      "repo": "ComfyUI",
+      "oneLiner": "Generating duotoned SDXL heroes for project pages; dot/stipple prompts proved most reliable"
     },
     {
-      "repo": "BudgetTracker",
-      "oneLiner": "A full-stack personal finance application."
+      "repo": "Hermes-Agent",
+      "oneLiner": "Stabilizing the daily dashboard cron on local Gemma 4 26B — re-architected to keep exact paths out of model tool calls"
     },
     {
-      "repo": "Rep Counter",
-      "oneLiner": "An on-device barbell rep counter using color-plate tracking."
+      "repo": "phillipsben.com",
+      "oneLiner": "Site infrastructure: hero pipeline, assistant band, and dashboard refresh all landing on main"
     }
   ]
 }
