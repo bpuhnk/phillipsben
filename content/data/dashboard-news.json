@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-24T14:48:43Z",
+  "updatedAt": "2026-05-25T15:36:51Z",
   "items": [
     {
-      "title": "Microsoft starts canceling Claude Code licenses",
-      "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+      "title": "DeepSeek reasonix, DeepSeek native coding agent with high caching and low cost",
+      "url": "https://esengine.github.io/DeepSeek-Reasonix/",
       "source": "Hacker News",
-      "points": 468,
-      "whyItMatters": "Highlights the volatility of developer tooling as major providers pivot their AI service integrations."
+      "points": 623,
+      "whyItMatters": "DeepSeek's new native coding agent offers high caching and low cost."
     },
     {
-      "title": "DeepSeek makes the V4 Pro price discount permanent",
-      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "title": "Memory has grown to nearly two-thirds of AI chip component costs",
+      "url": "https://epoch.ai/data-insights/ai-chip-component-cost-shares",
       "source": "Hacker News",
-      "points": 448,
-      "whyItMatters": "DeepSeek's permanent price cuts signal a massive downward trend in the cost of high-performance LLMs."
+      "points": 413,
+      "whyItMatters": "Memory now accounts for nearly two-thirds of the cost of AI chip components."
     },
     {
-      "title": "Launch HN: Superset (YC P26) – IDE for the agents era",
-      "url": "https://github.com/superset-sh/superset",
+      "title": "The Eternal Sloptember",
+      "url": "https://geohot.github.io//blog/jekyll/update/2026/05/24/the-eternal-sloptember.html",
       "source": "Hacker News",
-      "points": 103,
-      "whyItMatters": "A new IDE designed for the agents era, potentially changing how we build and interact with autonomous tools."
+      "points": 399,
+      "whyItMatters": "A deep dive into the 'Eternal Sloptember' phenomenon."
     },
     {
-      "title": "Project Glasswing: An Initial Update",
-      "url": "https://www.anthropic.com/research/glasswing-initial-update",
+      "title": "Italy moves to Airbus A330 tankers",
+      "url": "https://www.euronews.com/my-europe/2026/05/21/italy-moves-to-airbus-a330-tankers-in-major-nato-aligned-shift",
       "source": "Hacker News",
-      "points": 536,
-      "whyItMatters": "Provides insight into the latest research on AI safety and interpretability from a key industry leader."
+      "points": 282,
+      "whyItMatters": "Italy's significant shift toward Airbus A330 tankers for NATO alignment."
     },
     {
-      "title": "Is AI Profitable Yet?",
-      "url": "https://isaiprofitable.com/",
+      "title": "Constraint Decay: The Fragility of LLM Agents in Back End Code Generation",
+      "url": "https://arxiv.org/abs/2605.06445",
       "source": "Hacker News",
-      "points": 254,
-      "whyItMatters": "A timely investigation into the real-world economics and profitability of scaling AI systems."
+      "points": 267,
+      "whyItMatters": "Research on the fragility of LLM agents in back-end code generation."
     }
   ]
 }

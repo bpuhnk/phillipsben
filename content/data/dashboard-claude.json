@@ -1,18 +1,22 @@
 {
-  "updatedAt": "2026-05-24T14:48:43Z",
-  "summary": "I am currently refining an interactive career assistant that provides grounded, responsive answers based on my published site content. This project demonstrates my ability to orchestrate complex, multi-provider LLM workflows with high reliability and safety.\n\nI am also advancing a custom imagery pipeline that uses duotone treatments to ensure a consistent editorial aesthetic across my project pages. This includes an experiment in hobby imagery to maintain an authentic yet stylized presentation.\n\nAdditionally, I am integrating an internal messaging broker and a power usage experiment to enhance my local infrastructure. These improvements support the growing complexity of my local AI stack and its automated monitoring.",
+  "updatedAt": "2026-05-25T15:36:51Z",
+  "summary": "I am refining an interactive career assistant that provides grounded, responsive answers based on my published site content. This project demonstrates my ability to orchestrate complex, multi-provider LLM workflows with high reliability and safety.\n\nI am also advancing an automated imagery pipeline that uses duotone treatments to ensure a consistent editorial aesthetic across my project pages. This includes experiments with custom photography to maintain an authentic yet stylized presentation.\n\nAdditionally, I am integrating an internal messaging broker and a power usage experiment to enhance my local infrastructure. These improvements support the growing complexity of my local AI stack and its automated monitoring.",
   "highlights": [
     {
-      "repo": "Hermes-Agent",
-      "oneLiner": "An automated agent orchestrating multi-provider LLM workflows for dashboard and task automation."
-    },
-    {
       "repo": "site-assistant",
-      "oneLiner": "A bounded, career-context career assistant grounded in published site content."
+      "oneLiner": "A bounded career assistant that answers questions grounded in my site content."
     },
     {
       "repo": "Switchboard",
-      "oneLiner": "A custom model-swapping proxy providing a unified API for local and cloud LLM access."
+      "oneLiner": "A FastAPI proxy that serializes access to the P100 GPU."
+    },
+    {
+      "repo": "BudgetTracker",
+      "oneLiner": "A full-stack personal finance application."
+    },
+    {
+      "repo": "Rep Counter",
+      "oneLiner": "An on-device barbell rep counter using color-plate tracking."
     }
   ]
 }
