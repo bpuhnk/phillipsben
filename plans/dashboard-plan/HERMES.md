@@ -88,44 +88,18 @@ dashboard…"), conversational. Derive from `gh-raw.json` (which repos got the
 most commits) and the memory digest. Match the prior day's tone for
 continuity. (The `reading` field is preserved automatically — you never touch it.)
 
-### `/tmp/dash/claude.md` — public summary of recent Claude work
+### The Claude tile — NOT your job anymore
 
-2–4 short markdown paragraphs in Ben's voice. **Sources:** the `mem.txt`
-digest — pop-os entries weighted heavily, host01 lightly (Hermes-meta /
-plumbing). Use this as your drafting instruction:
+`claude.md` (summary) and `claude-hl.json` (highlights) are **pre-generated on
+the host** by `~/.hermes/bin/gen-claude-summary.sh`, a separate cron that runs
+Claude Code (Sonnet) ~09:45 — earlier than this refresh. It writes both files
+to `~/.hermes/dashboard/claude-staging/`, applies the redaction sweep itself,
+and `prep` copies today's file into the stage for you. **Do not write
+`claude.md` or `claude-hl.json`** — if you do, you'll clobber the better
+version. If no fresh staged file exists, `merge` keeps the published tile.
 
-> Summarize Ben's recent work with Claude for his PUBLIC dashboard.
-> Output 2-4 short paragraphs of markdown in Ben's voice (conversational,
-> dry, verbs over adjectives, no exclamation points).
->
-> RULES:
-> 1. Only name a project if it appears in `claudeTopicsAllowlist` (in
->    `config.json`). For everything else use generic phrasing ("a client
->    project," "internal tooling," "an experiment").
-> 2. Apply every rule in `claudeRedactionRules` verbatim.
-> 3. Weight pop-os memories heavily; host01 is supporting context only.
-> 4. Skip anything embarrassing if a recruiter or current client read it.
-
-**Regex sweep before you write** — if your draft matches any of these,
-redact and redraft:
-
-| Pattern                          | Catches                          |
-|----------------------------------|----------------------------------|
-| `[A-Za-z0-9_-]{32,}`             | likely tokens, hashes, JWTs      |
-| `sk-[A-Za-z0-9-]{20,}`           | OpenAI / Anthropic key prefixes  |
-| `gh[pousr]_[A-Za-z0-9]{20,}`     | GitHub token prefixes            |
-| `/(home\|Users\|var\|etc\|opt)/` | absolute filesystem paths        |
-| `\b\d{1,3}(\.\d{1,3}){3}\b`      | IPv4 addresses                   |
-| `[\w.+-]+@[\w-]+\.[\w.-]+`       | email addresses                  |
-| `Transaxle Manufacturing of America\|\bTMA\b` | employer name (always strip) |
-
-### `/tmp/dash/claude-hl.json` — highlights (optional, ≤4)
-
-```json
-[ { "repo": "<must be in allowlist>", "oneLiner": "…" } ]
-```
-
-Only repos on `claudeTopicsAllowlist`. Omit the file entirely if nothing fits.
+(Why: the local brain wrote flat, oversold prose and isn't safe to swap on the
+shared GPU mid-run. Generating on a remote model off-box fixes both.)
 
 ## Phase 3 — `finalize` (mechanical, you just run it)
 

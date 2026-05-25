@@ -91,6 +91,20 @@ prep)
     || { cp -f "$DATA/dashboard-config.json" "$STAGE/config.json" 2>/dev/null \
          && echo "allowlist staged (raw fallback) -> $STAGE/config.json"; }
 
+  echo "== claude tile (pre-generated on host) =="
+  # The Claude summary + highlights are written by gen-claude-summary.sh (a host
+  # cron running Claude Code ~09:45) into this staging dir, NOT by this agent.
+  # Copy today's file in if present; otherwise the tile keeps its published data.
+  CLAUDE_STAGE="${CLAUDE_STAGE:-/opt/data/dashboard/claude-staging}"
+  if [ -f "$CLAUDE_STAGE/claude.md" ] \
+     && [ "$(date -u -r "$CLAUDE_STAGE/claude.md" +%Y-%m-%d)" = "$(date -u +%Y-%m-%d)" ]; then
+    cp -f "$CLAUDE_STAGE/claude.md" "$STAGE/claude.md"
+    [ -f "$CLAUDE_STAGE/claude-hl.json" ] && cp -f "$CLAUDE_STAGE/claude-hl.json" "$STAGE/claude-hl.json"
+    echo "claude tile: staged copy dated today -> consumed (agent must NOT write it)"
+  else
+    echo "claude tile: no fresh staged file -> merge keeps published summary"
+  fi
+
   cat <<BRIEF
 
 == WHAT TO DO NOW ==
@@ -104,8 +118,8 @@ prep)
      $STAGE/gh-sum.json    {"<repo full_name>": "past-tense summary, <=140 chars", ...}
      $STAGE/news-pick.json [{"url":"<from candidates>","whyItMatters":"<=140 chars"}, ...]  best 5
      $STAGE/focus.txt      1-2 sentences, present-tense first-person, this week's focus
-     $STAGE/claude.md      2-4 short markdown paragraphs, redacted per allowlist + rules
-     $STAGE/claude-hl.json [{"repo":"<in allowlist>","oneLiner":"..."}]  up to 4 (optional)
+   The Claude tile (claude.md + claude-hl.json) is PRE-GENERATED on the host and
+   already staged for you — do NOT write those two files.
 3. Run:  bash scripts/dashboard/refresh.sh finalize
 4. Reply with ONLY finalize's report.
 Do NOT write content/data directly. Do NOT author your own scripts.
