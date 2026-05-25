@@ -93,6 +93,39 @@ SUBJECTS = {
         "waiting on the left, generous empty space, abstract flat technical diagram, "
         "hand-drawn linework"
     ),
+    "rep-counter": (
+        "a rising staircase of small solid dots stepping upward from low on the left to high on the "
+        "right in equal even increments, each step one higher than the last, the sense of a steadily "
+        "climbing count, generous empty space, abstract flat diagram, hand-drawn dotwork"
+    ),
+    "mosquitto": (
+        "a small tight cluster of dots at the exact center, many short fine straight lines radiating "
+        "outward from that center to a surrounding ring of separate small dots, every outer dot "
+        "joined only to the center and never to each other, abstract flat hub-and-spoke diagram, "
+        "generous empty space, hand-drawn linework"
+    ),
+    "couch-presence": (
+        "a single small solid dot resting alone at the center of a wide empty area, a few faint thin "
+        "arc lines sweeping in toward it from one corner like a quiet sensing field, lots of "
+        "negative space, abstract flat diagram, hand-drawn linework"
+    ),
+    "koboldcpp": (
+        "a faint horizontal time line with a single small solid dot resting on it, a soft fading "
+        "dotted trail before and after the dot showing the same spot left empty, the idea of briefly "
+        "occupying one shared place then releasing it, generous negative space, abstract flat "
+        "diagram, hand-drawn linework"
+    ),
+    "comfyui": (
+        "scattered loose dots and short ink strokes drawing inward and composing into one small tidy "
+        "ordered grid of marks at the center, the surrounding field left clear, the idea of an image "
+        "forming from nothing then the space released, abstract flat diagram, hand-drawn linework"
+    ),
+    "budget-tracker": (
+        "a thin horizontal beam balanced perfectly level on a single small central triangular pivot, "
+        "an equal small group of dots resting on the far left end and a matching equal group of dots "
+        "on the far right end, symmetrical and level, generous empty space, abstract flat "
+        "balance-scale diagram, hand-drawn linework"
+    ),
 }
 
 
