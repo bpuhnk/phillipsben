@@ -1,41 +1,46 @@
 {
-  "updatedAt": "2026-05-25T18:20:08Z",
-  "nowPlaying": null,
+  "updatedAt": "2026-05-26T10:01:48Z",
+  "nowPlaying": {
+    "track": "The Stillpoint Between Waves",
+    "artist": "Elunara Mare",
+    "albumArt": "https://i.scdn.co/image/ab67616d000048515866da1c638e28a4286b9315",
+    "url": "https://open.spotify.com/track/5PSz8jVwK1l81SY7TpzdUX"
+  },
   "recent": [
     {
-      "track": "FAKE LAND",
-      "artist": "FAKE TYPE.",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851b08b492470280d006fad58b7",
-      "url": "https://open.spotify.com/track/6sxV9tg9XvGZV0MIgzurqg",
-      "playedAt": "2026-05-25T16:50:02.298Z"
+      "track": "Event Horizon",
+      "artist": "Vayuna",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851217133dec561d823519fda05",
+      "url": "https://open.spotify.com/track/34Kr8Wb6JCb7NiwYZ9ANW4",
+      "playedAt": "2026-05-26T10:01:08.783Z"
     },
     {
-      "track": "I Won't Give Up",
-      "artist": "Jason Mraz",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485146e379c721504777a62bd9b8",
-      "url": "https://open.spotify.com/track/53QF56cjZA9RTuuMZDrSA6",
-      "playedAt": "2026-05-24T21:20:45.819Z"
+      "track": "Dignity",
+      "artist": "Nova Issue",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851588b53fc41468d3aeb45c2c2",
+      "url": "https://open.spotify.com/track/4vFL08pP0H9RDUVj05qXyL",
+      "playedAt": "2026-05-26T09:58:55.922Z"
     },
     {
-      "track": "Rhythm Of Love",
-      "artist": "Plain White T's",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485182553135f696b573f09a9a7d",
-      "url": "https://open.spotify.com/track/6MDTpYxPFL0wtFd0pjfKws",
-      "playedAt": "2026-05-24T16:49:29.902Z"
+      "track": "Altairsky",
+      "artist": "Frans Dromenstadt",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048517919ebe0f44f9e05ed56c3c9",
+      "url": "https://open.spotify.com/track/3HgFXcKX7bvOEEZGlC8lFX",
+      "playedAt": "2026-05-26T09:55:51.732Z"
     },
     {
-      "track": "Somewhere Over The Rainbow/What A Wonderful World",
-      "artist": "Israel Kamakawiwo'ole",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851812fa32814f5091076f98691",
-      "url": "https://open.spotify.com/track/25U7raB3ZSszayTYClh4hF",
-      "playedAt": "2026-05-24T16:46:05.846Z"
+      "track": "Velora",
+      "artist": "Elare Veylon",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851e3d2d3b065785148b1b95a68",
+      "url": "https://open.spotify.com/track/33JpAYiNPln7LBxQKmR7hO",
+      "playedAt": "2026-05-26T09:53:43.902Z"
     },
     {
-      "track": "Valerie - BBC Radio 1 Live Lounge",
-      "artist": "Amy Winehouse",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851bd8d74b33f8be9a6fef39e54",
-      "url": "https://open.spotify.com/track/5it9RIRXDwiLpJKdce6Z7e",
-      "playedAt": "2026-05-24T16:38:13.864Z"
+      "track": "Silver Wakes",
+      "artist": "Cael Lunor",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485136fbaf0436f8ae91e18d4194",
+      "url": "https://open.spotify.com/track/0BIsSTUGjOy6vSPHDoRQaI",
+      "playedAt": "2026-05-26T09:51:37.943Z"
     }
   ]
 }

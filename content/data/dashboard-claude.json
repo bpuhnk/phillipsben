@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-05-25T18:25:25Z",
-  "summary": "I've been building a career assistant for phillipsben.com — a \"Talk to Virtual Me\" bot that fields questions about my work using only what's published on the site. No vector database: the knowledge pack (~12k tokens) gets stuffed directly into context. The interesting constraint was keeping confidential details out structurally, not just instructionally — a build-time redaction guard assembles the pack before the model ever sees it, so there's nothing to leak. It passed a 16/16 adversarial battery on Claude Haiku: fabrication probes, prompt injection, off-topic deflection. Backend is pluggable; I benchmarked local inference on a Pascal-era P100 (~10s warm, ~48s cold prefill on the 11k pack) and chose Haiku as the default on latency, keeping the local stack as an opt-in.\n\nThe site's project pages each get a generated hero image. ComfyUI runs on that same P100, and I've built out a pipeline: generate an abstract editorial SDXL render, then duotone it to the site palette and drop it as a webp. The generative work turned out to be as much prompt engineering as anything else — literal nouns cue the wrong geometry (columns became architecture, \"message bus\" became a literal coach bus), and line-centric prompts drifted into diagonal curves. Dot-field and stipple prompts are far more reliable on this checkpoint. I've generated heroes for about a dozen projects now, the most stubborn of which took four or five seeds and a rewritten prompt to land.\n\nHermes, the agent that refreshes the phillipsben.com dashboard daily, runs its primary model as a local Gemma 4 26B on the P100 via a llama.cpp server I built and wired into a priority-aware proxy. Getting the dashboard cron stable took some work: a DRY repetition-penalty sampler corrupted repeated identifiers in tool calls (paths, filenames, the repo name), so the model kept mangling its own shell commands. Disabling DRY was necessary but not sufficient — the Q4 quantization still struggled with exact long paths in agentic runs, so I re-architected the refresh to keep exact filesystem paths out of the model's hands entirely. A deterministic shell script handles the plumbing; the model writes short prose artifacts and calls two commands.\n\nOn the hardware side, I traced a 30-minute hang in a Hermes voice session to a missing `--n-predict` cap on the llama.cpp server — no output ceiling meant a repetition loop generated 53,000 tokens over half an hour, holding the single P100 slot and queuing every follow-up. A 4096-token hard cap bounds the worst case to about two and a half minutes. I also found that the workstation's RAM had been running at DDR4-2133 (JEDEC default) instead of the kit's rated 3600 — flipping the DOCP profile in the BIOS lifted the model's decode speed by about 18%, which matters because the 26B slightly overflows the 16GB P100 and runs partly off system RAM.",
+  "updatedAt": "2026-05-26T10:05:02Z",
+  "summary": "I shipped \"Talk to Virtual Me\" on phillipsben.com — a career assistant that answers questions about my work using only what's published on the site. No vector database: the whole knowledge base is around 12k tokens, so it fits in-context. A build-time redaction guard assembles the knowledge pack at compile time and strips confidential material before the model ever sees it, making leaks structurally impossible rather than prompt-engineered around. I ran a 16/16 adversarial battery before shipping — fabrication attempts, prompt injection, open-relay probes. The backend choice was a deliberate trade: I benchmarked cold prefill on the local P100 (around 10 seconds warm, up to 48 seconds cold after eviction by another service) and defaulted to Claude Haiku for responsiveness, keeping local as an opt-in.\n\nFor phillipsben.com's project pages I've been generating abstract SDXL hero images and duotoning them to the site palette. The prompt-craft work on the Pascal-era P100 took some iteration: line-centric prompts reliably drift into generic flowing curves on this checkpoint, so dot-field and stipple compositions work far better. Concrete nouns cause other problems — \"message bus\" prompted a literal coach bus, \"bounded frame\" a picture hanging on a wall. Most concepts needed three or four seeds and reworded prompts. Separately, I built a ComfyUI custom node that acquires a GPU lease from Switchboard before a render starts, so image generation workflows now queue alongside the 26B language model instead of competing for VRAM.\n\nBudgetTracker has seven years of bank transactions in it, and a large share of the dollar figures were money movement rather than actual spending — Zelle transfers, brokerage contributions, car financing — sitting in the income and expense buckets and making the totals useless. I built a transfer-detection service that identifies these by merchant and description pattern and re-tags them, then ran it over the history. The net income figure went from a number that reflected nothing real to one that reads as actual spending against earnings across those years. On the AI side, I wired the insights layer to the local 26B model via Switchboard, which required handling its reasoning output — it splits responses into a thinking block and actual content, and short-budget utility calls were returning empty content until I added a flag to disable thinking on those.\n\nI repurposed an ESP32-S3 into the Rep Counter — an on-device barbell rep counter that tracks a color-coded plate as a fiducial, with no server or ML involved. The detection runs on raw RGB565 directly from the camera; decoding to JPEG and back gave unreliable results, which I only confirmed after trying three different decode paths. It counted 5/5 reps in a dim living room on first real test. On the home-automation side: when my phone enters a store's geofence, a webhook fires and sends a Telegram voice note with the TickTick shopping list for that store and my checking balance from BudgetTracker. The spoken balance has to be spelled out as words — the TTS reads raw digits like a year, so \"$7,032\" comes out \"seventy thirty-two.\"",
   "highlights": [
     {
-      "repo": "Talk to Virtual Me",
-      "oneLiner": "Bounded career assistant live on phillipsben.com — context-stuffed, adversarially tested 16/16"
-    },
-    {
-      "repo": "ComfyUI",
-      "oneLiner": "Generating duotoned SDXL heroes for project pages; dot/stipple prompts proved most reliable"
-    },
-    {
-      "repo": "Hermes-Agent",
-      "oneLiner": "Stabilizing the daily dashboard cron on local Gemma 4 26B — re-architected to keep exact paths out of model tool calls"
-    },
-    {
       "repo": "phillipsben.com",
-      "oneLiner": "Site infrastructure: hero pipeline, assistant band, and dashboard refresh all landing on main"
+      "oneLiner": "Shipping 'Talk to Virtual Me' career assistant + SDXL hero image generation for project pages"
+    },
+    {
+      "repo": "BudgetTracker",
+      "oneLiner": "Transfer detection pass to re-tag 7 years of money-movement; wiring AI layer to local 26B via Switchboard"
+    },
+    {
+      "repo": "Switchboard",
+      "oneLiner": "ComfyUI GPU-coordinator custom node; P100 serialization now covers image gen workflows"
+    },
+    {
+      "repo": "rep-counter",
+      "oneLiner": "On-device barbell rep counter on ESP32-S3 using raw RGB565 color-plate tracking, no ML"
     }
   ]
 }

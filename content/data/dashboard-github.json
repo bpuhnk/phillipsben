@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-05-25T18:25:25Z",
-  "weekStart": "2026-05-18",
+  "updatedAt": "2026-05-26T10:05:02Z",
+  "weekStart": "2026-05-19",
   "totals": {
-    "commits": 48,
+    "commits": 67,
     "prs": 0,
     "repos": 1,
     "activeDays": 6
@@ -11,8 +11,8 @@
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 42,
-      "summary": "Updated phillipsben.com dashboard, added BudgetTracker and new project pages, and improved internal tooling for hero imagery."
+      "commits": 38,
+      "summary": "Refined the dashboard with automated Claude tile generation, expanded the project allowlist, and added new project pages."
     }
   ]
 }

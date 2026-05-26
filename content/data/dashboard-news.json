@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-25T18:25:25Z",
+  "updatedAt": "2026-05-26T10:05:02Z",
   "items": [
     {
       "title": "DeepSeek reasonix, DeepSeek native coding agent with high caching and low cost",
       "url": "https://esengine.github.io/DeepSeek-Reasonix/",
       "source": "Hacker News",
-      "points": 654,
-      "whyItMatters": "A new high-efficiency, low-cost native coding agent from DeepSeek."
+      "points": 714,
+      "whyItMatters": "DeepSeek's new coding agent offers high caching and low cost."
+    },
+    {
+      "title": "Using AI to write better code more slowly",
+      "url": "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/",
+      "source": "Hacker News",
+      "points": 646,
+      "whyItMatters": "A thoughtful piece on using AI deliberately to improve code quality."
     },
     {
       "title": "The Eternal Sloptember",
       "url": "https://geohot.github.io//blog/jekyll/update/2026/05/24/the-eternal-sloptember.html",
       "source": "Hacker News",
-      "points": 422,
-      "whyItMatters": "A provocative look at the current state of AI content saturation."
+      "points": 461,
+      "whyItMatters": "Geohot's take on the current state of AI-generated content."
     },
     {
       "title": "Memory has grown to nearly two-thirds of AI chip component costs",
       "url": "https://epoch.ai/data-insights/ai-chip-component-cost-shares",
       "source": "Hacker News",
-      "points": 419,
-      "whyItMatters": "Memory costs now make up nearly two-thirds of AI chip component expenses."
+      "points": 438,
+      "whyItMatters": "Deep dive into the growing cost of memory in AI chip components."
     },
     {
       "title": "Pope Leo XIV says AI must serve humanity, not the powerful few",
       "url": "https://religionnews.com/2026/05/25/in-his-first-encyclical-pope-leo-xiv-says-ai-must-serve-humanity-not-the-powerful-few/",
       "source": "Hacker News",
-      "points": 326,
-      "whyItMatters": "The Pope's first encyclical addresses the ethical mandate for AI to serve all humanity."
-    },
-    {
-      "title": "Constraint Decay: The Fragility of LLM Agents in Back End Code Generation",
-      "url": "https://arxiv.org/abs/2605.06445",
-      "source": "Hacker News",
-      "points": 271,
-      "whyItMatters": "Explores the fragility and potential decay of constraints in LLM back-end code generation."
+      "points": 339,
+      "whyItMatters": "Pope Leo XIV's first encyclical on the ethical role of AI in humanity."
     }
   ]
 }
