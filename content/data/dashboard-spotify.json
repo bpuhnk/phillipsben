@@ -1,46 +1,41 @@
 {
-  "updatedAt": "2026-05-26T10:01:48Z",
-  "nowPlaying": {
-    "track": "The Stillpoint Between Waves",
-    "artist": "Elunara Mare",
-    "albumArt": "https://i.scdn.co/image/ab67616d000048515866da1c638e28a4286b9315",
-    "url": "https://open.spotify.com/track/5PSz8jVwK1l81SY7TpzdUX"
-  },
+  "updatedAt": "2026-05-27T10:01:29Z",
+  "nowPlaying": null,
   "recent": [
     {
-      "track": "Event Horizon",
-      "artist": "Vayuna",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851217133dec561d823519fda05",
-      "url": "https://open.spotify.com/track/34Kr8Wb6JCb7NiwYZ9ANW4",
-      "playedAt": "2026-05-26T10:01:08.783Z"
+      "track": "Sweet Pea",
+      "artist": "Amos Lee",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851964d11137319657e9073c384",
+      "url": "https://open.spotify.com/track/4KqBoq7MoDJeVsvUHTjXCM",
+      "playedAt": "2026-05-26T22:22:50.120Z"
     },
     {
-      "track": "Dignity",
-      "artist": "Nova Issue",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851588b53fc41468d3aeb45c2c2",
-      "url": "https://open.spotify.com/track/4vFL08pP0H9RDUVj05qXyL",
-      "playedAt": "2026-05-26T09:58:55.922Z"
+      "track": "Love Someone",
+      "artist": "Lukas Graham",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485145100f4cdb2a88ecf80f270f",
+      "url": "https://open.spotify.com/track/0OCRwXbQRdOZ1OtB4Imsp1",
+      "playedAt": "2026-05-26T22:13:01.522Z"
     },
     {
-      "track": "Altairsky",
-      "artist": "Frans Dromenstadt",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048517919ebe0f44f9e05ed56c3c9",
-      "url": "https://open.spotify.com/track/3HgFXcKX7bvOEEZGlC8lFX",
-      "playedAt": "2026-05-26T09:55:51.732Z"
+      "track": "Rolling in the Deep",
+      "artist": "Adele",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048517e7e5dd9d1ab19fcded8a17f",
+      "url": "https://open.spotify.com/track/1c8gk2PeTE04A1pIDH9YMk",
+      "playedAt": "2026-05-26T22:09:35.623Z"
     },
     {
-      "track": "Velora",
-      "artist": "Elare Veylon",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e3d2d3b065785148b1b95a68",
-      "url": "https://open.spotify.com/track/33JpAYiNPln7LBxQKmR7hO",
-      "playedAt": "2026-05-26T09:53:43.902Z"
+      "track": "Fly Me to the Moon / Lucky (Mash-Up) [feat. Breea Guttery]",
+      "artist": "Rick Hale, Breea Guttery",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851281e203ea1eea2c3e3d2e83b",
+      "url": "https://open.spotify.com/track/5I8wqCZfqMXhJ8NYwFHgwc",
+      "playedAt": "2026-05-26T22:05:47.023Z"
     },
     {
-      "track": "Silver Wakes",
-      "artist": "Cael Lunor",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485136fbaf0436f8ae91e18d4194",
-      "url": "https://open.spotify.com/track/0BIsSTUGjOy6vSPHDoRQaI",
-      "playedAt": "2026-05-26T09:51:37.943Z"
+      "track": "Have It All",
+      "artist": "Jason Mraz",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048511b84102f154deb7a798ed372",
+      "url": "https://open.spotify.com/track/7BXW1QCg56yzEBV8pW8pah",
+      "playedAt": "2026-05-26T21:57:12.625Z"
     }
   ]
 }
