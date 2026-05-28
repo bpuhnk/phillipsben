@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-05-27T10:05:58Z",
-  "weekStart": "2026-05-20",
+  "updatedAt": "2026-05-28T10:04:38Z",
+  "weekStart": "2026-05-21",
   "totals": {
-    "commits": 56,
+    "commits": 51,
     "prs": 0,
     "repos": 1,
-    "activeDays": 5
+    "activeDays": 4
   },
   "repos": [
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 27,
-      "summary": "Refined dashboard automation, expanded project content with BudgetTracker and hero images, and slimmed Claude allowlist."
+      "commits": 22,
+      "summary": "Shipped new project pages and duotone heroes, rewrote /uses, and updated the dashboard automation."
     }
   ]
 }

@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-27T10:05:58Z",
+  "updatedAt": "2026-05-28T10:04:38Z",
   "items": [
     {
-      "title": "Using AI to write better code more slowly",
-      "url": "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/",
+      "title": "I think Anthropic and OpenAI have found product-market fit",
+      "url": "https://simonwillison.net/2026/May/27/product-market-fit/",
       "source": "Hacker News",
-      "points": 1175,
-      "whyItMatters": "Discusses the tradeoff between AI speed and code quality and intentionality."
+      "points": 871,
+      "whyItMatters": "Exploring how Anthropic and OpenAI reached product-market fit through distinct user experiences."
     },
     {
-      "title": "Pope Leo XIV says AI must serve humanity, not the powerful few",
-      "url": "https://religionnews.com/2026/05/25/in-his-first-encyclical-pope-leo-xiv-says-ai-must-serve-humanity-not-the-powerful-few/",
+      "title": "I'm Tired of Talking to AI",
+      "url": "https://orchidfiles.com/im-tired-of-ai-generated-answers/",
       "source": "Hacker News",
-      "points": 345,
-      "whyItMatters": "An encyclical addressing the ethical and social impact of AI on humanity."
+      "points": 1914,
+      "whyItMatters": "A reflection on the fatigue of interacting with purely AI-generated content and responses."
     },
     {
-      "title": "Norway's 2 petabytes of Huawei flash storage and LLM training",
-      "url": "https://www.blocksandfiles.com/flash/2026/05/22/norways-2-petabytes-of-huawei-flash-storage-and-llm-training/5244910",
+      "title": "DuckDuckGo search saw 28% more visits after Google said people love AI mode",
+      "url": "https://www.pcgamer.com/hardware/duckduckgos-ai-free-search-saw-nearly-28-percent-more-visits-in-the-week-following-googles-insistence-that-people-love-ai-mode/",
       "source": "Hacker News",
-      "points": 320,
-      "whyItMatters": "Explores large-scale LLM training infrastructure in Norway using Huawei hardware."
+      "points": 867,
+      "whyItMatters": "DuckDuckGo saw a boost in usage following Google's claims about user preference for AI-integrated search."
     },
     {
-      "title": "Uber’s COO says it’s getting harder to justify money spent on tokenmaxxing",
-      "url": "https://www.businessinsider.com/uber-coo-andrew-macdonald-ai-token-spending-harder-justify-2026-5",
+      "title": "Tech CEOs are apparently suffering from AI psychosis",
+      "url": "https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/",
       "source": "Hacker News",
-      "points": 288,
-      "whyItMatters": "Highlights growing skepticism over the ROI of massive AI token consumption."
+      "points": 649,
+      "whyItMatters": "Tech leaders are reportedly becoming overly enamored with AI capabilities, potentially ignoring practical limits."
     },
     {
-      "title": "Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks",
-      "url": "https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/",
+      "title": "Claude Code as a Daily Driver: Claude.md, Skills, Subagents, Plugins, and MCPs",
+      "url": "https://arps18.github.io/posts/claude-code-mastery/",
       "source": "Hacker News",
-      "points": 286,
-      "whyItMatters": "Details a major international law enforcement action against cyberattack infrastructure."
+      "points": 401,
+      "whyItMatters": "A deep dive into using Claude Code effectively with skills, subagents, and MCPs."
     }
   ]
 }

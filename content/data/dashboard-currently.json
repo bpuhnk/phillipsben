@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-27T10:05:58Z",
-  "focus": "I am refining my automated dashboard refresh pipeline and fine-tuning the Switchboard GPU arbitration logic for my local homelab stack.",
+  "updatedAt": "2026-05-28T10:04:38Z",
+  "focus": "I am refining the Switchboard GPU arbiter by wiring up a custom ComfyUI node to manage lease acquisitions. I'm also finalizing the BudgetTracker data cleanup to ensure all historical bank transactions are categorized correctly.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-05-27T10:01:29Z",
+  "updatedAt": "2026-05-28T10:00:43Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Sweet Pea",
-      "artist": "Amos Lee",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851964d11137319657e9073c384",
-      "url": "https://open.spotify.com/track/4KqBoq7MoDJeVsvUHTjXCM",
-      "playedAt": "2026-05-26T22:22:50.120Z"
+      "track": "Chopin: Nocturne No. 20 in C-Sharp Minor, Op. Posth.",
+      "artist": "Frédéric Chopin, Mikhail Pletnev",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851ae4dfa09519c27b64cd5a958",
+      "url": "https://open.spotify.com/track/2MSgFefjK0T7Iwjvr3OKqV",
+      "playedAt": "2026-05-28T00:27:48.354Z"
     },
     {
-      "track": "Love Someone",
-      "artist": "Lukas Graham",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485145100f4cdb2a88ecf80f270f",
-      "url": "https://open.spotify.com/track/0OCRwXbQRdOZ1OtB4Imsp1",
-      "playedAt": "2026-05-26T22:13:01.522Z"
+      "track": "Mahler: Symphony No. 5 in C-Sharp Minor: IV. Adagietto. Sehr langsam",
+      "artist": "Gustav Mahler, Daniel Barenboim, Chicago Symphony Orchestra",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851783958b7925dd51636a85ca6",
+      "url": "https://open.spotify.com/track/0cqcRqZgkNHanWQ8slYA0v",
+      "playedAt": "2026-05-28T00:23:21.701Z"
     },
     {
-      "track": "Rolling in the Deep",
-      "artist": "Adele",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048517e7e5dd9d1ab19fcded8a17f",
-      "url": "https://open.spotify.com/track/1c8gk2PeTE04A1pIDH9YMk",
-      "playedAt": "2026-05-26T22:09:35.623Z"
+      "track": "Violin Concerto No. 1 in G Minor, Op. 26: III. Finale. Allegro energico",
+      "artist": "Max Bruch, Randall Goosby, Philadelphia Orchestra, Yannick Nézet-Séguin",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851773c8f9846f3891686650705",
+      "url": "https://open.spotify.com/track/3bDA5rMBde88xVYgm1oIUw",
+      "playedAt": "2026-05-28T00:03:27.701Z"
     },
     {
-      "track": "Fly Me to the Moon / Lucky (Mash-Up) [feat. Breea Guttery]",
-      "artist": "Rick Hale, Breea Guttery",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851281e203ea1eea2c3e3d2e83b",
-      "url": "https://open.spotify.com/track/5I8wqCZfqMXhJ8NYwFHgwc",
-      "playedAt": "2026-05-26T22:05:47.023Z"
+      "track": "Prélude à l'après-midi d'un faune, CD 87a",
+      "artist": "Claude Debussy, Timothy Hutchins, Orchestre Symphonique de Montréal, Charles Dutoit",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515d026bccbd8a50650e903130",
+      "url": "https://open.spotify.com/track/02dVj5B3vXOjylEFYCCsYQ",
+      "playedAt": "2026-05-27T23:55:44.227Z"
     },
     {
-      "track": "Have It All",
-      "artist": "Jason Mraz",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048511b84102f154deb7a798ed372",
-      "url": "https://open.spotify.com/track/7BXW1QCg56yzEBV8pW8pah",
-      "playedAt": "2026-05-26T21:57:12.625Z"
+      "track": "Prélude à l'après-midi d'un faune, CD 87a",
+      "artist": "Claude Debussy, Timothy Hutchins, Orchestre Symphonique de Montréal, Charles Dutoit",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515d026bccbd8a50650e903130",
+      "url": "https://open.spotify.com/track/02dVj5B3vXOjylEFYCCsYQ",
+      "playedAt": "2026-05-27T23:52:46.485Z"
     }
   ]
 }
