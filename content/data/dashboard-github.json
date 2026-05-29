@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-05-28T10:04:38Z",
-  "weekStart": "2026-05-21",
+  "updatedAt": "2026-05-29T10:13:15Z",
+  "weekStart": "2026-05-22",
   "totals": {
-    "commits": 51,
+    "commits": 32,
     "prs": 0,
     "repos": 1,
-    "activeDays": 4
+    "activeDays": 3
   },
   "repos": [
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 22,
-      "summary": "Shipped new project pages and duotone heroes, rewrote /uses, and updated the dashboard automation."
+      "commits": 3,
+      "summary": "Automating dashboard refreshes, generating project hero images, and expanding the content allowlist."
     }
   ]
 }
