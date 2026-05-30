@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-29T10:13:15Z",
-  "weekStart": "2026-05-22",
+  "updatedAt": "2026-05-30T10:09:06Z",
+  "weekStart": "2026-05-23",
   "totals": {
     "commits": 32,
     "prs": 0,
@@ -12,7 +12,7 @@
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
       "commits": 3,
-      "summary": "Automating dashboard refreshes, generating project hero images, and expanding the content allowlist."
+      "summary": "Maintained the dashboard refresh cron, updated project hero image pipeline, and added documentation for the BudgetTracker database migration."
     }
   ]
 }

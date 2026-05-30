@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-05-29T10:02:04Z",
+  "updatedAt": "2026-05-30T10:02:06Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "NIGHT DANCER",
-      "artist": "imase",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048514b062591b6a5c15652dd2bb5",
-      "url": "https://open.spotify.com/track/3gmn76fCtpDazGMnN0QMHX",
-      "playedAt": "2026-05-28T23:22:38.969Z"
+      "track": "Believer",
+      "artist": "Rockapella",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048514135fa4fc48d7f3ae8c440a4",
+      "url": "https://open.spotify.com/track/5ZxsohvKqdpT1TXg7e2l1b",
+      "playedAt": "2026-05-30T03:31:57.555Z"
     },
     {
-      "track": "Nightless City",
-      "artist": "KANKAN, FAKE TYPE.",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851cea5840deb7b12a696ed6e97",
-      "url": "https://open.spotify.com/track/0VJrjIBeHTlbkp0MBkXE5t",
-      "playedAt": "2026-05-28T21:59:18.127Z"
+      "track": "Sic Transit Gloria ... Glory Fades",
+      "artist": "Brand New",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048511d421119351d6801a2c99741",
+      "url": "https://open.spotify.com/track/42A4dSYBf0g9OHreccqU5o",
+      "playedAt": "2026-05-30T00:39:57.050Z"
     },
     {
-      "track": "Bloody Mary",
-      "artist": "KANKAN",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851c06dc351f5b8b7a9512cb8a2",
-      "url": "https://open.spotify.com/track/1I4E6dVWXnvwZhbjBWhSb1",
-      "playedAt": "2026-05-28T21:56:04.016Z"
+      "track": "P.I.M.P.",
+      "artist": "50 Cent",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851f7f74100d5cc850e01172cbf",
+      "url": "https://open.spotify.com/track/2D1hlMwWWXpkc3CZJ5U351",
+      "playedAt": "2026-05-30T00:36:50.137Z"
     },
     {
-      "track": "ダイスキ with TeddyLoid",
-      "artist": "Daoko",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851a2d678bd49da74cdc32c6589",
-      "url": "https://open.spotify.com/track/4koA8IVYaHiBuCh8iKhSM9",
-      "playedAt": "2026-05-28T21:51:55.743Z"
+      "track": "99 Problems",
+      "artist": "Hugo",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851f1cfd8bc073ab8cfc61e9113",
+      "url": "https://open.spotify.com/track/4KyPPjKoZVlMihGk94Fc1G",
+      "playedAt": "2026-05-30T00:32:40.242Z"
     },
     {
-      "track": "ブルーバード",
-      "artist": "Ikimonogakari",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048514ff62a8bad528d3b04d0794e",
-      "url": "https://open.spotify.com/track/2XpV9sHBexcNrz0Gyf3l18",
-      "playedAt": "2026-05-28T21:48:28.079Z"
+      "track": "Code Name: Raven",
+      "artist": "House of Heroes",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048511a63cb2cc81c1ed8197e0ede",
+      "url": "https://open.spotify.com/track/60r6l0O6DME6CShNpFyUpQ",
+      "playedAt": "2026-05-30T00:30:22.363Z"
     }
   ]
 }

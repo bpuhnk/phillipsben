@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-29T10:12:29Z",
-  "focus": "I am migrating my home server to a new host, focusing on restoring databases and folding in client projects. I am also refining the automated dashboard refresh pipeline.",
+  "updatedAt": "2026-05-30T10:09:06Z",
+  "focus": "I am finishing the migration of BudgetTracker's database to a native Postgres layer and completing the automated hero image generation pipeline for project pages.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-05-29T10:12:29Z",
-  "summary": "I shipped the \"Talk to Virtual Me\" feature on phillipsben.com — a career assistant that answers questions about my work strictly from what's published on the site, so it can't invent or speculate. The constraint I built around was the fallback: it tries the local GPU stack first (a Gemma 4 model running on a Tesla P100 at home), then routes to Claude Haiku if that slot is busy or unavailable. It passed 16 out of 16 adversarial test cases designed to push it outside its source material before I called it done.\n\nMost of the project pages on phillipsben.com now have generated hero images. The pipeline runs through ComfyUI on the P100 — generate a raw render, map it to the site's two-color palette, export as webp. The prompt engineering took longer than the plumbing. Some concepts that seem obvious in English translate badly to SDXL: \"message bus\" reliably generates a coach bus, \"bounded frame\" produces a framed picture hanging on a wall, and anything involving tally marks renders blank because the negative prompt catches it. What worked across the whole batch was dot-field and stipple prompts — radial hub-and-spoke patterns, concentric ripples, dots converging to a point. A few projects took four or five seed attempts before something read right.\n\nThe Couch Presence Sensor started as on-device pedestrian detection to pause the TV when you leave the couch. The problem was that the model was trained on upright walking people — it mostly missed someone slouched, leaning over a bowl, or sitting still in a dim room. Detections sat right at the confidence threshold and fell apart with any change in posture or light. Rather than tune something structurally wrong for the job, I pivoted to a mmWave radar module, which doesn't care about posture or darkness, and repurposed the camera hardware for a barbell rep counter instead. The Rep Counter tracks a colored plate as a fiducial, counts a full oscillation between the top and bottom of the lift as one rep, and doesn't use any ML — just classical color-blob tracking. It counted 5 out of 5 reps correctly on the first real test in a dim room.\n\nA weekday morning briefing now runs as a scheduled job — weather, any active NWS alerts, an outdoor temperature sensor, today's agenda from two calendar feeds, a task list, and a short Japanese practice segment. It composes everything into a voice note delivered to my phone via Telegram. The NLG is a single model call with no tools; all the data collection is deterministic bash and Python that runs beforehand. The Japanese segment was the part I hadn't expected to care much about — hiragana only, with romaji and an English gloss, read back by a Japanese TTS voice slowed slightly. I'm about 90 days into learning the writing system and it shows up every weekday morning whether I ask for it or not.",
+  "updatedAt": "2026-05-30T10:09:06Z",
+  "summary": "I've been working on a handful of related things across the site and the local AI stack.\n\nThe biggest chunk of work went into BudgetTracker's database layer. I rewrote all 22 repositories and 14 services from MSSQL to Postgres using Drizzle ORM — that's everything: schema, migrations, tenant-isolation SQL, the `AccessibleAccounts` CTE, money arithmetic, triggers for audit immutability and family constraints. Validated the whole thing against a real postgres:16 container (11/11 integration tests green). The migration script for copying the live data is built and verified; the last step is Ben creating the Supabase project and running the cutover, which needs credentials only he can supply.\n\nOn phillipsben.com I built the project hero image pipeline. Each project page gets a generated SDXL illustration, color-mapped into the site's two-tone palette, baked into a webp at build time. The process runs on a local Tesla P100 via ComfyUI: generate with a prompt from a per-slug dictionary, apply a duotone pass (ink or accent depending on whether the project is featured), output at about 100–180 KB. Getting the prompts right took some iteration — literal nouns consistently cue the wrong output, so everything is abstracted to dot fields, ripple patterns, and hub-and-spoke arrangements. I generated heroes for 11 projects in two batches and wired up a prebuild guard that fails the build if a featured project is missing one.\n\n\"Talk to Virtual Me\" also shipped — a bounded career assistant on phillipsben.com that answers questions about my work using only what's published on the site. The backend routes across a local Gemma model via Switchboard and falls back to Claude Haiku when the GPU is busy. It passed 16/16 adversarial test cases before I called it done.\n\nA few smaller things: I set up a store-arrival briefing that fires when I enter a geofence — it pulls the relevant TickTick shopping items, formats a voice note via Kokoro TTS, and sends both text and audio to Telegram before I'm through the door. A separate lightweight web page at list.phillipsben.com lets my wife add items to the same list without needing an account. The morning briefing runs the same way: weather, calendar from two Outlook ICS feeds, TickTick tasks, and a short Japanese hiragana practice segment, all assembled and delivered as a voice note at 6:30am.",
   "highlights": [
     {
+      "repo": "BudgetTracker",
+      "oneLiner": "Migrating all 22 repos and 14 services from MSSQL to Postgres/Drizzle ORM; data copy script built, blocked on Supabase credentials"
+    },
+    {
       "repo": "phillipsben.com",
-      "oneLiner": "Shipped 'Talk to Virtual Me' career assistant with local GPU fallback and hero images via ComfyUI pipeline"
+      "oneLiner": "Built SDXL hero image pipeline with duotone palette mapping; generated heroes for 11 projects via ComfyUI on the P100"
     },
     {
-      "repo": "ComfyUI",
-      "oneLiner": "Generating project hero images via SDXL on the P100, duotoned to palette, exported as webp"
+      "repo": "site-assistant",
+      "oneLiner": "Shipped bounded career assistant with GPU/Haiku fallback; 16/16 adversarial test cases passed"
     },
     {
-      "repo": "Couch Presence Sensor",
-      "oneLiner": "Pivoted from vision-on-XIAO to mmWave radar after pedestrian_detect proved too posture-dependent"
-    },
-    {
-      "repo": "rep-counter",
-      "oneLiner": "Built on-device barbell rep counter via color-plate tracking on repurposed XIAO S3; 5/5 reps verified"
+      "repo": "mosquitto",
+      "oneLiner": "Store-arrival geofence briefing live; wife item-input page at list.phillipsben.com wired to same TickTick pipeline"
     }
   ]
 }
