@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-05-30T10:09:06Z",
-  "weekStart": "2026-05-23",
+  "updatedAt": "2026-05-31T10:06:53Z",
+  "weekStart": "2026-05-24",
   "totals": {
-    "commits": 32,
-    "prs": 0,
+    "commits": 79,
+    "prs": 3,
     "repos": 1,
-    "activeDays": 3
+    "activeDays": 6
   },
   "repos": [
     {
       "name": "bpuhnk/phillipsben",
       "url": "https://github.com/bpuhnk/phillipsben",
       "commits": 3,
-      "summary": "Maintained the dashboard refresh cron, updated project hero image pipeline, and added documentation for the BudgetTracker database migration."
+      "summary": "Maintained the phillipsben.com dashboard with daily refreshes, added project heroes, and implemented off-box Claude tile generation."
     }
   ]
 }

@@ -1,22 +1,18 @@
 {
-  "updatedAt": "2026-05-30T10:09:06Z",
-  "summary": "I've been working on a handful of related things across the site and the local AI stack.\n\nThe biggest chunk of work went into BudgetTracker's database layer. I rewrote all 22 repositories and 14 services from MSSQL to Postgres using Drizzle ORM — that's everything: schema, migrations, tenant-isolation SQL, the `AccessibleAccounts` CTE, money arithmetic, triggers for audit immutability and family constraints. Validated the whole thing against a real postgres:16 container (11/11 integration tests green). The migration script for copying the live data is built and verified; the last step is Ben creating the Supabase project and running the cutover, which needs credentials only he can supply.\n\nOn phillipsben.com I built the project hero image pipeline. Each project page gets a generated SDXL illustration, color-mapped into the site's two-tone palette, baked into a webp at build time. The process runs on a local Tesla P100 via ComfyUI: generate with a prompt from a per-slug dictionary, apply a duotone pass (ink or accent depending on whether the project is featured), output at about 100–180 KB. Getting the prompts right took some iteration — literal nouns consistently cue the wrong output, so everything is abstracted to dot fields, ripple patterns, and hub-and-spoke arrangements. I generated heroes for 11 projects in two batches and wired up a prebuild guard that fails the build if a featured project is missing one.\n\n\"Talk to Virtual Me\" also shipped — a bounded career assistant on phillipsben.com that answers questions about my work using only what's published on the site. The backend routes across a local Gemma model via Switchboard and falls back to Claude Haiku when the GPU is busy. It passed 16/16 adversarial test cases before I called it done.\n\nA few smaller things: I set up a store-arrival briefing that fires when I enter a geofence — it pulls the relevant TickTick shopping items, formats a voice note via Kokoro TTS, and sends both text and audio to Telegram before I'm through the door. A separate lightweight web page at list.phillipsben.com lets my wife add items to the same list without needing an account. The morning briefing runs the same way: weather, calendar from two Outlook ICS feeds, TickTick tasks, and a short Japanese hiragana practice segment, all assembled and delivered as a voice note at 6:30am.",
+  "updatedAt": "2026-05-31T10:06:53Z",
+  "summary": "I've been building a lot of infrastructure lately, but three things feel worth calling out.\n\nI shipped a personal RSVP reader called Cadence — it tails a live Claude Code session transcript and flashes the reply one phrase at a time, with adaptive pacing driven by a Haiku-based density scorer. The interesting engineering problem was credential resolution: the tool needs to call the Anthropic API, and on my machine the only credential present is the Claude Code OAuth token, not a traditional API key. Getting that to work as a Bearer token with the right beta header took some digging, and the result is somewhere in gray-area territory — it works, but it's not officially supported.\n\nBudgetTracker got a lot of work. The database moved off a shared MSSQL instance onto Postgres on Supabase — a full Drizzle ORM rewrite rather than a compatibility shim, since it was a good window for breaking changes with only one user. On top of that, I added multi-provider LLM support so the in-app AI assistant can route to Anthropic, OpenAI, or a local model depending on what the user has configured. The trickiest part was the access boundary work: a native tool-calling loop where the server injects the userId before any tool executes, so the assistant can only ever see accounts the requesting user is entitled to see. Eight thousand-plus transactions, 773 merchants, all migrated without data loss.\n\nThe D&D campaign hub got a meaningful chunk of RAG work. The pgvector embedding column had been silently dropped by a Prisma migration and never restored, so search had been returning empty for a while without anyone noticing. I fixed the column, switched from ivfflat to an HNSW index, and added a pre-push hook to reject any future migration that tries to drop it again. Phase 1 of the memory system is fully implemented — session note chunking, per-author chat indexing, a three-tier trust model for what the AI can surface to whom — but it's sitting on a branch waiting for Ben to apply the migrations to production.",
   "highlights": [
     {
       "repo": "BudgetTracker",
-      "oneLiner": "Migrating all 22 repos and 14 services from MSSQL to Postgres/Drizzle ORM; data copy script built, blocked on Supabase credentials"
+      "oneLiner": "Migrated DB from MSSQL to Postgres/Supabase with a full Drizzle ORM rewrite, added multi-provider LLM support, and shipped a native tool-calling loop with server-side access boundaries"
     },
     {
-      "repo": "phillipsben.com",
-      "oneLiner": "Built SDXL hero image pipeline with duotone palette mapping; generated heroes for 11 projects via ComfyUI on the P100"
+      "repo": "TheWordGroup",
+      "oneLiner": "D&D campaign hub RAG work: restored dropped pgvector column, switched to HNSW index, added pre-push guard, and implemented Phase 1 memory system across a branch awaiting prod migration"
     },
     {
-      "repo": "site-assistant",
-      "oneLiner": "Shipped bounded career assistant with GPU/Haiku fallback; 16/16 adversarial test cases passed"
-    },
-    {
-      "repo": "mosquitto",
-      "oneLiner": "Store-arrival geofence briefing live; wife item-input page at list.phillipsben.com wired to same TickTick pipeline"
+      "repo": "Hermes-Agent",
+      "oneLiner": "Built Cadence RSVP speed-reader with Haiku adaptive pacing and gray-area Claude Code OAuth credential path for the Anthropic API"
     }
   ]
 }

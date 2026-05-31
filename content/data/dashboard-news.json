@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-05-30T10:09:06Z",
+  "updatedAt": "2026-05-31T10:06:53Z",
   "items": [
     {
-      "title": "Claude Opus 4.8",
-      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "title": "Please Use AI",
+      "url": "https://shawnsmucker.substack.com/p/please-use-ai",
       "source": "Hacker News",
-      "points": 1734,
-      "whyItMatters": "Anthropic's next major model upgrade is arriving."
+      "points": 772,
+      "whyItMatters": "Exploring the evolving necessity and impact of AI in software development workflows."
     },
     {
-      "title": "Show HN: Continue? Y/N: A 60-second game about AI agent permission fatigue",
-      "url": "https://llmgame.scalex.dev",
+      "title": "GTA 6 Developers Unionize",
+      "url": "https://rockstarintel.com/gta-6-developers-announce-rockstar-games-union/",
       "source": "Hacker News",
-      "points": 376,
-      "whyItMatters": "A 60-second game exploring the fatigue of AI agent permissions."
+      "points": 740,
+      "whyItMatters": "A landmark moment for developer rights in one of the world's largest gaming studios."
     },
     {
-      "title": "Disagreement among frontier LLMs on real-world fact-checks",
-      "url": "https://lenz.io/research/llm-disagreement",
+      "title": "Notes from the Mistral AI Now Summit",
+      "url": "https://koenvangilst.nl/lab/mistral-ai-now-summit",
       "source": "Hacker News",
-      "points": 504,
-      "whyItMatters": "Research shows even frontier LLMs disagree on real-world facts."
+      "points": 458,
+      "whyItMatters": "Synthesizing key technical and strategic takeaways from Mistral's latest summit."
     },
     {
-      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
-      "url": "https://www.anthropic.com/news/series-h",
+      "title": "OpenRouter raises $113M Series B",
+      "url": "https://openrouter.ai/announcements/series-b",
       "source": "Hacker News",
-      "points": 359,
-      "whyItMatters": "Anthropic secures a massive $65B funding round at a near-trillion valuation."
+      "points": 418,
+      "whyItMatters": "Significant capital injection for the primary gateway to diverse LLM providers."
     },
     {
-      "title": "Claude Code – Everything you can configure that the docs don't tell you",
-      "url": "https://buildingbetter.tech/p/i-read-the-claude-code-source-code",
+      "title": "Anthropic surpasses OpenAI to become most valuable AI startup",
+      "url": "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup",
       "source": "Hacker News",
-      "points": 324,
-      "whyItMatters": "An in-depth look at how Claude Code actually operates under the hood."
+      "points": 404,
+      "whyItMatters": "A major shift in the hierarchy of the rapidly evolving AI industry."
     }
   ]
 }

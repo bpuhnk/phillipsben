@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-30T10:09:06Z",
-  "focus": "I am finishing the migration of BudgetTracker's database to a native Postgres layer and completing the automated hero image generation pipeline for project pages.",
+  "updatedAt": "2026-05-31T10:06:53Z",
+  "focus": "I am finalizing an experimental RSVP speed-reader after completing its MVP and Phase 2. I am also managing the BudgetTracker database migration to Supabase.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
