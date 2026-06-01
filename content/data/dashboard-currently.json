@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-31T10:06:53Z",
-  "focus": "I am finalizing an experimental RSVP speed-reader after completing its MVP and Phase 2. I am also managing the BudgetTracker database migration to Supabase.",
+  "updatedAt": "2026-06-01T10:08:10Z",
+  "focus": "I am refining the dashboard's automation, specifically the new Claude tile generation. I am also monitoring the latest developments in AI and core infrastructure.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

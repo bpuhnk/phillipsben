@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-05-31T10:01:49Z",
+  "updatedAt": "2026-06-01T10:03:10Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Blood (Alucard Rap)",
-      "artist": "Rustage, TOPHAMHAT-KYO",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048517458266080dbe2b8aadb05e1",
-      "url": "https://open.spotify.com/track/2deb24yUrqgOVwGJjaIaYp",
-      "playedAt": "2026-05-31T00:39:07.225Z"
+      "track": "Sunday Morning",
+      "artist": "Maroon 5",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485192f2d790c6a97b195f66d51e",
+      "url": "https://open.spotify.com/track/5qII2n90lVdPDcgXEEVHNy",
+      "playedAt": "2026-05-31T19:04:07.294Z"
     },
     {
-      "track": "Money Game, Pt. 2",
-      "artist": "Ren",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851161ace020d3675ac230fb660",
-      "url": "https://open.spotify.com/track/7fHoIcqmjrcpPYvv1iaZk1",
-      "playedAt": "2026-05-30T18:07:34.196Z"
+      "track": "Right Down the Line",
+      "artist": "Gerry Rafferty",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851dc60cf9a010f86354e6735dd",
+      "url": "https://open.spotify.com/track/2Xb6wJYGi0QXwURw5WWvI5",
+      "playedAt": "2026-05-31T17:23:32.682Z"
     },
     {
-      "track": "Sadie Hawkins Dance",
-      "artist": "Relient K",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851102c170920f16db53016b5c2",
-      "url": "https://open.spotify.com/track/37OI3jA1ts5U0nmuk2qBXR",
-      "playedAt": "2026-05-30T18:03:54.928Z"
+      "track": "So Easy (To Fall In Love)",
+      "artist": "Olivia Dean",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048519a336bfb6d40bbd90a507417",
+      "url": "https://open.spotify.com/track/6sGIMrtIzQjdzNndVxe397",
+      "playedAt": "2026-05-31T17:13:52.647Z"
     },
     {
-      "track": "Sharks",
-      "artist": "Imagine Dragons",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13",
-      "url": "https://open.spotify.com/track/7sA2SKTo1QbTSSYn5YvJC4",
-      "playedAt": "2026-05-30T18:00:56.874Z"
+      "track": "Budapest",
+      "artist": "George Ezra",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048513a60095e50104070cc89ed9f",
+      "url": "https://open.spotify.com/track/2ixsaeFioXJmMgkkbd4uj1",
+      "playedAt": "2026-05-31T17:11:03.200Z"
     },
     {
-      "track": "Overwhelmed (Ryan Mack Remix)",
-      "artist": "Ryan Mack",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851bd2b4d8196d87add72b743c8",
-      "url": "https://open.spotify.com/track/03eyNjBM2mpx28H6kdaufN",
-      "playedAt": "2026-05-30T17:57:45.531Z"
+      "track": "Living in the Moment",
+      "artist": "Jason Mraz",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485146e379c721504777a62bd9b8",
+      "url": "https://open.spotify.com/track/3ce7k1L4EkZppZPz1EJWTS",
+      "playedAt": "2026-05-31T17:07:42.187Z"
     }
   ]
 }
