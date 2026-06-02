@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-06-01T10:03:10Z",
+  "updatedAt": "2026-06-02T10:02:21Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Sunday Morning",
-      "artist": "Maroon 5",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485192f2d790c6a97b195f66d51e",
-      "url": "https://open.spotify.com/track/5qII2n90lVdPDcgXEEVHNy",
-      "playedAt": "2026-05-31T19:04:07.294Z"
+      "track": "Im Doing Fine",
+      "artist": "Marino, Promoting Sounds",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851a03158ed39ce7468e1637298",
+      "url": "https://open.spotify.com/track/3KR1JFRwYzha78aE9SpX3a",
+      "playedAt": "2026-06-01T22:26:19.029Z"
     },
     {
-      "track": "Right Down the Line",
-      "artist": "Gerry Rafferty",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851dc60cf9a010f86354e6735dd",
-      "url": "https://open.spotify.com/track/2Xb6wJYGi0QXwURw5WWvI5",
-      "playedAt": "2026-05-31T17:23:32.682Z"
+      "track": "The Best Of Me",
+      "artist": "The Starting Line",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485139fedf61abad94ee76ff6a7f",
+      "url": "https://open.spotify.com/track/1Up4RdOBpChNDytatxKDXP",
+      "playedAt": "2026-06-01T22:24:38.904Z"
     },
     {
-      "track": "So Easy (To Fall In Love)",
-      "artist": "Olivia Dean",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048519a336bfb6d40bbd90a507417",
-      "url": "https://open.spotify.com/track/6sGIMrtIzQjdzNndVxe397",
-      "playedAt": "2026-05-31T17:13:52.647Z"
+      "track": "My Girl's Ex-Boyfriend",
+      "artist": "Relient K",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851572a9d884dc34896085175af",
+      "url": "https://open.spotify.com/track/1VedGMBsKJ7bsg30edx4tq",
+      "playedAt": "2026-06-01T22:20:33.634Z"
     },
     {
-      "track": "Budapest",
-      "artist": "George Ezra",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048513a60095e50104070cc89ed9f",
-      "url": "https://open.spotify.com/track/2ixsaeFioXJmMgkkbd4uj1",
-      "playedAt": "2026-05-31T17:11:03.200Z"
+      "track": "(I'm Gonna Be) 500 Miles",
+      "artist": "MxPx",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485139865e23a5aa6ac75c05690d",
+      "url": "https://open.spotify.com/track/1FVCDJJIdoMPbxbXo4ud9X",
+      "playedAt": "2026-06-01T22:16:51.635Z"
     },
     {
-      "track": "Living in the Moment",
-      "artist": "Jason Mraz",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485146e379c721504777a62bd9b8",
-      "url": "https://open.spotify.com/track/3ce7k1L4EkZppZPz1EJWTS",
-      "playedAt": "2026-05-31T17:07:42.187Z"
+      "track": "We All Float Down Here",
+      "artist": "Four Year Strong",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851ed99045a9559f316db89cf0c",
+      "url": "https://open.spotify.com/track/1Lth0lc9ges0BMZHotzbLP",
+      "playedAt": "2026-06-01T22:13:17.912Z"
     }
   ]
 }

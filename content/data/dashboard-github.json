@@ -1,18 +1,11 @@
 {
-  "updatedAt": "2026-06-01T10:08:10Z",
-  "weekStart": "2026-05-25",
+  "updatedAt": "2026-06-02T10:07:56Z",
+  "weekStart": "2026-05-26",
   "totals": {
-    "commits": 82,
+    "commits": 73,
     "prs": 3,
-    "repos": 1,
+    "repos": 0,
     "activeDays": 6
   },
-  "repos": [
-    {
-      "name": "bpuhnk/phillipsben",
-      "url": "https://github.com/bpuhnk/phillipsben",
-      "commits": 1,
-      "summary": "Updated dashboard components and added automated Claude tile generation via Claude Code."
-    }
-  ]
+  "repos": []
 }

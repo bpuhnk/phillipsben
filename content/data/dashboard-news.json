@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-06-01T10:08:10Z",
+  "updatedAt": "2026-06-02T10:07:56Z",
   "items": [
     {
-      "title": "Please Do Not Vibe Fuck Up This Software",
-      "url": "https://github.com/RsyncProject/rsync/issues/929",
+      "title": "The newest Instagram “exploit” is the goofiest I've seen",
+      "url": "https://www.0xsid.com/blog/meta-account-takeover-fiasco",
       "source": "Hacker News",
-      "points": 491,
-      "whyItMatters": "Rsync issue highlights the fragility of core infrastructure."
+      "points": 1810,
+      "whyItMatters": "A goofy exploit led to a massive Instagram account takeover fiasco."
     },
     {
-      "title": "Openrsync: An implementation of rsync, by the OpenBSD team",
-      "url": "https://github.com/kristapsdz/openrsync",
+      "title": "Malicious npm packages detected across Red Hat Cloud Services",
+      "url": "https://github.com/RedHatInsights/javascript-clients/issues/492",
       "source": "Hacker News",
-      "points": 474,
-      "whyItMatters": "A new implementation of rsync from the OpenBSD team."
+      "points": 750,
+      "whyItMatters": "Malicious npm packages were detected across Red Hat Cloud Services."
     },
     {
-      "title": "OpenRouter raises $113M Series B",
-      "url": "https://openrouter.ai/announcements/series-b",
+      "title": "Anthropic confidentially submits draft S-1 to the SEC",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
       "source": "Hacker News",
-      "points": 454,
-      "whyItMatters": "Significant funding for a major AI model gateway."
+      "points": 498,
+      "whyItMatters": "Anthropic has confidentially submitted a draft S-1 to the SEC."
     },
     {
-      "title": "Anthropic surpasses OpenAI to become most valuable AI startup",
-      "url": "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup",
+      "title": "AI Agent Guidelines for CS336 at Stanford",
+      "url": "https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md",
       "source": "Hacker News",
-      "points": 419,
-      "whyItMatters": "Major shift in the AI competitive landscape."
+      "points": 417,
+      "whyItMatters": "New AI agent guidelines released for Stanford's CS336."
     },
     {
-      "title": "The solution might be cancelling my AI subscription",
-      "url": "https://thoughts.hmmz.org/2026-05-31.html",
+      "title": "United Airlines 767 returns to Newark after Bluetooth name sparks alert",
+      "url": "https://simpleflying.com/united-airlines-767-returns-newark-bluetooth-name-alert/",
       "source": "Hacker News",
-      "points": 361,
-      "whyItMatters": "AI subscription fatigue might drive user behavior changes."
+      "points": 415,
+      "whyItMatters": "A United Airlines 767 returned to Newark after a Bluetooth name sparked an alert."
     }
   ]
 }
