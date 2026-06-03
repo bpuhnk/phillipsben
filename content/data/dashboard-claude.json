@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-06-02T10:07:56Z",
-  "summary": "I've been overhauling BudgetTracker, mostly under the hood. The biggest change was moving the database off a shared SQL Server instance onto Postgres on Supabase and rewriting the data layer with Drizzle from scratch — no compatibility shim, since being single-user gave me a window for breaking changes. That meant migrating 8,239 transactions and 773 merchants in a single cut, right before the switchover. One gotcha along the way: the Supabase session pooler requires TLS but its certificate isn't signed by a default CA, so strict verify throws and no-SSL throws; the only thing that connects is `no-verify`. It's documented, but you only find it by failing both ways first.\n\nThe in-app AI assistant got rebuilt at the same time. It now supports multiple providers — Anthropic, OpenAI, Gemini, or a local model — with per-user API keys stored encrypted. The interesting part was the tool-calling loop: the model can request account balances, transaction lists, and date-range summaries by calling read-only functions, with `userId` injected server-side so it never touches auth logic directly. One concrete fix: the local model was burning its reasoning budget on chain-of-thought and returning empty answers, so tool-heavy calls now disable thinking mode while conversational turns keep it on.\n\nI also built a small MCP server into BudgetTracker so Hermes-Agent — my local AI agent — can ask financial questions against it. Eleven read-only tools, each gated by scopes modeled on GitHub fine-grained PATs: each API key declares what it can read, and tools only advertise themselves to keys that have permission. One rule throughout: all the math lives in SQL. Anomaly detection runs a z-score over category spend history; cash flow projection walks a ledger forward applying scheduled income and expense rules. The model gets numbers, it doesn't compute them. Getting the two services talking required tracking down a silent 401: BudgetTracker was signing webhook payloads Stripe-style (`t=timestamp,v1=hmac(timestamp.body)`) while Hermes-Agent expected a plain body HMAC with no timestamp in the signed string. Every real delivery failed until I added the second header.\n\nSeparately, I've been building an RSVP reader for Claude Code output — a tool that mirrors replies and flashes them one phrase at a time. The adaptive pacing layer uses a smaller model to score phrase density and return timing multipliers without touching the text itself. The web version holds the API credentials server-side and streams phrase events to the browser so the token never crosses to the client. Ninety-two tests so far, with a few planned features (per-user WPM calibration, conversation scrollback) not started yet.",
+  "updatedAt": "2026-06-03T10:06:08Z",
+  "summary": "I've been heads-down on **BudgetTracker** for the past several weeks. The biggest milestone was migrating the whole database off MSSQL onto PostgreSQL on Supabase, including a full Drizzle ORM rewrite — no compatibility shim, since it was a good window for breaking changes while the user count was still just me. After that landed, I built out a complete MCP tool surface (11 read-only tools) that lets my Hermes home agent query things like upcoming obligations, cash-flow projections, and spending anomalies. The interesting constraint there was keeping the math in SQL — the agent reasons over deterministic outputs, never runs arithmetic itself.\n\nA few things followed from that foundation. I wired up a Hermes→BudgetTracker webhook channel so that after a bank sync, the agent wakes up, pulls the computed figures, and sends a proportional summary to my phone. That involved tracing a 401 bug down to a signature-scheme mismatch: BudgetTracker signs Stripe-style (timestamp + body), Hermes validates body-only, and fixing it meant sending both headers. I also ran a security audit: the notable finding was a path traversal in the receipt image endpoint (`..%2f` escaped the upload directory) plus upload magic-byte spoofing. The SSRF guard for user-supplied LLM endpoints landed with an intentional operator-vs-user boundary — operator-configured endpoints can be private, user-supplied ones must be public HTTPS, so a self-hosted deployment can't be used as a relay into internal infrastructure.\n\nOn a smaller scale, I built **Cadence** — an RSVP speed-reader that mirrors Claude Code's live transcript and flashes replies one word at a time with adaptive pacing. The pacing overlay comes from a Haiku scorer that returns density weights keyed to word indices; the engine applies them as clamped dwell multipliers without rewriting the text. There's a web GUI with a session picker, the speed-reader itself, and a server-side `/api/score` endpoint so the browser never handles the API credential. I also found and fixed a filemover bug where browsing to a subdestination wasn't committing the transfer target, so files landed in the parent folder instead.",
   "highlights": [
     {
       "repo": "BudgetTracker",
-      "oneLiner": "Migrated DB to Postgres/Supabase + Drizzle, rebuilt AI assistant with multi-provider support and tool-calling loop"
+      "oneLiner": "Security audit (path traversal, magic-byte spoofing, SSRF guard) shipped; 12th MCP tool and latent Postgres bugs fixed"
     },
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "Wired BudgetTracker MCP (11 read-only tools, scoped api_keys) into Hermes; fixed BT→Hermes webhook 401 signature mismatch"
-    },
-    {
-      "repo": "Claude-Orbiter",
-      "oneLiner": "Building Cadence RSVP speed-reader for Claude output with adaptive Haiku pacing and a web GUI"
+      "oneLiner": "Brain flipped from Gemma to Qwen3.6-35B; toolset trimmed 32K→20K tokens; spending section wired into morning briefing"
     },
     {
       "repo": "phillipsben.com",
-      "oneLiner": "Watchlist UX batch deployed: searchable merchants, month-scoped drill-down, single CTA, back link"
+      "oneLiner": "Daily spending section added to morning briefing, composed by local Qwen to keep financial data off cloud LLMs"
+    },
+    {
+      "repo": "Internal MCP Servers",
+      "oneLiner": "BudgetTracker MCP tool surface grew to 12 read-only tools; webhook signature fix unblocked Hermes-triggered financial reviews"
     }
   ]
 }

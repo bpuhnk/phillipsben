@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-02T10:07:56Z",
-  "focus": "I am refining the BudgetTracker MCP interface and perfecting the RSVP speed-reader.",
+  "updatedAt": "2026-06-03T10:06:08Z",
+  "focus": "Shipping a morning briefing tool that pulls computed spend figures from the database for the cron job — the LLM never does the math. Also wrangling a full security audit: path-traversal fixes, JWT token-type separation, SSRF guard on LLM endpoints, and upload content verification. On the side, the RSVP speed-reader for Claude Code replies hit MVP + Phase 2 with Haiku-adaptive pacing.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
