@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-03T10:06:08Z",
-  "focus": "Shipping a morning briefing tool that pulls computed spend figures from the database for the cron job — the LLM never does the math. Also wrangling a full security audit: path-traversal fixes, JWT token-type separation, SSRF guard on LLM endpoints, and upload content verification. On the side, the RSVP speed-reader for Claude Code replies hit MVP + Phase 2 with Haiku-adaptive pacing.",
+  "updatedAt": "2026-06-04T10:03:36Z",
+  "focus": "This week I'm shipping the BudgetTracker MCP tool surface to the morning briefing, so the home assistant pulls yesterday's spend, today's account totals, and a 14-day run-rate forecast every morning — all reasoning over pre-computed SQL so the model never does arithmetic. I'm also hardening the security posture with the path traversal fix, JWT separation, SSRF guard, and magic-byte upload verification I wrapped up on 06-02.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
