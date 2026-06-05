@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-06-04T10:03:36Z",
+  "updatedAt": "2026-06-05T10:03:23Z",
   "items": [
     {
       "title": "Gemma 4 12B: A unified, encoder-free multimodal model",
       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
       "source": "Hacker News",
-      "points": 838,
-      "whyItMatters": "Google releases a unified encoder-free multimodal model at 12B params — small enough for local hardware, directly relevant to my local Gemma workflow."
+      "points": 1034,
+      "whyItMatters": "Google releases Gemma 4 12B — a unified encoder-free multimodal model, relevant to local LLM deployment."
     },
     {
-      "title": "1-Click GitHub Token Stealing via a VSCode Bug",
-      "url": "https://blog.ammaraskar.com/github-token-stealing/",
+      "title": "Failing grades soar with AI usage, dwindling math skills in Berkeley CS classes",
+      "url": "https://www.dailycal.org/news/campus/academics/failing-grades-soar-as-professors-see-greater-ai-usage-dwindling-math-skills-in-uc-berkeley/article_16fad0bf-02cb-4b8c-8d88-888ffd9f8608.html",
       "source": "Hacker News",
-      "points": 644,
-      "whyItMatters": "A VSCode extension bug allows one-click GitHub token theft; security hygiene matters given my auth token work on BudgetTracker."
+      "points": 774,
+      "whyItMatters": "Berkeley CS shows rising failures as AI usage grows and math skills dwindle — signals a real educational inflection point."
     },
     {
-      "title": "MAI-Code-1-Flash",
-      "url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+      "title": "Meta workers can opt out of being tracked at work up to 30 min",
+      "url": "https://www.bbc.com/news/articles/c93x0k194yno",
       "source": "Hacker News",
-      "points": 533,
-      "whyItMatters": "Microsoft's new AI coding model competes in the space where I evaluate models for local dev assistance and code generation."
+      "points": 762,
+      "whyItMatters": "Meta lets workers opt out of up to 30 min of daily tracking — notable policy shift on workplace surveillance."
     },
     {
       "title": "Uber's $1,500/month AI limit is a useful signal for AI tool pricing",
       "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/",
       "source": "Hacker News",
-      "points": 485,
-      "whyItMatters": "Uber's $1,500/month AI cap offers a real-world signal for pricing AI tool usage in personal projects like BudgetTracker."
+      "points": 607,
+      "whyItMatters": "Uber caps AI spending at $1,500/month per employee — a practical signal for enterprise AI budgeting."
     },
     {
-      "title": "Use your Nvidia GPU's VRAM as swap space on Linux",
-      "url": "https://github.com/c0dejedi/nbd-vram",
+      "title": "When AI Builds Itself: Our progress toward recursive self-improvement",
+      "url": "https://www.anthropic.com/institute/recursive-self-improvement",
       "source": "Hacker News",
-      "points": 461,
-      "whyItMatters": "Using GPU VRAM as Linux swap space is a clever resource hack that could help squeeze more out of limited local hardware."
+      "points": 456,
+      "whyItMatters": "Anthropic's institute report on AI recursive self-improvement progress, directly relevant to the field's trajectory."
     }
   ]
 }

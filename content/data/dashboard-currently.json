@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-04T10:03:36Z",
-  "focus": "This week I'm shipping the BudgetTracker MCP tool surface to the morning briefing, so the home assistant pulls yesterday's spend, today's account totals, and a 14-day run-rate forecast every morning — all reasoning over pre-computed SQL so the model never does arithmetic. I'm also hardening the security posture with the path traversal fix, JWT separation, SSRF guard, and magic-byte upload verification I wrapped up on 06-02.",
+  "updatedAt": "2026-06-05T10:03:23Z",
+  "focus": "This week I'm wrapping up BudgetTracker's Postgres migration and hardening the AI assistant with per-provider key isolation, while also advancing the MCP server that exposes read-only financial tools behind scoped tokens to my local AI agent. On the side, the Cadence speed-reader MVP is feature-complete and now in polish phase — refining Haiku-based adaptive pacing across both TUI and web GUI frontends.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
