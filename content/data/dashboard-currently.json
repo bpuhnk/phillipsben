@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-05T10:03:23Z",
-  "focus": "This week I'm wrapping up BudgetTracker's Postgres migration and hardening the AI assistant with per-provider key isolation, while also advancing the MCP server that exposes read-only financial tools behind scoped tokens to my local AI agent. On the side, the Cadence speed-reader MVP is feature-complete and now in polish phase — refining Haiku-based adaptive pacing across both TUI and web GUI frontends.",
+  "updatedAt": "2026-06-06T10:04:38Z",
+  "focus": "I'm hardening BudgetTracker's security posture — path traversal, JWT separation, and LLM endpoint SSRF guards are all in play — while spinning up a dedicated dev box that unifies my local environments behind Caddy wildcard routing and Tailscale.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

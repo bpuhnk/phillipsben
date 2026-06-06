@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-06-05T10:03:23Z",
+  "updatedAt": "2026-06-06T10:04:38Z",
   "items": [
     {
-      "title": "Gemma 4 12B: A unified, encoder-free multimodal model",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
+      "title": "Anthropic's open-source framework for AI-powered vulnerability discovery",
+      "url": "https://github.com/anthropics/defending-code-reference-harness",
       "source": "Hacker News",
-      "points": 1034,
-      "whyItMatters": "Google releases Gemma 4 12B — a unified encoder-free multimodal model, relevant to local LLM deployment."
-    },
-    {
-      "title": "Failing grades soar with AI usage, dwindling math skills in Berkeley CS classes",
-      "url": "https://www.dailycal.org/news/campus/academics/failing-grades-soar-as-professors-see-greater-ai-usage-dwindling-math-skills-in-uc-berkeley/article_16fad0bf-02cb-4b8c-8d88-888ffd9f8608.html",
-      "source": "Hacker News",
-      "points": 774,
-      "whyItMatters": "Berkeley CS shows rising failures as AI usage grows and math skills dwindle — signals a real educational inflection point."
-    },
-    {
-      "title": "Meta workers can opt out of being tracked at work up to 30 min",
-      "url": "https://www.bbc.com/news/articles/c93x0k194yno",
-      "source": "Hacker News",
-      "points": 762,
-      "whyItMatters": "Meta lets workers opt out of up to 30 min of daily tracking — notable policy shift on workplace surveillance."
-    },
-    {
-      "title": "Uber's $1,500/month AI limit is a useful signal for AI tool pricing",
-      "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/",
-      "source": "Hacker News",
-      "points": 607,
-      "whyItMatters": "Uber caps AI spending at $1,500/month per employee — a practical signal for enterprise AI budgeting."
+      "points": 523,
+      "whyItMatters": "Anthropic releases an open-source framework for automated vulnerability discovery in AI training data"
     },
     {
       "title": "When AI Builds Itself: Our progress toward recursive self-improvement",
       "url": "https://www.anthropic.com/institute/recursive-self-improvement",
       "source": "Hacker News",
-      "points": 456,
-      "whyItMatters": "Anthropic's institute report on AI recursive self-improvement progress, directly relevant to the field's trajectory."
+      "points": 510,
+      "whyItMatters": "Anthropic's research report on progress toward AI systems that can improve their own architecture"
+    },
+    {
+      "title": "Did Claude increase bugs in rsync?",
+      "url": "https://alexispurslane.github.io/rsync-analysis/",
+      "source": "Hacker News",
+      "points": 414,
+      "whyItMatters": "Analysis suggests Claude-generated patches increased bugs in rsync — raises questions about LLM code quality at scale"
+    },
+    {
+      "title": "pg_durable: Microsoft open sources in-database durable execution",
+      "url": "https://github.com/microsoft/pg_durable",
+      "source": "Hacker News",
+      "points": 401,
+      "whyItMatters": "Microsoft open-sources pg_durable, enabling durable execution workflows directly inside PostgreSQL"
     }
   ]
 }
