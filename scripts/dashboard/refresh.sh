@@ -53,13 +53,23 @@ prep)
   mkdir -p "$STAGE"
   rm -f "$STAGE"/*.json "$STAGE"/*.err "$STAGE"/*.tmp "$STAGE"/*.txt 2>/dev/null
 
+  # GitHub fetcher reads $GITHUB_TOKEN from the env. Post the Docker->native
+  # migration (2026-06-06) the gateway no longer reliably hands it to the fetch
+  # subprocess, so source it from the native env file if it isn't already set.
+  if [ -z "${GITHUB_TOKEN:-}" ] && [ -f "$HOME/servers/hermes/.env" ]; then
+    GITHUB_TOKEN="$(sed -n 's/^GITHUB_TOKEN=//p' "$HOME/servers/hermes/.env" | head -1)"
+    GITHUB_LOGIN="${GITHUB_LOGIN:-$(sed -n 's/^GITHUB_LOGIN=//p' "$HOME/servers/hermes/.env" | head -1)}"
+    export GITHUB_TOKEN GITHUB_LOGIN
+  fi
+
   echo "== fetch =="
   echo "github  fetch: $(fetch_to gh-raw   scripts/dashboard/fetch_github.py)"
   echo "news    fetch: $(fetch_to news-raw scripts/dashboard/fetch_news.py)"
   echo "spotify fetch: $(fetch_to spotify  scripts/dashboard/fetch_spotify.py)"
 
   echo "== claude memory digest =="
-  pop="/opt/data/snapshots/claude-memory/pop-os/projects"
+  # Native layout post-migration (was /opt/data inside the old hermes container).
+  pop="$HOME/.hermes/snapshots/claude-memory/pop-os/projects"
   h01="$HOME/.claude/projects"
   : >"$STAGE/mem.txt"
   pop_n=0; h01_n=0
@@ -95,7 +105,7 @@ prep)
   # The Claude summary + highlights are written by gen-claude-summary.sh (a host
   # cron running Claude Code ~09:45) into this staging dir, NOT by this agent.
   # Copy today's file in if present; otherwise the tile keeps its published data.
-  CLAUDE_STAGE="${CLAUDE_STAGE:-/opt/data/dashboard/claude-staging}"
+  CLAUDE_STAGE="${CLAUDE_STAGE:-$HOME/.hermes/dashboard/claude-staging}"
   if [ -f "$CLAUDE_STAGE/claude.md" ] \
      && [ "$(date -u -r "$CLAUDE_STAGE/claude.md" +%Y-%m-%d)" = "$(date -u +%Y-%m-%d)" ]; then
     cp -f "$CLAUDE_STAGE/claude.md" "$STAGE/claude.md"
