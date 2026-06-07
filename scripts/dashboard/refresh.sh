@@ -54,11 +54,13 @@ prep)
   rm -f "$STAGE"/*.json "$STAGE"/*.err "$STAGE"/*.tmp "$STAGE"/*.txt 2>/dev/null
 
   # GitHub fetcher reads $GITHUB_TOKEN from the env. Post the Docker->native
-  # migration (2026-06-06) the gateway no longer reliably hands it to the fetch
-  # subprocess, so source it from the native env file if it isn't already set.
-  if [ -z "${GITHUB_TOKEN:-}" ] && [ -f "$HOME/servers/hermes/.env" ]; then
-    GITHUB_TOKEN="$(sed -n 's/^GITHUB_TOKEN=//p' "$HOME/servers/hermes/.env" | head -1)"
-    GITHUB_LOGIN="${GITHUB_LOGIN:-$(sed -n 's/^GITHUB_LOGIN=//p' "$HOME/servers/hermes/.env" | head -1)}"
+  # migration (2026-06-06) Hermes scrubs GITHUB_TOKEN from the agent sandbox and
+  # the agent's $HOME is the sandbox home (~/.hermes/home), so source it from the
+  # env file by ABSOLUTE path if it isn't already set.
+  HERMES_ENV_FILE="/home/administrator/servers/hermes/.env"
+  if [ -z "${GITHUB_TOKEN:-}" ] && [ -f "$HERMES_ENV_FILE" ]; then
+    GITHUB_TOKEN="$(sed -n 's/^GITHUB_TOKEN=//p' "$HERMES_ENV_FILE" | head -1)"
+    GITHUB_LOGIN="${GITHUB_LOGIN:-$(sed -n 's/^GITHUB_LOGIN=//p' "$HERMES_ENV_FILE" | head -1)}"
     export GITHUB_TOKEN GITHUB_LOGIN
   fi
 
