@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-06-06T10:04:38Z",
+  "updatedAt": "2026-06-07T17:04:48Z",
   "items": [
     {
-      "title": "Anthropic's open-source framework for AI-powered vulnerability discovery",
-      "url": "https://github.com/anthropics/defending-code-reference-harness",
+      "title": "S&P 500 rejects SpaceX, also blocking entry for OpenAI and Anthropic",
+      "url": "https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rule-for-unprofitable-ai-firms/",
       "source": "Hacker News",
-      "points": 523,
-      "whyItMatters": "Anthropic releases an open-source framework for automated vulnerability discovery in AI training data"
+      "points": 1434,
+      "whyItMatters": "S&P blocks fast-track listing — first major rejection of unprofitable AI firms, reshaping how the industry funds growth."
     },
     {
-      "title": "When AI Builds Itself: Our progress toward recursive self-improvement",
-      "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+      "title": "Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot",
+      "url": "https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/",
       "source": "Hacker News",
-      "points": 510,
-      "whyItMatters": "Anthropic's research report on progress toward AI systems that can improve their own architecture"
+      "points": 657,
+      "whyItMatters": "AI chatbot abused to compromise thousands of accounts — a warning about trust boundaries in deployed AI systems."
     },
     {
-      "title": "Did Claude increase bugs in rsync?",
-      "url": "https://alexispurslane.github.io/rsync-analysis/",
+      "title": "LLMs are eroding my software engineering career and I don't know what to do",
+      "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
       "source": "Hacker News",
-      "points": 414,
-      "whyItMatters": "Analysis suggests Claude-generated patches increased bugs in rsync — raises questions about LLM code quality at scale"
+      "points": 521,
+      "whyItMatters": "Honest reckoning from a dev about LLMs reshaping the profession — worth reading at face value."
     },
     {
-      "title": "pg_durable: Microsoft open sources in-database durable execution",
-      "url": "https://github.com/microsoft/pg_durable",
+      "title": "Harness engineering: Leveraging Codex in an agent-first world",
+      "url": "https://openai.com/index/harness-engineering/",
       "source": "Hacker News",
-      "points": 401,
-      "whyItMatters": "Microsoft open-sources pg_durable, enabling durable execution workflows directly inside PostgreSQL"
+      "points": 265,
+      "whyItMatters": "Practical look at leveraging Codex in an agent-first workflow — directly relevant to how we ship code now."
+    },
+    {
+      "title": "Transformers are inherently succinct",
+      "url": "https://openreview.net/pdf?id=Yxz92UuPLQ",
+      "source": "Hacker News",
+      "points": 145,
+      "whyItMatters": "Research paper arguing transformers are inherently succinct — interesting angles on model efficiency."
     }
   ]
 }

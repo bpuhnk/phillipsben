@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-06T10:04:38Z",
-  "focus": "I'm hardening BudgetTracker's security posture — path traversal, JWT separation, and LLM endpoint SSRF guards are all in play — while spinning up a dedicated dev box that unifies my local environments behind Caddy wildcard routing and Tailscale.",
+  "updatedAt": "2026-06-07T17:04:48Z",
+  "focus": "This week I'm watching how AI reshapes the boundaries between tooling and professional practice — from chatbot-driven account compromises to devs asking hard questions about their own careers. The engineering conversations around Codex, agent-first workflows, and model efficiency are what I'm following most closely.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

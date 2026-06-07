@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-06-06T10:02:31Z",
+  "updatedAt": "2026-06-07T17:03:26Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Greed",
-      "artist": "Marino",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e8b3be1e32dbf38f9e660b9e",
-      "url": "https://open.spotify.com/track/6sPBgWvvJXebIn0fj7Shte",
-      "playedAt": "2026-06-05T23:39:27.871Z"
+      "track": "Air",
+      "artist": "Son of a Bach",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485145674ae82e1e462da6e739c3",
+      "url": "https://open.spotify.com/track/25QsEzWhS0asgJUC8i97sZ",
+      "playedAt": "2026-06-07T05:23:37.009Z"
     },
     {
-      "track": "Lucky",
-      "artist": "Jason Mraz, Colbie Caillat",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851125b1a330b6f6100ab19dbed",
-      "url": "https://open.spotify.com/track/0IktbUcnAGrvD03AWnz3Q8",
-      "playedAt": "2026-06-05T23:37:39.030Z"
+      "track": "I Just Wanna Run",
+      "artist": "The Downtown Fiction",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851618ddee85455e7d12c861194",
+      "url": "https://open.spotify.com/track/3WLLJzllBEgPiSA0qd3BN3",
+      "playedAt": "2026-06-07T03:52:21.409Z"
     },
     {
-      "track": "Crazy",
-      "artist": "Gnarls Barkley, CeeLo Green, Danger Mouse",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851ab051a2c680f39c0d9827706",
-      "url": "https://open.spotify.com/track/6o1l9I0faXJN2iqulHrdCQ",
-      "playedAt": "2026-06-05T23:34:35.398Z"
+      "track": "Over the Rainbow",
+      "artist": "Me First and the Gimme Gimmes",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851e29d4310a869c8aa3234285f",
+      "url": "https://open.spotify.com/track/21Zg9ZQijBP1hdNpSfnDBf",
+      "playedAt": "2026-06-07T03:47:15.217Z"
     },
     {
-      "track": "Sleep",
-      "artist": "Lagwagon",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851ec864326b8b78618225bdcca",
-      "url": "https://open.spotify.com/track/5EkFENUwCnkv3dN0fwPxse",
-      "playedAt": "2026-06-05T23:31:38.193Z"
+      "track": "Everlong",
+      "artist": "Foo Fighters",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048514bc9bcdbdc9ac34e37d8b6bb",
+      "url": "https://open.spotify.com/track/5UWwZ5lm5PKu6eKsHAGxOk",
+      "playedAt": "2026-06-07T03:45:08.979Z"
     },
     {
-      "track": "Maria Maria (feat. The Product G&B)",
-      "artist": "Santana, The Product G&B",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485105517e4e2defded1e818d3d0",
-      "url": "https://open.spotify.com/track/567UAkWoLBqZ709s3Qcbze",
-      "playedAt": "2026-06-05T23:26:43.219Z"
+      "track": "God Bless The U.S.A.",
+      "artist": "Lee Greenwood",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851c9eaf9bda3dbf6cd880121a3",
+      "url": "https://open.spotify.com/track/1xcDKZqyEg1dIgsidluiFP",
+      "playedAt": "2026-06-07T03:40:58.003Z"
     }
   ]
 }
