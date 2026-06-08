@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-06-07T17:04:48Z",
+  "updatedAt": "2026-06-08T10:02:38Z",
   "items": [
     {
-      "title": "S&P 500 rejects SpaceX, also blocking entry for OpenAI and Anthropic",
-      "url": "https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rule-for-unprofitable-ai-firms/",
+      "title": "LLMs are eroding my software engineering career and I don't know what to do",
+      "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
       "source": "Hacker News",
-      "points": 1434,
-      "whyItMatters": "S&P blocks fast-track listing — first major rejection of unprofitable AI firms, reshaping how the industry funds growth."
+      "points": 968,
+      "whyItMatters": "Deep conversation about whether LLMs are displacing engineers — and why building real systems with AI tools, not replacing them, is the answer."
+    },
+    {
+      "title": "DeepSeek V4 Pro beats GPT-5.5 Pro on precision",
+      "url": "https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision",
+      "source": "Hacker News",
+      "points": 267,
+      "whyItMatters": "DeepSeek V4 Pro edged out GPT-5.5 Pro on precision benchmarks — the open-weight model race keeps tightening."
     },
     {
       "title": "Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot",
       "url": "https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/",
       "source": "Hacker News",
-      "points": 657,
-      "whyItMatters": "AI chatbot abused to compromise thousands of accounts — a warning about trust boundaries in deployed AI systems."
+      "points": 695,
+      "whyItMatters": "Meta confirmed thousands of Instagram accounts were compromised via its AI chatbot — a warning about trusting LLMs with authentication flows."
     },
     {
-      "title": "LLMs are eroding my software engineering career and I don't know what to do",
-      "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
+      "title": "I design with Claude more than Figma now",
+      "url": "https://blog.janestreet.com/i-design-with-claude-code-more-than-figma-now-index/",
       "source": "Hacker News",
-      "points": 521,
-      "whyItMatters": "Honest reckoning from a dev about LLMs reshaping the profession — worth reading at face value."
-    },
-    {
-      "title": "Harness engineering: Leveraging Codex in an agent-first world",
-      "url": "https://openai.com/index/harness-engineering/",
-      "source": "Hacker News",
-      "points": 265,
-      "whyItMatters": "Practical look at leveraging Codex in an agent-first workflow — directly relevant to how we ship code now."
-    },
-    {
-      "title": "Transformers are inherently succinct",
-      "url": "https://openreview.net/pdf?id=Yxz92UuPLQ",
-      "source": "Hacker News",
-      "points": 145,
-      "whyItMatters": "Research paper arguing transformers are inherently succinct — interesting angles on model efficiency."
+      "points": 286,
+      "whyItMatters": "Someone at Jane Street now designs with Claude more than Figma — showing how AI-native workflows are replacing traditional creative toolchains."
     }
   ]
 }
