@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-08T10:02:38Z",
-  "focus": "This week I'm keeping the dashboard pipeline running smoothly, watching the AI tooling landscape shift as new models and agent frameworks keep arriving, and iterating on the Hermes integration to make it more useful for day-to-day work.",
+  "updatedAt": "2026-06-09T10:02:16Z",
+  "focus": "Spent the week pushing commits across a few active repos and reviewing PRs — steady progress with five active days. I've been thinking a lot about where AI tooling is heading, especially the push toward native Linux Claude Desktop and what it means for my own Hermes-based workflow.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

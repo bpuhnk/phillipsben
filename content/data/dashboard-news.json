@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-06-08T10:02:38Z",
+  "updatedAt": "2026-06-09T10:02:16Z",
   "items": [
     {
       "title": "LLMs are eroding my software engineering career and I don't know what to do",
       "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
       "source": "Hacker News",
-      "points": 968,
-      "whyItMatters": "Deep conversation about whether LLMs are displacing engineers — and why building real systems with AI tools, not replacing them, is the answer."
+      "points": 1117,
+      "whyItMatters": "Deep discussion on how AI is reshaping developer roles — worth reading for perspective on the tradeoff between velocity and craft."
+    },
+    {
+      "title": "Anthropic, please ship an official Claude Desktop for Linux",
+      "url": "https://github.com/anthropics/claude-code/issues/65697",
+      "source": "Hacker News",
+      "points": 528,
+      "whyItMatters": "The push for a native Linux Claude Desktop has been building — if Anthropic ships, it changes the CLI-first AI workflow."
+    },
+    {
+      "title": "AI is slowing down",
+      "url": "https://www.wheresyoured.at/ai-is-slowing-down/",
+      "source": "Hacker News",
+      "points": 554,
+      "whyItMatters": "Argues AI progress is decelerating on several fronts. A counter-narrative to the hype cycle worth evaluating."
+    },
+    {
+      "title": "Confidential submission of draft S-1 to the SEC",
+      "url": "https://openai.com/index/openai-submits-confidential-s-1/",
+      "source": "Hacker News",
+      "points": 338,
+      "whyItMatters": "OpenAI files confidential S-1 — a potential $1T+ IPO would reshape the AI industry's economics and competitive landscape."
     },
     {
       "title": "DeepSeek V4 Pro beats GPT-5.5 Pro on precision",
       "url": "https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision",
       "source": "Hacker News",
-      "points": 267,
-      "whyItMatters": "DeepSeek V4 Pro edged out GPT-5.5 Pro on precision benchmarks — the open-weight model race keeps tightening."
-    },
-    {
-      "title": "Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot",
-      "url": "https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/",
-      "source": "Hacker News",
-      "points": 695,
-      "whyItMatters": "Meta confirmed thousands of Instagram accounts were compromised via its AI chatbot — a warning about trusting LLMs with authentication flows."
-    },
-    {
-      "title": "I design with Claude more than Figma now",
-      "url": "https://blog.janestreet.com/i-design-with-claude-code-more-than-figma-now-index/",
-      "source": "Hacker News",
-      "points": 286,
-      "whyItMatters": "Someone at Jane Street now designs with Claude more than Figma — showing how AI-native workflows are replacing traditional creative toolchains."
+      "points": 391,
+      "whyItMatters": "DeepSeek V4 Pro edges out GPT-5.5 Pro on precision benchmarks, showing the open-weight model space is closing hard on proprietary."
     }
   ]
 }
