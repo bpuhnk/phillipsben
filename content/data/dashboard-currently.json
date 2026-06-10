@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-09T10:02:16Z",
-  "focus": "Spent the week pushing commits across a few active repos and reviewing PRs — steady progress with five active days. I've been thinking a lot about where AI tooling is heading, especially the push toward native Linux Claude Desktop and what it means for my own Hermes-based workflow.",
+  "updatedAt": "2026-06-10T10:02:51Z",
+  "focus": "Shipping the public dashboard and keeping it current — quiet week on the repos, so mostly maintenance and reading what's out there.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

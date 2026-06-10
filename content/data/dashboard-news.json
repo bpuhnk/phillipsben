@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-06-09T10:02:16Z",
+  "updatedAt": "2026-06-10T10:02:51Z",
   "items": [
     {
-      "title": "LLMs are eroding my software engineering career and I don't know what to do",
-      "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
+      "title": "Claude Fable 5",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
       "source": "Hacker News",
-      "points": 1117,
-      "whyItMatters": "Deep discussion on how AI is reshaping developer roles — worth reading for perspective on the tradeoff between velocity and craft."
+      "points": 2241,
+      "whyItMatters": "Anthropic's major release — deeper reasoning, new mythos system for multi-agent behavior, and built-in competitor detection. Worth understanding the safety constraints this time around."
     },
     {
-      "title": "Anthropic, please ship an official Claude Desktop for Linux",
-      "url": "https://github.com/anthropics/claude-code/issues/65697",
+      "title": "Show HN: Performative-UI – A react component library of design tropes",
+      "url": "https://vorpus.github.io/performativeUI/",
       "source": "Hacker News",
-      "points": 528,
-      "whyItMatters": "The push for a native Linux Claude Desktop has been building — if Anthropic ships, it changes the CLI-first AI workflow."
+      "points": 1139,
+      "whyItMatters": "A practical React component library that packages common UI patterns (skeleton screens, toast systems, progressive disclosure) into a reusable set. Useful for dashboards and admin panels."
     },
     {
-      "title": "AI is slowing down",
-      "url": "https://www.wheresyoured.at/ai-is-slowing-down/",
+      "title": "Making Graphics Like it's 1993",
+      "url": "https://staniks.github.io/articles/catlantean-3d-blog-1/",
       "source": "Hacker News",
-      "points": 554,
-      "whyItMatters": "Argues AI progress is decelerating on several fronts. A counter-narrative to the hype cycle worth evaluating."
+      "points": 865,
+      "whyItMatters": ""
     },
     {
-      "title": "Confidential submission of draft S-1 to the SEC",
-      "url": "https://openai.com/index/openai-submits-confidential-s-1/",
+      "title": "Apple Core AI Framework",
+      "url": "https://developer.apple.com/documentation/coreai/",
       "source": "Hacker News",
-      "points": 338,
-      "whyItMatters": "OpenAI files confidential S-1 — a potential $1T+ IPO would reshape the AI industry's economics and competitive landscape."
+      "points": 358,
+      "whyItMatters": "Apple's official Core AI framework docs. If you're building ML features for macOS/iOS apps, this is now the primary integration path replacing older ML approaches."
     },
     {
-      "title": "DeepSeek V4 Pro beats GPT-5.5 Pro on precision",
-      "url": "https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision",
+      "title": "Upcoming breaking changes for npm v12",
+      "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/",
       "source": "Hacker News",
-      "points": 391,
-      "whyItMatters": "DeepSeek V4 Pro edges out GPT-5.5 Pro on precision benchmarks, showing the open-weight model space is closing hard on proprietary."
+      "points": 369,
+      "whyItMatters": "npm v12 breaking changes landed — affects every Node.js project. Review the migration guide early, especially around resolution strategy and workspace hoisting."
     }
   ]
 }
