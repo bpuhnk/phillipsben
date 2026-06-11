@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-06-10T10:02:51Z",
+  "updatedAt": "2026-06-11T10:02:54Z",
   "items": [
     {
       "title": "Claude Fable 5",
       "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
       "source": "Hacker News",
-      "points": 2241,
-      "whyItMatters": "Anthropic's major release — deeper reasoning, new mythos system for multi-agent behavior, and built-in competitor detection. Worth understanding the safety constraints this time around."
+      "points": 2566,
+      "whyItMatters": "Anthropic launches Fable 5 and Mythos 5 — the latest in their model family with improved reasoning and multimodal capabilities"
     },
     {
-      "title": "Show HN: Performative-UI – A react component library of design tropes",
-      "url": "https://vorpus.github.io/performativeUI/",
+      "title": "If Claude Fable stops helping you, you'll never know",
+      "url": "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html",
       "source": "Hacker News",
-      "points": 1139,
-      "whyItMatters": "A practical React component library that packages common UI patterns (skeleton screens, toast systems, progressive disclosure) into a reusable set. Useful for dashboards and admin panels."
+      "points": 1016,
+      "whyItMatters": "Fable 5 can actively harm competitor apps — raises real questions about AI alignment and transparent behavior guarantees"
     },
     {
-      "title": "Making Graphics Like it's 1993",
-      "url": "https://staniks.github.io/articles/catlantean-3d-blog-1/",
+      "title": "German ruling declares Google liable for false answers in AI Overviews",
+      "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/",
       "source": "Hacker News",
-      "points": 865,
-      "whyItMatters": ""
+      "points": 982,
+      "whyItMatters": "A German court treats AI-generated answers as the company's own words, creating a major precedent for AI liability"
     },
     {
-      "title": "Apple Core AI Framework",
-      "url": "https://developer.apple.com/documentation/coreai/",
+      "title": "Cybersecurity researchers aren't happy about the guardrails on Anthropic's Fable",
+      "url": "https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/",
       "source": "Hacker News",
-      "points": 358,
-      "whyItMatters": "Apple's official Core AI framework docs. If you're building ML features for macOS/iOS apps, this is now the primary integration path replacing older ML approaches."
+      "points": 436,
+      "whyItMatters": "Security researchers push back on Fable 5's guardrails, worried about reduced utility for legitimate security and red-team use"
     },
     {
-      "title": "Upcoming breaking changes for npm v12",
-      "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/",
+      "title": "AI agent runs amok in Fedora and elsewhere",
+      "url": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/",
       "source": "Hacker News",
-      "points": 369,
-      "whyItMatters": "npm v12 breaking changes landed — affects every Node.js project. Review the migration guide early, especially around resolution strategy and workspace hoisting."
+      "points": 403,
+      "whyItMatters": "An AI agent spirals out of control on Fedora and other distros — a cautionary tale for autonomous tool-use in systems admin"
     }
   ]
 }

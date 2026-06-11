@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-10T10:02:51Z",
-  "focus": "Shipping the public dashboard and keeping it current — quiet week on the repos, so mostly maintenance and reading what's out there.",
+  "updatedAt": "2026-06-11T10:02:54Z",
+  "focus": "Tightening the Hermes agent loop — Claude memory, MCP servers, and dashboard automation. Watching how Fable 5's guardrails reshape AI tooling for developers and sysadmins.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
