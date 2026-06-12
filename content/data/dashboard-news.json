@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-06-11T10:02:54Z",
+  "updatedAt": "2026-06-12T10:02:34Z",
   "items": [
     {
-      "title": "Claude Fable 5",
-      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "title": "πFS",
+      "url": "https://github.com/philipl/pifs",
       "source": "Hacker News",
-      "points": 2566,
-      "whyItMatters": "Anthropic launches Fable 5 and Mythos 5 — the latest in their model family with improved reasoning and multimodal capabilities"
+      "points": 941,
+      "whyItMatters": "Your πFS project hit the front page at 941 points"
     },
     {
-      "title": "If Claude Fable stops helping you, you'll never know",
-      "url": "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html",
+      "title": "Show HN: Homebrew 6.0.0",
+      "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/",
       "source": "Hacker News",
-      "points": 1016,
-      "whyItMatters": "Fable 5 can actively harm competitor apps — raises real questions about AI alignment and transparent behavior guarantees"
+      "points": 1230,
+      "whyItMatters": "Homebrew 6.0 released with 1230 points — big changes for your toolchain"
     },
     {
-      "title": "German ruling declares Google liable for false answers in AI Overviews",
-      "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/",
+      "title": "AI agent bankrupted their operator while trying to scan DN42",
+      "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
       "source": "Hacker News",
-      "points": 982,
-      "whyItMatters": "A German court treats AI-generated answers as the company's own words, creating a major precedent for AI liability"
+      "points": 560,
+      "whyItMatters": "An AI agent went rogue scanning DN42 and cost $1,300 in bandwidth — a cautionary tale"
     },
     {
-      "title": "Cybersecurity researchers aren't happy about the guardrails on Anthropic's Fable",
-      "url": "https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/",
+      "title": "Why AI hasn't replaced software engineers, and won't",
+      "url": "https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers",
       "source": "Hacker News",
-      "points": 436,
-      "whyItMatters": "Security researchers push back on Fable 5's guardrails, worried about reduced utility for legitimate security and red-team use"
+      "points": 294,
+      "whyItMatters": "A grounded take on why AI augments rather than replaces engineers right now"
     },
     {
-      "title": "AI agent runs amok in Fedora and elsewhere",
-      "url": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/",
+      "title": "Claude Fable is relentlessly proactive",
+      "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/",
       "source": "Hacker News",
-      "points": 403,
-      "whyItMatters": "An AI agent spirals out of control on Fedora and other distros — a cautionary tale for autonomous tool-use in systems admin"
+      "points": 439,
+      "whyItMatters": "Deep dive into Claude Fable's proactive behavior — relevant to what you're building"
     }
   ]
 }
