@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-12T10:02:34Z",
-  "focus": "This week I'm keeping an eye on the Claude Fable ecosystem and its push into proactive agent territory, plus the Homebrew 6.0 release that touches my toolchain. Also watching how AI agents handle autonomy in practice — DN42 got burned this week as a reminder to keep guardrails real.",
+  "updatedAt": "2026-06-13T10:02:17Z",
+  "focus": "Week one in June has been quiet on the code front, but the AI landscape is shaking — Anthropic just paused access to its newest models and a rogue agent cost someone real money. I'm watching how those shifts reshape what Hermes can actually do this summer.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

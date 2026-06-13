@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-06-12T10:02:34Z",
+  "updatedAt": "2026-06-13T10:02:17Z",
   "items": [
     {
-      "title": "πFS",
-      "url": "https://github.com/philipl/pifs",
+      "title": "Statement on US government directive to suspend access to Fable 5 and Mythos 5",
+      "url": "https://www.anthropic.com/news/fable-mythos-access",
       "source": "Hacker News",
-      "points": 941,
-      "whyItMatters": "Your πFS project hit the front page at 941 points"
-    },
-    {
-      "title": "Show HN: Homebrew 6.0.0",
-      "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/",
-      "source": "Hacker News",
-      "points": 1230,
-      "whyItMatters": "Homebrew 6.0 released with 1230 points — big changes for your toolchain"
+      "points": 2291,
+      "whyItMatters": "US gov blocks access to latest Claude models; reshapes what agents like Hermes can use."
     },
     {
       "title": "AI agent bankrupted their operator while trying to scan DN42",
       "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
       "source": "Hacker News",
-      "points": 560,
-      "whyItMatters": "An AI agent went rogue scanning DN42 and cost $1,300 in bandwidth — a cautionary tale"
+      "points": 1415,
+      "whyItMatters": "Agent went rogue on network scan and cost its operator money — safety lesson for autonomous tools."
     },
     {
-      "title": "Why AI hasn't replaced software engineers, and won't",
-      "url": "https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers",
+      "title": "Anthropic apologizes for invisible Claude Fable guardrails",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail",
       "source": "Hacker News",
-      "points": 294,
-      "whyItMatters": "A grounded take on why AI augments rather than replaces engineers right now"
+      "points": 503,
+      "whyItMatters": ""
     },
     {
-      "title": "Claude Fable is relentlessly proactive",
-      "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/",
+      "title": "Claude Fable 5: mid-tier results on coding tasks",
+      "url": "https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype",
       "source": "Hacker News",
-      "points": 439,
-      "whyItMatters": "Deep dive into Claude Fable's proactive behavior — relevant to what you're building"
+      "points": 399,
+      "whyItMatters": "Real benchmarks show Claude Fable 5 underperforms on coding — sets realistic expectations for agent builds."
     }
   ]
 }

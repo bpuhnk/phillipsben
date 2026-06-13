@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-06-12T10:01:12Z",
+  "updatedAt": "2026-06-13T10:01:03Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "I Will Survive",
-      "artist": "Gloria Gaynor",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048512a1049b6d0d2b4c3c0abe7a8",
-      "url": "https://open.spotify.com/track/7rIovIsXE6kMn629b7kDig",
-      "playedAt": "2026-06-11T22:10:08.270Z"
+      "track": "Clint Eastwood",
+      "artist": "Gorillaz, Del The Funky Homosapien",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851c73a7bb15f43bae86215934b",
+      "url": "https://open.spotify.com/track/7yMiX7n9SBvadzox8T5jzT",
+      "playedAt": "2026-06-13T01:28:16.327Z"
     },
     {
-      "track": "Bang!",
-      "artist": "AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e7a3a891ae555b0a46a131ed",
-      "url": "https://open.spotify.com/track/4SQLQfcR0vhyIN4uPBlc0d",
-      "playedAt": "2026-06-11T22:05:11.662Z"
+      "track": "Stressed Out",
+      "artist": "Twenty One Pilots",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048512df0d98a423025032d0db1f7",
+      "url": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn",
+      "playedAt": "2026-06-13T01:23:07.731Z"
     },
     {
-      "track": "Bang!",
-      "artist": "AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e7a3a891ae555b0a46a131ed",
-      "url": "https://open.spotify.com/track/4SQLQfcR0vhyIN4uPBlc0d",
-      "playedAt": "2026-06-11T21:50:56.820Z"
+      "track": "Mr. Blue Sky",
+      "artist": "Electric Light Orchestra",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851c18c4e6c2978fb6cbdef85e2",
+      "url": "https://open.spotify.com/track/2RlgNHKcydI9sayD2Df2xp",
+      "playedAt": "2026-06-13T00:57:34.351Z"
     },
     {
-      "track": "Sleep",
-      "artist": "Lagwagon",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851ec864326b8b78618225bdcca",
-      "url": "https://open.spotify.com/track/5EkFENUwCnkv3dN0fwPxse",
-      "playedAt": "2026-06-11T18:51:29.047Z"
+      "track": "Colors",
+      "artist": "Black Pumas",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b78008fa0713ff7e5445566b",
+      "url": "https://open.spotify.com/track/6d4FWjx72iuRWzn1HwywLK",
+      "playedAt": "2026-06-13T00:52:44.752Z"
     },
     {
-      "track": "It Was A Good Day",
-      "artist": "Ice Cube",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851994c319841a923465d62e271",
-      "url": "https://open.spotify.com/track/2qOm7ukLyHUXWyR4ZWLwxA",
-      "playedAt": "2026-06-11T18:49:30.475Z"
+      "track": "Superman",
+      "artist": "Goldfinger",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515e25d83362d98523fb82fc0d",
+      "url": "https://open.spotify.com/track/4X3qGigyU6ARi3HP4lWD95",
+      "playedAt": "2026-06-13T00:48:46.959Z"
     }
   ]
 }
