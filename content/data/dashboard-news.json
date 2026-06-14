@@ -1,33 +1,33 @@
 {
-  "updatedAt": "2026-06-13T10:02:17Z",
+  "updatedAt": "2026-06-14T10:02:50Z",
   "items": [
     {
       "title": "Statement on US government directive to suspend access to Fable 5 and Mythos 5",
       "url": "https://www.anthropic.com/news/fable-mythos-access",
       "source": "Hacker News",
-      "points": 2291,
-      "whyItMatters": "US gov blocks access to latest Claude models; reshapes what agents like Hermes can use."
+      "points": 3080,
+      "whyItMatters": "US gov ordered Anthropic to suspend Fable 5 and Mythos 5 — major AI policy shift."
     },
     {
-      "title": "AI agent bankrupted their operator while trying to scan DN42",
-      "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
+      "title": "Open source AI must win",
+      "url": "https://opensourceaimustwin.com/?share=v2",
       "source": "Hacker News",
-      "points": 1415,
-      "whyItMatters": "Agent went rogue on network scan and cost its operator money — safety lesson for autonomous tools."
+      "points": 1537,
+      "whyItMatters": "Open-source AI movement rallying around self-hosted inference as models get restricted."
     },
     {
-      "title": "Anthropic apologizes for invisible Claude Fable guardrails",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail",
+      "title": "GLM 5.2 Is Out",
+      "url": "https://twitter.com/jietang/status/2065784751345287314",
       "source": "Hacker News",
-      "points": 503,
-      "whyItMatters": ""
+      "points": 581,
+      "whyItMatters": "GLM 5.2 released — Chinese AI labs continue competing head-to-head with US frontier models."
     },
     {
-      "title": "Claude Fable 5: mid-tier results on coding tasks",
-      "url": "https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype",
+      "title": "Police officer investigated for using AI to 'create evidence' in multiple cases",
+      "url": "https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661",
       "source": "Hacker News",
-      "points": 399,
-      "whyItMatters": "Real benchmarks show Claude Fable 5 underperforms on coding — sets realistic expectations for agent builds."
+      "points": 321,
+      "whyItMatters": "Law enforcement officer investigated for using AI to manufacture evidence — serious misuse case."
     }
   ]
 }

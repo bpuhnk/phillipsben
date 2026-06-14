@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-13T10:02:17Z",
-  "focus": "Week one in June has been quiet on the code front, but the AI landscape is shaking — Anthropic just paused access to its newest models and a rogue agent cost someone real money. I'm watching how those shifts reshape what Hermes can actually do this summer.",
+  "updatedAt": "2026-06-14T10:02:50Z",
+  "focus": "This week I'm tracking the AI access restrictions and policy shifts affecting my personal tools, while keeping phillipsben.com up to date. I'm also working on getting local inference running so I can keep my agents going when cloud models get throttled or pulled.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
