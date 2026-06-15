@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-06-14T10:01:30Z",
+  "updatedAt": "2026-06-15T10:01:27Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "By My Side",
+      "artist": "Connor Price",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851eadd4ad23aedec632090f335",
+      "url": "https://open.spotify.com/track/0w4xrMMceR4F8CTAmTn1nV",
+      "playedAt": "2026-06-14T10:59:26.563Z"
+    },
     {
       "track": "Crazy",
       "artist": "Gnarls Barkley, CeeLo Green, Danger Mouse",
@@ -29,13 +36,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d00004851bdb5103f7459d2a7888752d6",
       "url": "https://open.spotify.com/track/0LXt8IQauov0NMDN2kKmev",
       "playedAt": "2026-06-13T13:59:56.050Z"
-    },
-    {
-      "track": "Clint Eastwood",
-      "artist": "Gorillaz, Del The Funky Homosapien",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851c73a7bb15f43bae86215934b",
-      "url": "https://open.spotify.com/track/7yMiX7n9SBvadzox8T5jzT",
-      "playedAt": "2026-06-13T01:28:16.327Z"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-14T10:02:50Z",
-  "focus": "This week I'm tracking the AI access restrictions and policy shifts affecting my personal tools, while keeping phillipsben.com up to date. I'm also working on getting local inference running so I can keep my agents going when cloud models get throttled or pulled.",
+  "updatedAt": "2026-06-15T10:02:32Z",
+  "focus": "This week I'm focusing on wrapping up server-side automation — getting the dashboard pipeline stable and tightening the refresh loop so everything updates cleanly on schedule.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
