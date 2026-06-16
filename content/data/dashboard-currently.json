@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-15T10:02:32Z",
-  "focus": "This week I'm focusing on wrapping up server-side automation — getting the dashboard pipeline stable and tightening the refresh loop so everything updates cleanly on schedule.",
+  "updatedAt": "2026-06-16T10:01:56Z",
+  "focus": "This week I'm keeping things stable on the homelab front while exploring local LLM setups for daily coding. The community debate around replacing cloud models with self-hosted ones is particularly relevant — might be time to experiment beyond Claude.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

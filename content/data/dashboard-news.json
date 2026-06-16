@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-06-15T10:02:32Z",
+  "updatedAt": "2026-06-16T10:01:56Z",
   "items": [
     {
-      "title": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models",
-      "url": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&reflink=desktopwebshare_permalink",
+      "title": "A backdoor in a LinkedIn job offer",
+      "url": "https://roman.pt/posts/linkedin-backdoor/",
       "source": "Hacker News",
-      "points": 786,
-      "whyItMatters": "Amazon's federal outreach reshaping AI safety policy and model-access rules across the industry."
+      "points": 1172,
+      "whyItMatters": "Security lesson: a job offer link could install a keylogger. Stay vigilant with unexpected URLs from recruiters."
     },
     {
-      "title": "GLM 5.2 Is Out",
-      "url": "https://twitter.com/jietang/status/2065784751345287314",
+      "title": "Ask HN: Has anyone replaced Claude/GPT with a local model for daily coding?",
+      "url": "https://news.ycombinator.com/item?id=48542100",
       "source": "Hacker News",
-      "points": 749,
-      "whyItMatters": "GLM 5.2 arrives with notable reasoning improvements — key competitor in the open-weight space."
+      "points": 990,
+      "whyItMatters": "Community debating local LLMs for daily coding — directly relevant to Ben's Claude/Hermes setup and offline-first workflow."
     },
     {
-      "title": "Police officer investigated for using AI to 'create evidence' in multiple cases",
-      "url": "https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661",
+      "title": "Show HN: Kage – Shadow any website to a single binary for offline viewing",
+      "url": "https://github.com/tamnd/kage",
       "source": "Hacker News",
-      "points": 379,
-      "whyItMatters": "A UK officer faces investigation for using AI to fabricate evidence — highlights governance gaps."
+      "points": 686,
+      "whyItMatters": "Shadows websites into self-contained binaries for offline viewing. Useful for archiving docs and research."
     },
     {
-      "title": "KPMG pulls report on AI usage due to apparent hallucinations",
-      "url": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
+      "title": "Apple Foundation Models",
+      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models",
       "source": "Hacker News",
-      "points": 144,
-      "whyItMatters": "KPMG retracting an AI-assisted report underscores reliability concerns with auto-generated analysis."
+      "points": 473,
+      "whyItMatters": "Apple's new open foundation models could reshape the local AI model landscape for developers."
     },
     {
-      "title": "AI coding at home without going broke",
-      "url": "https://stephen.bochinski.dev/blog/2026/06/13/ai-coding-at-home-without-going-broke/",
+      "title": "Why Is Claude Turning into an a**Hole?",
+      "url": "https://bramcohen.com/p/why-is-claude-turning-into-an-asshole",
       "source": "Hacker News",
-      "points": 340,
-      "whyItMatters": "Practical guide to running AI coding tools on cheap local hardware without expensive API spend."
+      "points": 119,
+      "whyItMatters": "Interesting critique of Claude's tone shifts — relevant as a heavy user of Anthropic models for daily work."
     }
   ]
 }

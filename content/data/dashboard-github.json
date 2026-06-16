@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-06-15T10:02:32Z",
-  "weekStart": "2026-06-08",
+  "updatedAt": "2026-06-16T10:01:56Z",
+  "weekStart": "2026-06-09",
   "totals": {
-    "commits": 117,
-    "prs": 3,
+    "commits": 166,
+    "prs": 16,
     "repos": 0,
     "activeDays": 6
   },
