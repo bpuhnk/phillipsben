@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-22T10:03:17Z",
-  "focus": "Pushing through a busy week of dev work — 146 commits and 23 PRs across 8 active days, chipping away at projects that matter. No major releases this sprint, just steady progress across the board.",
+  "updatedAt": "2026-06-23T10:02:06Z",
+  "focus": "This week I'm keeping the home infrastructure humming — Mosquitto MQTT backbone, Hermes agent routines, and phillipsben.com staying sharp. Tending to personal projects like BudgetTracker and Workstation Toolbar on the side.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
