@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-23T10:02:06Z",
-  "focus": "This week I'm keeping the home infrastructure humming — Mosquitto MQTT backbone, Hermes agent routines, and phillipsben.com staying sharp. Tending to personal projects like BudgetTracker and Workstation Toolbar on the side.",
+  "updatedAt": "2026-06-24T10:01:16Z",
+  "focus": "This week I'm pushing Hermes-Agent forward — refining the tool-use pipeline and getting scheduled-cron jobs to work reliably end-to-end. I'm also iterating on phillipsben.com's dashboard tile system so it stays fresh with minimal manual overhead.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
