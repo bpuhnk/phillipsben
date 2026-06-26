@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-25T10:01:40Z",
-  "focus": "Keeping the home infrastructure stable and shipping incremental improvements across active projects — Hermes-Agent, BudgetTracker, and internal tooling all seeing steady week-over-week progress.",
+  "updatedAt": "2026-06-26T10:01:59Z",
+  "focus": "Still holding the line on Hermes-Agent and phillipsben.com — keeping the dashboard fresh, the MVP pipeline humming, and the home lab sane. Also wrangling ComfyUI and KoboldCPP for a better local AI setup when I need it.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
