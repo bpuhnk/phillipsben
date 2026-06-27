@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-26T10:01:59Z",
-  "focus": "Still holding the line on Hermes-Agent and phillipsben.com — keeping the dashboard fresh, the MVP pipeline humming, and the home lab sane. Also wrangling ComfyUI and KoboldCPP for a better local AI setup when I need it.",
+  "updatedAt": "2026-06-27T10:01:56Z",
+  "focus": "43 commits and 16 PRs this week but no individual repos surfaced in the feed — mostly maintenance grind on existing projects while waiting on Spotify to come back online.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
