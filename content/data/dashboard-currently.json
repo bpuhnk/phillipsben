@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-28T10:01:51Z",
-  "focus": "Spent the week pushing commits and PRs across active repos, keeping things moving forward. Focused on wrapping up current work and preparing for whatever comes next.",
+  "updatedAt": "2026-06-29T10:02:11Z",
+  "focus": "This week I'm keeping things stable — shipping bug fixes and iterating on Hermes-Agent, the phillipsben.com dashboard, and a few internal tooling improvements. Still working through Q2 priorities and prep'g for what's next.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
