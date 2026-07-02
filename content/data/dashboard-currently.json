@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-02T10:01:53Z",
-  "focus": "This week I'm wrapping up the Hermes agent integration on the home backend and keeping the phillipsben.com dashboard fresh. Still iterating on ComfyUI workflows and the home MQTT backbone — steady progress, no big announcements yet.",
+  "updatedAt": "2026-07-02T10:44:53Z",
+  "focus": "This week I'm keeping the local brain stack tuned — Switchboard running Qwen3.6-abliterated on the P100, 1660 handling summarizer duties — and maintaining reference configs for the K1 3D printer and SillyTavern multi-user setup across both boxes.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-06-16T10:01:56Z",
+  "updatedAt": "2026-07-02T10:44:53Z",
   "items": [
     {
-      "title": "A backdoor in a LinkedIn job offer",
-      "url": "https://roman.pt/posts/linkedin-backdoor/",
+      "title": "Claude Code is steganographically marking requests",
+      "url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
       "source": "Hacker News",
-      "points": 1172,
-      "whyItMatters": "Security lesson: a job offer link could install a keylogger. Stay vigilant with unexpected URLs from recruiters."
+      "points": 2387,
+      "whyItMatters": "Claude Code is embedding hidden stego-signatures in AI requests — raises tool-integrity and trust concerns"
     },
     {
-      "title": "Ask HN: Has anyone replaced Claude/GPT with a local model for daily coding?",
-      "url": "https://news.ycombinator.com/item?id=48542100",
+      "title": "Claude Sonnet 5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
       "source": "Hacker News",
-      "points": 990,
-      "whyItMatters": "Community debating local LLMs for daily coding — directly relevant to Ben's Claude/Hermes setup and offline-first workflow."
+      "points": 1244,
+      "whyItMatters": "Next-gen model launch from Anthropic; direct relevance to local LLM deployment choices and benchmarks"
     },
     {
-      "title": "Show HN: Kage – Shadow any website to a single binary for offline viewing",
-      "url": "https://github.com/tamnd/kage",
+      "title": "Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5",
+      "url": "https://twitter.com/AnthropicAI/status/2072106151890809341",
       "source": "Hacker News",
-      "points": 686,
-      "whyItMatters": "Shadows websites into self-contained binaries for offline viewing. Useful for archiving docs and research."
+      "points": 937,
+      "whyItMatters": "US govt lifts export controls on Fable 5 & Mythos 5 — changes competitive landscape for domestic AI access"
     },
     {
-      "title": "Apple Foundation Models",
-      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models",
+      "title": "Claude Science",
+      "url": "https://claude.com/product/claude-science",
       "source": "Hacker News",
-      "points": 473,
-      "whyItMatters": "Apple's new open foundation models could reshape the local AI model landscape for developers."
+      "points": 559,
+      "whyItMatters": "Anthropic launches a research-specialized Claude product — expands the AI-assisted science toolchain"
     },
     {
-      "title": "Why Is Claude Turning into an a**Hole?",
-      "url": "https://bramcohen.com/p/why-is-claude-turning-into-an-asshole",
+      "title": "Godot will no longer accept AI-authored code contributions",
+      "url": "https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/",
       "source": "Hacker News",
-      "points": 119,
-      "whyItMatters": "Interesting critique of Claude's tone shifts — relevant as a heavy user of Anthropic models for daily work."
+      "points": 542,
+      "whyItMatters": "Godot engine pivots away from AI-authored contributions — signals growing tension between AI-assisted dev and code trust"
     }
   ]
 }
