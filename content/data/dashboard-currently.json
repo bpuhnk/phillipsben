@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-01T10:01:19Z",
-  "focus": "Quiet week — no new repo activity or headline picks to call out. Keeping the dashboard lights on and monitoring what's next.",
+  "updatedAt": "2026-07-02T10:01:53Z",
+  "focus": "This week I'm wrapping up the Hermes agent integration on the home backend and keeping the phillipsben.com dashboard fresh. Still iterating on ComfyUI workflows and the home MQTT backbone — steady progress, no big announcements yet.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
