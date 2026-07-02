@@ -40,8 +40,10 @@ def search(query: str, since_ts: int) -> list[dict]:
         + urllib.parse.urlencode({
             "query": query,
             "tags": "story",
-            "numericFilters": f"points>{MIN_POINTS},created_at_i>{since_ts}",
-            "hitsPerPage": 30,
+            # Algolia's HN index stopped allowing `points` in numericFilters
+            # (HTTP 400 since ~2026-06-17); points are filtered locally in main().
+            "numericFilters": f"created_at_i>{since_ts}",
+            "hitsPerPage": 50,
         })
     )
     req = urllib.request.Request(url, headers={"User-Agent": "phillipsben-dashboard"})
@@ -61,6 +63,8 @@ def main() -> int:
         for h in hits:
             oid = str(h.get("objectID"))
             if oid in seen:
+                continue
+            if int(h.get("points") or 0) < MIN_POINTS:
                 continue
             title = (h.get("title") or "").strip()
             if not title:

@@ -64,6 +64,16 @@ prep)
     export GITHUB_TOKEN GITHUB_LOGIN
   fi
 
+  # Spotify gets the same absolute-path treatment: the gateway unit rewrite
+  # (2026-06-19) dropped its EnvironmentFile, so the agent env has no
+  # SPOTIFY_* vars. The .env's SPOTIFY_REFRESH_TOKEN is bootstrap-only —
+  # Spotify ROTATES refresh tokens, and the live one is in the token file.
+  if [ -z "${SPOTIFY_CLIENT_ID:-}" ] && [ -f "$HERMES_ENV_FILE" ]; then
+    SPOTIFY_CLIENT_ID="$(sed -n 's/^SPOTIFY_CLIENT_ID=//p' "$HERMES_ENV_FILE" | head -1)"
+    export SPOTIFY_CLIENT_ID
+  fi
+  export SPOTIFY_TOKEN_FILE="${SPOTIFY_TOKEN_FILE:-/home/administrator/.hermes/secrets/spotify_refresh_token}"
+
   echo "== fetch =="
   echo "github  fetch: $(fetch_to gh-raw   scripts/dashboard/fetch_github.py)"
   echo "news    fetch: $(fetch_to news-raw scripts/dashboard/fetch_news.py)"
@@ -71,8 +81,9 @@ prep)
 
   echo "== claude memory digest =="
   # Native layout post-migration (was /opt/data inside the old hermes container).
-  pop="$HOME/.hermes/snapshots/claude-memory/pop-os/projects"
-  h01="$HOME/.claude/projects"
+  # ABSOLUTE paths: the agent sandbox's $HOME is ~/.hermes/home, not /home/administrator.
+  pop="/home/administrator/.hermes/snapshots/claude-memory/pop-os/projects"
+  h01="/home/administrator/.claude/projects"
   : >"$STAGE/mem.txt"
   pop_n=0; h01_n=0
   if [ -d "$pop" ]; then
@@ -107,7 +118,7 @@ prep)
   # The Claude summary + highlights are written by gen-claude-summary.sh (a host
   # cron running Claude Code ~09:45) into this staging dir, NOT by this agent.
   # Copy today's file in if present; otherwise the tile keeps its published data.
-  CLAUDE_STAGE="${CLAUDE_STAGE:-$HOME/.hermes/dashboard/claude-staging}"
+  CLAUDE_STAGE="${CLAUDE_STAGE:-/home/administrator/.hermes/dashboard/claude-staging}"
   if [ -f "$CLAUDE_STAGE/claude.md" ] \
      && [ "$(date -u -r "$CLAUDE_STAGE/claude.md" +%Y-%m-%d)" = "$(date -u +%Y-%m-%d)" ]; then
     cp -f "$CLAUDE_STAGE/claude.md" "$STAGE/claude.md"
