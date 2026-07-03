@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-02T10:44:53Z",
-  "focus": "This week I'm keeping the local brain stack tuned — Switchboard running Qwen3.6-abliterated on the P100, 1660 handling summarizer duties — and maintaining reference configs for the K1 3D printer and SillyTavern multi-user setup across both boxes.",
+  "updatedAt": "2026-07-03T10:03:50Z",
+  "focus": "This week I'm tracking the rapid rise of AI coding assistants (Kimi K2.7 in Copilot, ZCode from GLM makers) and their impact on how we build. Legal shifts — Japan ruling AI can't hold patents — add another layer to navigating the space. Also watching Cloudflare's new x402 monetization gateway as a potential tool for service-based products, and the ongoing debate about LLM-generated code in dependencies shaping our build practices.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-07-02T10:44:53Z",
-  "summary": "I've been building a small proxy called Switchboard that sits in front of a single GPU and arbitrates who gets to use it. I've got a writing model, an image generator, and an embedding backend all wanting the same card, and only one fits in memory at a time — so the proxy locks, evicts whoever's resident, waits for VRAM to actually drop, then loads the next one. The fiddly part turned out to be idle backends that stay \"warm\": I was tearing them down and reloading them on every request even when nothing else needed the card, adding ten seconds to every turn for no reason. Skipping that when the right model was already loaded cut round-trip time from 16 seconds down to about 5.\n\nOn a personal app I've been running (a D&D session companion with a live combat tracker), I chased down a bug where editing a monster's initiative mid-fight, or killing one off, would silently hand the turn to the wrong creature. Turned out the tracker stored \"whose turn is it\" as a list position, not an identity — so re-sorting the initiative order after an edit shifted the pointer onto a different combatant. I reproduced it as three concrete scenarios (edit initiative, delete above the active creature, delete the last active one), switched the tracker to follow the creature by id instead of its position in the list, and verified all three cases on the live app afterward.\n\nOn BudgetTracker, my personal finance tracker, most of the recent work has been wiring it up so an AI agent can actually query it — a set of read-only endpoints scoped per account so the agent can only see what it's supposed to, with the actual math (totals, running rates) computed in SQL rather than trusted to the model. That's the backbone of a daily spending summary I get automatically: real numbers pulled deterministically from the database, with only the phrasing left to the model.\n\nOn the hardware side I've got a couple of small ESP32 projects going: a barbell rep counter that counts reps entirely on-device with no ML involved, and a couch presence sensor meant to auto-pause the TV when you get up. The presence sensor started as a camera-based approach, but vision turned out to be unreliable for that job, so I pivoted it to an mmWave radar sensor instead — better fit for detecting \"is a person sitting there\" than trying to classify it from an image.",
+  "updatedAt": "2026-07-03T10:03:50Z",
+  "summary": "I've been building a career assistant that lives on this site and only answers from what's actually published here — it can't invent projects I haven't written down. It routes across a couple of model providers, and if the one it's talking to gets slow or busy, it falls back cleanly instead of the answer degrading.\n\nBehind the scenes I run one shared GPU across everything that wants it — a chat model, an image generator, a couple of others — through a small proxy I call Switchboard. It queues requests and evicts whatever's resident so nothing collides. The more interesting piece was getting one of those models to serve two people at once instead of one after another: two simultaneous requests now finish in about the time a single one used to take, so I'm getting roughly double the throughput out of the same card without adding hardware.\n\nBudgetTracker, my personal finance tracker, is deployed and live. I recently gave my own AI assistant read-only access to it through a set of tools that do their math in SQL rather than trusting the model to add up numbers itself, with account access scoped per key so nothing leaks across accounts it shouldn't see.\n\nOn the hardware side I've got a barbell rep counter running on a small ESP32 board — no machine learning, just onboard logic and a live dashboard — and a couch presence sensor that pauses the TV when I get up. That one went through a pivot: the camera-based version turned out to be unreliable, so I swapped it for a radar sensor instead.",
   "highlights": [
     {
+      "repo": "site-assistant",
+      "oneLiner": "Career assistant answers only from published site content, routes across providers, falls back cleanly under load"
+    },
+    {
       "repo": "Switchboard",
-      "oneLiner": "GPU arbitration proxy for one P100 across model backends; fixed idle-reload adding 10s/turn"
+      "oneLiner": "Shared-GPU proxy now serves one model to two users at once, ~2x throughput on the same card"
     },
     {
       "repo": "BudgetTracker",
-      "oneLiner": "Wiring read-only, per-account scoped endpoints so an agent can query it; SQL does the math"
-    },
-    {
-      "repo": "Rep Counter",
-      "oneLiner": "ESP32 barbell rep counter, counts reps on-device with no ML"
+      "oneLiner": "Gave the personal AI assistant read-only, per-key-scoped access via SQL-side math tools"
     },
     {
       "repo": "Couch Presence Sensor",
-      "oneLiner": "Pivoted from camera to mmWave radar to detect someone sitting on the couch"
+      "oneLiner": "Pivoted from unreliable camera detection to a radar sensor for auto-pausing the TV"
     }
   ]
 }
