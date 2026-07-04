@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-03T10:03:50Z",
-  "focus": "This week I'm tracking the rapid rise of AI coding assistants (Kimi K2.7 in Copilot, ZCode from GLM makers) and their impact on how we build. Legal shifts — Japan ruling AI can't hold patents — add another layer to navigating the space. Also watching Cloudflare's new x402 monetization gateway as a potential tool for service-based products, and the ongoing debate about LLM-generated code in dependencies shaping our build practices.",
+  "updatedAt": "2026-07-04T10:04:22Z",
+  "focus": "This week I'm wrapping up the D&D companion video work (LiveKit is production-verified with multi-participant smoke tests done), pushing the Sweetpea native iOS app forward, and hardening the phillipsben.com site with local-AI tooling that respects the user's right to self-host. The Long Rest live character state remains stable in prod.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

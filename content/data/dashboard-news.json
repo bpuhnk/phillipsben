@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-03T10:03:50Z",
+  "updatedAt": "2026-07-04T10:04:22Z",
   "items": [
     {
-      "title": "Kimi K2.7 Code is generally available in GitHub Copilot",
-      "url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/",
+      "title": "Protect your right to run local AI",
+      "url": "https://righttointelligence.org/",
       "source": "Hacker News",
-      "points": 409,
-      "whyItMatters": "Kimi K2.7 hits Copilot — next-gen coding assistant reshapes the tools we use daily."
+      "points": 516,
+      "whyItMatters": "Push for legal right to run AI locally — directly aligns with Ben's local-first, self-hosted stack ethos."
+    },
+    {
+      "title": "Jamesob's guide to running SOTA LLMs locally",
+      "url": "https://github.com/jamesob/local-llm",
+      "source": "Hacker News",
+      "points": 345,
+      "whyItMatters": "Community guide to running top-tier LLMs on consumer hardware — practical play for the P100 setup."
     },
     {
       "title": "AI can't be listed as inventor on patent applications, Japan's top court rules",
       "url": "https://japannews.yomiuri.co.jp/science-nature/technology/20260306-314930/",
       "source": "Hacker News",
-      "points": 377,
-      "whyItMatters": "Top court rules AI can't patent — a legal precedent affecting AI tool builders worldwide."
+      "points": 394,
+      "whyItMatters": "Japan's top court says AI can't hold patents — shifts the IP landscape for generative-AI output."
     },
     {
-      "title": "Monetization Gateway: Charge for any resource behind Cloudflare via x402",
-      "url": "https://blog.cloudflare.com/monetization-gateway/",
+      "title": "Alibaba to ban Claude Code in workplace over alleged backdoor risks, source says",
+      "url": "https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/",
       "source": "Hacker News",
-      "points": 344,
-      "whyItMatters": "Cloudflare charges for any resource via x402 — new monetization path for API devs."
+      "points": 328,
+      "whyItMatters": "Major company restricts Claude Code over security fears — signals growing enterprise pushback on agentic AI."
     },
     {
-      "title": "ZCode: Claude Code from the Makers of GLM",
-      "url": "https://zcode.z.ai/cn",
+      "title": "Please stop the AI confidence theater",
+      "url": "https://www.elenaverna.com/p/please-stop-the-ai-confidence-theater",
       "source": "Hacker News",
-      "points": 276,
-      "whyItMatters": "ZCode from the GLM makers brings a new AI coding agent into the competitive landscape."
-    },
-    {
-      "title": "No LLM Code in Dependencies",
-      "url": "https://joeyh.name/blog/entry/no_LLM_code_in_dependencies/",
-      "source": "Hacker News",
-      "points": 117,
-      "whyItMatters": "Warning against LLM-generated code in deps — directly relevant to build tooling hygiene."
+      "points": 230,
+      "whyItMatters": "Critique of inflated AI claims resonates with the local-AI community tired of marketing over substance."
     }
   ]
 }
