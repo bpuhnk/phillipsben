@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-07-04T10:01:03Z",
+  "updatedAt": "2026-07-05T10:00:32Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Precious",
-      "artist": "The Big Push, Ren",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485109fd7861fdd46452d8ced941",
-      "url": "https://open.spotify.com/track/1uacV5MJFgTgUA5enkHFHv",
-      "playedAt": "2026-07-03T15:09:48.466Z"
+      "track": "Hai Yorokonde",
+      "artist": "Kocchi no Kento",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048514437b6a88739b0935c554307",
+      "url": "https://open.spotify.com/track/6woV8uWxn7rcLZxJKYruS1",
+      "playedAt": "2026-07-05T01:50:00.602Z"
     },
     {
-      "track": "Vincent's Tale - Starry Night - Act I",
-      "artist": "Ren",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048514d4e2eb15751307d223650d7",
-      "url": "https://open.spotify.com/track/5EqVsl9c13YQjuB0giqLo8",
-      "playedAt": "2026-07-03T13:28:43.738Z"
+      "track": "Shadow",
+      "artist": "Livingston",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048519e29fcb2a0b61b2b11bf7332",
+      "url": "https://open.spotify.com/track/4xTgbiXPiMy4u4veI4j9tk",
+      "playedAt": "2026-07-05T01:47:27.080Z"
     },
     {
-      "track": "アイドル",
-      "artist": "YOASOBI",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851f3527c2e1ffc2e99bb6a072e",
-      "url": "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1",
-      "playedAt": "2026-07-03T13:26:34.712Z"
+      "track": "The Good Times",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485160dd5ad96e5ff53860c3101b",
+      "url": "https://open.spotify.com/track/0mHFWWwvg8g4mPtNGy8WYE",
+      "playedAt": "2026-07-05T01:19:30.880Z"
     },
     {
-      "track": "Fight Back",
-      "artist": "NEFFEX",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851282f526aa6a8ecdf1422b5f5",
-      "url": "https://open.spotify.com/track/6dWWOi8PvMJPOl60TwQxKP",
-      "playedAt": "2026-07-03T13:22:25.805Z"
+      "track": "GOSSIP (feat. Tom Morello)",
+      "artist": "Måneskin, Tom Morello",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485146e72dff16a10e1b5062fdf7",
+      "url": "https://open.spotify.com/track/44Xyja7xYPlVC6v2CeweSi",
+      "playedAt": "2026-07-05T01:17:25.990Z"
     },
     {
-      "track": "Ophelia",
-      "artist": "Matt Schuster",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851a47141f2835fce7574c70045",
-      "url": "https://open.spotify.com/track/7H7dECFXGV7I0fB2UGfpen",
-      "playedAt": "2026-07-03T13:19:41.223Z"
+      "track": "Toxic",
+      "artist": "BoyWithUke",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851ee07023115f822012390d2a0",
+      "url": "https://open.spotify.com/track/3M214U0mwSm041GsQR3nrO",
+      "playedAt": "2026-07-05T01:14:41.766Z"
     }
   ]
 }

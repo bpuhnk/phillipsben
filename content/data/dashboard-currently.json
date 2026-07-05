@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-04T10:04:22Z",
-  "focus": "This week I'm wrapping up the D&D companion video work (LiveKit is production-verified with multi-participant smoke tests done), pushing the Sweetpea native iOS app forward, and hardening the phillipsben.com site with local-AI tooling that respects the user's right to self-host. The Long Rest live character state remains stable in prod.",
+  "updatedAt": "2026-07-05T10:03:29Z",
+  "focus": "This week I wrapped up the Claude Code session leakage investigation and reviewed local LLM performance guides — both directly relevant to keeping our automation stack reliable. Ongoing priorities include finalizing BlueBubbles setup on the Mac for iMessage bridging, and closing out P3 telemetry in Sweetpea grounding so we can move forward with the native app build.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
