@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-05T10:03:29Z",
+  "updatedAt": "2026-07-06T10:06:43Z",
   "items": [
     {
-      "title": "The bottleneck might be the air in the room",
-      "url": "https://blog.mikebowler.ca/2026/07/03/co2-and-decision-making/",
+      "title": "GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance",
+      "url": "https://github.com/openai/codex/issues/30364",
       "source": "Hacker News",
-      "points": 783,
-      "whyItMatters": "CO2 levels directly impair decision-making — a hidden factor in long coding sessions and system design reviews"
-    },
-    {
-      "title": "Jamesob's guide to running SOTA LLMs locally",
-      "url": "https://github.com/jamesob/local-llm",
-      "source": "Hacker News",
-      "points": 398,
-      "whyItMatters": "Community guide for running state-of-the-art models locally, relevant to any P100 GPU setup"
-    },
-    {
-      "title": "Performance per dollar is getting faster and cheaper",
-      "url": "https://www.wafer.ai/blog/glm52-amd",
-      "source": "Hacker News",
-      "points": 350,
-      "whyItMatters": "Performance-per-dollar keeps improving — useful context for any future hardware planning discussions"
+      "points": 364,
+      "whyItMatters": "Reasoning-token clustering may be silently degrading model performance — worth tracking if you use Codex's reasoning features."
     },
     {
       "title": "Potential session/cache leakage between workspace instances or consumer accounts",
       "url": "https://github.com/anthropics/claude-code/issues/74066",
       "source": "Hacker News",
-      "points": 298,
-      "whyItMatters": "Session leakage between workspaces affects the Claude Code runner used in daily automation workflows"
+      "points": 313,
+      "whyItMatters": "Session/cache leakage between workspace instances is a real sandboxing concern for multi-session tool-use environments."
     },
     {
-      "title": "GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance",
-      "url": "https://github.com/openai/codex/issues/30364",
+      "title": "GPT-5.6 Sol Ultra will be in Codex",
+      "url": "https://twitter.com/thsottiaux/status/2073933490513752151",
       "source": "Hacker News",
-      "points": 273,
-      "whyItMatters": "Reasoning-token clustering degrading GPT-5.5 Codex — a quality signal for the models we compare against"
+      "points": 288,
+      "whyItMatters": "GPT-5.6 Sol Ultra incoming in Codex — tracks the model race that affects agent backends everywhere."
+    },
+    {
+      "title": "Claude Design System Prompt",
+      "url": "https://github.com/Trystan-SA/claude-design-system-prompt",
+      "source": "Hacker News",
+      "points": 120,
+      "whyItMatters": "Structured design-system prompt for Claude — practical approach to encoding component specs without hallucinated markup."
+    },
+    {
+      "title": "New AI tutor achieves 0.71-1.30 SD effect size in Dartmouth course [pdf]",
+      "url": "https://intextbooks.science.uu.nl/workshop2026/files/itb26_s1s2.pdf",
+      "source": "Hacker News",
+      "points": 165,
+      "whyItMatters": "Real-world AI tutor eval with 0.71-1.30 SD effect size — one of the cleaner benchmark designs I've seen for adaptive learning."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-05T10:03:29Z",
-  "focus": "This week I wrapped up the Claude Code session leakage investigation and reviewed local LLM performance guides — both directly relevant to keeping our automation stack reliable. Ongoing priorities include finalizing BlueBubbles setup on the Mac for iMessage bridging, and closing out P3 telemetry in Sweetpea grounding so we can move forward with the native app build.",
+  "updatedAt": "2026-07-06T10:06:43Z",
+  "focus": "Shipping M3 of the character forge (drawers, scenario builder, audit system) — v0.3.0 built and pushed, deploy pending. Keeping Claude memory synced so each new session starts with context instead of re-learning everything from scratch.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

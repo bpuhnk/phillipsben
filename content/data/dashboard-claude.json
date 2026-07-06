@@ -1,22 +1,18 @@
 {
-  "updatedAt": "2026-07-05T10:03:29Z",
-  "summary": "I've been running a home server stack with a personal AI agent (Hermes-Agent), and most of the interesting work lately has been in the plumbing that keeps everything else from stepping on each other. I've got one GPU serving six different jobs — image generation, a couple of chat models, a roleplay backend — so I wrote Switchboard, a proxy that evicts whichever backend is idle, waits for the card to actually free up, then loads whoever's next in line. The harder problem was getting two people talking to the same model at once instead of queueing behind each other: I swapped in a server that does continuous batching and ran it head to head against the old setup — two simultaneous requests finished in roughly the time one used to take alone, instead of one waiting on the other to clear.\n\nOn BudgetTracker, a finance tracker I run for myself, I built a set of read-only tools that let the agent answer questions like \"how's my cash flow this week\" straight from the database instead of guessing off chat history. The daily spending summary pulls yesterday's totals and a two-week run rate as exact numbers from SQL first, then hands only the wording to the model — the agent narrates, it doesn't do the arithmetic. That split surfaced a few real date-handling bugs in the queries that would have quietly produced wrong numbers if I'd let the model compute them itself.\n\nI've also been tinkering on the hardware side. A couch-presence sensor — pause the TV automatically when someone leaves the room — started as a camera doing computer vision, which turned out to be unreliable in practice (lighting, angles, false triggers), so I swapped it for an mmWave radar sensor that just measures motion and distance directly instead of trying to interpret an image. The camera didn't go to waste — it's now repurposed into a barbell rep counter that counts reps on-device with no machine learning involved at all.\n\nSmaller thing worth mentioning: the \"recent work\" tile on this dashboard is itself produced by a scheduled Claude run that reads my own notes and writes a summary like this one — a small closed loop I set up mostly because it was a convenient way to keep the site honest about what I actually did that week.",
+  "updatedAt": "2026-07-06T10:06:43Z",
+  "summary": "I'll write the dashboard summary now based on the notes, staying within the allowlist and redaction rules.\n\nI've been building out a character-forge tool for SillyTavern — a builder that interviews you about a character, drafts a card, then lints and creates it live. The milestone worth mentioning is the second one: forging from an existing character with a soul-check gate on updates, so an append-only edit skips the check but anything structural gets flagged before it overwrites 42 tests worth of behavior I'd already locked in. Getting the model to reliably ask its interview questions turned out to be its own small project — some of the roleplay-tuned models drop the formatting marker my parser expected, so the parser now falls back to a looser rule rather than silently losing an answer.\n\nMost of the plumbing underneath is Switchboard, a small proxy that lets one GPU serve several different jobs — chat, image generation, a couple of local models — without them stepping on each other. The part I keep having to revisit is eviction: swapping a 15GB model off the card and back on costs real time, so a chunk of the recent work has been about avoiding that swap rather than making it faster — keeping the right things warm, restoring saved state instead of reloading from scratch.\n\nOn BudgetTracker I shipped the read side of a small API surface so it can answer questions about spending directly rather than needing someone to open the app and eyeball totals. The finicky part was date handling in the database layer — a couple of latent bugs where a date was being passed around as a raw string instead of a real date type, which is the kind of thing that works fine until the one query that needs to do math on it.\n\nI've also been tightening up the tool-search side of an agent framework I run day to day — instead of handing a model every tool it might ever need, it now gets a slimmed menu, and only fetches the rest by name when it actually decides it wants them. The main tuning problem is where to draw the \"always visible\" line; too narrow and the model tries to call an invisible tool directly and fails, too wide and you're back to the bloat you were trying to remove.",
   "highlights": [
     {
       "repo": "Switchboard",
-      "oneLiner": "Added continuous batching so two concurrent requests finish in the time one used to take"
+      "oneLiner": "Single-GPU proxy for chat/image/local models; current focus is avoiding costly model eviction/reload"
     },
     {
       "repo": "BudgetTracker",
-      "oneLiner": "Read-only agent tools pull cash-flow/spending numbers from SQL instead of guessing"
+      "oneLiner": "Shipped a read-only API surface for spending queries; fixed latent date-as-string bugs in the DB layer"
     },
     {
-      "repo": "Couch Presence Sensor",
-      "oneLiner": "Swapped unreliable camera-based presence detection for mmWave radar"
-    },
-    {
-      "repo": "Rep Counter",
-      "oneLiner": "Repurposed the old presence camera into an on-device barbell rep counter, no ML"
+      "repo": "Hermes-Agent",
+      "oneLiner": "Tuning progressive tool disclosure so the model only fetches extra tools it decides it needs"
     }
   ]
 }
