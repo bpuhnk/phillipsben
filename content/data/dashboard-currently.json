@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-06T10:06:43Z",
-  "focus": "Shipping M3 of the character forge (drawers, scenario builder, audit system) — v0.3.0 built and pushed, deploy pending. Keeping Claude memory synced so each new session starts with context instead of re-learning everything from scratch.",
+  "updatedAt": "2026-07-07T10:03:49Z",
+  "focus": "Wrapping up M4 (art, FaceID) and closing out M5 persona-forge — v0.7.2 is in and the interview flow should be clean now. No commits landed this week so I'm riding the momentum from last few days' smoke tests.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

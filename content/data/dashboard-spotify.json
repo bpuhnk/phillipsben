@@ -1,46 +1,41 @@
 {
-  "updatedAt": "2026-07-06T10:01:17Z",
-  "nowPlaying": {
-    "track": "Blood (Alucard Rap)",
-    "artist": "Rustage, TOPHAMHAT-KYO",
-    "albumArt": "https://i.scdn.co/image/ab67616d000048517458266080dbe2b8aadb05e1",
-    "url": "https://open.spotify.com/track/2deb24yUrqgOVwGJjaIaYp"
-  },
+  "updatedAt": "2026-07-07T10:01:06Z",
+  "nowPlaying": null,
   "recent": [
     {
-      "track": "A Little Piece of Heaven",
-      "artist": "Avenged Sevenfold",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485133c52ca8309741c6999ca742",
-      "url": "https://open.spotify.com/track/1BLfQ6dPXmuDrFmbdfW7Jl",
-      "playedAt": "2026-07-06T09:46:16.579Z"
+      "track": "Love Someone",
+      "artist": "Lukas Graham",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485145100f4cdb2a88ecf80f270f",
+      "url": "https://open.spotify.com/track/0OCRwXbQRdOZ1OtB4Imsp1",
+      "playedAt": "2026-07-07T00:14:48.651Z"
     },
     {
-      "track": "Can't Hold Us (feat. Ray Dalton)",
-      "artist": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485198a02fef3a8b1d80a0f164ec",
-      "url": "https://open.spotify.com/track/3bidbhpOYeV4knp8AIu8Xn",
-      "playedAt": "2026-07-06T09:38:50.797Z"
+      "track": "Sweet Dreams (Are Made of This) - 2005 Remaster",
+      "artist": "Eurythmics, Annie Lennox, Dave Stewart",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b3994c94dfb241923664bb4d",
+      "url": "https://open.spotify.com/track/1TfqLAPs4K3s2rJMoCokcS",
+      "playedAt": "2026-07-07T00:11:22.759Z"
     },
     {
-      "track": "Fight Back",
-      "artist": "NEFFEX",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851282f526aa6a8ecdf1422b5f5",
-      "url": "https://open.spotify.com/track/6dWWOi8PvMJPOl60TwQxKP",
-      "playedAt": "2026-07-06T09:34:40.938Z"
+      "track": "Lucky",
+      "artist": "Jason Mraz, Colbie Caillat",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851125b1a330b6f6100ab19dbed",
+      "url": "https://open.spotify.com/track/0IktbUcnAGrvD03AWnz3Q8",
+      "playedAt": "2026-07-07T00:07:45.373Z"
     },
     {
-      "track": "Virtual Insanity - Remastered 2006",
-      "artist": "Jamiroquai",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485143a58a3269fa18d1e4f8b5ca",
-      "url": "https://open.spotify.com/track/4UQDZlZhGUDoYMohwrY28v",
-      "playedAt": "2026-07-06T09:31:47.398Z"
+      "track": "City of Angels",
+      "artist": "Em Beihold",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515b79184118d97eb823f7060e",
+      "url": "https://open.spotify.com/track/3u2e0jBFHbDT9yPA6vMK1v",
+      "playedAt": "2026-07-06T23:56:31.986Z"
     },
     {
-      "track": "Babydoll",
-      "artist": "Dominic Fike",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048517b1b6f41c1645af9757d5616",
-      "url": "https://open.spotify.com/track/7yNf9YjeO5JXUE3JEBgnYc",
-      "playedAt": "2026-07-06T09:28:07.900Z"
+      "track": "I Wanna Be Like You - The Monkey Song",
+      "artist": "Sid Bader",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485119a0fe11e55b906f420c279e",
+      "url": "https://open.spotify.com/track/2fB7LYyu9IiHXvKYivey8q",
+      "playedAt": "2026-07-06T23:53:17.229Z"
     }
   ]
 }

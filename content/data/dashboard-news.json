@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-06T10:06:43Z",
+  "updatedAt": "2026-07-07T10:03:49Z",
   "items": [
     {
-      "title": "GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance",
-      "url": "https://github.com/openai/codex/issues/30364",
+      "title": "GLM 5.2 and the coming AI margin collapse",
+      "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
       "source": "Hacker News",
-      "points": 364,
-      "whyItMatters": "Reasoning-token clustering may be silently degrading model performance — worth tracking if you use Codex's reasoning features."
+      "points": 421,
+      "whyItMatters": "Sharp take on how frontier model pricing is collapsing — the economics of running GLM-5.2 and what it means for margins across the industry."
     },
     {
-      "title": "Potential session/cache leakage between workspace instances or consumer accounts",
-      "url": "https://github.com/anthropics/claude-code/issues/74066",
+      "title": "A global workspace in language models",
+      "url": "https://www.anthropic.com/research/global-workspace",
       "source": "Hacker News",
-      "points": 313,
-      "whyItMatters": "Session/cache leakage between workspace instances is a real sandboxing concern for multi-session tool-use environments."
+      "points": 374,
+      "whyItMatters": "Anthropic's research on a global workspace architecture for LMs — concrete ideas about routing, attention, and memory that go beyond current scaling approaches."
     },
     {
-      "title": "GPT-5.6 Sol Ultra will be in Codex",
-      "url": "https://twitter.com/thsottiaux/status/2073933490513752151",
+      "title": "AMD Ryzen AI Halo – $4k AI Dev Kit",
+      "url": "https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo",
       "source": "Hacker News",
-      "points": 288,
-      "whyItMatters": "GPT-5.6 Sol Ultra incoming in Codex — tracks the model race that affects agent backends everywhere."
-    },
-    {
-      "title": "Claude Design System Prompt",
-      "url": "https://github.com/Trystan-SA/claude-design-system-prompt",
-      "source": "Hacker News",
-      "points": 120,
-      "whyItMatters": "Structured design-system prompt for Claude — practical approach to encoding component specs without hallucinated markup."
+      "points": 333,
+      "whyItMatters": "$4k AMD Ryzen AI Halo dev kit — a self-contained AI workstation that could make local inference accessible to independent developers."
     },
     {
       "title": "New AI tutor achieves 0.71-1.30 SD effect size in Dartmouth course [pdf]",
       "url": "https://intextbooks.science.uu.nl/workshop2026/files/itb26_s1s2.pdf",
       "source": "Hacker News",
-      "points": 165,
-      "whyItMatters": "Real-world AI tutor eval with 0.71-1.30 SD effect size — one of the cleaner benchmark designs I've seen for adaptive learning."
+      "points": 176,
+      "whyItMatters": "Real-world eval: an AI tutor achieving 0.71-1.30 SD effect size in a real Dartmouth course — measured, peer-reviewed student outcomes, not synthetic benchmarks."
+    },
+    {
+      "title": "OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "source": "Hacker News",
+      "points": 182,
+      "whyItMatters": "A CLI tool for AI agents to read and edit Microsoft Office files — practical infrastructure for agentic workflows that need structured document handling."
     }
   ]
 }
