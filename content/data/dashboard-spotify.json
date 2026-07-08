@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-07-07T10:01:06Z",
+  "updatedAt": "2026-07-08T10:00:54Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Love Someone",
-      "artist": "Lukas Graham",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485145100f4cdb2a88ecf80f270f",
-      "url": "https://open.spotify.com/track/0OCRwXbQRdOZ1OtB4Imsp1",
-      "playedAt": "2026-07-07T00:14:48.651Z"
-    },
-    {
-      "track": "Sweet Dreams (Are Made of This) - 2005 Remaster",
-      "artist": "Eurythmics, Annie Lennox, Dave Stewart",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851b3994c94dfb241923664bb4d",
-      "url": "https://open.spotify.com/track/1TfqLAPs4K3s2rJMoCokcS",
-      "playedAt": "2026-07-07T00:11:22.759Z"
-    },
-    {
-      "track": "Lucky",
-      "artist": "Jason Mraz, Colbie Caillat",
+      "track": "I'm Yours",
+      "artist": "Jason Mraz",
       "albumArt": "https://i.scdn.co/image/ab67616d00004851125b1a330b6f6100ab19dbed",
-      "url": "https://open.spotify.com/track/0IktbUcnAGrvD03AWnz3Q8",
-      "playedAt": "2026-07-07T00:07:45.373Z"
+      "url": "https://open.spotify.com/track/1EzrEOXmMH3G43AXT1y7pA",
+      "playedAt": "2026-07-07T23:09:09.074Z"
     },
     {
-      "track": "City of Angels",
-      "artist": "Em Beihold",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048515b79184118d97eb823f7060e",
-      "url": "https://open.spotify.com/track/3u2e0jBFHbDT9yPA6vMK1v",
-      "playedAt": "2026-07-06T23:56:31.986Z"
+      "track": "God's Gonna Cut You Down",
+      "artist": "Johnny Cash",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485190c9072fbd484299e0f624ca",
+      "url": "https://open.spotify.com/track/6jXPZid0KLorvgIDP6TiSo",
+      "playedAt": "2026-07-07T23:05:23.144Z"
     },
     {
-      "track": "I Wanna Be Like You - The Monkey Song",
-      "artist": "Sid Bader",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485119a0fe11e55b906f420c279e",
-      "url": "https://open.spotify.com/track/2fB7LYyu9IiHXvKYivey8q",
-      "playedAt": "2026-07-06T23:53:17.229Z"
+      "track": "I'm Shipping Up To Boston",
+      "artist": "Dropkick Murphys",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851030915ffa58125ae36f13a6f",
+      "url": "https://open.spotify.com/track/7rSERmjAT38lC5QhJ8hnQc",
+      "playedAt": "2026-07-07T23:02:52.041Z"
+    },
+    {
+      "track": "The Hell Song",
+      "artist": "Sum 41",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515f897ffe64efe64404d7a8a6",
+      "url": "https://open.spotify.com/track/17XgxMFNzBYv38TEJRC18D",
+      "playedAt": "2026-07-07T23:00:31.140Z"
+    },
+    {
+      "track": "Driftwood: A Fairy Tale",
+      "artist": "Cursive",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515071b2999bfac735febd75ca",
+      "url": "https://open.spotify.com/track/2ZhtbOrNfwJNR1K5Vinn7w",
+      "playedAt": "2026-07-07T22:57:23.586Z"
     }
   ]
 }
