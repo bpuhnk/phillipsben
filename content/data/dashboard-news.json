@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-08T10:03:52Z",
+  "updatedAt": "2026-07-09T10:04:18Z",
   "items": [
-    {
-      "title": "A global workspace in language models",
-      "url": "https://www.anthropic.com/research/global-workspace",
-      "source": "Hacker News",
-      "points": 450,
-      "whyItMatters": "Anthropic formalizes global workspace theory for LMs — architectural patterns for routing, collaboration and bottleneck detection that apply beyond the paper."
-    },
-    {
-      "title": "GLM 5.2 and the coming AI margin collapse",
-      "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
-      "source": "Hacker News",
-      "points": 670,
-      "whyItMatters": "Clear-eyed look at pricing pressure from frontier models — forces hard choices about build-vs-buy for in-house model infrastructure."
-    },
-    {
-      "title": "Small AI Models Gain Traction In places with unreliable networks",
-      "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-      "source": "Hacker News",
-      "points": 268,
-      "whyItMatters": "Small models outperforming larger ones in constrained environments — relevant for edge deployments and offline-first apps."
-    },
-    {
-      "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
-      "url": "https://github.com/rowboatlabs/rowboat",
-      "source": "Hacker News",
-      "points": 161,
-      "whyItMatters": "Local-first open-source Claude Desktop alternative. Worth watching if you want to keep AI tooling on your own hardware."
-    },
     {
       "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
       "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
       "source": "Hacker News",
-      "points": 180,
-      "whyItMatters": "GitHub Copilot leaked private repos via prompt injection — a real security gap in how AI agents access code bases."
+      "points": 521,
+      "whyItMatters": "Private repos bled through GitHub Copilot's agent sandbox — a concrete attack surface for AI-assisted dev workflows."
+    },
+    {
+      "title": "GPT‑Live",
+      "url": "https://openai.com/index/introducing-gpt-live/",
+      "source": "Hacker News",
+      "points": 706,
+      "whyItMatters": "OpenAI ships a streaming voice model for real-time conversation — relevant to any agent that needs natural latency-less dialogue."
+    },
+    {
+      "title": "SWE-1.7 Reach Near GPT 5.5 and Opus Intelligence",
+      "url": "https://cognition.com/blog/swe-1-7",
+      "source": "Hacker News",
+      "points": 263,
+      "whyItMatters": "Cognition's SWE-1.7 nears GPT-5.5 / Opus on coding benchmarks — the agent-dev-toolbar arms race keeps accelerating."
+    },
+    {
+      "title": "Separating signal from noise in coding evaluations",
+      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
+      "source": "Hacker News",
+      "points": 216,
+      "whyItMatters": "A rigorous eval methodology using real PR merge rates instead of synthetic benchmarks — what coding agents actually need."
+    },
+    {
+      "title": "We charge $10k a week to delete AI-generated code",
+      "url": "https://odra.dev/slopfix/",
+      "source": "Hacker News",
+      "points": 297,
+      "whyItMatters": "A shop charges $10k/week to clean up AI-generated code that would break in production — the hidden cost of model-assisted dev is real."
     }
   ]
 }
