@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-09T10:04:18Z",
+  "updatedAt": "2026-07-10T10:03:26Z",
   "items": [
     {
-      "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
-      "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+      "title": "GPT-5.6",
+      "url": "https://openai.com/index/gpt-5-6/",
       "source": "Hacker News",
-      "points": 521,
-      "whyItMatters": "Private repos bled through GitHub Copilot's agent sandbox — a concrete attack surface for AI-assisted dev workflows."
+      "points": 1277,
+      "whyItMatters": "GPT-5.6 drops alongside GPT-Live and ChatGPT Work — a big week for the platform you use daily."
     },
     {
       "title": "GPT‑Live",
       "url": "https://openai.com/index/introducing-gpt-live/",
       "source": "Hacker News",
-      "points": 706,
-      "whyItMatters": "OpenAI ships a streaming voice model for real-time conversation — relevant to any agent that needs natural latency-less dialogue."
+      "points": 745,
+      "whyItMatters": "Real-time voice streaming from GPT: could reshape agent-based TTS workflows like yours."
     },
     {
-      "title": "SWE-1.7 Reach Near GPT 5.5 and Opus Intelligence",
-      "url": "https://cognition.com/blog/swe-1-7",
+      "title": "John Deere owners will get the right to repair equipment under FTC settlement",
+      "url": "https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02",
       "source": "Hacker News",
-      "points": 263,
-      "whyItMatters": "Cognition's SWE-1.7 nears GPT-5.5 / Opus on coding benchmarks — the agent-dev-toolbar arms race keeps accelerating."
+      "points": 1322,
+      "whyItMatters": "FTC right-to-repair win for John Deere owners — practical impact on DIY tinkering culture."
     },
     {
-      "title": "Separating signal from noise in coding evaluations",
-      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
+      "title": "Why developers are ditching GitHub for Codeberg and self-hosting alternatives",
+      "url": "https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives/",
       "source": "Hacker News",
-      "points": 216,
-      "whyItMatters": "A rigorous eval methodology using real PR merge rates instead of synthetic benchmarks — what coding agents actually need."
+      "points": 354,
+      "whyItMatters": "Growing self-hosting wave mirrors your own infra — Codeberg as GitHub alternative."
     },
     {
-      "title": "We charge $10k a week to delete AI-generated code",
-      "url": "https://odra.dev/slopfix/",
+      "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
+      "url": "https://microsoft.github.io/flint-chart/#/",
       "source": "Hacker News",
-      "points": 297,
-      "whyItMatters": "A shop charges $10k/week to clean up AI-generated code that would break in production — the hidden cost of model-assisted dev is real."
+      "points": 342,
+      "whyItMatters": "Microsoft's new visualization language for AI agents — relevant to agent tooling and observability."
     }
   ]
 }

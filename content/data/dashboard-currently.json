@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-09T10:04:18Z",
-  "focus": "Smoking v0.4.0 art bridge + closing M4 with FaceID, then landing persona-forge v0.7.2 (the Q10 textarea freeze fix) and getting the upstream lore-constant flip baked into the forge-web image so new cards ship cache-friendly from the start.",
+  "updatedAt": "2026-07-10T10:03:26Z",
+  "focus": "Big AI week ahead with GPT-5.6, GPT-Live, and ChatGPT Work all landing in the same window — I'm watching to see what shifts in the agent-tooling landscape before committing to any new builds. Meanwhile, my immediate focus stays on character-forge project management: closing out M4 FaceID tests, wrapping up the remaining v0.4.x smoke items, and planning M5 layer merges once the stable releases ship.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
