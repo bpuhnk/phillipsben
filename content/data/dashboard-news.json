@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-10T10:03:26Z",
+  "updatedAt": "2026-07-11T10:04:13Z",
   "items": [
     {
       "title": "GPT-5.6",
       "url": "https://openai.com/index/gpt-5-6/",
       "source": "Hacker News",
-      "points": 1277,
-      "whyItMatters": "GPT-5.6 drops alongside GPT-Live and ChatGPT Work — a big week for the platform you use daily."
+      "points": 1524,
+      "whyItMatters": "GPT-5.6 lands with significant architecture shifts — worth tracking for its reasoning capabilities and the prompt interface it exposes."
     },
     {
-      "title": "GPT‑Live",
-      "url": "https://openai.com/index/introducing-gpt-live/",
+      "title": "AI-generated videos to maximally drive a target brain region",
+      "url": "https://nevo-project.epfl.ch/",
       "source": "Hacker News",
-      "points": 745,
-      "whyItMatters": "Real-time voice streaming from GPT: could reshape agent-based TTS workflows like yours."
+      "points": 278,
+      "whyItMatters": "EPFL's NEVO project generates AI videos to steer target brain regions — practical neurofeedback loop using generative models rather than just analysis."
     },
     {
-      "title": "John Deere owners will get the right to repair equipment under FTC settlement",
-      "url": "https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02",
+      "title": "GPT-5.6, Grok 4.5, Claude, and Muse Spark build the same 4 apps",
+      "url": "https://www.tryai.dev/blog/gpt-5.6-build-off-12-models",
       "source": "Hacker News",
-      "points": 1322,
-      "whyItMatters": "FTC right-to-repair win for John Deere owners — practical impact on DIY tinkering culture."
+      "points": 145,
+      "whyItMatters": "GPT-5.6, Grok 4.5, Claude and Muse converge on the same four apps — reveals how frontier models are normalizing around identical capability boundaries."
     },
     {
-      "title": "Why developers are ditching GitHub for Codeberg and self-hosting alternatives",
-      "url": "https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives/",
+      "title": "AI 2040: Plan A",
+      "url": "https://ai-2040.com/",
       "source": "Hacker News",
-      "points": 354,
-      "whyItMatters": "Growing self-hosting wave mirrors your own infra — Codeberg as GitHub alternative."
+      "points": 265,
+      "whyItMatters": "OpenAI's 'Plan A' for AI alignment research is a long-horizon strategy doc — maps how they're reorganizing from benchmark-driven to safety-first."
     },
     {
-      "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
-      "url": "https://microsoft.github.io/flint-chart/#/",
+      "title": "GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]",
+      "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
       "source": "Hacker News",
-      "points": 342,
-      "whyItMatters": "Microsoft's new visualization language for AI agents — relevant to agent tooling and observability."
+      "points": 453,
+      "whyItMatters": "GPT-5.6 Sol Ultra claims to have produced a proof of the Cycle Double Cover Conjecture — if real, that's a major formal-reasoning milestone."
     }
   ]
 }
