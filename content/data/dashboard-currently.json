@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-11T10:04:13Z",
-  "focus": "Shipping the dashboard itself — zero commits this week, so everything's quiet on the repo front. The SillyTavern character forge is deep in M5 (persona workflows A/B/C all built), and I've been tracking the triangular Liminal VTT sync workflow. Also still wrestling with that P100 prefix-cache busting from lore injection.",
+  "updatedAt": "2026-07-12T10:05:26Z",
+  "focus": "Closing out M4 (art) with FaceID and live smoke, wrapping M5C personas. Pushing character-forge v0.7.2 quick-interview fix to the main branch. On the ST/RP side, maintaining the P100 prefill cache discipline — constant lore, pinned examples, batched memoryBooks — keeping turns at ~20s.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

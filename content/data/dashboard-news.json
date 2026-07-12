@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-07-11T10:04:13Z",
+  "updatedAt": "2026-07-12T10:05:26Z",
   "items": [
     {
-      "title": "GPT-5.6",
-      "url": "https://openai.com/index/gpt-5-6/",
+      "title": "GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]",
+      "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
       "source": "Hacker News",
-      "points": 1524,
-      "whyItMatters": "GPT-5.6 lands with significant architecture shifts — worth tracking for its reasoning capabilities and the prompt interface it exposes."
+      "points": 520,
+      "whyItMatters": "GPT-5.6 Sol Ultra produced a formal proof of the Cycle Double Cover Conjecture — rare for an LLM to tackle open math and get it right."
     },
     {
-      "title": "AI-generated videos to maximally drive a target brain region",
-      "url": "https://nevo-project.epfl.ch/",
+      "title": "Mesh LLM: distributed AI computing on iroh",
+      "url": "https://www.iroh.computer/blog/mesh-llm",
       "source": "Hacker News",
-      "points": 278,
-      "whyItMatters": "EPFL's NEVO project generates AI videos to steer target brain regions — practical neurofeedback loop using generative models rather than just analysis."
+      "points": 257,
+      "whyItMatters": "Distributes LLM inference over iroh's IPFS mesh — decentralized compute could change how you run models without centralized GPU vendors."
+    },
+    {
+      "title": "Ghost Font: A font that humans can read but AI cannot",
+      "url": "https://www.mixfont.com/ghost-font",
+      "source": "Hacker News",
+      "points": 212,
+      "whyItMatters": "A font legible to humans but adversarial to OCR and vision models — practical demonstration of data poisoning at the UI layer."
     },
     {
       "title": "GPT-5.6, Grok 4.5, Claude, and Muse Spark build the same 4 apps",
       "url": "https://www.tryai.dev/blog/gpt-5.6-build-off-12-models",
       "source": "Hacker News",
-      "points": 145,
-      "whyItMatters": "GPT-5.6, Grok 4.5, Claude and Muse converge on the same four apps — reveals how frontier models are normalizing around identical capability boundaries."
-    },
-    {
-      "title": "AI 2040: Plan A",
-      "url": "https://ai-2040.com/",
-      "source": "Hacker News",
-      "points": 265,
-      "whyItMatters": "OpenAI's 'Plan A' for AI alignment research is a long-horizon strategy doc — maps how they're reorganizing from benchmark-driven to safety-first."
-    },
-    {
-      "title": "GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]",
-      "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
-      "source": "Hacker News",
-      "points": 453,
-      "whyItMatters": "GPT-5.6 Sol Ultra claims to have produced a proof of the Cycle Double Cover Conjecture — if real, that's a major formal-reasoning milestone."
+      "points": 155,
+      "whyItMatters": "Four frontier models (GPT-5.6, Grok 4.5, Claude, Muse) converged on identical app designs from the same brief — reveals how model output space is compressing."
     }
   ]
 }
