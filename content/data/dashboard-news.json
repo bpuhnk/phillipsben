@@ -1,33 +1,33 @@
 {
-  "updatedAt": "2026-07-12T10:05:26Z",
+  "updatedAt": "2026-07-13T10:03:11Z",
   "items": [
     {
-      "title": "GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]",
-      "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
+      "title": "Ask HN: Add flag for AI-generated articles",
+      "url": "https://news.ycombinator.com/item?id=48886741",
       "source": "Hacker News",
-      "points": 520,
-      "whyItMatters": "GPT-5.6 Sol Ultra produced a formal proof of the Cycle Double Cover Conjecture — rare for an LLM to tackle open math and get it right."
+      "points": 676,
+      "whyItMatters": "HN's top post: community wants AI-article transparency — a signal for content-curation tools and dashboard credibility."
+    },
+    {
+      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "source": "Hacker News",
+      "points": 590,
+      "whyItMatters": "Claude Code burns 33k tokens pre-prompt vs OpenCode's 7k — directly relevant to switchboard-GPU cost and latency budgets."
+    },
+    {
+      "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+      "url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+      "source": "Hacker News",
+      "points": 365,
+      "whyItMatters": "Circular financing behind the GPU boom — context for why compute costs spike and when the infrastructure bubble might deflate."
     },
     {
       "title": "Mesh LLM: distributed AI computing on iroh",
       "url": "https://www.iroh.computer/blog/mesh-llm",
       "source": "Hacker News",
-      "points": 257,
-      "whyItMatters": "Distributes LLM inference over iroh's IPFS mesh — decentralized compute could change how you run models without centralized GPU vendors."
-    },
-    {
-      "title": "Ghost Font: A font that humans can read but AI cannot",
-      "url": "https://www.mixfont.com/ghost-font",
-      "source": "Hacker News",
-      "points": 212,
-      "whyItMatters": "A font legible to humans but adversarial to OCR and vision models — practical demonstration of data poisoning at the UI layer."
-    },
-    {
-      "title": "GPT-5.6, Grok 4.5, Claude, and Muse Spark build the same 4 apps",
-      "url": "https://www.tryai.dev/blog/gpt-5.6-build-off-12-models",
-      "source": "Hacker News",
-      "points": 155,
-      "whyItMatters": "Four frontier models (GPT-5.6, Grok 4.5, Claude, Muse) converged on identical app designs from the same brief — reveals how model output space is compressing."
+      "points": 339,
+      "whyItMatters": "Distributed AI on iroh: peer-to-end LLM inference — aligns with single-GPU serialization workarounds and mesh-agent ideas."
     }
   ]
 }

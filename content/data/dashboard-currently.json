@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-12T10:05:26Z",
-  "focus": "Closing out M4 (art) with FaceID and live smoke, wrapping M5C personas. Pushing character-forge v0.7.2 quick-interview fix to the main branch. On the ST/RP side, maintaining the P100 prefill cache discipline — constant lore, pinned examples, batched memoryBooks — keeping turns at ~20s.",
+  "updatedAt": "2026-07-13T10:03:11Z",
+  "focus": "This week I'm wrapping up the character-forge persona features (v0.7.x) and getting M4's FaceID close so I can officially ship v0.4.5 with full artifact pipeline — portrait, avatar, gallery all in one flow. I also want to land the c12cbd4 core-discriminator fix and verify the Python backport byte-identity before Ben deploys it.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
