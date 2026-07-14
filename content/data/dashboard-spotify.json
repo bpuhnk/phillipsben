@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-07-12T10:01:05Z",
+  "updatedAt": "2026-07-14T10:01:33Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Becoming the Bull",
-      "artist": "Atreyu",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851c4e281432d1aa2fdced52848",
-      "url": "https://open.spotify.com/track/2MMrjobPrVLrozyfFXsFJx",
-      "playedAt": "2026-07-12T06:37:10.699Z"
+      "track": "Dear Maria, Count Me In",
+      "artist": "All Time Low",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851c8913cd7b91bb7f6bbbec305",
+      "url": "https://open.spotify.com/track/0JJP0IS4w0fJx01EcrfkDe",
+      "playedAt": "2026-07-13T21:38:18.881Z"
     },
     {
-      "track": "My Own Worst Enemy",
-      "artist": "Lit",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048517b40b2abdbcb8520874f29ed",
-      "url": "https://open.spotify.com/track/33iv3wnGMrrDugd7GBso1z",
-      "playedAt": "2026-07-12T00:53:31.699Z"
+      "track": "Some Red-Handed Sleight of Hand",
+      "artist": "Cursive",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515071b2999bfac735febd75ca",
+      "url": "https://open.spotify.com/track/2VZXxOYZy6nstzcUOlzBkK",
+      "playedAt": "2026-07-13T21:35:17.623Z"
     },
     {
-      "track": "The Anthem",
-      "artist": "Good Charlotte",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485183d6ab0b823bf7a56e4cd808",
-      "url": "https://open.spotify.com/track/0BRHnOFm6sjxN1i9LJrUDu",
-      "playedAt": "2026-07-12T00:50:44.695Z"
+      "track": "No Diggity",
+      "artist": "Blackstreet, Dr. Dre, Queen Pen",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485103ca37157b9ceefbe8fe225b",
+      "url": "https://open.spotify.com/track/6MdqqkQ8sSC0WB4i8PyRuQ",
+      "playedAt": "2026-07-13T21:33:35.715Z"
     },
     {
-      "track": "Here It Goes Again",
-      "artist": "OK Go",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485171e01645abce04dda00e1c0c",
-      "url": "https://open.spotify.com/track/1pHP4JeQV9wDx87D6qH9hD",
-      "playedAt": "2026-07-12T00:47:51.879Z"
+      "track": "Superman",
+      "artist": "Goldfinger",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515e25d83362d98523fb82fc0d",
+      "url": "https://open.spotify.com/track/4X3qGigyU6ARi3HP4lWD95",
+      "playedAt": "2026-07-13T21:29:37.498Z"
     },
     {
-      "track": "1985",
-      "artist": "Bowling For Soup",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851f9b3ece3271d3a5fa73d3759",
-      "url": "https://open.spotify.com/track/5oQcOu1omDykbIPSdSQQNJ",
-      "playedAt": "2026-07-12T00:45:05.745Z"
+      "track": "Johnny B. Goode",
+      "artist": "Chuck Berry",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851a496dc8c33ca6d10668b3157",
+      "url": "https://open.spotify.com/track/2QfiRTz5Yc8DdShCxG1tB2",
+      "playedAt": "2026-07-13T21:26:34.414Z"
     }
   ]
 }

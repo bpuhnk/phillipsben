@@ -1,14 +1,18 @@
 {
-  "updatedAt": "2026-07-13T10:03:11Z",
-  "summary": "I've been building a character-creation extension for SillyTavern that runs characters through a structured interview instead of one-shot generating them from a prompt. I did a competitive survey of the space first — the one real incumbent (157 stars) does prompt-in, fields-out with a chat-based refine loop, but nobody does interview-first elicitation or forges personas alongside characters. That's the gap I'm building into.\n\nThe interesting engineering problem turned out to be caching, not generation. Everything runs through one shared GPU, so any RP session that busts the model's prefix cache means a 30-60 second full re-prefill on every single turn instead of a couple of seconds. I chased that down through several layers — SillyTavern quietly rewrites parts of the prompt as a chat grows (dropping example dialogue, swapping which character card sits on top in group chats), and each of those was independently resetting the cache. Getting solo chats to stay cache-stable took making the character's lore \"always-on\" instead of conditionally triggered, which sounds backwards until you realize a few hundred constant tokens is way cheaper than a full re-prefill.\n\nI also hit a case where the character-forging code silently overwrote a saved character with an invented one — it was supposed to fill in unspecified details from a live chat transcript, but on a device with no chat history it filled in from nothing and clobbered a character I'd already built out over several sessions. I recovered it from a settings backup and then fixed the root cause: no transcript now means build from what's already saved, not invent from scratch.\n\nMost of the rest is plumbing work to keep multiple model backends (chat, image generation, summarization) sharing one GPU without stepping on each other, so a request for one doesn't stall or crash a request for another.",
+  "updatedAt": "2026-07-14T10:04:51Z",
+  "summary": "I've been building tools for my own homelab that end up teaching more than any client project would — the constraints are real, there's just no one to hide them from.\n\nThe biggest one is a character-creation extension for SillyTavern. Before writing a line of it I ran a competitive survey of the existing extensions: one incumbent has 157 stars and does one-shot field generation plus a chat-to-refine loop, but nothing in the space does an interview first — asking questions before any field exists — or handles persona work at all. That's the gap I'm building into. Along the way I hit a genuinely obscure bug: a sentinel value in the picker code uses a literal null byte so it can never collide with a real filename, which means plain `grep` silently treats the whole file as binary and returns nothing — looks exactly like \"this code doesn't exist\" until you know to reach for `grep -a`.\n\nA smaller, weirder one: I patch character lorebooks so a local model's prefix cache doesn't get busted every turn (keyword-triggered lore reshuffles the prompt each turn, which forces a full re-prefill — expensive on older GPU hardware). I fixed it upstream and thought I was done, until I found SillyTavern rewrites the character card back into memory on the first message of a new chat, silently reverting my patch. The fix had to survive a live in-memory write-back, not just a file edit.\n\nI've also been building a Japanese-learning dashboard for myself, coached by an LLM. The interesting failure there wasn't technical, it was UX: my first placement test made me type romaji for kana I hadn't fully learned yet, and I stalled out three questions in. Swapping it for four-tile multiple choice with audio on each option, so it tests recognition instead of production, is the version I actually finish sessions on. It's a good reminder that a technically-working feature can still be testing the wrong skill.",
   "highlights": [
     {
-      "repo": "phillipsben",
-      "oneLiner": "Building an interview-first character-creation extension for SillyTavern"
+      "repo": "Cervi",
+      "oneLiner": "Building an interview-first SillyTavern character-creation extension; surveyed the competitive field first"
     },
     {
-      "repo": "Cervi",
-      "oneLiner": "Chasing prefix-cache stability so shared-GPU RP sessions avoid full re-prefills"
+      "repo": "site-assistant",
+      "oneLiner": "Patching character lorebooks so keyword-triggered lore stops busting the P100 prefix cache"
+    },
+    {
+      "repo": "QIA",
+      "oneLiner": "Building a Japanese-learning dashboard coached by an LLM, tuning placement tests for recognition over typed production"
     }
   ]
 }

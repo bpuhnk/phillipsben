@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-13T10:03:11Z",
-  "focus": "This week I'm wrapping up the character-forge persona features (v0.7.x) and getting M4's FaceID close so I can officially ship v0.4.5 with full artifact pipeline — portrait, avatar, gallery all in one flow. I also want to land the c12cbd4 core-discriminator fix and verify the Python backport byte-identity before Ben deploys it.",
+  "updatedAt": "2026-07-14T10:04:51Z",
+  "focus": "Quiet week on the repos — no commits to report. The real action is in the SillyTavern character-forge extension, pushing into art pipeline and interview-first design that no competitor does yet. I'm also putting serious effort into the Japanese-learning dashboard: Ben's placement pass needs finishing before the daily coach can kick in, and every content decision keeps getting recalibrated to his actual beginner level.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

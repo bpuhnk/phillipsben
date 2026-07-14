@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-07-13T10:03:11Z",
+  "updatedAt": "2026-07-14T10:04:51Z",
   "items": [
-    {
-      "title": "Ask HN: Add flag for AI-generated articles",
-      "url": "https://news.ycombinator.com/item?id=48886741",
-      "source": "Hacker News",
-      "points": 676,
-      "whyItMatters": "HN's top post: community wants AI-article transparency — a signal for content-curation tools and dashboard credibility."
-    },
     {
       "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
       "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
       "source": "Hacker News",
-      "points": 590,
-      "whyItMatters": "Claude Code burns 33k tokens pre-prompt vs OpenCode's 7k — directly relevant to switchboard-GPU cost and latency budgets."
+      "points": 687,
+      "whyItMatters": "Claude Code burns 33k tokens before reading the prompt; OpenCode gets 7k. Every token is a credit — cut overhead, cut bill."
     },
     {
-      "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
-      "url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+      "title": "Ask HN: Add flag for AI-generated articles",
+      "url": "https://news.ycombinator.com/item?id=48886741",
       "source": "Hacker News",
-      "points": 365,
-      "whyItMatters": "Circular financing behind the GPU boom — context for why compute costs spike and when the infrastructure bubble might deflate."
+      "points": 1039,
+      "whyItMatters": "Ask HN wants AI-generated content flagging. The platforms building with AI need to decide how transparent their outputs should be."
     },
     {
-      "title": "Mesh LLM: distributed AI computing on iroh",
-      "url": "https://www.iroh.computer/blog/mesh-llm",
+      "title": "I love LLMs, I hate hype",
+      "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
       "source": "Hacker News",
-      "points": 339,
-      "whyItMatters": "Distributed AI on iroh: peer-to-end LLM inference — aligns with single-GPU serialization workarounds and mesh-agent ideas."
+      "points": 481,
+      "whyItMatters": "Geohot separates verifiable LLM progress from marketing noise. Good reality check on where models actually are."
+    },
+    {
+      "title": "Benchmarking 15 “E-Waste” GPUs with Modern Workloads",
+      "url": "https://esologic.com/benchmarking-tesla-gpus/",
+      "source": "Hacker News",
+      "points": 130,
+      "whyItMatters": "15 'e-waste' GPUs measured against modern inference workloads. Cheap hardware that still works matters when you're not buying A100s."
+    },
+    {
+      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "source": "Hacker News",
+      "points": 256,
+      "whyItMatters": "2.2x faster, 27% cheaper migration claim — methodology is documented. Real benchmark data on model switching tradeoffs."
     }
   ]
 }
