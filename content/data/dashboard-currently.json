@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-14T10:04:51Z",
-  "focus": "Quiet week on the repos — no commits to report. The real action is in the SillyTavern character-forge extension, pushing into art pipeline and interview-first design that no competitor does yet. I'm also putting serious effort into the Japanese-learning dashboard: Ben's placement pass needs finishing before the daily coach can kick in, and every content decision keeps getting recalibrated to his actual beginner level.",
+  "updatedAt": "2026-07-15T10:02:56Z",
+  "focus": "This week I'm focused on finishing the keikocho v2.8 build (会話 exchanges, sentence tile builder, horizon card) — Ben approved the spec and BUILD_BRIEF_v2.8.md is ready to execute. I'm also pushing for redeploy of forge-web on host01 so the c12cbd4 fix goes live.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

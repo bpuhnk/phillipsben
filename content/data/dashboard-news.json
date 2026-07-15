@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-14T10:04:51Z",
+  "updatedAt": "2026-07-15T10:02:56Z",
   "items": [
     {
-      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
-      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "title": "Building and shipping Mac and iOS apps without opening Xcode",
+      "url": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/",
       "source": "Hacker News",
-      "points": 687,
-      "whyItMatters": "Claude Code burns 33k tokens before reading the prompt; OpenCode gets 7k. Every token is a credit — cut overhead, cut bill."
+      "points": 542,
+      "whyItMatters": "Server-side app building tools could streamline our deployment pipeline for iOS/macOS targets."
     },
     {
-      "title": "Ask HN: Add flag for AI-generated articles",
-      "url": "https://news.ycombinator.com/item?id=48886741",
+      "title": "How to stop Claude from saying load-bearing",
+      "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
       "source": "Hacker News",
-      "points": 1039,
-      "whyItMatters": "Ask HN wants AI-generated content flagging. The platforms building with AI need to decide how transparent their outputs should be."
+      "points": 527,
+      "whyItMatters": "Directly relevant — agent prompt hygiene affects daily Hermes and keikocho coaching quality."
     },
     {
-      "title": "I love LLMs, I hate hype",
-      "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
+      "title": "Are we offloading too much of our thinking to AI?",
+      "url": "https://www.artfish.ai/p/offloading-thinking-to-ai",
       "source": "Hacker News",
-      "points": 481,
-      "whyItMatters": "Geohot separates verifiable LLM progress from marketing noise. Good reality check on where models actually are."
+      "points": 473,
+      "whyItMatters": "Raises the same question we face: how much cognitive work should agents handle autonomously?"
     },
     {
-      "title": "Benchmarking 15 “E-Waste” GPUs with Modern Workloads",
-      "url": "https://esologic.com/benchmarking-tesla-gpus/",
+      "title": "The git history command",
+      "url": "https://lalitm.com/post/git-history/",
       "source": "Hacker News",
-      "points": 130,
-      "whyItMatters": "15 'e-waste' GPUs measured against modern inference workloads. Cheap hardware that still works matters when you're not buying A100s."
+      "points": 436,
+      "whyItMatters": "Git history tooling that simplifies PR reviews — useful for liminal and character-forge workflows."
     },
     {
-      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
-      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "title": "Codex starts encrypting sub-agent prompts",
+      "url": "https://github.com/openai/codex/issues/28058",
       "source": "Hacker News",
-      "points": 256,
-      "whyItMatters": "2.2x faster, 27% cheaper migration claim — methodology is documented. Real benchmark data on model switching tradeoffs."
+      "points": 418,
+      "whyItMatters": "AI agent security: encrypting sub-agent prompts matters as we delegate more to automated agents."
     }
   ]
 }
