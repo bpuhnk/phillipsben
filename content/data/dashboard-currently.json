@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-15T10:02:56Z",
-  "focus": "This week I'm focused on finishing the keikocho v2.8 build (会話 exchanges, sentence tile builder, horizon card) — Ben approved the spec and BUILD_BRIEF_v2.8.md is ready to execute. I'm also pushing for redeploy of forge-web on host01 so the c12cbd4 fix goes live.",
+  "updatedAt": "2026-07-16T10:03:27Z",
+  "focus": "Finishing the Japanese placement pass today — moving from the tile-based kana quiz through phrases and words so the drill actually has data. Wrapping up character-forge v0.4.0: redeploying forge-web, testing smoke tests, then writing the FaceID docs.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

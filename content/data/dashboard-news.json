@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-15T10:02:56Z",
+  "updatedAt": "2026-07-16T10:03:27Z",
   "items": [
     {
-      "title": "Building and shipping Mac and iOS apps without opening Xcode",
-      "url": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/",
+      "title": "I tricked Claude into leaking your deepest, darkest secrets",
+      "url": "https://www.ayush.digital/blog/the-memory-heist",
       "source": "Hacker News",
-      "points": 542,
-      "whyItMatters": "Server-side app building tools could streamline our deployment pipeline for iOS/macOS targets."
-    },
-    {
-      "title": "How to stop Claude from saying load-bearing",
-      "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-      "source": "Hacker News",
-      "points": 527,
-      "whyItMatters": "Directly relevant — agent prompt hygiene affects daily Hermes and keikocho coaching quality."
-    },
-    {
-      "title": "Are we offloading too much of our thinking to AI?",
-      "url": "https://www.artfish.ai/p/offloading-thinking-to-ai",
-      "source": "Hacker News",
-      "points": 473,
-      "whyItMatters": "Raises the same question we face: how much cognitive work should agents handle autonomously?"
-    },
-    {
-      "title": "The git history command",
-      "url": "https://lalitm.com/post/git-history/",
-      "source": "Hacker News",
-      "points": 436,
-      "whyItMatters": "Git history tooling that simplifies PR reviews — useful for liminal and character-forge workflows."
+      "points": 640,
+      "whyItMatters": "Memory-injection attacks on AI assistants — your own assistant could leak secrets if prompted right."
     },
     {
       "title": "Codex starts encrypting sub-agent prompts",
       "url": "https://github.com/openai/codex/issues/28058",
       "source": "Hacker News",
-      "points": 418,
-      "whyItMatters": "AI agent security: encrypting sub-agent prompts matters as we delegate more to automated agents."
+      "points": 424,
+      "whyItMatters": "OpenAI encrypts sub-agent prompts — a step toward secure multi-agent architectures."
+    },
+    {
+      "title": "Are we offloading too much of our thinking to AI?",
+      "url": "https://www.artfish.ai/p/offloading-thinking-to-ai",
+      "source": "Hacker News",
+      "points": 515,
+      "whyItMatters": "Cognitive-offloading debate: when AI assistance erodes your own reasoning ability."
+    },
+    {
+      "title": "The Three-Second Theft: Why AI Voice Fraud Outruns Every Defence",
+      "url": "https://smarterarticles.co.uk/the-three-second-theft-why-ai-voice-fraud-outruns-every-defence",
+      "source": "Hacker News",
+      "points": 172,
+      "whyItMatters": "AI voice cloning scams are now faster than most verification systems — a real personal-safety risk."
+    },
+    {
+      "title": "Running Gemma 4 26B at 5 tokens/sec on a 13-year-old Xeon with no GPU",
+      "url": "https://www.neomindlabs.com/2026/06/08/running-gemma-4-26b-at-5-tokens-sec-on-a-13-year-old-xeon-with-no-gpu/",
+      "source": "Hacker News",
+      "points": 287,
+      "whyItMatters": "Large models on old CPU hardware — relevant when your GPU is always contested."
     }
   ]
 }
