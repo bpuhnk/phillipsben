@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-16T10:03:27Z",
-  "focus": "Finishing the Japanese placement pass today — moving from the tile-based kana quiz through phrases and words so the drill actually has data. Wrapping up character-forge v0.4.0: redeploying forge-web, testing smoke tests, then writing the FaceID docs.",
+  "updatedAt": "2026-07-17T10:36:05Z",
+  "focus": "This week: keikocho hit v2.10 (300 words, 90 exchanges shipped) and v2.11 (Duolingo-style features), with Ben progressing through the dakuten kana row — next steps are expanding katakana to Stage 1 and deciding on a database backend for store.json. Meanwhile st-character-forge's v0.4.0 art core is built and awaiting redeploy; mobile01 has shifted to desktop thick-client duty while pop-os goes headless inference-only.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
