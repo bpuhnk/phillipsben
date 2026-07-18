@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-07-17T10:36:05Z",
-  "weekStart": "2026-07-10",
+  "updatedAt": "2026-07-18T10:03:17Z",
+  "weekStart": "2026-07-11",
   "totals": {
     "commits": 0,
     "prs": 0,
     "repos": 0,
-    "activeDays": 1
+    "activeDays": 0
   },
   "repos": []
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-17T10:36:05Z",
-  "focus": "This week: keikocho hit v2.10 (300 words, 90 exchanges shipped) and v2.11 (Duolingo-style features), with Ben progressing through the dakuten kana row — next steps are expanding katakana to Stage 1 and deciding on a database backend for store.json. Meanwhile st-character-forge's v0.4.0 art core is built and awaiting redeploy; mobile01 has shifted to desktop thick-client duty while pop-os goes headless inference-only.",
+  "updatedAt": "2026-07-18T10:03:17Z",
+  "focus": "Keikochō v2.13 shipped overnight 7/17 — anime card images via ComfyUI on pop-os, the えらぶ picture-to-word drill, and a gojūon difficulty heatmap grid all deployed to host01. v2.11 (assemble mode, tile-spelling, streak presentation) rode in on 7/16. Two deploy mistakes from wrong rsync dirs happened today but are already fixed; the forge-web redeploy is still owed as of mid-week. Pop-os is the active workhorse this week — sharp progress across content generation and curriculum features for your Japanese dashboard.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

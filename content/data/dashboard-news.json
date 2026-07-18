@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-17T10:36:05Z",
+  "updatedAt": "2026-07-18T10:03:17Z",
   "items": [
     {
-      "title": "Running Gemma 4 26B at 5 tokens/sec on a 13-year-old Xeon with no GPU",
-      "url": "https://www.neomindlabs.com/2026/06/08/running-gemma-4-26b-at-5-tokens-sec-on-a-13-year-old-xeon-with-no-gpu/",
+      "title": "Kaiser nurses say AI, surveillance are making their jobs and patient care worse",
+      "url": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/",
       "source": "Hacker News",
-      "points": 323,
-      "whyItMatters": "Raw CPU inference for 26B models — directly relevant to running local LLMs on aging hardware without a GPU."
+      "points": 509,
+      "whyItMatters": "509-up HN thread — healthcare workers report AI and surveillance degrading both jobs and patient care"
+    },
+    {
+      "title": "The state of open source AI",
+      "url": "https://stateofopensource.ai/",
+      "source": "Hacker News",
+      "points": 443,
+      "whyItMatters": "443 pts — landscape report on the current state of open source AI, key trends and players"
+    },
+    {
+      "title": "Apple targets dozens of OpenAI employees with legal letters",
+      "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166",
+      "source": "Hacker News",
+      "points": 393,
+      "whyItMatters": "393 pts — Apple sends legal letters to dozens of OpenAI employees, major industry shakeup"
+    },
+    {
+      "title": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+      "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6",
+      "source": "Hacker News",
+      "points": 389,
+      "whyItMatters": "389 pts — side-by-side test: Claude Fable 5 vs GPT-5.6 Sol on a $100 AI music video"
     },
     {
       "title": "LM Studio Bionic: the AI agent for open models",
       "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
       "source": "Hacker News",
-      "points": 252,
-      "whyItMatters": "LM Studio's new AI agent interface for open models — could be useful alongside Hermes-Agent and MCP workflows."
-    },
-    {
-      "title": "Governments, companies, nonprofits should invest in free, open source AI [pdf]",
-      "url": "https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf",
-      "source": "Hacker News",
-      "points": 290,
-      "whyItMatters": "Policy argument for public investment in free/open AI models — aligns with the open-source tooling philosophy."
-    },
-    {
-      "title": "DSLs Enable Reliable Use of LLMs",
-      "url": "https://martinfowler.com/articles/llm-and-dsls.html",
-      "source": "Hacker News",
-      "points": 121,
-      "whyItMatters": "Structured approach to reliable LLM integration via DSLs rather than raw prompts — practical engineering pattern."
-    },
-    {
-      "title": "Inkling – Open-Weights 975B Parameter LLM",
-      "url": "https://thinkingmachines.ai/inkling/",
-      "source": "Hacker News",
-      "points": 121,
-      "whyItMatters": "Open-weights 975B model available for local use — relevant to the open-model inference ecosystem you work in."
+      "points": 323,
+      "whyItMatters": "323 pts — LM Studio Bionic launches as an AI agent specifically for open models"
     }
   ]
 }
