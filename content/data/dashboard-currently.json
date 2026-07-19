@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-18T10:03:17Z",
-  "focus": "Keikochō v2.13 shipped overnight 7/17 — anime card images via ComfyUI on pop-os, the えらぶ picture-to-word drill, and a gojūon difficulty heatmap grid all deployed to host01. v2.11 (assemble mode, tile-spelling, streak presentation) rode in on 7/16. Two deploy mistakes from wrong rsync dirs happened today but are already fixed; the forge-web redeploy is still owed as of mid-week. Pop-os is the active workhorse this week — sharp progress across content generation and curriculum features for your Japanese dashboard.",
+  "updatedAt": "2026-07-19T10:04:05Z",
+  "focus": "Keikochō v2.17 shipped this week with JLPT framing and the Stage 1 graduation API, but Ben still needs to verify the frontend graduate/un-graduate buttons locally after deploying v2.16. Outside that: the forge-web redeploy is still owed on character-forge (both sides fixed in code, just not live).",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
