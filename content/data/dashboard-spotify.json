@@ -1,41 +1,46 @@
 {
-  "updatedAt": "2026-07-19T10:01:58Z",
-  "nowPlaying": null,
+  "updatedAt": "2026-07-20T10:00:44Z",
+  "nowPlaying": {
+    "track": "Understand",
+    "artist": "BoyWithUke",
+    "albumArt": "https://i.scdn.co/image/ab67616d00004851ee07023115f822012390d2a0",
+    "url": "https://open.spotify.com/track/6dGqGkYDoRrKh5UiIcTT22"
+  },
   "recent": [
     {
-      "track": "Ain't No Rest for the Wicked",
-      "artist": "Cage The Elephant",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e4800c920780ac18d4ab6730",
-      "url": "https://open.spotify.com/track/3Pzh926pXggbMe2ZpXyMV7",
-      "playedAt": "2026-07-18T15:08:41.827Z"
+      "track": "GOOD DAY",
+      "artist": "Forrest Frank",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851500c84a64b89a118c27e5f59",
+      "url": "https://open.spotify.com/track/0vC82BouGPXm6X2K60RfQw",
+      "playedAt": "2026-07-20T09:58:32.661Z"
     },
     {
-      "track": "What's New Scooby-Doo?",
-      "artist": "Simple Plan",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485148463ed74aee049f2f14973d",
-      "url": "https://open.spotify.com/track/6DD5beNG6Ji3AYp5WrYnwD",
-      "playedAt": "2026-07-18T15:06:04.932Z"
+      "track": "Hit the Road Jack",
+      "artist": "Ray Charles",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048514448e36a9ef845b705d80a0d",
+      "url": "https://open.spotify.com/track/5dUMh0ugelpKfoFp3qChuK",
+      "playedAt": "2026-07-20T09:55:57.864Z"
     },
     {
-      "track": "Record Player",
-      "artist": "Daisy the Great, AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851436132f24b5a9ff1605b86bb",
-      "url": "https://open.spotify.com/track/7Gk8IPlFTLUcoIH3mtASI0",
-      "playedAt": "2026-07-18T15:04:57.233Z"
+      "track": "Im Doing Fine",
+      "artist": "Marino, Promoting Sounds",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851a03158ed39ce7468e1637298",
+      "url": "https://open.spotify.com/track/3KR1JFRwYzha78aE9SpX3a",
+      "playedAt": "2026-07-20T09:54:10.262Z"
     },
     {
-      "track": "Booty Swing",
-      "artist": "Parov Stelar",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485198a37a4f85f06b144d32c7fc",
-      "url": "https://open.spotify.com/track/3P7LQUvGw5TQofcETsN4FJ",
-      "playedAt": "2026-07-18T15:02:31.333Z"
+      "track": "Wonderwall - Remastered",
+      "artist": "Oasis",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048517a4c8c59851c88f6794c3cbf",
+      "url": "https://open.spotify.com/track/7ygpwy2qP3NbrxVkHvUhXY",
+      "playedAt": "2026-07-20T09:52:12.163Z"
     },
     {
-      "track": "Ain't No Sunshine",
-      "artist": "Bill Withers",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851f64b9ea8a8a409c6af86134f",
-      "url": "https://open.spotify.com/track/1k1Bqnv2R0uJXQN4u6LKYt",
-      "playedAt": "2026-07-18T14:59:41.388Z"
+      "track": "So Easy (To Fall In Love)",
+      "artist": "Olivia Dean",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048519a336bfb6d40bbd90a507417",
+      "url": "https://open.spotify.com/track/6sGIMrtIzQjdzNndVxe397",
+      "playedAt": "2026-07-20T09:48:09.458Z"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-19T10:04:05Z",
-  "focus": "Keikochō v2.17 shipped this week with JLPT framing and the Stage 1 graduation API, but Ben still needs to verify the frontend graduate/un-graduate buttons locally after deploying v2.16. Outside that: the forge-web redeploy is still owed on character-forge (both sides fixed in code, just not live).",
+  "updatedAt": "2026-07-20T10:02:56Z",
+  "focus": "This week I shipped keikocho v2.26 — SQLite DB, reading passages with audio, listening drills, dialogue graph, LLM lane, and cited tutor — all deployed to production. Still on the hook: redeploy forge-web so the constant-core-proxy fix goes live, then finish the diction spec once we have real voice clips from Ben's mic.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

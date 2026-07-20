@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-07-19T10:04:05Z",
+  "updatedAt": "2026-07-20T10:02:56Z",
   "items": [
     {
-      "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
-      "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/",
+      "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
+      "url": "https://news.ycombinator.com/item?id=48968606",
       "source": "Hacker News",
-      "points": 563,
-      "whyItMatters": "GPT-5.6 solved a 30-year convex optimization gap via prompt engineering — auto-reasoning at research level."
+      "points": 2331,
+      "whyItMatters": "Replaced a $120k industrial system with $1,600 in ESP32s — a masterclass in cheap-hardware replacement"
     },
     {
-      "title": "Apple targets dozens of OpenAI employees with legal letters",
-      "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166",
+      "title": "Claude Code uses Bun written in Rust now",
+      "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/",
       "source": "Hacker News",
-      "points": 407,
-      "whyItMatters": "Apple sends cease-and-desist to dozens of OpenAI employees — talent war escalating into legal."
+      "points": 521,
+      "whyItMatters": "Claude Code now uses Bun written in Rust — faster AI-assisted coding, directly relevant to your workflow"
     },
     {
       "title": "What AI did to stackoverflow in a graph",
       "url": "https://data.stackexchange.com/stackoverflow/query/1953768#graph",
       "source": "Hacker News",
-      "points": 410,
-      "whyItMatters": "Quantified how AI answers are reshaping StackOverflow — real data on a cultural shift in Q&A."
-    },
-    {
-      "title": "Claude Code: Anatomy of a Misfeature",
-      "url": "https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/",
-      "source": "Hacker News",
-      "points": 140,
-      "whyItMatters": "Practical critique of Claude Code design choices — useful signal for anyone building AI dev tools."
+      "points": 464,
+      "whyItMatters": "Data viz of what AI did to StackOverflow — useful context for a developer's ecosystem"
     },
     {
       "title": "AI Mania Is Eviscerating Global Decision-Making",
       "url": "https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/#fnref:3",
       "source": "Hacker News",
-      "points": 208,
-      "whyItMatters": "Thoughtful essay on how AI hype degrades institutional decision-making beyond the tech sector."
+      "points": 407,
+      "whyItMatters": "Thoughtful critique of how AI enthusiasm is skewing decision-making at scale"
     }
   ]
 }
