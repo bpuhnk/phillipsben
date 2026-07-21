@@ -1,46 +1,41 @@
 {
-  "updatedAt": "2026-07-20T10:00:44Z",
-  "nowPlaying": {
-    "track": "Understand",
-    "artist": "BoyWithUke",
-    "albumArt": "https://i.scdn.co/image/ab67616d00004851ee07023115f822012390d2a0",
-    "url": "https://open.spotify.com/track/6dGqGkYDoRrKh5UiIcTT22"
-  },
+  "updatedAt": "2026-07-21T10:01:44Z",
+  "nowPlaying": null,
   "recent": [
     {
-      "track": "GOOD DAY",
-      "artist": "Forrest Frank",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851500c84a64b89a118c27e5f59",
-      "url": "https://open.spotify.com/track/0vC82BouGPXm6X2K60RfQw",
-      "playedAt": "2026-07-20T09:58:32.661Z"
+      "track": "Say It Ain't So - Original Mix",
+      "artist": "Weezer",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851345536847e60f622ee0eae96",
+      "url": "https://open.spotify.com/track/6VoIBz0VhCyz7OdEoRYDiA",
+      "playedAt": "2026-07-21T04:46:36.714Z"
     },
     {
-      "track": "Hit the Road Jack",
-      "artist": "Ray Charles",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048514448e36a9ef845b705d80a0d",
-      "url": "https://open.spotify.com/track/5dUMh0ugelpKfoFp3qChuK",
-      "playedAt": "2026-07-20T09:55:57.864Z"
+      "track": "Say It Ain't So - Original Mix",
+      "artist": "Weezer",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851345536847e60f622ee0eae96",
+      "url": "https://open.spotify.com/track/6VoIBz0VhCyz7OdEoRYDiA",
+      "playedAt": "2026-07-21T01:50:19.741Z"
     },
     {
-      "track": "Im Doing Fine",
-      "artist": "Marino, Promoting Sounds",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851a03158ed39ce7468e1637298",
-      "url": "https://open.spotify.com/track/3KR1JFRwYzha78aE9SpX3a",
-      "playedAt": "2026-07-20T09:54:10.262Z"
+      "track": "Burn The House Down",
+      "artist": "AJR",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485174be78bd14d095c8d76943a0",
+      "url": "https://open.spotify.com/track/2QKLrgXNQtK2c8QbLRO3XC",
+      "playedAt": "2026-07-20T23:34:46.439Z"
     },
     {
-      "track": "Wonderwall - Remastered",
-      "artist": "Oasis",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048517a4c8c59851c88f6794c3cbf",
-      "url": "https://open.spotify.com/track/7ygpwy2qP3NbrxVkHvUhXY",
-      "playedAt": "2026-07-20T09:52:12.163Z"
+      "track": "Superman",
+      "artist": "Goldfinger",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515e25d83362d98523fb82fc0d",
+      "url": "https://open.spotify.com/track/4X3qGigyU6ARi3HP4lWD95",
+      "playedAt": "2026-07-20T23:31:22.895Z"
     },
     {
-      "track": "So Easy (To Fall In Love)",
-      "artist": "Olivia Dean",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048519a336bfb6d40bbd90a507417",
-      "url": "https://open.spotify.com/track/6sGIMrtIzQjdzNndVxe397",
-      "playedAt": "2026-07-20T09:48:09.458Z"
+      "track": "Freedom Won't Die",
+      "artist": "Topher",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048513838e4836b519e8131d083b8",
+      "url": "https://open.spotify.com/track/43YN9gSzWV3eDZ7Np5Oeq1",
+      "playedAt": "2026-07-20T23:28:13.349Z"
     }
   ]
 }

@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-07-20T10:02:56Z",
+  "updatedAt": "2026-07-21T10:03:57Z",
   "items": [
     {
-      "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
-      "url": "https://news.ycombinator.com/item?id=48968606",
+      "title": "China’s open-weights AI strategy is winning",
+      "url": "https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/",
       "source": "Hacker News",
-      "points": 2331,
-      "whyItMatters": "Replaced a $120k industrial system with $1,600 in ESP32s — a masterclass in cheap-hardware replacement"
+      "points": 1112,
+      "whyItMatters": "Open-weights strategy beats proprietary AI — vital intel for local LLM workflows."
     },
     {
-      "title": "Claude Code uses Bun written in Rust now",
-      "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/",
+      "title": "Claude Fable produced a counterexample to the Jacobian Conjecture",
+      "url": "https://xcancel.com/__alpoge__/status/2079028340955197566",
       "source": "Hacker News",
-      "points": 521,
-      "whyItMatters": "Claude Code now uses Bun written in Rust — faster AI-assisted coding, directly relevant to your workflow"
+      "points": 761,
+      "whyItMatters": "Claude Fable proved a math conjecture counterexample — AI reasoning milestone."
     },
     {
-      "title": "What AI did to stackoverflow in a graph",
-      "url": "https://data.stackexchange.com/stackoverflow/query/1953768#graph",
+      "title": "Moonshot AI suspends new subscriptions due to Kimi K3 demand",
+      "url": "https://twitter.com/kimi_moonshot/status/2078855608565207130",
       "source": "Hacker News",
-      "points": 464,
-      "whyItMatters": "Data viz of what AI did to StackOverflow — useful context for a developer's ecosystem"
+      "points": 283,
+      "whyItMatters": "Kimi K3 demand so strong it suspended subscriptions. Real-world frontier AI adoption signal."
     },
     {
-      "title": "AI Mania Is Eviscerating Global Decision-Making",
-      "url": "https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/#fnref:3",
+      "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
+      "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/",
       "source": "Hacker News",
-      "points": 407,
-      "whyItMatters": "Thoughtful critique of how AI enthusiasm is skewing decision-making at scale"
+      "points": 337,
+      "whyItMatters": "Kim K3, Qwen 3.8, Anthropic dynamics — the open vs closed model landscape is shifting fast."
+    },
+    {
+      "title": "I found a WordPress RCEs with GPT5.6 and $25",
+      "url": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+      "source": "Hacker News",
+      "points": 394,
+      "whyItMatters": "GPT-level models find $500k RCEs — prompt injection is becoming a real exploit vector."
     }
   ]
 }

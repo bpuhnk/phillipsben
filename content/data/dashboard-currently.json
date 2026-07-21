@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-20T10:02:56Z",
-  "focus": "This week I shipped keikocho v2.26 — SQLite DB, reading passages with audio, listening drills, dialogue graph, LLM lane, and cited tutor — all deployed to production. Still on the hook: redeploy forge-web so the constant-core-proxy fix goes live, then finish the diction spec once we have real voice clips from Ben's mic.",
+  "updatedAt": "2026-07-21T10:03:57Z",
+  "focus": "This week I shipped v2.30 on Keikochō — 先生の一言 coach now everywhere (drill, typing, phrases, kaiwa, words, paths, Today) and locked Whisper to medium ASR. Also fixed mobile typing viewport jumps with preventScroll + reserved msgslot space. Stage-1 readiness is at ~93%, just waiting on that last recall gate to click over 85% so katakana graduation opens up.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
