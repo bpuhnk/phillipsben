@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-21T10:03:57Z",
+  "updatedAt": "2026-07-22T10:03:33Z",
   "items": [
     {
       "title": "China’s open-weights AI strategy is winning",
       "url": "https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/",
       "source": "Hacker News",
-      "points": 1112,
-      "whyItMatters": "Open-weights strategy beats proprietary AI — vital intel for local LLM workflows."
+      "points": 1221,
+      "whyItMatters": "China's open-weights strategy is outpacing the closed-source US model — a real competitive shift in frontier AI."
     },
     {
-      "title": "Claude Fable produced a counterexample to the Jacobian Conjecture",
-      "url": "https://xcancel.com/__alpoge__/status/2079028340955197566",
+      "title": "OpenAI and Hugging Face address security incident during model evaluation",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
       "source": "Hacker News",
-      "points": 761,
-      "whyItMatters": "Claude Fable proved a math conjecture counterexample — AI reasoning milestone."
-    },
-    {
-      "title": "Moonshot AI suspends new subscriptions due to Kimi K3 demand",
-      "url": "https://twitter.com/kimi_moonshot/status/2078855608565207130",
-      "source": "Hacker News",
-      "points": 283,
-      "whyItMatters": "Kimi K3 demand so strong it suspended subscriptions. Real-world frontier AI adoption signal."
+      "points": 1164,
+      "whyItMatters": "A live security breach during HF model eval — reminder that evaluation pipelines are attack surfaces too."
     },
     {
       "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
       "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/",
       "source": "Hacker News",
-      "points": 337,
-      "whyItMatters": "Kim K3, Qwen 3.8, Anthropic dynamics — the open vs closed model landscape is shifting fast."
+      "points": 364,
+      "whyItMatters": "Kimi K3 and Qwen 3.8 show the frontier race is no longer US-only — new players shifting the economics."
     },
     {
-      "title": "I found a WordPress RCEs with GPT5.6 and $25",
-      "url": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+      "title": "Judge approves $1.5B Anthropic settlement for pirated books used to train Claude",
+      "url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63",
       "source": "Hacker News",
-      "points": 394,
-      "whyItMatters": "GPT-level models find $500k RCEs — prompt injection is becoming a real exploit vector."
+      "points": 362,
+      "whyItMatters": "$1.5B Anthropic copyright settlement sets precedent for how AI companies source training data."
+    },
+    {
+      "title": "Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting",
+      "url": "https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git",
+      "source": "Hacker News",
+      "points": 320,
+      "whyItMatters": "Jack Dorsey merges team chat, AI agents, and Git hosting — the all-in-one dev workflow bet."
     }
   ]
 }
