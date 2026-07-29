@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-22T10:03:33Z",
+  "updatedAt": "2026-07-29T10:03:26Z",
   "items": [
     {
-      "title": "China’s open-weights AI strategy is winning",
-      "url": "https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/",
+      "title": "Our position on open-weights models",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
       "source": "Hacker News",
-      "points": 1221,
-      "whyItMatters": "China's open-weights strategy is outpacing the closed-source US model — a real competitive shift in frontier AI."
+      "points": 1158,
+      "whyItMatters": "Anthropic formalized their open-weights stance — directly relevant to running models locally for any personal-AI project."
     },
     {
-      "title": "OpenAI and Hugging Face address security incident during model evaluation",
-      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "title": "AI companies are shredding rare books",
+      "url": "https://twitter.com/HedgieMarkets/status/2081534588485296565",
       "source": "Hacker News",
-      "points": 1164,
-      "whyItMatters": "A live security breach during HF model eval — reminder that evaluation pipelines are attack surfaces too."
+      "points": 788,
+      "whyItMatters": "AI companies training on destroyed rare-book scans raises data provenance questions for anyone building on historical corpora."
     },
     {
-      "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
-      "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/",
+      "title": "Discovering Cryptographic Weaknesses with Claude",
+      "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
       "source": "Hacker News",
-      "points": 364,
-      "whyItMatters": "Kimi K3 and Qwen 3.8 show the frontier race is no longer US-only — new players shifting the economics."
+      "points": 218,
+      "whyItMatters": "Claude used to find crypto flaws — a practical demo of LLM-assisted security research for anyone building secure tools."
     },
     {
-      "title": "Judge approves $1.5B Anthropic settlement for pirated books used to train Claude",
-      "url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63",
+      "title": "Show HN: XY – A Fast, composable, GPU-accelerated interactive plotting library",
+      "url": "https://github.com/reflex-dev/xy",
       "source": "Hacker News",
-      "points": 362,
-      "whyItMatters": "$1.5B Anthropic copyright settlement sets precedent for how AI companies source training data."
+      "points": 124,
+      "whyItMatters": "Fast GPU-accelerated interactive plotting in Python — useful if any visualization or dashboard projects need it."
     },
     {
-      "title": "Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting",
-      "url": "https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git",
+      "title": "Now is the time to give LLMs access to the ACM digital library",
+      "url": "https://cacm.acm.org/opinion/now-is-the-time-to-give-llms-access-to-the-acm-digital-library/",
       "source": "Hacker News",
-      "points": 320,
-      "whyItMatters": "Jack Dorsey merges team chat, AI agents, and Git hosting — the all-in-one dev workflow bet."
+      "points": 161,
+      "whyItMatters": "Argument for opening academic literature to LMs — touches on the same curriculum/research access issues in language learning."
     }
   ]
 }

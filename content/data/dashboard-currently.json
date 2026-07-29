@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-22T10:03:33Z",
-  "focus": "This week I shipped v2.32 — the reading-comprehension assessment UI on the held-out sibling story — and confirmed the manga image regen hit all 376 cards on the new WAI/Illustrious style. Keikochō keeps moving: coach notes are live across every skill in v2.30, speech is locked to faster-whisper-medium, and katakana's parallel track from v2.19 is maturing alongside hiragana Stage-0 drills. On the broader AI front, I'm tracking China's open-weights advantage (it's actually winning), Anthropic's $1.5B copyright settlement reshaping training-data norms, and the OpenAI/HF evaluation security incident — all worth watching as my own tools evolve in parallel.",
+  "updatedAt": "2026-07-29T10:03:26Z",
+  "focus": "This week I focused on shipping v2.54 (dojo flip, kana quiz, hero images) and v2.55 (furigana rung). The grammar-buildability audit mapped which Genki points are implementable next — g3_masu_present looks like the strongest first target. On the infra side, pop-os VRAM budget stayed tight but stable after trimming koboldcpp's context size.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
