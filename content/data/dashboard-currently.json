@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-29T10:03:26Z",
-  "focus": "This week I focused on shipping v2.54 (dojo flip, kana quiz, hero images) and v2.55 (furigana rung). The grammar-buildability audit mapped which Genki points are implementable next — g3_masu_present looks like the strongest first target. On the infra side, pop-os VRAM budget stayed tight but stable after trimming koboldcpp's context size.",
+  "updatedAt": "2026-07-30T10:03:53Z",
+  "focus": "Shipping Keikochō v2.55 with the furigana rung and finishing out the grammar-buildability audit — 17 unmapped points are pure content, so there's a real backlog once we pick which frame to build next.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

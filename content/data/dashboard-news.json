@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-29T10:03:26Z",
+  "updatedAt": "2026-07-30T10:03:53Z",
   "items": [
     {
-      "title": "Our position on open-weights models",
-      "url": "https://www.anthropic.com/news/position-open-weights-models",
+      "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
+      "url": "https://github.com/drumih/turbo-fieldfare",
       "source": "Hacker News",
-      "points": 1158,
-      "whyItMatters": "Anthropic formalized their open-weights stance — directly relevant to running models locally for any personal-AI project."
+      "points": 801,
+      "whyItMatters": "Gemma 4 26B in 2 GB RAM on M-series Mac — a real win for edge-local inference and the kind of quantization tricks worth studying."
     },
     {
-      "title": "AI companies are shredding rare books",
-      "url": "https://twitter.com/HedgieMarkets/status/2081534588485296565",
+      "title": "Document-borne AI worms can self-propagate through Copilot for Word",
+      "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
       "source": "Hacker News",
-      "points": 788,
-      "whyItMatters": "AI companies training on destroyed rare-book scans raises data provenance questions for anyone building on historical corpora."
+      "points": 368,
+      "whyItMatters": "Self-propagating AI worms through Copilot for Word — a new attack surface on document-borne threats worth understanding."
+    },
+    {
+      "title": "Show HN: Formally verified 3D CSG: Trust 93 lines spec, not 1000 lines AI code",
+      "url": "https://github.com/schildep/verified-3d-mesh-intersection",
+      "source": "Hacker News",
+      "points": 113,
+      "whyItMatters": "Formally verified 3D CSG: trust a small spec over thousands of lines of AI-generated code — a practical lesson in verifiability."
     },
     {
       "title": "Discovering Cryptographic Weaknesses with Claude",
       "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
       "source": "Hacker News",
-      "points": 218,
-      "whyItMatters": "Claude used to find crypto flaws — a practical demo of LLM-assisted security research for anyone building secure tools."
+      "points": 226,
+      "whyItMatters": "Anthropic's frontier models applied to cryptanalysis — shows where LLM capabilities currently land on hard technical problems."
     },
     {
       "title": "Show HN: XY – A Fast, composable, GPU-accelerated interactive plotting library",
       "url": "https://github.com/reflex-dev/xy",
       "source": "Hacker News",
-      "points": 124,
-      "whyItMatters": "Fast GPU-accelerated interactive plotting in Python — useful if any visualization or dashboard projects need it."
-    },
-    {
-      "title": "Now is the time to give LLMs access to the ACM digital library",
-      "url": "https://cacm.acm.org/opinion/now-is-the-time-to-give-llms-access-to-the-acm-digital-library/",
-      "source": "Hacker News",
-      "points": 161,
-      "whyItMatters": "Argument for opening academic literature to LMs — touches on the same curriculum/research access issues in language learning."
+      "points": 131,
+      "whyItMatters": "GPU-accelerated interactive plotting — useful for any kind of data work, and the composition model looks clean."
     }
   ]
 }
