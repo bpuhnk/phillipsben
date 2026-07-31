@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-30T10:03:53Z",
-  "focus": "Shipping Keikochō v2.55 with the furigana rung and finishing out the grammar-buildability audit — 17 unmapped points are pure content, so there's a real backlog once we pick which frame to build next.",
+  "updatedAt": "2026-07-31T10:03:15Z",
+  "focus": "Shipped Keikochō v2.54 (dojo comprehension fix, onboarding quiz, manga images) and v2.55 (furigana script rung, grammar buildability audit). Working toward v2.56: building missing grammar frames — g3_masu_present is the priority first frame since it closes the plain-form vs ます gap that config.py already flags. Keeping an eye on GPT-5.6 and stacked PRs for agent-tooling implications.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-30T10:03:53Z",
+  "updatedAt": "2026-07-31T10:03:15Z",
   "items": [
     {
       "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
       "url": "https://github.com/drumih/turbo-fieldfare",
       "source": "Hacker News",
-      "points": 801,
-      "whyItMatters": "Gemma 4 26B in 2 GB RAM on M-series Mac — a real win for edge-local inference and the kind of quantization tricks worth studying."
+      "points": 895,
+      "whyItMatters": "Runs Gemma 4 26B in 2 GB RAM on M-series Macs — fits the local-model-at-low-cost sweet spot."
+    },
+    {
+      "title": "Stacked PRs are now live on GitHub",
+      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
+      "source": "Hacker News",
+      "points": 643,
+      "whyItMatters": "Stacked PRs land on GitHub; useful for sequential feature work and multi-strand PRs."
+    },
+    {
+      "title": "Advancing the price-performance frontier with GPT‑5.6",
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+      "source": "Hacker News",
+      "points": 574,
+      "whyItMatters": "GPT-5.6 released with improved price-performance; tracks the model race driving agent tooling costs."
     },
     {
       "title": "Document-borne AI worms can self-propagate through Copilot for Word",
       "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
       "source": "Hacker News",
-      "points": 368,
-      "whyItMatters": "Self-propagating AI worms through Copilot for Word — a new attack surface on document-borne threats worth understanding."
+      "points": 380,
+      "whyItMatters": "AI worm that self-propagates via Copilot for Word — a concrete attack surface for AI-assisted workflows."
     },
     {
-      "title": "Show HN: Formally verified 3D CSG: Trust 93 lines spec, not 1000 lines AI code",
-      "url": "https://github.com/schildep/verified-3d-mesh-intersection",
-      "source": "Hacker News",
-      "points": 113,
-      "whyItMatters": "Formally verified 3D CSG: trust a small spec over thousands of lines of AI-generated code — a practical lesson in verifiability."
-    },
-    {
-      "title": "Discovering Cryptographic Weaknesses with Claude",
-      "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
-      "source": "Hacker News",
-      "points": 226,
-      "whyItMatters": "Anthropic's frontier models applied to cryptanalysis — shows where LLM capabilities currently land on hard technical problems."
-    },
-    {
-      "title": "Show HN: XY – A Fast, composable, GPU-accelerated interactive plotting library",
-      "url": "https://github.com/reflex-dev/xy",
+      "title": "The AI trade now runs on borrowed money, and the lenders are repricing it",
+      "url": "https://greyswansignals.com/?theme=dark",
       "source": "Hacker News",
       "points": 131,
-      "whyItMatters": "GPU-accelerated interactive plotting — useful for any kind of data work, and the composition model looks clean."
+      "whyItMatters": "Analysis of AI financing being repriced by lenders — market signal on the sustainability of current AI spending."
     }
   ]
 }
