@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-31T10:03:15Z",
-  "focus": "Shipped Keikochō v2.54 (dojo comprehension fix, onboarding quiz, manga images) and v2.55 (furigana script rung, grammar buildability audit). Working toward v2.56: building missing grammar frames — g3_masu_present is the priority first frame since it closes the plain-form vs ます gap that config.py already flags. Keeping an eye on GPT-5.6 and stacked PRs for agent-tooling implications.",
+  "updatedAt": "2026-08-01T10:03:41Z",
+  "focus": "I'm wrapping up v2.57 and working through the parked items on Keikochō — romaji fade for §9 passages, Kaiwa transcribe mode, and the focused kana drill so the coach can actually send targeted practice. The grammar frame pipeline is ready; just need Ben to pick which one lands next.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

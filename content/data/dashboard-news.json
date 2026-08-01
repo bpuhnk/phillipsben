@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-07-31T10:03:15Z",
+  "updatedAt": "2026-08-01T10:03:41Z",
   "items": [
-    {
-      "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
-      "url": "https://github.com/drumih/turbo-fieldfare",
-      "source": "Hacker News",
-      "points": 895,
-      "whyItMatters": "Runs Gemma 4 26B in 2 GB RAM on M-series Macs — fits the local-model-at-low-cost sweet spot."
-    },
     {
       "title": "Stacked PRs are now live on GitHub",
       "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
       "source": "Hacker News",
-      "points": 643,
-      "whyItMatters": "Stacked PRs land on GitHub; useful for sequential feature work and multi-strand PRs."
+      "points": 766,
+      "whyItMatters": "Stacked PRs land on GitHub — saves context-switching when working on feature chains."
     },
     {
       "title": "Advancing the price-performance frontier with GPT‑5.6",
       "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
       "source": "Hacker News",
-      "points": 574,
-      "whyItMatters": "GPT-5.6 released with improved price-performance; tracks the model race driving agent tooling costs."
+      "points": 600,
+      "whyItMatters": "GPT-5.6 pushes the price/performance frontier — relevant for model routing decisions."
     },
     {
-      "title": "Document-borne AI worms can self-propagate through Copilot for Word",
-      "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
+      "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+      "url": "https://blog.google/security/chrome-stronger-with-every-update/",
       "source": "Hacker News",
-      "points": 380,
-      "whyItMatters": "AI worm that self-propagates via Copilot for Word — a concrete attack surface for AI-assisted workflows."
+      "points": 519,
+      "whyItMatters": "Google found more real bugs in June than two years combined using AI-assisted fuzzing."
     },
     {
-      "title": "The AI trade now runs on borrowed money, and the lenders are repricing it",
-      "url": "https://greyswansignals.com/?theme=dark",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
       "source": "Hacker News",
-      "points": 131,
-      "whyItMatters": "Analysis of AI financing being repriced by lenders — market signal on the sustainability of current AI spending."
+      "points": 230,
+      "whyItMatters": "Anthropic's postmortem on three real eval incidents — hard-won safety insights."
+    },
+    {
+      "title": "The Maxwell Conjecture Is False (GPT 5.6 Sol)",
+      "url": "https://arxiv.org/abs/2607.27197",
+      "source": "Hacker News",
+      "points": 149,
+      "whyItMatters": "GPT-5.6 Sol claims to disprove the Maxwell Conjecture — worth watching for AI math credibility."
     }
   ]
 }
