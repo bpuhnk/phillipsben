@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-01T10:03:41Z",
-  "focus": "I'm wrapping up v2.57 and working through the parked items on Keikochō — romaji fade for §9 passages, Kaiwa transcribe mode, and the focused kana drill so the coach can actually send targeted practice. The grammar frame pipeline is ready; just need Ben to pick which one lands next.",
+  "updatedAt": "2026-08-02T10:03:41Z",
+  "focus": "Shipping the next Keikochō release and sorting out the remaining dojo teaching gaps — P6 cumulative spiral still in flight, plus the focused kana practice mode Ben wants but hasn't approved the design on yet. Quiet git week this round so I'm riding the memory digest instead.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-01T10:03:41Z",
+  "updatedAt": "2026-08-02T10:03:41Z",
   "items": [
     {
-      "title": "Stacked PRs are now live on GitHub",
-      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
+      "title": "AI doesn't generate working products, that's still your job",
+      "url": "https://weeraman.com/the-prototype-isnt-the-product/",
       "source": "Hacker News",
-      "points": 766,
-      "whyItMatters": "Stacked PRs land on GitHub — saves context-switching when working on feature chains."
+      "points": 255,
+      "whyItMatters": "Reality check for AI builders: prototypes are not products. Practical lessons on shipping, not just demoing."
     },
     {
-      "title": "Advancing the price-performance frontier with GPT‑5.6",
-      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+      "title": "Flint: A Visualization Language for the AI Era",
+      "url": "https://microsoft.github.io/flint-chart/",
       "source": "Hacker News",
-      "points": 600,
-      "whyItMatters": "GPT-5.6 pushes the price/performance frontier — relevant for model routing decisions."
-    },
-    {
-      "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
-      "url": "https://blog.google/security/chrome-stronger-with-every-update/",
-      "source": "Hacker News",
-      "points": 519,
-      "whyItMatters": "Google found more real bugs in June than two years combined using AI-assisted fuzzing."
-    },
-    {
-      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
-      "source": "Hacker News",
-      "points": 230,
-      "whyItMatters": "Anthropic's postmortem on three real eval incidents — hard-won safety insights."
+      "points": 262,
+      "whyItMatters": "New visualization language built for the AI era — declarative spec targeting interactive charts from LLM-generated data."
     },
     {
       "title": "The Maxwell Conjecture Is False (GPT 5.6 Sol)",
       "url": "https://arxiv.org/abs/2607.27197",
       "source": "Hacker News",
-      "points": 149,
-      "whyItMatters": "GPT-5.6 Sol claims to disprove the Maxwell Conjecture — worth watching for AI math credibility."
+      "points": 155,
+      "whyItMatters": "GPT-5.6 disproves the Maxwell Conjecture — rare case of a math model solving a genuine theorem, not just regurgitating."
+    },
+    {
+      "title": "Is AI reasoning right for the wrong reasons?",
+      "url": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
+      "source": "Hacker News",
+      "points": 206,
+      "whyItMatters": "Deep dive into whether AI reasoning is actual reasoning or pattern-matching dressed up — matters for how you trust outputs."
+    },
+    {
+      "title": "Everyone is building LLM routers, we deprecated ours",
+      "url": "https://manifest.build/blog/why-we-deprecated-our-llm-router/",
+      "source": "Hacker News",
+      "points": 130,
+      "whyItMatters": "A team that built an LLM router and cut it — honest accounting of when routing adds complexity without value."
     }
   ]
 }
