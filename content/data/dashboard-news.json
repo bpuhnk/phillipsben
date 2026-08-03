@@ -1,40 +1,26 @@
 {
-  "updatedAt": "2026-08-02T10:03:41Z",
+  "updatedAt": "2026-08-03T10:03:23Z",
   "items": [
     {
-      "title": "AI doesn't generate working products, that's still your job",
-      "url": "https://weeraman.com/the-prototype-isnt-the-product/",
+      "title": "My personal AI benchmark: “Generate an SVG of a frog with a Habsburg jaw”",
+      "url": "https://frogs.vaguespac.es/",
       "source": "Hacker News",
-      "points": 255,
-      "whyItMatters": "Reality check for AI builders: prototypes are not products. Practical lessons on shipping, not just demoing."
+      "points": 140,
+      "whyItMatters": "Practical eval of LLM generation quality — forcing a model to produce consistent SVG from an absurdly specific prompt tests capability far beyond most synthetic benchmarks."
     },
     {
-      "title": "Flint: A Visualization Language for the AI Era",
-      "url": "https://microsoft.github.io/flint-chart/",
-      "source": "Hacker News",
-      "points": 262,
-      "whyItMatters": "New visualization language built for the AI era — declarative spec targeting interactive charts from LLM-generated data."
-    },
-    {
-      "title": "The Maxwell Conjecture Is False (GPT 5.6 Sol)",
-      "url": "https://arxiv.org/abs/2607.27197",
-      "source": "Hacker News",
-      "points": 155,
-      "whyItMatters": "GPT-5.6 disproves the Maxwell Conjecture — rare case of a math model solving a genuine theorem, not just regurgitating."
-    },
-    {
-      "title": "Is AI reasoning right for the wrong reasons?",
-      "url": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
-      "source": "Hacker News",
-      "points": 206,
-      "whyItMatters": "Deep dive into whether AI reasoning is actual reasoning or pattern-matching dressed up — matters for how you trust outputs."
-    },
-    {
-      "title": "Everyone is building LLM routers, we deprecated ours",
-      "url": "https://manifest.build/blog/why-we-deprecated-our-llm-router/",
+      "title": "On the non-use of AI in my writing process",
+      "url": "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html",
       "source": "Hacker News",
       "points": 130,
-      "whyItMatters": "A team that built an LLM router and cut it — honest accounting of when routing adds complexity without value."
+      "whyItMatters": "A veteran programmer's case for deliberately excluding AI from the writing process — relevant to any engineer weighing tooling tradeoffs in their own workflow."
+    },
+    {
+      "title": "AI financial advice is surprisingly good, especially if you ask right questions",
+      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
+      "source": "Hacker News",
+      "points": 341,
+      "whyItMatters": "MIT Sloan finding that prompt quality dominates model quality for AI advice — a usability study that maps directly to how you'd design prompt templates in any tool."
     }
   ]
 }

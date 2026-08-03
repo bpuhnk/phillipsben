@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-02T10:01:19Z",
+  "updatedAt": "2026-08-03T10:01:00Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Roxanne",
-      "artist": "The Police",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048512043dd3544a339547d04b436",
-      "url": "https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo",
-      "playedAt": "2026-08-02T02:29:53.169Z"
+      "track": "worst case scenario",
+      "artist": "jayo",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851c3764f086bc59b88063e6bf5",
+      "url": "https://open.spotify.com/track/3WrqBnovxXQCnFdeQ4buqY",
+      "playedAt": "2026-08-02T16:58:40.242Z"
     },
     {
-      "track": "Cupid's Chokehold / Breakfast in America",
-      "artist": "Gym Class Heroes",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851faa6560290393ee2057a6581",
-      "url": "https://open.spotify.com/track/2Lhdl74nwwVGOE2Gv35QuK",
-      "playedAt": "2026-08-02T02:26:56.054Z"
+      "track": "Ride or Die",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048513a54c383205719da17312cd3",
+      "url": "https://open.spotify.com/track/1lZaNg8FHAtuQqgzISCxAj",
+      "playedAt": "2026-08-02T16:56:36.394Z"
     },
     {
-      "track": "Smooth (feat. Rob Thomas)",
-      "artist": "Santana, Rob Thomas",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485105517e4e2defded1e818d3d0",
-      "url": "https://open.spotify.com/track/2pX4FpOgwItRVPPUFdRcxA",
-      "playedAt": "2026-08-02T02:23:04.778Z"
+      "track": "KICK BACK",
+      "artist": "Kenshi Yonezu",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485103d3216d6c463f993c96c9c7",
+      "url": "https://open.spotify.com/track/7oYCBKvdjrqp5vDbhDBuac",
+      "playedAt": "2026-08-02T16:54:26.262Z"
     },
     {
-      "track": "Breezeblocks",
-      "artist": "alt-J",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851609c89ad17eb28c2013c56c6",
-      "url": "https://open.spotify.com/track/3n69hLUdIsSa1WlRmjMZlW",
-      "playedAt": "2026-08-02T02:18:29.395Z"
+      "track": "last day on earth",
+      "artist": "Tai Verdes",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485144072c96d744d2b723af29ff",
+      "url": "https://open.spotify.com/track/2sS1DcNGSsG34Ccua98Q4t",
+      "playedAt": "2026-08-02T16:51:14.967Z"
     },
     {
-      "track": "Man I Need",
-      "artist": "Olivia Dean",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e3d69e17dde129037a1f09e2",
-      "url": "https://open.spotify.com/track/1qbmS6ep2hbBRaEZFpn7BX",
-      "playedAt": "2026-08-02T02:14:46.172Z"
+      "track": "Careful What You Wish For (the doctor said to)",
+      "artist": "Jack Harris",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048518d4d0f745a6b4150e64c9f26",
+      "url": "https://open.spotify.com/track/1Tob6YkutQ6jjWKzLO4gkr",
+      "playedAt": "2026-08-02T16:48:34.992Z"
     }
   ]
 }

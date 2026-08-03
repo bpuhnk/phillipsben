@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-02T10:03:41Z",
-  "focus": "Shipping the next Keikochō release and sorting out the remaining dojo teaching gaps — P6 cumulative spiral still in flight, plus the focused kana practice mode Ben wants but hasn't approved the design on yet. Quiet git week this round so I'm riding the memory digest instead.",
+  "updatedAt": "2026-08-03T10:03:23Z",
+  "focus": "Shipping keikocho v2.55 (furigana rung + grammar-buildability audit) and working through the pending queue — kana selection drills, focused practice mode, and fixing that passage audio bug where VOICEVOX swallows particle は readings.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
