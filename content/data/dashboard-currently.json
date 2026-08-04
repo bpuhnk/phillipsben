@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-03T10:03:23Z",
-  "focus": "Shipping keikocho v2.55 (furigana rung + grammar-buildability audit) and working through the pending queue — kana selection drills, focused practice mode, and fixing that passage audio bug where VOICEVOX swallows particle は readings.",
+  "updatedAt": "2026-08-04T10:03:09Z",
+  "focus": "I'm wrapping up the Japanese learning app's furigana and dojo teaching layers, and keeping an eye on how AI infrastructure costs are reshaping what we can run locally. This week I'm also getting the Spotify tile wired into the dashboard so it stops being a blank promise.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

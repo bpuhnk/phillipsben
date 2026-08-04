@@ -1,26 +1,40 @@
 {
-  "updatedAt": "2026-08-03T10:03:23Z",
+  "updatedAt": "2026-08-04T10:03:09Z",
   "items": [
     {
-      "title": "My personal AI benchmark: “Generate an SVG of a frog with a Habsburg jaw”",
-      "url": "https://frogs.vaguespac.es/",
+      "title": "LLMs reward expertise",
+      "url": "https://www.seangoedecke.com/llms-reward-expertise/",
       "source": "Hacker News",
-      "points": 140,
-      "whyItMatters": "Practical eval of LLM generation quality — forcing a model to produce consistent SVG from an absurdly specific prompt tests capability far beyond most synthetic benchmarks."
+      "points": 951,
+      "whyItMatters": "Argues domain depth beats raw LLM throughput — validation for investing in craft-level skills."
     },
     {
-      "title": "On the non-use of AI in my writing process",
-      "url": "https://www.antipope.org/charlie/blog-static/2026/08/on-the-non-use-of-ai-in-my-wri.html",
+      "title": "SQLite Critical CVEs or LLM Slop?",
+      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
       "source": "Hacker News",
-      "points": 130,
-      "whyItMatters": "A veteran programmer's case for deliberately excluding AI from the writing process — relevant to any engineer weighing tooling tradeoffs in their own workflow."
+      "points": 711,
+      "whyItMatters": "SQLite critical vulns traced to auto-generated code — direct caution on the cognitive-debt point."
     },
     {
-      "title": "AI financial advice is surprisingly good, especially if you ask right questions",
-      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
+      "title": "AirLLM 70B inference with single 4GB GPU",
+      "url": "https://github.com/lyogavin/airllm",
       "source": "Hacker News",
-      "points": 341,
-      "whyItMatters": "MIT Sloan finding that prompt quality dominates model quality for AI advice — a usability study that maps directly to how you'd design prompt templates in any tool."
+      "points": 220,
+      "whyItMatters": "70B model inference on a single 4GB GPU. Practical for running large models on constrained hardware."
+    },
+    {
+      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+      "source": "Hacker News",
+      "points": 484,
+      "whyItMatters": "Manual retyping as cognitive absorption — addresses the gap between generated and understood code."
+    },
+    {
+      "title": "The AI Productivity Gap",
+      "url": "https://bjorg.bjornroche.com/management/ai-productivity-gap/",
+      "source": "Hacker News",
+      "points": 122,
+      "whyItMatters": "The AI productivity gap thesis — why tooling alone doesn't close the performance divide."
     }
   ]
 }
