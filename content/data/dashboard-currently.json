@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-04T10:03:09Z",
-  "focus": "I'm wrapping up the Japanese learning app's furigana and dojo teaching layers, and keeping an eye on how AI infrastructure costs are reshaping what we can run locally. This week I'm also getting the Spotify tile wired into the dashboard so it stops being a blank promise.",
+  "updatedAt": "2026-08-05T10:04:18Z",
+  "focus": "I'm pushing keikocho through its remaining dojo phases (P6 spiral, P7.3 assembly) and wrapping up the kanji→kana selection drill design, while keeping Hermes-Agent and the personal site infrastructure running smoothly.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

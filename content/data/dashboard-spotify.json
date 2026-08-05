@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-04T10:01:09Z",
+  "updatedAt": "2026-08-05T10:01:23Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "怪物",
-      "artist": "YOASOBI",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e897f4915425f0a48484e3f9",
-      "url": "https://open.spotify.com/track/2vjY3jGKElvqXoaGNEuYef",
-      "playedAt": "2026-08-03T22:24:16.331Z"
+      "track": "Fly-day Chinatown",
+      "artist": "Yasuha",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485118c6750a7de879dbe57dc9b5",
+      "url": "https://open.spotify.com/track/73yXCwINoNqUBJRAgPJPsY",
+      "playedAt": "2026-08-04T20:53:17.350Z"
     },
     {
-      "track": "Insane",
-      "artist": "Black Gryph0n, Baasik",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851db593bc79e337cbcab12cf88",
-      "url": "https://open.spotify.com/track/5flerg6aEao2VayZezVlgu",
-      "playedAt": "2026-08-03T22:20:49.131Z"
+      "track": "BANG",
+      "artist": "Unroyal",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851fb70b585a72bafa3bfe5b945",
+      "url": "https://open.spotify.com/track/46YcPxEL3WYvHQE2nAd0T3",
+      "playedAt": "2026-08-04T20:49:56.647Z"
     },
     {
-      "track": "Missing Piece",
-      "artist": "John Michael Howell",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048511d0c2bc4791cd87db8c9f738",
-      "url": "https://open.spotify.com/track/25DOfzfpERYnUtEauoZgNA",
-      "playedAt": "2026-08-03T22:18:07.258Z"
-    },
-    {
-      "track": "Sharks",
-      "artist": "Imagine Dragons",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13",
-      "url": "https://open.spotify.com/track/7sA2SKTo1QbTSSYn5YvJC4",
-      "playedAt": "2026-08-03T22:15:57.538Z"
-    },
-    {
-      "track": "Blur",
+      "track": "Jenna Ortega",
       "artist": "Stellar",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851a575bce980100d4b35227f54",
-      "url": "https://open.spotify.com/track/16Azhyv8164hYxI8Ax3F5k",
-      "playedAt": "2026-08-03T22:12:59.468Z"
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851774b2fc4500d120ee6342114",
+      "url": "https://open.spotify.com/track/7hOfI5CHfxYcJ3ufzTaFM0",
+      "playedAt": "2026-08-04T20:48:10.553Z"
+    },
+    {
+      "track": "September",
+      "artist": "Earth, Wind & Fire",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048510faf2fc17446651865ce2282",
+      "url": "https://open.spotify.com/track/3kXoKlD84c6OmIcOLfrfEs",
+      "playedAt": "2026-08-04T20:46:09.153Z"
+    },
+    {
+      "track": "Against The Tide (The Captain's Tarantella)",
+      "artist": "Sail North",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485136bf914a4dd2ca73b4bf5984",
+      "url": "https://open.spotify.com/track/1vuWlF2OWLtBqPNz0aoatB",
+      "playedAt": "2026-08-04T20:42:35.959Z"
     }
   ]
 }

@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-04T10:03:09Z",
+  "updatedAt": "2026-08-05T10:04:18Z",
   "items": [
     {
       "title": "LLMs reward expertise",
       "url": "https://www.seangoedecke.com/llms-reward-expertise/",
       "source": "Hacker News",
-      "points": 951,
-      "whyItMatters": "Argues domain depth beats raw LLM throughput — validation for investing in craft-level skills."
+      "points": 1354,
+      "whyItMatters": "Deep take on why surface-level LLM prompting fails and real domain expertise compounds — relevant to building skillful AI agents."
     },
     {
       "title": "SQLite Critical CVEs or LLM Slop?",
       "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
       "source": "Hacker News",
-      "points": 711,
-      "whyItMatters": "SQLite critical vulns traced to auto-generated code — direct caution on the cognitive-debt point."
+      "points": 721,
+      "whyItMatters": "Questions whether critical SQLite CVEs are real vulnerabilities or just model-generated slop. Important data hygiene insight."
     },
     {
-      "title": "AirLLM 70B inference with single 4GB GPU",
-      "url": "https://github.com/lyogavin/airllm",
+      "title": "AI-Generated Images Discourage Me from Reading Your Blog",
+      "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
       "source": "Hacker News",
-      "points": 220,
-      "whyItMatters": "70B model inference on a single 4GB GPU. Practical for running large models on constrained hardware."
+      "points": 759,
+      "whyItMatters": "Why AI images hurt reader engagement — a useful reminder that quality beats convenience for human-first content."
     },
     {
-      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
-      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+      "title": "What's the largest software project AI can complete on its own?",
+      "url": "https://epoch.ai/MirrorCode",
       "source": "Hacker News",
-      "points": 484,
-      "whyItMatters": "Manual retyping as cognitive absorption — addresses the gap between generated and understood code."
+      "points": 102,
+      "whyItMatters": "Benchmark of the largest software project AI can complete autonomously. Sets expectations on agent capability limits."
     },
     {
-      "title": "The AI Productivity Gap",
-      "url": "https://bjorg.bjornroche.com/management/ai-productivity-gap/",
+      "title": "The AI Demand Bubble",
+      "url": "https://www.wheresyoured.at/the-ai-demand-bubble/",
       "source": "Hacker News",
-      "points": 122,
-      "whyItMatters": "The AI productivity gap thesis — why tooling alone doesn't close the performance divide."
+      "points": 106,
+      "whyItMatters": "Analysis of whether current AI infrastructure demand is sustainable or overextended. Macro context for the industry."
     }
   ]
 }
