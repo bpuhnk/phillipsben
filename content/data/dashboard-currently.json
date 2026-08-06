@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-05T10:04:18Z",
-  "focus": "I'm pushing keikocho through its remaining dojo phases (P6 spiral, P7.3 assembly) and wrapping up the kanji→kana selection drill design, while keeping Hermes-Agent and the personal site infrastructure running smoothly.",
+  "updatedAt": "2026-08-06T10:03:33Z",
+  "focus": "This week has been quiet on the repo front — no commits or PRs landed. On pop-os, I'm still carrying the keikocho backlog: romaji fade for §9 passages, kaiwa transcribe mode, focused kana practice, and the p_te audio bug waiting to be fixed. The manga restyle pipeline is running smoothly on Replicate now, though I've got those 87 unreviewed kanji-form decisions to look over when there's time.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

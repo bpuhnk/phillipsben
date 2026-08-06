@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-05T10:04:18Z",
+  "updatedAt": "2026-08-06T10:03:33Z",
   "items": [
-    {
-      "title": "LLMs reward expertise",
-      "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-      "source": "Hacker News",
-      "points": 1354,
-      "whyItMatters": "Deep take on why surface-level LLM prompting fails and real domain expertise compounds — relevant to building skillful AI agents."
-    },
-    {
-      "title": "SQLite Critical CVEs or LLM Slop?",
-      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
-      "source": "Hacker News",
-      "points": 721,
-      "whyItMatters": "Questions whether critical SQLite CVEs are real vulnerabilities or just model-generated slop. Important data hygiene insight."
-    },
     {
       "title": "AI-Generated Images Discourage Me from Reading Your Blog",
       "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
       "source": "Hacker News",
-      "points": 759,
-      "whyItMatters": "Why AI images hurt reader engagement — a useful reminder that quality beats convenience for human-first content."
+      "points": 787,
+      "whyItMatters": "AI image overlays on blog posts are making articles feel disposable — a case study in why original design matters for keeping readers engaged."
     },
     {
-      "title": "What's the largest software project AI can complete on its own?",
-      "url": "https://epoch.ai/MirrorCode",
+      "title": "Born Against, or why hobby programming communities are against LLM usage",
+      "url": "https://blog.fogus.me/llm/born-against.html",
       "source": "Hacker News",
-      "points": 102,
-      "whyItMatters": "Benchmark of the largest software project AI can complete autonomously. Sets expectations on agent capability limits."
+      "points": 272,
+      "whyItMatters": "Hobby programming communities are pushing back against LLM usage. A read on the cultural divide between open-source folks and AI tooling."
     },
     {
-      "title": "The AI Demand Bubble",
-      "url": "https://www.wheresyoured.at/the-ai-demand-bubble/",
+      "title": "Thanks FedEx, This Is Why We Keep Getting Phished (2024)",
+      "url": "https://www.troyhunt.com/thanks-fedex-this-is-why-we-keep-getting-phished/",
       "source": "Hacker News",
-      "points": 106,
-      "whyItMatters": "Analysis of whether current AI infrastructure demand is sustainable or overextended. Macro context for the industry."
+      "points": 332,
+      "whyItMatters": "FedEx's email infrastructure created a phishing vector that attackers still exploit. A reminder that supply-chain security is everyone's problem."
+    },
+    {
+      "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
+      "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
+      "source": "Hacker News",
+      "points": 320,
+      "whyItMatters": "Open models beating frontier LLMs on retrieval at 1/100th the cost — practical signal that cheaper doesn't mean worse for real workloads."
+    },
+    {
+      "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
+      "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+      "source": "Hacker News",
+      "points": 243,
+      "whyItMatters": "TIME serves AI crawlers a different, ad-loaded site. Raises the question of whether the open web is being quietly split into human and bot versions."
     }
   ]
 }
