@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-06T10:01:12Z",
+  "updatedAt": "2026-08-07T10:01:49Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Bling-Bang-Bang-Born",
+      "track": "Can't Hold Us (feat. Ray Dalton)",
+      "artist": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048512a6b364528b128a4a17d100d",
+      "url": "https://open.spotify.com/track/22skzmqfdWrjJylampe0kt",
+      "playedAt": "2026-08-07T00:26:25.622Z"
+    },
+    {
+      "track": "September",
+      "artist": "Earth, Wind & Fire",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048510faf2fc17446651865ce2282",
+      "url": "https://open.spotify.com/track/3kXoKlD84c6OmIcOLfrfEs",
+      "playedAt": "2026-08-06T20:35:42.927Z"
+    },
+    {
+      "track": "Show",
+      "artist": "Ado",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048517ac841876cee380bbeb3fdc1",
+      "url": "https://open.spotify.com/track/3K4gshVxh3IBi7XRhKZcp8",
+      "playedAt": "2026-08-06T20:32:13.808Z"
+    },
+    {
+      "track": "Sharks",
+      "artist": "Imagine Dragons",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13",
+      "url": "https://open.spotify.com/track/7sA2SKTo1QbTSSYn5YvJC4",
+      "playedAt": "2026-08-06T20:28:45.372Z"
+    },
+    {
+      "track": "オトノケ - Otonoke",
       "artist": "Creepy Nuts",
       "albumArt": "https://i.scdn.co/image/ab67616d00004851ee4da3c97e72acfdd6f62b2c",
-      "url": "https://open.spotify.com/track/4LhDEsC2tzaVuZbWAaCLrP",
-      "playedAt": "2026-08-06T02:27:59.003Z"
-    },
-    {
-      "track": "IRIS OUT",
-      "artist": "Kenshi Yonezu",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048516d1d4e875e2424cdd07f3232",
-      "url": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
-      "playedAt": "2026-08-05T22:15:53.487Z"
-    },
-    {
-      "track": "Rondo Alla Turca (Wolfgang Amadeus Mozart)",
-      "artist": "Daniel Tidwell",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851184e41e44e6e30d6b0b0a527",
-      "url": "https://open.spotify.com/track/1aGGXsSrBXnO2tWWOBKqcV",
-      "playedAt": "2026-08-05T21:41:56.478Z"
-    },
-    {
-      "track": "Rondo Alla Turca (Wolfgang Amadeus Mozart)",
-      "artist": "Daniel Tidwell",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851184e41e44e6e30d6b0b0a527",
-      "url": "https://open.spotify.com/track/1aGGXsSrBXnO2tWWOBKqcV",
-      "playedAt": "2026-08-05T21:40:46.314Z"
-    },
-    {
-      "track": "Badinerie",
-      "artist": "Son of a Bach",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485129e867f5f6ea8739e2ca3157",
-      "url": "https://open.spotify.com/track/4Uwrrm38f1EQ3VjtCMPAnR",
-      "playedAt": "2026-08-05T18:51:47.804Z"
+      "url": "https://open.spotify.com/track/185mDjE865QpjA4MtzAzgs",
+      "playedAt": "2026-08-06T20:19:56.972Z"
     }
   ]
 }

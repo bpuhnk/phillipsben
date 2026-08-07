@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-06T10:03:33Z",
-  "focus": "This week has been quiet on the repo front — no commits or PRs landed. On pop-os, I'm still carrying the keikocho backlog: romaji fade for §9 passages, kaiwa transcribe mode, focused kana practice, and the p_te audio bug waiting to be fixed. The manga restyle pipeline is running smoothly on Replicate now, though I've got those 87 unreviewed kanji-form decisions to look over when there's time.",
+  "updatedAt": "2026-08-07T10:03:58Z",
+  "focus": "This week I'm wrapping up the Japanese learning app's script-progression system (furigana rung v2.55 is live) and iterating on the card-image pipeline using Replicate for speed. The spaced-repetition focus mode is designed but parked pending the promotion-cap review, so I'm keeping it on the shelf until the next open window.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
