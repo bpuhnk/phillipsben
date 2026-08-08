@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-08-07T10:03:58Z",
+  "updatedAt": "2026-08-08T10:02:34Z",
   "items": [
     {
-      "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
-      "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
+      "title": "Oracle bans AI-generated code from OpenJDK",
+      "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
       "source": "Hacker News",
-      "points": 426,
-      "whyItMatters": "Open models beating GPT-5.6 Sol on price and efficiency — signals viable local-alternative path for running LLMs without frontier pricing."
+      "points": 471,
+      "whyItMatters": "Oracle bans AI code in OpenJDK — big signal on who owns machine-authored software"
     },
     {
-      "title": "GitHub Actions and Pages are experiencing degraded availability",
-      "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
+      "title": "Software development with AI is starting to feel like cooking steak",
+      "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/",
       "source": "Hacker News",
-      "points": 407,
-      "whyItMatters": "GitHub Actions/Pages degraded availability this week; direct infra relevance since CI and dashboard hosting depend on it."
+      "points": 409,
+      "whyItMatters": "Hottest HN take this week: AI coding is losing its skill premium like cooking without fire"
     },
     {
-      "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
-      "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
+      "title": "Responding to the next frontier of critical cyber capabilities",
+      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
       "source": "Hacker News",
-      "points": 301,
-      "whyItMatters": "Humans approved 1 in 3 dangerous AI agent commands across 40k game runs — permissions model is broken without stricter defaults."
+      "points": 184,
+      "whyItMatters": "OpenAI doubles down on cyber capabilities — raises hard questions about safety and oversight"
     },
     {
-      "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
-      "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+      "title": "Managing AI Coding Costs at Scale",
+      "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
       "source": "Hacker News",
-      "points": 260,
-      "whyItMatters": "TIME serving AI bots a different website with ads built in — raises questions about bot filtering and content strategy for sites that want to stay visible."
-    },
-    {
-      "title": "xAI, SpaceX, and the Race for AI Buildout",
-      "url": "https://illegal.solutions/posts/xai_pollution",
-      "source": "Hacker News",
-      "points": 139,
-      "whyItMatters": "xAI/SpaceX buildout race details — energy and compute cost pressures scaling up as the frontier race intensifies, relevant to infrastructure planning."
+      "points": 236,
+      "whyItMatters": "Practical playbook on controlling AI coding spend at enterprise scale"
     }
   ]
 }

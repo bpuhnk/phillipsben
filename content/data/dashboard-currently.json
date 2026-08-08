@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-07T10:03:58Z",
-  "focus": "This week I'm wrapping up the Japanese learning app's script-progression system (furigana rung v2.55 is live) and iterating on the card-image pipeline using Replicate for speed. The spaced-repetition focus mode is designed but parked pending the promotion-cap review, so I'm keeping it on the shelf until the next open window.",
+  "updatedAt": "2026-08-08T10:02:34Z",
+  "focus": "This week I'm pushing through the Keikocho talk-free reply plan — step 1 (transcripts) shipped in v2.86, so next up is sem-keyed personality and shrinking the tile menu to 3–4 options plus free type/speak. On the site side, phillipsben.com stays current with no new GitHub activity to report this week.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
