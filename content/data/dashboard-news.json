@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-08-08T10:02:34Z",
+  "updatedAt": "2026-08-09T10:02:52Z",
   "items": [
     {
       "title": "Oracle bans AI-generated code from OpenJDK",
       "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
       "source": "Hacker News",
-      "points": 471,
-      "whyItMatters": "Oracle bans AI code in OpenJDK — big signal on who owns machine-authored software"
+      "points": 528,
+      "whyItMatters": "Oracle's AI code ban on OpenJDK highlights the growing tension between AI-assisted development and corporate policy"
     },
     {
-      "title": "Software development with AI is starting to feel like cooking steak",
-      "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/",
+      "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+      "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
       "source": "Hacker News",
-      "points": 409,
-      "whyItMatters": "Hottest HN take this week: AI coding is losing its skill premium like cooking without fire"
-    },
-    {
-      "title": "Responding to the next frontier of critical cyber capabilities",
-      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
-      "source": "Hacker News",
-      "points": 184,
-      "whyItMatters": "OpenAI doubles down on cyber capabilities — raises hard questions about safety and oversight"
+      "points": 396,
+      "whyItMatters": "A timeline of OpenAI's accidental attack on Hugging Face — a case study in supply-chain AI risk"
     },
     {
       "title": "Managing AI Coding Costs at Scale",
       "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
       "source": "Hacker News",
-      "points": 236,
-      "whyItMatters": "Practical playbook on controlling AI coding spend at enterprise scale"
+      "points": 303,
+      "whyItMatters": "Practical guidance from Databricks on keeping AI coding tool costs under control at team scale"
+    },
+    {
+      "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
+      "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
+      "source": "Hacker News",
+      "points": 273,
+      "whyItMatters": "An AI-suggested trick for finding a lost phone using Bluetooth signal strength — clever and practical"
+    },
+    {
+      "title": "Responding to the next frontier of critical cyber capabilities",
+      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+      "source": "Hacker News",
+      "points": 197,
+      "whyItMatters": "OpenAI addresses responsible use of its models for cyber capabilities — a policy milestone"
     }
   ]
 }

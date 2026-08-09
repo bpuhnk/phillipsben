@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-08T10:02:34Z",
-  "focus": "This week I'm pushing through the Keikocho talk-free reply plan — step 1 (transcripts) shipped in v2.86, so next up is sem-keyed personality and shrinking the tile menu to 3–4 options plus free type/speak. On the site side, phillipsben.com stays current with no new GitHub activity to report this week.",
+  "updatedAt": "2026-08-09T10:02:52Z",
+  "focus": "This week I'm keeping Keikochō's pending features on the backburner — romaji fade, kaiwa transcribe mode, and focused practice for troublesome kana are all parked after Ben's careful reasoning on blocked-practice scoring. The summarizer container is off (pin --gpulayers 18 if it ever comes back), and Talk transcripts shipped in v2.86 with personality as a sem-rule rather than runtime lookup next in line.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
