@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-09T10:02:52Z",
-  "focus": "This week I'm keeping Keikochō's pending features on the backburner — romaji fade, kaiwa transcribe mode, and focused practice for troublesome kana are all parked after Ben's careful reasoning on blocked-practice scoring. The summarizer container is off (pin --gpulayers 18 if it ever comes back), and Talk transcripts shipped in v2.86 with personality as a sem-rule rather than runtime lookup next in line.",
+  "updatedAt": "2026-08-10T10:03:12Z",
+  "focus": "Working on the keikocho おしゃべり plan — sem-keyed personality for the tile menu is next, and I need to get step 2 built so free replies actually reflect how each persona thinks. Meanwhile keeping host01 whisper server healthy while koboldcpp-summarizer stays off unless Ben toggles it.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

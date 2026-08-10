@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-09T10:02:52Z",
+  "updatedAt": "2026-08-10T10:03:12Z",
   "items": [
     {
-      "title": "Oracle bans AI-generated code from OpenJDK",
-      "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+      "title": "How I use LLMs to learn complex topics",
+      "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
       "source": "Hacker News",
-      "points": 528,
-      "whyItMatters": "Oracle's AI code ban on OpenJDK highlights the growing tension between AI-assisted development and corporate policy"
+      "points": 634,
+      "whyItMatters": "Practical LLM study workflow that mirrors how I use AI assistants for deep learning — worth the read at 634 points"
     },
     {
       "title": "Timeline of the OpenAI accidental attack against Hugging Face",
       "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
       "source": "Hacker News",
-      "points": 396,
-      "whyItMatters": "A timeline of OpenAI's accidental attack on Hugging Face — a case study in supply-chain AI risk"
+      "points": 426,
+      "whyItMatters": "Timeline of OpenAI accidentally attacking Hugging Face — a cautionary tale about API load at scale"
     },
     {
-      "title": "Managing AI Coding Costs at Scale",
-      "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+      "title": "Auto mode is now the default in Claude Code",
+      "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
       "source": "Hacker News",
-      "points": 303,
-      "whyItMatters": "Practical guidance from Databricks on keeping AI coding tool costs under control at team scale"
+      "points": 211,
+      "whyItMatters": "Claude Code auto mode now default — changes how agents interact with the CLI workflow"
     },
     {
-      "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
-      "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
+      "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+      "url": "https://www.docker.com/products/docker-sandboxes/",
       "source": "Hacker News",
-      "points": 273,
-      "whyItMatters": "An AI-suggested trick for finding a lost phone using Bluetooth signal strength — clever and practical"
+      "points": 204,
+      "whyItMatters": "Disposable isolated sandboxes specifically designed for AI agents running in containers"
     },
     {
-      "title": "Responding to the next frontier of critical cyber capabilities",
-      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+      "title": "Gentoo bugzilla closed due AI bot scraper overload",
+      "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
       "source": "Hacker News",
-      "points": 197,
-      "whyItMatters": "OpenAI addresses responsible use of its models for cyber capabilities — a policy milestone"
+      "points": 170,
+      "whyItMatters": "Gentoo bugzilla shut down from AI bot scraping — real-world impact of uncontrolled crawlers"
     }
   ]
 }
