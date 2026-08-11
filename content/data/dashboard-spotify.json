@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-10T10:01:01Z",
+  "updatedAt": "2026-08-11T10:01:09Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Daydream",
-      "artist": "Gunter Kallmann Choir",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851b53422c1c8504eefc54e2343",
-      "url": "https://open.spotify.com/track/7rdlpVEwdhbCyGz2Wf5r4U",
-      "playedAt": "2026-08-09T23:48:21.878Z"
+      "track": "Carnival",
+      "artist": "John Michael Howell",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851a76f6fe17674953eeeeaff0e",
+      "url": "https://open.spotify.com/track/4TfmXkmAqtiq1ixe5PT5kX",
+      "playedAt": "2026-08-10T21:13:34.642Z"
     },
     {
-      "track": "Record Player",
-      "artist": "Daisy the Great, AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851436132f24b5a9ff1605b86bb",
-      "url": "https://open.spotify.com/track/7Gk8IPlFTLUcoIH3mtASI0",
-      "playedAt": "2026-08-09T22:08:36.027Z"
+      "track": "Our Way",
+      "artist": "Mark Ambor",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851da33127f62acdb0aca585e92",
+      "url": "https://open.spotify.com/track/4nuTfBhGsmbLCx7dutULKU",
+      "playedAt": "2026-08-10T21:09:42.308Z"
     },
     {
-      "track": "Roxanne",
-      "artist": "The Police",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048512043dd3544a339547d04b436",
-      "url": "https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo",
-      "playedAt": "2026-08-09T22:06:13.363Z"
+      "track": "Worst Enemy",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048518803747b6bcf0b1887b9f715",
+      "url": "https://open.spotify.com/track/012LR1KvgL8GvHryu0zMoc",
+      "playedAt": "2026-08-10T21:06:57.589Z"
     },
     {
-      "track": "Many Men (Jazz Version)",
-      "artist": "Ben Dunnill",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048516d686e1133656a2aabd97ac2",
-      "url": "https://open.spotify.com/track/3IDox0mQTGTCauYwDV9fuS",
-      "playedAt": "2026-08-09T22:03:27.328Z"
+      "track": "All My Favorite Songs (feat. AJR)",
+      "artist": "Weezer, AJR",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515e89368f5835eb72f86a1ff2",
+      "url": "https://open.spotify.com/track/3A6nR4GSolo160nu7xtDk7",
+      "playedAt": "2026-08-10T21:05:11.943Z"
     },
     {
-      "track": "I Am A Man Of Constant Sorrow - Radio Edit",
-      "artist": "The Soggy Bottom Boys, Dan Tyminski",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851a7e90e0f6a18e36a594d39c2",
-      "url": "https://open.spotify.com/track/0YwNdeDFbGP6AGwsQrtzdY",
-      "playedAt": "2026-08-09T22:00:30.125Z"
+      "track": "Tear in My Heart",
+      "artist": "Twenty One Pilots",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048512df0d98a423025032d0db1f7",
+      "url": "https://open.spotify.com/track/3bnVBN67NBEzedqQuWrpP4",
+      "playedAt": "2026-08-10T21:02:21.318Z"
     }
   ]
 }

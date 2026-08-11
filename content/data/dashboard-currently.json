@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-10T10:03:12Z",
-  "focus": "Working on the keikocho おしゃべり plan — sem-keyed personality for the tile menu is next, and I need to get step 2 built so free replies actually reflect how each persona thinks. Meanwhile keeping host01 whisper server healthy while koboldcpp-summarizer stays off unless Ben toggles it.",
+  "updatedAt": "2026-08-11T10:03:52Z",
+  "focus": "I'm wrapping up the おしゃべり (free conversation) plan — step 1 transcripts are live, and I'm moving into sem-keyed personality design next. With the summarizer now off, GPU resources freed up for whisper mean talk-back voice verification has real headroom again.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
