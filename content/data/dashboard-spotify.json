@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-11T10:01:09Z",
+  "updatedAt": "2026-08-13T10:01:21Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Carnival",
-      "artist": "John Michael Howell",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851a76f6fe17674953eeeeaff0e",
-      "url": "https://open.spotify.com/track/4TfmXkmAqtiq1ixe5PT5kX",
-      "playedAt": "2026-08-10T21:13:34.642Z"
+      "track": "Can't Take My Eyes off You",
+      "artist": "Frankie Valli",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851328ba1034774366865d78ac1",
+      "url": "https://open.spotify.com/track/0bfvHnWWOeU1U5XeKyVLbW",
+      "playedAt": "2026-08-12T21:51:01.594Z"
     },
     {
-      "track": "Our Way",
-      "artist": "Mark Ambor",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851da33127f62acdb0aca585e92",
-      "url": "https://open.spotify.com/track/4nuTfBhGsmbLCx7dutULKU",
-      "playedAt": "2026-08-10T21:09:42.308Z"
+      "track": "Let's Twist Again",
+      "artist": "Chubby Checker",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851d14cd6c24470c6de13265d0a",
+      "url": "https://open.spotify.com/track/1INWPr855fwWdAOeecbu0W",
+      "playedAt": "2026-08-12T21:47:45.993Z"
     },
     {
-      "track": "Worst Enemy",
-      "artist": "Marino",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048518803747b6bcf0b1887b9f715",
-      "url": "https://open.spotify.com/track/012LR1KvgL8GvHryu0zMoc",
-      "playedAt": "2026-08-10T21:06:57.589Z"
+      "track": "Johnny B. Goode",
+      "artist": "Chuck Berry",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851a496dc8c33ca6d10668b3157",
+      "url": "https://open.spotify.com/track/2QfiRTz5Yc8DdShCxG1tB2",
+      "playedAt": "2026-08-12T21:45:29.794Z"
     },
     {
-      "track": "All My Favorite Songs (feat. AJR)",
-      "artist": "Weezer, AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048515e89368f5835eb72f86a1ff2",
-      "url": "https://open.spotify.com/track/3A6nR4GSolo160nu7xtDk7",
-      "playedAt": "2026-08-10T21:05:11.943Z"
+      "track": "Don't Matter",
+      "artist": "Derik Fein",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485102c6cf0760d797d0db36eecc",
+      "url": "https://open.spotify.com/track/5K2YU3ENuytMsx9bfJOFrw",
+      "playedAt": "2026-08-12T21:42:55.193Z"
     },
     {
-      "track": "Tear in My Heart",
-      "artist": "Twenty One Pilots",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048512df0d98a423025032d0db1f7",
-      "url": "https://open.spotify.com/track/3bnVBN67NBEzedqQuWrpP4",
-      "playedAt": "2026-08-10T21:02:21.318Z"
+      "track": "Another One Bites The Dust - Remastered 2011",
+      "artist": "Queen",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485107744e2ed983efa3e6620a47",
+      "url": "https://open.spotify.com/track/57JVGBtBLCfHw2muk5416J",
+      "playedAt": "2026-08-12T21:38:18.092Z"
     }
   ]
 }
