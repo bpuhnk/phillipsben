@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-13T10:03:46Z",
+  "updatedAt": "2026-08-14T10:03:54Z",
   "items": [
     {
       "title": "AI is removing the middle class of software engineering?",
       "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
       "source": "Hacker News",
-      "points": 882,
-      "whyItMatters": "AI tools are compressing the junior-mid engineer tier — a structural shift in what skills remain valuable."
+      "points": 973,
+      "whyItMatters": "973 points — AI is hollowing out mid-level dev roles; directly relevant to how we think about our own craft."
     },
     {
-      "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
-      "url": "https://stolen-thoughts.com/",
+      "title": "Accelerating GPT-5.6 Sol Ultrafast",
+      "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
       "source": "Hacker News",
-      "points": 685,
-      "whyItMatters": "New paper shows reasoning traces can be exfiltrated from proprietary LLM APIs, threatening model IP and safety layers."
+      "points": 602,
+      "whyItMatters": "602 points — Cerebras pushing ultrafast inference on a major model; practical performance implications for local and cloud deployment."
     },
     {
-      "title": "OpenAI’s head of ethics leaves less than a year after joining",
-      "url": "https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0",
+      "title": "Codex in ChatGPT desktop app for Linux is now in preview",
+      "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
       "source": "Hacker News",
-      "points": 512,
-      "whyItMatters": "OpenAI's ethics chief departed under a year — signals ongoing tension between safety leadership and product velocity."
+      "points": 454,
+      "whyItMatters": "454 points — Codex landing in ChatGPT's Linux desktop app; agent-assisted dev workflow on our platform."
     },
     {
-      "title": "Go is an ideal language for AI-assisted software engineering",
-      "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
+      "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
+      "url": "https://knownagents.com/insights",
       "source": "Hacker News",
-      "points": 430,
-      "whyItMatters": ""
+      "points": 301,
+      "whyItMatters": "301 points — Mass vulnerability scans spoofing AI bot identities; a real threat model for any service with an API endpoint."
     },
     {
-      "title": "Apple Silicon and macOS VMs: Faster LLM Inference with llama.cpp",
-      "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
+      "title": "What sort of maths are LLMs good at?",
+      "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
       "source": "Hacker News",
-      "points": 303,
-      "whyItMatters": "macOS VM GPU passthrough cuts LLM inference latency vs CPU-only, a practical win for local model workloads."
+      "points": 259,
+      "whyItMatters": "259 points — A mathematician's take on where LLMs actually reason vs. pattern-match; useful boundary awareness."
     }
   ]
 }

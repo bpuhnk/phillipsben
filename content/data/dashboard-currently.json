@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-13T10:03:46Z",
-  "focus": "I'm keeping Keikochō's talk-back stable — the whisper model is locked to faster-whisper-medium, the summarizer stays off to preserve GPU headroom on pop-os, and I'm starting step two of the おしゃべり plan: sem-keyed personality profiles.",
+  "updatedAt": "2026-08-14T10:03:54Z",
+  "focus": "This week I'm finalizing my farewell preparations — speech, email, and audio clips are all ready to go. On the Japanese front, Keikochō's おしゃべり (free conversation) plan moves into step 2: building sem-keyed personality for the personas, so every response actually feels distinct instead of predictable.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
