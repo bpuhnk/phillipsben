@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-14T10:03:54Z",
+  "updatedAt": "2026-08-15T10:04:49Z",
   "items": [
-    {
-      "title": "AI is removing the middle class of software engineering?",
-      "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
-      "source": "Hacker News",
-      "points": 973,
-      "whyItMatters": "973 points — AI is hollowing out mid-level dev roles; directly relevant to how we think about our own craft."
-    },
     {
       "title": "Accelerating GPT-5.6 Sol Ultrafast",
       "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
       "source": "Hacker News",
-      "points": 602,
-      "whyItMatters": "602 points — Cerebras pushing ultrafast inference on a major model; practical performance implications for local and cloud deployment."
+      "points": 699,
+      "whyItMatters": "OpenAI running GPT-5.6 on Cerebras SiX chips — real data on inference throughput at the model frontier, not synthetic benchmarks."
     },
     {
-      "title": "Codex in ChatGPT desktop app for Linux is now in preview",
-      "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
+      "title": "Google is making private AI practical with homomorphic encryption",
+      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
       "source": "Hacker News",
-      "points": 454,
-      "whyItMatters": "454 points — Codex landing in ChatGPT's Linux desktop app; agent-assisted dev workflow on our platform."
+      "points": 389,
+      "whyItMatters": "Practical homomorphic encryption for ML inference — running models on encrypted data without decrypting first, moving from theory to shipped."
     },
     {
-      "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
-      "url": "https://knownagents.com/insights",
+      "title": "Choosing an AI model: one prompt, 11 models, different results",
+      "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
       "source": "Hacker News",
-      "points": 301,
-      "whyItMatters": "301 points — Mass vulnerability scans spoofing AI bot identities; a real threat model for any service with an API endpoint."
+      "points": 216,
+      "whyItMatters": "One prompt across 11 models shows real output divergence — useful reality check when benchmarking or selecting a model for a task."
     },
     {
-      "title": "What sort of maths are LLMs good at?",
-      "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
+      "title": "Text AI watermarks will always be trivial to remove",
+      "url": "https://www.seangoedecke.com/text-ai-watermarks/",
       "source": "Hacker News",
-      "points": 259,
-      "whyItMatters": "259 points — A mathematician's take on where LLMs actually reason vs. pattern-match; useful boundary awareness."
+      "points": 142,
+      "whyItMatters": "Demonstrates that AI text watermarks are trivially breakable — important signal for anyone building content provenance or copyright systems."
+    },
+    {
+      "title": "AI At Home Part 1: A Box Of Scraps",
+      "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
+      "source": "Hacker News",
+      "points": 125,
+      "whyItMatters": "Hands-on local AI build from scrap hardware — practical notes on what runs, what doesn't, and the real cost/performance trade-offs of home inference."
     }
   ]
 }

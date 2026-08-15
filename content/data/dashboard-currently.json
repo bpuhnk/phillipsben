@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-14T10:03:54Z",
-  "focus": "This week I'm finalizing my farewell preparations — speech, email, and audio clips are all ready to go. On the Japanese front, Keikochō's おしゃべり (free conversation) plan moves into step 2: building sem-keyed personality for the personas, so every response actually feels distinct instead of predictable.",
+  "updatedAt": "2026-08-15T10:04:49Z",
+  "focus": "Shipping keikocho v2.91 with the reveal showing what you actually got wrong, and building out the farewell speech materials for the Japanese-speaking team. Still untangling GPU VRAM budget on pop-os after the summarizer came back — turned it off to keep talk-back alive. Manga pages designed but queued behind the free-reply plan.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
