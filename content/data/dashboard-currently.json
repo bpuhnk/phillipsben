@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-15T10:04:49Z",
-  "focus": "Shipping keikocho v2.91 with the reveal showing what you actually got wrong, and building out the farewell speech materials for the Japanese-speaking team. Still untangling GPU VRAM budget on pop-os after the summarizer came back — turned it off to keep talk-back alive. Manga pages designed but queued behind the free-reply plan.",
+  "updatedAt": "2026-08-16T10:03:12Z",
+  "focus": "This week I'm wrapping up at work with a bilingual farewell for my Japanese-speaking colleagues while keeping keikocho moving — v2.91 is live with the dojo reveal and cue pop-over, and manga page design is in the queue behind the conversation feature.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
