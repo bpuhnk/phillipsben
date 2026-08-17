@@ -1,33 +1,26 @@
 {
-  "updatedAt": "2026-08-16T10:03:12Z",
+  "updatedAt": "2026-08-17T10:03:13Z",
   "items": [
     {
-      "title": "AI has access to a vastly larger working memory than the human brain",
-      "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
+      "title": "Patterns and problems in emerging multi-agent systems",
+      "url": "https://www.anthropic.com/research/multiagent-systems",
       "source": "Hacker News",
-      "points": 499,
-      "whyItMatters": "Explores how AI's massive working memory changes problem-solving — less about raw intelligence, more about holding context at scale."
+      "points": 185,
+      "whyItMatters": "Anthropic's own research on multi-agent patterns — directly relevant to agent systems work."
     },
     {
-      "title": "Google is making private AI practical with homomorphic encryption",
-      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+      "title": "Claude: System Prompts",
+      "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
       "source": "Hacker News",
-      "points": 486,
-      "whyItMatters": "Google tackles the privacy barrier to enterprise AI with homomorphic encryption — run models on encrypted data without decrypting first."
+      "points": 661,
+      "whyItMatters": "Official system prompt docs update — important for anyone building with Claude."
     },
     {
-      "title": "AI by Hand",
-      "url": "https://www.byhand.ai/",
+      "title": "Ask HN: Do you know of any company that went back to hand-written code?",
+      "url": "https://news.ycombinator.com/item?id=49318906",
       "source": "Hacker News",
-      "points": 357,
-      "whyItMatters": "A new site showing hand-crafted AI builds as an alternative to no-code platforms — making the invisible visible."
-    },
-    {
-      "title": "Maximizing the value of your Claude Code sessions",
-      "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
-      "source": "Hacker News",
-      "points": 306,
-      "whyItMatters": "Anthropic's own guidance on getting more from Claude Code — prompt patterns, iteration strategy, and when to step back."
+      "points": 101,
+      "whyItMatters": "Ask HN: companies going back to hand-written code — reflects on AI-code adoption limits."
     }
   ]
 }
