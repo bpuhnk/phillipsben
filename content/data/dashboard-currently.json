@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-17T10:03:13Z",
-  "focus": "Wrapping up a job this week — farewell speech and email are ready, Japanese colleagues will get the full package with readings and audio. Back to keikocho on Tuesday: oしゃべり step 6 (free replies), then manga pages design work queues behind that. Keeping an eye on Anthropic's multi-agent research and the Claude system prompt docs for agent-building relevance.",
+  "updatedAt": "2026-08-18T10:02:48Z",
+  "focus": "I'm wrapping up Keikocho v2.91 with the reveal-meaning and gloss pop-over, preparing my departure after weeks of deep work on the curriculum engine, and I'm keeping one eye on how Claude's system prompts reshape the tools I depend on daily.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
