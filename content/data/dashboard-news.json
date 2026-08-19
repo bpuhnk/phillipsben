@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-08-18T10:02:48Z",
+  "updatedAt": "2026-08-19T10:03:56Z",
   "items": [
-    {
-      "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
-      "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
-      "source": "Hacker News",
-      "points": 790,
-      "whyItMatters": "Claude output is being adulterated with watermarks — raises authorship and integrity questions for anyone using it professionally."
-    },
-    {
-      "title": "Claude: System Prompts",
-      "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
-      "source": "Hacker News",
-      "points": 746,
-      "whyItMatters": "Official system prompts release reshapes how Claude behaves across apps — directly affects tooling and dashboards that use it."
-    },
     {
       "title": "AI;DR (AI; Didn't Read)",
       "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
       "source": "Hacker News",
-      "points": 882,
-      "whyItMatters": "Witty, practical take on why most AI users haven't actually read the docs — useful mindset check for anyone building on top of LLMs."
+      "points": 1077,
+      "whyItMatters": "Sharp portrait of how people actually use chatbots — exactly the behavior LLMs were built to optimize for."
     },
     {
-      "title": "Incident with Github.com [resolved]",
-      "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
-      "source": "Hacker News",
-      "points": 543,
-      "whyItMatters": "GitHub outage hits developers hard; incident timeline shows how fragile modern dev workflows are when a single platform goes down."
-    },
-    {
-      "title": "GPT-5.6 Sol Pricing Cut by 50%",
+      "title": "GPT-5.6 Sol Pricing Cut by 50% on OpenRouter",
       "url": "https://openrouter.ai/openai/gpt-5.6-sol",
       "source": "Hacker News",
-      "points": 442,
-      "whyItMatters": "OpenAI cuts GPT-5.6 Sol pricing by half — market pressure shifting, affects competitive positioning for Claude-based tools."
+      "points": 622,
+      "whyItMatters": "OpenRouter slashes GPT-5.6 Sol pricing by 50% — cuts inference cost for vision tasks in half."
+    },
+    {
+      "title": "Google has acquired the data of failed US airline Spirit",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
+      "source": "Hacker News",
+      "points": 583,
+      "whyItMatters": "Google buys bankrupt Spirit's data for AI training — the next frontier of dataset acquisition."
+    },
+    {
+      "title": "Cursor launches Origin, GitHub alternative",
+      "url": "https://cursor.com/changelog/origin-code-hosting",
+      "source": "Hacker News",
+      "points": 566,
+      "whyItMatters": "Cursor launches Origin, a GitHub-competitive code hosting platform built around AI-assisted workflows."
     }
   ]
 }

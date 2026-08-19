@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-18T10:00:30Z",
+  "updatedAt": "2026-08-19T10:01:15Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "A Horse with No Name",
-      "artist": "America, George Martin",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851cc2ef2810c85fde8ec60cbc4",
-      "url": "https://open.spotify.com/track/54eZmuggBFJbV7k248bTTt",
-      "playedAt": "2026-08-17T18:02:39.770Z"
+      "track": "The Greatest Show",
+      "artist": "Panic! At The Disco",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048510703eca0a035007b44ae2778",
+      "url": "https://open.spotify.com/track/55PZSFcKQxXH5BOOcDA6yI",
+      "playedAt": "2026-08-19T02:33:13.641Z"
     },
     {
-      "track": "Feeling Good",
-      "artist": "Michael Bublé",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048514baba2a420140005081a91f2",
-      "url": "https://open.spotify.com/track/6lRU3pKjNnSI9svHzznkC6",
-      "playedAt": "2026-08-17T11:40:25.237Z"
+      "track": "I Wanna Be Like You - The Monkey Song",
+      "artist": "Sid Bader",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485119a0fe11e55b906f420c279e",
+      "url": "https://open.spotify.com/track/2fB7LYyu9IiHXvKYivey8q",
+      "playedAt": "2026-08-18T21:11:38.792Z"
     },
     {
-      "track": "Put Your Head on My Shoulder",
-      "artist": "Paul Anka",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851ca4474ff02298f4b3257765f",
-      "url": "https://open.spotify.com/track/7eqNATKM78MkWP6aHGXHEV",
-      "playedAt": "2026-08-17T11:31:22.758Z"
+      "track": "Dance Monkey",
+      "artist": "Tones And I",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851931a1c33d7850f20ee23a5e1",
+      "url": "https://open.spotify.com/track/2N8m6CYs74qQO4mjVcXO30",
+      "playedAt": "2026-08-18T21:06:51.350Z"
     },
     {
-      "track": "Mouth off",
-      "artist": "Louis Capone",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485167f005a069ba291a5cf2d3ec",
-      "url": "https://open.spotify.com/track/3lfQZpZDvo0EnYQLTUEEyM",
-      "playedAt": "2026-08-17T11:28:42.801Z"
+      "track": "Just A Girl",
+      "artist": "No Doubt",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048516ebd5e789646a833b8f7d4ba",
+      "url": "https://open.spotify.com/track/5lWRaa0fBxDE5yU91npPq7",
+      "playedAt": "2026-08-18T21:03:35.155Z"
     },
     {
-      "track": "Let's Ride",
-      "artist": "Khantrast",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851af0e31f8e69efc7e17723cb9",
-      "url": "https://open.spotify.com/track/3QgfLvIc7mrW1GIXQFh540",
-      "playedAt": "2026-08-17T11:26:15.507Z"
+      "track": "Smoke",
+      "artist": "Connor Price, Walker Hayes",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851bc627b988941b8da702b7960",
+      "url": "https://open.spotify.com/track/2QaKqCBZzBossC940glm6N",
+      "playedAt": "2026-08-18T21:00:14.754Z"
     }
   ]
 }
