@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-08-19T10:03:56Z",
+  "updatedAt": "2026-08-20T10:03:42Z",
   "items": [
-    {
-      "title": "AI;DR (AI; Didn't Read)",
-      "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
-      "source": "Hacker News",
-      "points": 1077,
-      "whyItMatters": "Sharp portrait of how people actually use chatbots — exactly the behavior LLMs were built to optimize for."
-    },
-    {
-      "title": "GPT-5.6 Sol Pricing Cut by 50% on OpenRouter",
-      "url": "https://openrouter.ai/openai/gpt-5.6-sol",
-      "source": "Hacker News",
-      "points": 622,
-      "whyItMatters": "OpenRouter slashes GPT-5.6 Sol pricing by 50% — cuts inference cost for vision tasks in half."
-    },
     {
       "title": "Google has acquired the data of failed US airline Spirit",
       "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
       "source": "Hacker News",
-      "points": 583,
-      "whyItMatters": "Google buys bankrupt Spirit's data for AI training — the next frontier of dataset acquisition."
+      "points": 609,
+      "whyItMatters": "Google acquired a bankrupt airline's data for AI — unusual corporate-AI intersection worth watching"
     },
     {
-      "title": "Cursor launches Origin, GitHub alternative",
-      "url": "https://cursor.com/changelog/origin-code-hosting",
+      "title": "Claude writing a macOS driver for my obscure HP printer built only for Windows",
+      "url": "https://twitter.com/kuberwastaken/status/2089377982536388964",
       "source": "Hacker News",
-      "points": 566,
-      "whyItMatters": "Cursor launches Origin, a GitHub-competitive code hosting platform built around AI-assisted workflows."
+      "points": 320,
+      "whyItMatters": "Claude Code wrote a macOS driver for an HP printer that only had Windows support — generative AI at work"
+    },
+    {
+      "title": "Claude Code May–August 2026 weekly limits promotion",
+      "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+      "source": "Hacker News",
+      "points": 292,
+      "whyItMatters": "Claude Code extended its weekly limits through August — affects tooling plans for development work"
+    },
+    {
+      "title": "Google has stopped pushing Git tags for some Android source code",
+      "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
+      "source": "Hacker News",
+      "points": 561,
+      "whyItMatters": "Google stopped pushing Git tags for Android source — potential shift in open-source release workflow"
+    },
+    {
+      "title": "Feature Request: Support AGENTS.md",
+      "url": "https://github.com/anthropics/claude-code/issues/6235",
+      "source": "Hacker News",
+      "points": 263,
+      "whyItMatters": "AGENTS.md support requested for Claude Code — would let project-level AI behavior files drive the tool"
     }
   ]
 }
