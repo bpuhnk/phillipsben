@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-21T10:03:05Z",
+  "updatedAt": "2026-08-22T10:03:43Z",
   "items": [
     {
-      "title": "Don't paste the AI, please",
-      "url": "https://dontpastetheai.com/",
-      "source": "Hacker News",
-      "points": 1012,
-      "whyItMatters": "AI training data transparency: a public tracker of what companies are actually scraping"
-    },
-    {
-      "title": "Google has stopped pushing Git tags for some Android source code",
-      "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
-      "source": "Hacker News",
-      "points": 804,
-      "whyItMatters": "Google stopped pushing Git tags for Android source — trust and verifiability implications"
-    },
-    {
-      "title": "Feature Request: Support AGENTS.md",
-      "url": "https://github.com/anthropics/claude-code/issues/6235",
-      "source": "Hacker News",
-      "points": 361,
-      "whyItMatters": "AGENTS.md feature request could standardize agent configuration across tools"
-    },
-    {
       "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-      "url": "https://annas-archive.gl/blog/physical-destruction.html",
+      "url": "https://annas-archive.pk/blog/physical-destruction.html",
       "source": "Hacker News",
-      "points": 333,
-      "whyItMatters": "Rare book preservation before AI-era physical destruction raises urgent cultural question"
+      "points": 703,
+      "whyItMatters": "Cultural preservation angle: AI companies are destroying physical books while claiming to save knowledge. 703 points — people care."
     },
     {
       "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
       "url": "https://github.com/zachahn/vomit",
       "source": "Hacker News",
-      "points": 256,
-      "whyItMatters": "Using a separate LLM to post-process token output — novel pipeline for cleanup"
+      "points": 298,
+      "whyItMatters": "Tool to clean up Claude's raw token output with a second LLM. Directly useful for anyone piping Claude into downstream systems."
+    },
+    {
+      "title": "I'm becoming AI-blind",
+      "url": "https://cymerys.com/w/im-becoming-ai-blind",
+      "source": "Hacker News",
+      "points": 366,
+      "whyItMatters": "Essay on AI saturation — the feeling that everything is suddenly about AI and nothing else matters. Worth reading when you're deep in it."
+    },
+    {
+      "title": "What happens when a GPU reads memory",
+      "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory",
+      "source": "Hacker News",
+      "points": 108,
+      "whyItMatters": "Deep dive into GPU memory access patterns. Solid systems engineering write-up that's rare on HN right now."
+    },
+    {
+      "title": "Hacking with Claude on a $27 smart watch",
+      "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+      "source": "Hacker News",
+      "points": 105,
+      "whyItMatters": "Running Claude on a $27 smartwatch — hardware hacking meets LLM. Fun proof-of-concept that pushes boundaries."
     }
   ]
 }

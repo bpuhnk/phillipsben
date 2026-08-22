@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-21T10:00:45Z",
+  "updatedAt": "2026-08-22T10:00:54Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Gangsta's Paradise (Jazz Version)",
+      "track": "Lose Yourself (Jazz Version)",
       "artist": "Ben Dunnill",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e362b389e1ff7a0674ccc2d4",
-      "url": "https://open.spotify.com/track/0Kn0oNPk91U7AHRjMkT7yN",
-      "playedAt": "2026-08-21T06:18:50.570Z"
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851a0fb26eac022ad8fcf533290",
+      "url": "https://open.spotify.com/track/4niZrjAIA7QslaEQanLxeN",
+      "playedAt": "2026-08-22T05:17:39.017Z"
     },
     {
-      "track": "Voodoo",
+      "track": "Lose Yourself (Jazz Version)",
+      "artist": "Ben Dunnill",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851a0fb26eac022ad8fcf533290",
+      "url": "https://open.spotify.com/track/4niZrjAIA7QslaEQanLxeN",
+      "playedAt": "2026-08-22T02:09:19.820Z"
+    },
+    {
+      "track": "In the Name of Love",
       "artist": "Zak Azoury",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485126f3e430606f9de7802684c6",
-      "url": "https://open.spotify.com/track/3qqmGOkdVguuWBm754a5g8",
-      "playedAt": "2026-08-20T20:39:21.746Z"
+      "albumArt": "https://i.scdn.co/image/ab67616d000048513b7dba9884fd8032a01aeab7",
+      "url": "https://open.spotify.com/track/6SaEfJw9i6SxmQLJcD6fi7",
+      "playedAt": "2026-08-22T02:05:07.307Z"
     },
     {
-      "track": "Sweet Little Lady",
-      "artist": "The Big Push, Ren",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851f4aac26a741ecca9adae56f9",
-      "url": "https://open.spotify.com/track/5dvMYGrn42GmyzgxOALt9t",
-      "playedAt": "2026-08-20T20:36:12.101Z"
+      "track": "summertime",
+      "artist": "cinnamons, evening cinema",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851270b22c834084aa5357218c8",
+      "url": "https://open.spotify.com/track/172zA5Yn0YzayQWvEJuGAm",
+      "playedAt": "2026-08-22T02:01:48.222Z"
     },
     {
-      "track": "Crabbuckit",
-      "artist": "Good Lovelies",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851daab38784d0e4a891591cd8d",
-      "url": "https://open.spotify.com/track/34gqX330UgbRY9OZl71y1K",
-      "playedAt": "2026-08-20T20:33:33.456Z"
-    },
-    {
-      "track": "Karma",
-      "artist": "AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851a320d7e9efd7602648fb78e3",
-      "url": "https://open.spotify.com/track/2skZSmKuBgg37tMT2JnZUn",
-      "playedAt": "2026-08-20T20:31:23.349Z"
+      "track": "Tarinaifutari",
+      "artist": "Creepy Nuts",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048517a4d1b481d8b358e3c80b3da",
+      "url": "https://open.spotify.com/track/4cCUZC6zB2DzaKs5yuRwxa",
+      "playedAt": "2026-08-22T01:57:39.120Z"
     }
   ]
 }
