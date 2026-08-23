@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-22T10:03:43Z",
+  "updatedAt": "2026-08-23T10:03:32Z",
   "items": [
-    {
-      "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-      "url": "https://annas-archive.pk/blog/physical-destruction.html",
-      "source": "Hacker News",
-      "points": 703,
-      "whyItMatters": "Cultural preservation angle: AI companies are destroying physical books while claiming to save knowledge. 703 points — people care."
-    },
-    {
-      "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
-      "url": "https://github.com/zachahn/vomit",
-      "source": "Hacker News",
-      "points": 298,
-      "whyItMatters": "Tool to clean up Claude's raw token output with a second LLM. Directly useful for anyone piping Claude into downstream systems."
-    },
     {
       "title": "I'm becoming AI-blind",
       "url": "https://cymerys.com/w/im-becoming-ai-blind",
       "source": "Hacker News",
-      "points": 366,
-      "whyItMatters": "Essay on AI saturation — the feeling that everything is suddenly about AI and nothing else matters. Worth reading when you're deep in it."
+      "points": 484,
+      "whyItMatters": "The self-awareness of leaning too hard on AI — worth reflecting on before you become it"
     },
     {
-      "title": "What happens when a GPU reads memory",
-      "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory",
+      "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+      "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
       "source": "Hacker News",
-      "points": 108,
-      "whyItMatters": "Deep dive into GPU memory access patterns. Solid systems engineering write-up that's rare on HN right now."
+      "points": 352,
+      "whyItMatters": "A tool that strips BuzzFeed-speak from Claude's output — practical tone control for your own workflows"
     },
     {
-      "title": "Hacking with Claude on a $27 smart watch",
-      "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+      "title": "Why your local LLM feels dumber than it is",
+      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
       "source": "Hacker News",
-      "points": 105,
-      "whyItMatters": "Running Claude on a $27 smartwatch — hardware hacking meets LLM. Fun proof-of-concept that pushes boundaries."
+      "points": 349,
+      "whyItMatters": "Diagnoses why local models underperform — relevant to your Pop OS + qwen setup"
+    },
+    {
+      "title": "A week of using Codex more than Claude",
+      "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+      "source": "Hacker News",
+      "points": 193,
+      "whyItMatters": "Side-by-side week of Codex vs Claude for real dev work — the tradeoffs that matter day-to-day"
+    },
+    {
+      "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
+      "url": "https://twitter.com/argofowl/status/2091150597374537729",
+      "source": "Hacker News",
+      "points": 189,
+      "whyItMatters": "Anthropic A/B testing effort levels in Claude Code — could shift how much you lean on it"
     }
   ]
 }

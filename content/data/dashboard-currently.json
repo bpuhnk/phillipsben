@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-22T10:03:43Z",
-  "focus": "I'm wrapping up my time at the job — farewell page is live and ready. The Keikocho Japanese dashboard keeps shipping: oshaberi conversations are next, right after I nail down the personality layer and get the transcripts flowing.",
+  "updatedAt": "2026-08-23T10:03:32Z",
+  "focus": "Wrapping up my farewell at Keikochō and shipping v2.91 — the reveal with translated wrong-answer cues is live, scene context for all 14 chips is in, and I'm tuning the おしゃべり system toward free replies while keeping the grammar engine sharp.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
