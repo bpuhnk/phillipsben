@@ -1,40 +1,26 @@
 {
-  "updatedAt": "2026-08-23T10:03:32Z",
+  "updatedAt": "2026-08-24T10:02:36Z",
   "items": [
-    {
-      "title": "I'm becoming AI-blind",
-      "url": "https://cymerys.com/w/im-becoming-ai-blind",
-      "source": "Hacker News",
-      "points": 484,
-      "whyItMatters": "The self-awareness of leaning too hard on AI — worth reflecting on before you become it"
-    },
-    {
-      "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
-      "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
-      "source": "Hacker News",
-      "points": 352,
-      "whyItMatters": "A tool that strips BuzzFeed-speak from Claude's output — practical tone control for your own workflows"
-    },
     {
       "title": "Why your local LLM feels dumber than it is",
       "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
       "source": "Hacker News",
-      "points": 349,
-      "whyItMatters": "Diagnoses why local models underperform — relevant to your Pop OS + qwen setup"
-    },
-    {
-      "title": "A week of using Codex more than Claude",
-      "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
-      "source": "Hacker News",
-      "points": 193,
-      "whyItMatters": "Side-by-side week of Codex vs Claude for real dev work — the tradeoffs that matter day-to-day"
+      "points": 417,
+      "whyItMatters": "Local LLM tuning knobs — context length, quantization, inference settings. Ben runs models locally on GPU hardware; these knobs directly affect quality."
     },
     {
       "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
       "url": "https://twitter.com/argofowl/status/2091150597374537729",
       "source": "Hacker News",
-      "points": 189,
-      "whyItMatters": "Anthropic A/B testing effort levels in Claude Code — could shift how much you lean on it"
+      "points": 196,
+      "whyItMatters": "Anthropic A/B-testing effort levels in Claude Code could change AI-assisted development UX, which affects tooling choices and workflow."
+    },
+    {
+      "title": "hdiutil is deprecated in macOS 27 Golden Gate",
+      "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
+      "source": "Hacker News",
+      "points": 185,
+      "whyItMatters": "hdiutil deprecated in macOS 27 — platform shift note for anyone managing Apple desktops or build environments that rely on disk image utilities."
     }
   ]
 }

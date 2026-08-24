@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-23T10:01:15Z",
+  "updatedAt": "2026-08-24T10:00:38Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Fever",
-      "artist": "Peggy Lee",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048517c1a73a20e5dbcc984f69cb4",
-      "url": "https://open.spotify.com/track/3aPlQWU07jGgyHaBHVS5TS",
-      "playedAt": "2026-08-22T20:02:21.915Z"
+      "track": "Hey Mister",
+      "artist": "Poor Man's Poison",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851e263f90f4c5d13eadcfe6c04",
+      "url": "https://open.spotify.com/track/44VMH5NwFMqtmHsUTRVDNb",
+      "playedAt": "2026-08-23T22:33:14.264Z"
     },
     {
-      "track": "Lean on Me",
-      "artist": "Bill Withers",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485172641ed682401fc46c18ac12",
-      "url": "https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2",
-      "playedAt": "2026-08-22T15:15:36.649Z"
+      "track": "Medusa",
+      "artist": "Zak Azoury",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b8682ef09d46ca6d37e26a3b",
+      "url": "https://open.spotify.com/track/5Ij2rHvymdJwxs5B8Bi21I",
+      "playedAt": "2026-08-23T22:30:55.505Z"
     },
     {
-      "track": "These Boots Are Made for Walkin'",
-      "artist": "Nancy Sinatra",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485182d92aad3ac1d915434b29d5",
-      "url": "https://open.spotify.com/track/2PneNdtypG6XcgmWmGd9FI",
-      "playedAt": "2026-08-22T15:11:17.375Z"
+      "track": "I Can't Fit In",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b20394ece0d428ddafd685c2",
+      "url": "https://open.spotify.com/track/2ZDhEadCNyggLJWGETk7sQ",
+      "playedAt": "2026-08-23T22:28:01.204Z"
     },
     {
-      "track": "Take Five",
-      "artist": "The Dave Brubeck Quartet",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851b6bd44cf06bf8f4d5ce1e080",
-      "url": "https://open.spotify.com/track/1YQWosTIljIvxAgHWTp7KP",
-      "playedAt": "2026-08-22T15:08:29.138Z"
+      "track": "Killing Me Softly With His Song",
+      "artist": "Fugees, Ms. Lauryn Hill",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515b7865be7f7fcc05faec6137",
+      "url": "https://open.spotify.com/track/0Q0IVlqMV64kNLlwjPj0Hl",
+      "playedAt": "2026-08-23T22:25:55.437Z"
     },
     {
-      "track": "My Baby Just Cares for Me (2013 - Remaster)",
-      "artist": "Nina Simone",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485179d4b738f89a33471c9e0aa6",
-      "url": "https://open.spotify.com/track/5Lhjlnly9Ynhf52ojQS534",
-      "playedAt": "2026-08-22T14:26:15.814Z"
+      "track": "50 Ways to Leave Your Lover",
+      "artist": "Paul Simon",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851f081c7a1a21fb8f983a9d3cb",
+      "url": "https://open.spotify.com/track/6Qb7gtV6Q4MnUjSbkFcopl",
+      "playedAt": "2026-08-23T22:20:57.402Z"
     }
   ]
 }
