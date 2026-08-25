@@ -1,26 +1,40 @@
 {
-  "updatedAt": "2026-08-24T10:02:36Z",
+  "updatedAt": "2026-08-25T10:02:55Z",
   "items": [
     {
-      "title": "Why your local LLM feels dumber than it is",
-      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+      "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
+      "url": "https://twitter.com/lemire/status/2091894299289874926",
       "source": "Hacker News",
-      "points": 417,
-      "whyItMatters": "Local LLM tuning knobs — context length, quantization, inference settings. Ben runs models locally on GPU hardware; these knobs directly affect quality."
+      "points": 868,
+      "whyItMatters": "x86 SIMD legend benchmarks new CPU against Apple — real single-thread, big multi-thread delta, not synthetic."
     },
     {
-      "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
-      "url": "https://twitter.com/argofowl/status/2091150597374537729",
+      "title": "Coding expertise is going to collapse from AI reliance",
+      "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
       "source": "Hacker News",
-      "points": 196,
-      "whyItMatters": "Anthropic A/B-testing effort levels in Claude Code could change AI-assisted development UX, which affects tooling choices and workflow."
+      "points": 514,
+      "whyItMatters": "Argues that AI-assisted coding erodes deep expertise — worth reading for anyone building tools developers rely on daily."
     },
     {
-      "title": "hdiutil is deprecated in macOS 27 Golden Gate",
-      "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
+      "title": "My agent.md to improve LLM-assisted code quality",
+      "url": "https://fabiensanglard.net/agent.md/index.html",
       "source": "Hacker News",
-      "points": 185,
-      "whyItMatters": "hdiutil deprecated in macOS 27 — platform shift note for anyone managing Apple desktops or build environments that rely on disk image utilities."
+      "points": 403,
+      "whyItMatters": "A working developer's agent.md for LLM-assisted code quality — pragmatic, not buzzword-driven."
+    },
+    {
+      "title": "I built a low-latency AI companion that plays Skyrim with me",
+      "url": "https://pantel.is/projects/ai-gaming-companion/",
+      "source": "Hacker News",
+      "points": 360,
+      "whyItMatters": "Low-latency AI companion playing Skyrim in real time — practical demo of responsive agentic systems on consumer hardware."
+    },
+    {
+      "title": "LLMs could control their host machines by exploiting inference engines",
+      "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
+      "source": "Hacker News",
+      "points": 144,
+      "whyItMatters": "Shows how LLMs can hijack host machines through inference engines — security-relevant for anyone running models locally."
     }
   ]
 }
