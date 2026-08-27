@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-26T10:05:59Z",
-  "focus": "Finishing up my farewell events this week and wrapping remaining Keikochō work before focusing on new projects. TheLongRest D&D app, BudgetTracker migration complete — now building out the next wave of features across both.",
+  "updatedAt": "2026-08-27T10:05:19Z",
+  "focus": "I'm wrapping up the phillipsben.com dashboard overhaul and tightening the Hermes cron pipeline — fewer moving parts, more reliable. On the work front I'm keeping an eye on AI's push into everyday tooling: open-source models eating into the cloud incumbents, and how that changes what I build locally versus ship to the wire.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

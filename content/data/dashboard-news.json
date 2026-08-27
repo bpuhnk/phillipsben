@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-26T10:05:59Z",
+  "updatedAt": "2026-08-27T10:05:19Z",
   "items": [
     {
-      "title": "Coding expertise is going to collapse from AI reliance",
-      "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
+      "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
+      "url": "https://github.com/SenteLabsAI/OpenExecutive",
       "source": "Hacker News",
-      "points": 550,
-      "whyItMatters": "A sharp argument that over-reliance on AI tools is hollowing out deep engineering judgment — worth watching as an industry trend."
+      "points": 607,
+      "whyItMatters": "A fired-devs team built an open-source AI CEO — poetically on point for the week."
     },
     {
       "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
       "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
       "source": "Hacker News",
-      "points": 487,
-      "whyItMatters": "OpenAI's custom silicon challenge to Nvidia's dominance in AI hardware signals a shift toward vertical integration."
+      "points": 579,
+      "whyItMatters": "OpenAI Jalapeño outperforms Nvidia Blackwell — reshaping the AI hardware narrative."
     },
     {
-      "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
-      "url": "https://developers.openai.com/api/docs/pricing",
+      "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
       "source": "Hacker News",
-      "points": 335,
-      "whyItMatters": "GPT 5.6 Sol pricing cut through November makes advanced models more accessible for heavy users and teams."
+      "points": 426,
+      "whyItMatters": "Z.ai confirms Ox Alpha as a new GLM-series model with open weights — more competition in the middle."
     },
     {
       "title": "How much of HN is AI?",
       "url": "https://blog.coredump.cx/p/how-much-of-hn-is-ai",
       "source": "Hacker News",
-      "points": 267,
-      "whyItMatters": "A data-driven look at AI content saturation on Hacker News — relevant to any signal-vs-noise debate about what's new."
+      "points": 274,
+      "whyItMatters": "A data-driven look at how much of HN's content is now AI-generated or AI-themed."
     },
     {
-      "title": "LLMs could control their host machines by exploiting inference engines",
-      "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
+      "title": "Disruption with Some GitHub Services – Resolved",
+      "url": "https://www.githubstatus.com/incidents/hcbtzksccj2f",
       "source": "Hacker News",
-      "points": 188,
-      "whyItMatters": "A practical security angle: LLMs with inference engine access could hijack their host machines — timely for anyone running local models."
+      "points": 261,
+      "whyItMatters": "GitHub services disruption resolved — good news for repo-backed workflows like this dashboard."
     }
   ]
 }
