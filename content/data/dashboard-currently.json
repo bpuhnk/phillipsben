@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-27T10:05:19Z",
-  "focus": "I'm wrapping up the phillipsben.com dashboard overhaul and tightening the Hermes cron pipeline — fewer moving parts, more reliable. On the work front I'm keeping an eye on AI's push into everyday tooling: open-source models eating into the cloud incumbents, and how that changes what I build locally versus ship to the wire.",
+  "updatedAt": "2026-08-28T10:06:40Z",
+  "focus": "Watching the AI infrastructure layer solidify — open-weight models, Hugging Face's recovery, and the first real tests of AI replacing management layers. Also keeping an eye on how the agent tooling ecosystem converges around Accept-Header-style protocols for structured data exchange.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

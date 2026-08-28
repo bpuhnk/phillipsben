@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-27T10:05:19Z",
+  "updatedAt": "2026-08-28T10:06:40Z",
   "items": [
     {
       "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
       "url": "https://github.com/SenteLabsAI/OpenExecutive",
       "source": "Hacker News",
-      "points": 607,
-      "whyItMatters": "A fired-devs team built an open-source AI CEO — poetically on point for the week."
+      "points": 975,
+      "whyItMatters": "Fired devs built an open-source AI CEO — proof that replacing middle management with model invocations is actually shipping, not just a LinkedIn meme."
     },
     {
-      "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
-      "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+      "title": "Show HN: The load-bearing vocabulary of Claude",
+      "url": "https://louisabraham.github.io/load-bearing/",
       "source": "Hacker News",
-      "points": 579,
-      "whyItMatters": "OpenAI Jalapeño outperforms Nvidia Blackwell — reshaping the AI hardware narrative."
+      "points": 523,
+      "whyItMatters": "Maps the vocabulary Claude uses to think — reveals how its reasoning chains are structurally different from token-stacking, with real architectural consequences."
     },
     {
       "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
       "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
       "source": "Hacker News",
-      "points": 426,
-      "whyItMatters": "Z.ai confirms Ox Alpha as a new GLM-series model with open weights — more competition in the middle."
+      "points": 433,
+      "whyItMatters": "Z.ai's Ox Alpha joins the Chinese open-weight model arms race — GLM-series weights coming means another contender for local inference on modest GPUs."
     },
     {
-      "title": "How much of HN is AI?",
-      "url": "https://blog.coredump.cx/p/how-much-of-hn-is-ai",
+      "title": "The Hugging Face incident and the road ahead",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
       "source": "Hacker News",
-      "points": 274,
-      "whyItMatters": "A data-driven look at how much of HN's content is now AI-generated or AI-themed."
+      "points": 330,
+      "whyItMatters": "OpenAI's post-mortem on the Hugging Face outage covers infra dependencies that every AI engineering team now takes for granted until they break."
     },
     {
-      "title": "Disruption with Some GitHub Services – Resolved",
-      "url": "https://www.githubstatus.com/incidents/hcbtzksccj2f",
+      "title": "Serve Markdown to AI Agents with Accept Headers",
+      "url": "https://acceptmarkdown.com/",
       "source": "Hacker News",
-      "points": 261,
-      "whyItMatters": "GitHub services disruption resolved — good news for repo-backed workflows like this dashboard."
+      "points": 174,
+      "whyItMatters": "Serve Markdown to AI Agents with Accept Headers — a simple protocol change that lets clients request structured markdown instead of raw text, useful for any agent pipeline."
     }
   ]
 }

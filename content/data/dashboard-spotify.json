@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-08-27T10:02:25Z",
+  "updatedAt": "2026-08-28T10:02:52Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Amber",
-      "artist": "311",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851c63cd31653491e102712ee1a",
-      "url": "https://open.spotify.com/track/6Fe3Flc9SjE03pqwD6PVQl",
-      "playedAt": "2026-08-27T03:01:00.115Z"
+      "track": "A Change Is Gonna Come - Live at the Meyerson Symphony Center",
+      "artist": "Charles Yang",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048510514785e132957239e1739f3",
+      "url": "https://open.spotify.com/track/32mBFU8PLYROnvXsptoafb",
+      "playedAt": "2026-08-27T20:42:37.384Z"
     },
     {
-      "track": "The Search - Edit",
-      "artist": "NF",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851263d105a521bc3b6fb9fad98",
-      "url": "https://open.spotify.com/track/4tZDUt8vHpvjfOXcHwOvtq",
-      "playedAt": "2026-08-27T00:40:43.480Z"
+      "track": "Numb Little Bug - Piano Version",
+      "artist": "Em Beihold",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851139c312b2b54d1dde7524904",
+      "url": "https://open.spotify.com/track/7zQs5RxMWQBVDTW9zl9CHu",
+      "playedAt": "2026-08-27T20:34:34.020Z"
     },
     {
-      "track": "Let's Be Friends",
-      "artist": "Johnny Nash",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000052b7d65ae7ee64e54bc17b12f3c5",
-      "url": "https://open.spotify.com/track/2PJuuBTWNl200DWQYh8nNh",
-      "playedAt": "2026-08-26T20:12:56.151Z"
+      "track": "Banana Pancakes",
+      "artist": "Jack Johnson",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485106b42768ebe736eec21336ea",
+      "url": "https://open.spotify.com/track/451GvHwY99NKV4zdKPRWmv",
+      "playedAt": "2026-08-27T20:32:00.193Z"
     },
     {
-      "track": "The Search - Edit",
-      "artist": "NF",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851263d105a521bc3b6fb9fad98",
-      "url": "https://open.spotify.com/track/4tZDUt8vHpvjfOXcHwOvtq",
-      "playedAt": "2026-08-26T20:10:57.394Z"
+      "track": "Hypnosis",
+      "artist": "Zak Azoury",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048510a3305278556b0826fbfe810",
+      "url": "https://open.spotify.com/track/6goIVxN5fQYQ1V70XNC7TX",
+      "playedAt": "2026-08-27T20:28:29.258Z"
     },
     {
-      "track": "Providence",
-      "artist": "Poor Man's Poison",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e263f90f4c5d13eadcfe6c04",
-      "url": "https://open.spotify.com/track/4VGR3mr2WbiD0splKGasFc",
-      "playedAt": "2026-08-26T20:09:00.415Z"
+      "track": "1985",
+      "artist": "Bowling For Soup",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851f9b3ece3271d3a5fa73d3759",
+      "url": "https://open.spotify.com/track/5oQcOu1omDykbIPSdSQQNJ",
+      "playedAt": "2026-08-27T20:24:59.241Z"
     }
   ]
 }
