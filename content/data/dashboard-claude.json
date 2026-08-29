@@ -1,18 +1,22 @@
 {
-  "updatedAt": "2026-08-28T10:06:40Z",
-  "summary": "I've spent time this cycle on the machinery behind Hermes-Agent, my personal automation assistant, rather than user-facing features. A version bump silently renamed every MCP tool from single to double underscores, and the error message you got back when you called the old name — \"not a deferrable tool\" — read like a permissions problem when it actually just meant the tool didn't exist anymore. The model didn't know that, so it retried, wrapped calls in workarounds, and wrote itself memory notes about how to fix a problem that wasn't there. Fixing it meant sweeping every skill file and stored memory for the old names and checking each one against what the server actually exposes now, not guessing from the old convention.\n\nOn BudgetTracker I built out the read-only tool surface the agent uses to answer questions about spending — burn rate, upcoming obligations, cash flow projections. The rule I kept coming back to: any number the agent shows has to come from a SQL query, never from the model doing arithmetic on numbers in its context. That sounds obvious until you're debugging why a \"you're over budget\" alert fired for an account with no budget set — the fix was excluding that case at the query level, not trusting the model to notice the denominator was zero.\n\nSwitchboard is a small proxy that sits in front of a single shared GPU and arbitrates between everything that wants to use it — the chat model, image generation, a couple of side experiments. Recently I stood up a second model behind it just to A/B against the one already in production, on the theory that a newer architecture might be better at picking the right tool mid-conversation. Both scored identically on my test harness, which told me less about the models than about the harness — it was testing with a handful of clean mock tools, and the actual failures happen with thirty-plus real tool schemas and near-duplicate names. Negative result, but a more honest one than the number would've suggested on its own.\n\nMost of what I ship day to day is unglamorous plumbing like this: get the retry logic right, get the error messages to actually say what's wrong, make sure a benchmark is testing the thing you think it's testing. It adds up slower than a new feature, but it's the difference between an agent you can leave running unattended and one you have to babysit.",
+  "updatedAt": "2026-08-29T10:09:05Z",
+  "summary": "I've been chasing down why my home agent (Hermes-Agent) kept losing tool calls after an upgrade — turned out the MCP tool names had all silently changed from single to double underscores, and the error message it threw back (\"not a deferrable tool\") reads like a permissions problem when it actually just means the tool doesn't exist under that name anymore. The model would retry, wrap the call in a code sandbox, invent XML syntax for it, then loop. Fix was mechanical once I found it, but finding it meant reading the harness source rather than trusting the error text.\n\nI also ran a head-to-head between two local models to see which one calls tools more reliably in Switchboard, the router I use to keep a single shared GPU serving several different backends. Both models scored perfectly on my existing test harness, which told me more about the harness than the models — it uses a handful of clean mock tools, and the actual failures I see in production come from a much bigger, messier real tool list with near-duplicate names. So the benchmark wasn't wrong, it just wasn't testing the thing that breaks.\n\nOn BudgetTracker, the interesting bug was in the tool layer that lets the agent query financial data: a SQL date subtraction with an untyped parameter, and a `.toISOString()` call on a value that Postgres was actually handing back as a plain string instead of a Date object. Both bugs were dormant since a database migration months earlier and only surfaced once I built a new feature that finally exercised those code paths — a reminder that \"it's been running fine\" doesn't mean the code is correct, just untested.\n\nSmaller thing worth mentioning: I found and fixed a background job that had two steps checking two different endpoints for \"is the model already warm,\" so the fast-path check was permanently useless and the job did full work on every run. Refactored it to derive both checks from one variable so that class of drift can't happen again.",
   "highlights": [
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "swept tool names after an upgrade silently renamed every MCP tool"
-    },
-    {
-      "repo": "BudgetTracker",
-      "oneLiner": "built read-only spending/forecast tools, math kept in SQL not the model"
+      "oneLiner": "Traced tool-call failures to an MCP naming change the error message disguised as a permissions issue"
     },
     {
       "repo": "Switchboard",
-      "oneLiner": "A/B'd a second model behind the GPU proxy against the production one"
+      "oneLiner": "Ran a head-to-head tool-calling test between two local models; both models tied and exposed the benchmark's blind spot"
+    },
+    {
+      "repo": "BudgetTracker",
+      "oneLiner": "Fixed two dormant SQL bugs in the agent's financial query tools, latent since a migration months ago"
+    },
+    {
+      "repo": "Switchboard",
+      "oneLiner": "Fixed a background warm-check job that had drifted to querying two different endpoints, silencing its fast path"
     }
   ]
 }
