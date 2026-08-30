@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-29T10:09:05Z",
-  "focus": "I'm wrapping up the Node.js/React/AWS stack at Regions Bank and prepping for the Charlotte commute in December — finishing out remote from York County. On the home front, I've got the Hermes dashboard flowing again and The Long Rest D&D app taking shape, so I'm juggling a solid work rhythm with some serious side-building energy.",
+  "updatedAt": "2026-08-30T10:08:58Z",
+  "focus": "I'm keeping Hermes running lean after the native migration and backup repair, with the abliterated brain holding steady at qwen3.6-abliterated:35b. This week's focus is on system stability — no new features, just monitoring the stacks and making sure everything keeps running quietly in the background.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

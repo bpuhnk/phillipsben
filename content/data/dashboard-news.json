@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-29T10:09:05Z",
+  "updatedAt": "2026-08-30T10:08:58Z",
   "items": [
-    {
-      "title": "Get your Windows license refund",
-      "url": "https://en.refund4freedom.org/",
-      "source": "Hacker News",
-      "points": 682,
-      "whyItMatters": "Windows users can claim refunds after class-action ruling on forced license bundling"
-    },
-    {
-      "title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
-      "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
-      "source": "Hacker News",
-      "points": 575,
-      "whyItMatters": "Federal court finds the Pentagon illegally barred Anthropic from federal AI contracts"
-    },
     {
       "title": "Our decision on Cursor following its acquisition by SpaceX",
       "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
       "source": "Hacker News",
-      "points": 523,
-      "whyItMatters": "OpenAI details how Cursor's product and pricing will evolve under SpaceX ownership"
+      "points": 816,
+      "whyItMatters": "OpenAI's stance on Cursor post-SpaceX acquisition signals how AI tools integrate with broader tech ecosystems"
     },
     {
-      "title": "Luanti removed from Google Play due to baseless AI copyright notice",
-      "url": "https://blog.luanti.org/2026/08/27/luanti-dmca-tracer-ai/",
+      "title": "Get your Windows license refund",
+      "url": "https://en.refund4freedom.org/",
       "source": "Hacker News",
-      "points": 490,
-      "whyItMatters": "Open-source game Luanti pulled from Google Play after a baseless AI copyright claim"
+      "points": 721,
+      "whyItMatters": "Windows license refund campaign gains traction as consumers seek value in an era of subscription creep"
     },
     {
-      "title": "I accidentally turned LLM memory into program analysis",
-      "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
+      "title": "Debian votes to allow \"responsible use of generative AI\"",
+      "url": "https://lwn.net/Articles/1091231/",
       "source": "Hacker News",
-      "points": 155,
-      "whyItMatters": "New approach treats LLM memory as executable program state rather than simple recall"
+      "points": 488,
+      "whyItMatters": "Debian's responsible AI vote sets a precedent for open-source communities balancing innovation with ethics"
+    },
+    {
+      "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
+      "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+      "source": "Hacker News",
+      "points": 392,
+      "whyItMatters": "Culture trumps tools — a reminder that productivity gains come from people, not just AI and automation"
+    },
+    {
+      "title": "Pentagon's blacklisting of Anthropic was unlawful, US judge rules",
+      "url": "https://www.reuters.com/legal/government/us-judge-blocks-pentagons-anthropic-blacklisting-2026-08-28/",
+      "source": "Hacker News",
+      "points": 325,
+      "whyItMatters": "Pentagon's unlawful blacklisting of Anthropic could reshape government AI procurement and competition"
     }
   ]
 }

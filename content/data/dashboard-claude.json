@@ -1,22 +1,14 @@
 {
-  "updatedAt": "2026-08-29T10:09:05Z",
-  "summary": "I've been chasing down why my home agent (Hermes-Agent) kept losing tool calls after an upgrade — turned out the MCP tool names had all silently changed from single to double underscores, and the error message it threw back (\"not a deferrable tool\") reads like a permissions problem when it actually just means the tool doesn't exist under that name anymore. The model would retry, wrap the call in a code sandbox, invent XML syntax for it, then loop. Fix was mechanical once I found it, but finding it meant reading the harness source rather than trusting the error text.\n\nI also ran a head-to-head between two local models to see which one calls tools more reliably in Switchboard, the router I use to keep a single shared GPU serving several different backends. Both models scored perfectly on my existing test harness, which told me more about the harness than the models — it uses a handful of clean mock tools, and the actual failures I see in production come from a much bigger, messier real tool list with near-duplicate names. So the benchmark wasn't wrong, it just wasn't testing the thing that breaks.\n\nOn BudgetTracker, the interesting bug was in the tool layer that lets the agent query financial data: a SQL date subtraction with an untyped parameter, and a `.toISOString()` call on a value that Postgres was actually handing back as a plain string instead of a Date object. Both bugs were dormant since a database migration months earlier and only surfaced once I built a new feature that finally exercised those code paths — a reminder that \"it's been running fine\" doesn't mean the code is correct, just untested.\n\nSmaller thing worth mentioning: I found and fixed a background job that had two steps checking two different endpoints for \"is the model already warm,\" so the fast-path check was permanently useless and the job did full work on every run. Refactored it to derive both checks from one variable so that class of drift can't happen again.",
+  "updatedAt": "2026-08-30T10:08:58Z",
+  "summary": "I've been chasing down a media stack problem that looked like flakiness but wasn't. Sonarr kept losing episodes to \"Unable to Import Automatically,\" and I assumed bad downloads until I checked the actual mismatch: releases were arriving under Japanese titles while my library used English ones, and the scene-mapping service that bridges them had been silently dead for over a week. Once I saw that, the fix was a manual-import API call with hardlink-preserving copy mode instead of a move — so seeding continued and nothing got duplicated on disk.\n\nThe other half of that stack was a queue that looked stalled — 75 downloads sitting at 0% for ten hours. Turned out to be five zero-seeder torrents hogging every download slot while good torrents waited behind them. I also learned the hard way that blocklisting a dead release doesn't stop it from being re-grabbed, since the blocklist is keyed to release name plus indexer — a different indexer just serves it right back. A seeder floor turned out to be the actual guard, not the blocklist.\n\nOn the automation side, I run a local LLM as an agent brain, and I recently swapped in an uncensored variant after the stock one started refusing ordinary lookups. That surfaced a nasty, silent failure mode: setting its \"reasoning budget\" to zero didn't disable reasoning, it broke tool-calling outright — the model would type out a fake tool call as plain text instead of actually invoking one, and just sit there waiting for a response that would never come. Looked exactly like the model being slow or broken; it was neither. I ran an A/B against a second candidate model to see if it handled tool selection better, and the benchmark said no difference — which was itself informative, since it told me my test harness was too easy to catch the real failure mode I cared about, not that the models were actually equivalent.\n\nMostly this stretch has been less \"build the feature\" and more \"figure out why the thing that looks broken is actually a different thing entirely.\"",
   "highlights": [
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "Traced tool-call failures to an MCP naming change the error message disguised as a permissions issue"
+      "oneLiner": "chasing a reasoning-budget=0 bug that silently broke tool-calling"
     },
     {
-      "repo": "Switchboard",
-      "oneLiner": "Ran a head-to-head tool-calling test between two local models; both models tied and exposed the benchmark's blind spot"
-    },
-    {
-      "repo": "BudgetTracker",
-      "oneLiner": "Fixed two dormant SQL bugs in the agent's financial query tools, latent since a migration months ago"
-    },
-    {
-      "repo": "Switchboard",
-      "oneLiner": "Fixed a background warm-check job that had drifted to querying two different endpoints, silencing its fast path"
+      "repo": "server-talk",
+      "oneLiner": "A/B'd a second model against the brain; benchmark was too easy to tell"
     }
   ]
 }
