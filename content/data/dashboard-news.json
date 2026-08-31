@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-30T10:08:58Z",
+  "updatedAt": "2026-08-31T10:05:34Z",
   "items": [
-    {
-      "title": "Our decision on Cursor following its acquisition by SpaceX",
-      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
-      "source": "Hacker News",
-      "points": 816,
-      "whyItMatters": "OpenAI's stance on Cursor post-SpaceX acquisition signals how AI tools integrate with broader tech ecosystems"
-    },
-    {
-      "title": "Get your Windows license refund",
-      "url": "https://en.refund4freedom.org/",
-      "source": "Hacker News",
-      "points": 721,
-      "whyItMatters": "Windows license refund campaign gains traction as consumers seek value in an era of subscription creep"
-    },
     {
       "title": "Debian votes to allow \"responsible use of generative AI\"",
       "url": "https://lwn.net/Articles/1091231/",
       "source": "Hacker News",
-      "points": 488,
-      "whyItMatters": "Debian's responsible AI vote sets a precedent for open-source communities balancing innovation with ethics"
+      "points": 505,
+      "whyItMatters": "Debian sets a responsible-AI precedent that could shape open-source policy and AI adoption."
     },
     {
       "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
       "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
       "source": "Hacker News",
-      "points": 392,
-      "whyItMatters": "Culture trumps tools — a reminder that productivity gains come from people, not just AI and automation"
+      "points": 462,
+      "whyItMatters": "A counter to the AI-hype: culture and teamwork drive more productivity gains than tools alone."
     },
     {
-      "title": "Pentagon's blacklisting of Anthropic was unlawful, US judge rules",
-      "url": "https://www.reuters.com/legal/government/us-judge-blocks-pentagons-anthropic-blacklisting-2026-08-28/",
+      "title": "No AI Fridays",
+      "url": "https://noaifridays.com/",
       "source": "Hacker News",
-      "points": 325,
-      "whyItMatters": "Pentagon's unlawful blacklisting of Anthropic could reshape government AI procurement and competition"
+      "points": 272,
+      "whyItMatters": "Growing movement to preserve deep work — cutting AI noise to reclaim focus and creativity."
+    },
+    {
+      "title": "The Rise and Fall of Agent Civilizations",
+      "url": "https://www.dwarkesh.com/p/openai-huggingface",
+      "source": "Hacker News",
+      "points": 239,
+      "whyItMatters": "A framework for understanding how AI agent ecosystems will organize and compete."
+    },
+    {
+      "title": "Claude Session URL appended to commit messages and PR descriptions by default",
+      "url": "https://github.com/anthropics/claude-code/issues/66504",
+      "source": "Hacker News",
+      "points": 200,
+      "whyItMatters": "Claude Code now auto-links sessions to commits — tighter feedback loop for dev workflows."
     }
   ]
 }

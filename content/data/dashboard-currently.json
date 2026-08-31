@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-30T10:08:58Z",
-  "focus": "I'm keeping Hermes running lean after the native migration and backup repair, with the abliterated brain holding steady at qwen3.6-abliterated:35b. This week's focus is on system stability — no new features, just monitoring the stacks and making sure everything keeps running quietly in the background.",
+  "updatedAt": "2026-08-31T10:05:34Z",
+  "focus": "I'm keeping the Hermes stack healthy after the v0.20.5 upgrade — monitoring the abliterated brain, watching config drift, and making sure the backups don't fall silent again. On the media side, Bleach is safely in cold storage and media01 is fully on tailscale.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
