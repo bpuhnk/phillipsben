@@ -1,14 +1,22 @@
 {
-  "updatedAt": "2026-08-31T10:05:34Z",
-  "summary": "I've been debugging a media automation stack this week, and the fixes ended up being more interesting than the setup. I added Sonarr and Radarr to an existing torrent box, wiring their web UIs through a VPN container's shared network namespace since they can't publish their own ports once they join it. Straightforward once you see the shape of the problem, easy to get wrong on the way there.\n\nThe harder part was a queue that stalled at 75 downloads, 0% progress, for ten hours. Turned out to be five zero-seeder torrents holding every active download slot — the client wasn't smart enough to deprioritize dead torrents, so nothing behind them could start. I also found that Sonarr's blocklist is keyed to release title plus indexer, so blocklisting a bad torrent doesn't stop it from getting re-grabbed off a different indexer seconds later. The actual fix was a seeder floor upstream, not the blocklist people assume handles this.\n\nAlso spent time verifying media claims instead of trusting filenames — pulled subtitle streams out of a file tagged \"German\" and did word-frequency analysis to confirm it was actually English. Release metadata lies more often than you'd expect, and there's no shortcut around checking the actual streams.\n\nMost of my Claude usage lately has been agent-to-agent debugging — I run a small home automation assistant on a local LLM, and a good chunk of the work is instrumenting *why* it fails a task, not just fixing the task. One example: an error-handling layer was swallowing upstream API error messages down to a bare stack trace, so the model had no way to self-correct a bad argument. Passing the actual error text through turned repeated failed retries into a single successful one.",
+  "updatedAt": "2026-09-01T10:05:25Z",
+  "summary": "I've been chasing a nasty upgrade bug on Hermes-Agent, my personal AI assistant. A routine update jumped it 25,000 commits in one go and the tool-calling convention changed underneath it — MCP tool names went from single to double underscores. The failure mode was the interesting part: instead of erroring cleanly, the local model would see \"not a deferrable tool,\" read that as \"you're calling it wrong,\" and spiral into retries, inventing pseudo-XML tool syntax, compulsively writing memory notes to itself about how to fix it. Looked exactly like model stupidity. It wasn't — it just needed the right tool name. Swept 47 stale references across 13 files and it settled down.\n\nThat led me into a proper A/B test: benchmarking a second local model (GLM-4.7-Flash) against the incumbent brain to see if tool-selection reliability would improve. Stood it up as an additive route so I could compare without touching production. Both models scored a perfect 8/8 on my existing test harness, which told me less about the models than about my harness — it was built to catch an older, dumber failure and wasn't discriminating enough to reproduce the real problem I was seeing in production. That's the more useful result: knowing your test doesn't measure what you think it measures beats a clean pass/fail.\n\nOn BudgetTracker, my expense-tracking app, I've been building out a read-only MCP tool surface so Hermes can answer real financial questions — burn rate, spending anomalies, cash flow projections — using actual computed SQL rather than letting a model guess at arithmetic. Chasing that down turned up a couple of latent Postgres bugs that had been sitting dormant since a database migration, the kind that only surface the first time a new query path actually exercises them.",
   "highlights": [
     {
-      "repo": "Internal MCP Servers",
-      "oneLiner": "wired Sonarr/Radarr into a VPN container's shared netns, fixed a stalled download queue"
+      "repo": "Hermes-Agent",
+      "oneLiner": "Chased a tool-naming upgrade regression that looked like model failure but wasn't"
     },
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "debugging agent-to-agent tool failures; passing real API errors through instead of bare stack traces"
+      "oneLiner": "A/B'd a second local model against the incumbent; learned the test harness was the weak link"
+    },
+    {
+      "repo": "BudgetTracker",
+      "oneLiner": "Building read-only MCP tools so queries use computed SQL, not model arithmetic"
+    },
+    {
+      "repo": "budget-tracker",
+      "oneLiner": "Surfaced latent Postgres bugs left over from a prior DB migration"
     }
   ]
 }

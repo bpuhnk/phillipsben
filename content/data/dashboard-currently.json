@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-31T10:05:34Z",
-  "focus": "I'm keeping the Hermes stack healthy after the v0.20.5 upgrade — monitoring the abliterated brain, watching config drift, and making sure the backups don't fall silent again. On the media side, Bleach is safely in cold storage and media01 is fully on tailscale.",
+  "updatedAt": "2026-09-01T10:05:25Z",
+  "focus": "Keeping the Hermes agent stable on qwen3.6-abliterated after the v0.20.5 upgrade — all tiles fresh, no regressions. Working through the remaining open issues: confirming backup health and watching for any dashboard drift in the daily refresh pipeline.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

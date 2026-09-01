@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-08-31T10:05:34Z",
+  "updatedAt": "2026-09-01T10:05:25Z",
   "items": [
     {
-      "title": "Debian votes to allow \"responsible use of generative AI\"",
-      "url": "https://lwn.net/Articles/1091231/",
+      "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
+      "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
       "source": "Hacker News",
-      "points": 505,
-      "whyItMatters": "Debian sets a responsible-AI precedent that could shape open-source policy and AI adoption."
+      "points": 411,
+      "whyItMatters": "Apple didn't expect the surge in Mac Mini and Mac Studio demand driven by AI workloads."
     },
     {
-      "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
-      "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
       "source": "Hacker News",
-      "points": 462,
-      "whyItMatters": "A counter to the AI-hype: culture and teamwork drive more productivity gains than tools alone."
+      "points": 370,
+      "whyItMatters": "Claude Code Opus 5 introduces Auto Mode, pushing the boundary of fully autonomous coding agents."
     },
     {
       "title": "No AI Fridays",
       "url": "https://noaifridays.com/",
       "source": "Hacker News",
-      "points": 272,
-      "whyItMatters": "Growing movement to preserve deep work — cutting AI noise to reclaim focus and creativity."
+      "points": 286,
+      "whyItMatters": "A movement for AI-free Fridays surfaces as teams push back on constant AI tool fatigue."
     },
     {
-      "title": "The Rise and Fall of Agent Civilizations",
-      "url": "https://www.dwarkesh.com/p/openai-huggingface",
+      "title": "GPU World",
+      "url": "https://www.gpuworld.org/",
       "source": "Hacker News",
-      "points": 239,
-      "whyItMatters": "A framework for understanding how AI agent ecosystems will organize and compete."
+      "points": 236,
+      "whyItMatters": "GPU World covers the latest in GPU architecture, driving hardware decisions for AI and gaming alike."
     },
     {
       "title": "Claude Session URL appended to commit messages and PR descriptions by default",
       "url": "https://github.com/anthropics/claude-code/issues/66504",
       "source": "Hacker News",
-      "points": 200,
-      "whyItMatters": "Claude Code now auto-links sessions to commits — tighter feedback loop for dev workflows."
+      "points": 209,
+      "whyItMatters": "Claude Session URLs now auto-append to commits and PRs, improving traceability of AI-assisted work."
     }
   ]
 }
