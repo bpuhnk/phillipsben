@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-09-01T10:02:43Z",
+  "updatedAt": "2026-09-02T10:02:25Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "Medusa",
+      "artist": "Zak Azoury",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b8682ef09d46ca6d37e26a3b",
+      "url": "https://open.spotify.com/track/5Ij2rHvymdJwxs5B8Bi21I",
+      "playedAt": "2026-09-02T03:14:16.450Z"
+    },
+    {
+      "track": "Ghost",
+      "artist": "Confetti",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b0208722312bf88bd8cb4d9d",
+      "url": "https://open.spotify.com/track/30uCmqegKQnH5AbOE51gPD",
+      "playedAt": "2026-09-01T17:46:38.072Z"
+    },
     {
       "track": "Dear Maria, Count Me In",
       "artist": "All Time Low",
@@ -22,20 +36,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d000048510cbecafa929898c82adc519c",
       "url": "https://open.spotify.com/track/3WY0iazRPHOlIq6CdbKLZ6",
       "playedAt": "2026-08-31T20:57:51.098Z"
-    },
-    {
-      "track": "Feed the Machine",
-      "artist": "Poor Man's Poison",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851999247481fd9eec8afcabdc3",
-      "url": "https://open.spotify.com/track/40wmXUgVB0N5eLK8CuOhm3",
-      "playedAt": "2026-08-31T20:54:10.710Z"
-    },
-    {
-      "track": "インフェルノ",
-      "artist": "Mrs. GREEN APPLE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485181f55cd879e9480e3ed313df",
-      "url": "https://open.spotify.com/track/2vOAHp8PBBFYqvQUWSoITY",
-      "playedAt": "2026-08-31T20:51:10.332Z"
     }
   ]
 }

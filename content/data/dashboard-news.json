@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-01T10:05:25Z",
+  "updatedAt": "2026-09-02T10:05:18Z",
   "items": [
+    {
+      "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "source": "Hacker News",
+      "points": 1250,
+      "whyItMatters": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, pushing the frontier on reasoning and multimodal capabilities."
+    },
+    {
+      "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
+      "url": "https://danluu.com/zitron/",
+      "source": "Hacker News",
+      "points": 709,
+      "whyItMatters": "An audit of Ed Zitron's AI skepticism predictions reveals which calls were accurate and which missed."
+    },
+    {
+      "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
+      "url": "https://mvakde.github.io/blog/44-on-arc-1/",
+      "source": "Hacker News",
+      "points": 621,
+      "whyItMatters": "A small transformer trained in 1.5 hours beats many larger LLMs, challenging the scale-everything narrative."
+    },
     {
       "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
       "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
       "source": "Hacker News",
-      "points": 411,
-      "whyItMatters": "Apple didn't expect the surge in Mac Mini and Mac Studio demand driven by AI workloads."
+      "points": 492,
+      "whyItMatters": "Apple caught off guard by surging AI-driven demand for Mac Mini and Mac Studio."
     },
     {
-      "title": "Breaking Claude Code Opus 5 Auto Mode",
-      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "url": "https://openai.com/index/path-to-astra/",
       "source": "Hacker News",
-      "points": 370,
-      "whyItMatters": "Claude Code Opus 5 introduces Auto Mode, pushing the boundary of fully autonomous coding agents."
-    },
-    {
-      "title": "No AI Fridays",
-      "url": "https://noaifridays.com/",
-      "source": "Hacker News",
-      "points": 286,
-      "whyItMatters": "A movement for AI-free Fridays surfaces as teams push back on constant AI tool fatigue."
-    },
-    {
-      "title": "GPU World",
-      "url": "https://www.gpuworld.org/",
-      "source": "Hacker News",
-      "points": 236,
-      "whyItMatters": "GPU World covers the latest in GPU architecture, driving hardware decisions for AI and gaming alike."
-    },
-    {
-      "title": "Claude Session URL appended to commit messages and PR descriptions by default",
-      "url": "https://github.com/anthropics/claude-code/issues/66504",
-      "source": "Hacker News",
-      "points": 209,
-      "whyItMatters": "Claude Session URLs now auto-append to commits and PRs, improving traceability of AI-assisted work."
+      "points": 158,
+      "whyItMatters": "OpenAI lays out critical capabilities and frontier safeguards on the path to AGI."
     }
   ]
 }

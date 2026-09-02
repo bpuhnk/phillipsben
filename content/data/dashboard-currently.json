@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-01T10:05:25Z",
-  "focus": "Keeping the Hermes agent stable on qwen3.6-abliterated after the v0.20.5 upgrade — all tiles fresh, no regressions. Working through the remaining open issues: confirming backup health and watching for any dashboard drift in the daily refresh pipeline.",
+  "updatedAt": "2026-09-02T10:05:18Z",
+  "focus": "Quiet week on the code side — no commits worth flagging. I've been keeping the dashboard systems healthy: backups verified, the Hermes brain running clean on qwen3.6-abliterated, and all five tiles refreshing without incident. The real focus is staying tight on the Long Rest's production stability and making sure the morning briefing pipeline stays reliable through any season changes.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

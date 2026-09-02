@@ -1,22 +1,14 @@
 {
-  "updatedAt": "2026-09-01T10:05:25Z",
-  "summary": "I've been chasing a nasty upgrade bug on Hermes-Agent, my personal AI assistant. A routine update jumped it 25,000 commits in one go and the tool-calling convention changed underneath it — MCP tool names went from single to double underscores. The failure mode was the interesting part: instead of erroring cleanly, the local model would see \"not a deferrable tool,\" read that as \"you're calling it wrong,\" and spiral into retries, inventing pseudo-XML tool syntax, compulsively writing memory notes to itself about how to fix it. Looked exactly like model stupidity. It wasn't — it just needed the right tool name. Swept 47 stale references across 13 files and it settled down.\n\nThat led me into a proper A/B test: benchmarking a second local model (GLM-4.7-Flash) against the incumbent brain to see if tool-selection reliability would improve. Stood it up as an additive route so I could compare without touching production. Both models scored a perfect 8/8 on my existing test harness, which told me less about the models than about my harness — it was built to catch an older, dumber failure and wasn't discriminating enough to reproduce the real problem I was seeing in production. That's the more useful result: knowing your test doesn't measure what you think it measures beats a clean pass/fail.\n\nOn BudgetTracker, my expense-tracking app, I've been building out a read-only MCP tool surface so Hermes can answer real financial questions — burn rate, spending anomalies, cash flow projections — using actual computed SQL rather than letting a model guess at arithmetic. Chasing that down turned up a couple of latent Postgres bugs that had been sitting dormant since a database migration, the kind that only surface the first time a new query path actually exercises them.",
+  "updatedAt": "2026-09-02T10:05:18Z",
+  "summary": "I've been on a debugging kick lately with the home agent stack (Hermes-Agent), and the pattern that keeps repeating is: what looks like the model being dumb is actually an error message that dead-ends instead of naming the next step. Three separate times this week the \"agent\" got blamed for looping or fabricating data, and each time the real bug was in the tool wrapper. One memory tool returned \"Unknown action None\" on a perfectly schema-valid call because the required field only applied to a batch shape; the fix was inferring intent from the argument shape instead of failing closed. Another wrapper swallowed the upstream API's actual error text and handed the model a bare stack trace — a model can act on \"seriesId is required,\" it can't act on a traceback, so now every wrapper passes the real message through.\n\nThe more interesting one involved a media-library tool where a grab request kept failing with an ambiguous 404 that meant two opposite things: \"the ID you have is stale\" or \"you invented this ID.\" Without knowing which, the model couldn't recover, so it started guessing IDs outright. I added lightweight provenance tracking — the service remembers which IDs actually came out of a real search — so the error can now say definitively which case it is and what to do next.\n\nAlso spent time on an internal switchboard service that arbitrates GPU access across several local model backends, since they all compete for one card. Wired up a keep-warm mechanism using KV cache slot save/restore so a model that gets evicted for another workload doesn't need to reprocess the whole prompt from scratch on its next turn — that had been costing minutes on a cold reload.\n\nRounding it out, I patched a naming migration that broke silently after a tool-calling library upgraded its naming convention (single vs. double underscores) — old references scattered across configs and even the agent's own long-term memory kept resolving to nothing, and the failure mode read exactly like \"not a valid tool\" instead of \"no tool by that name,\" which sent things down the same fabrication path as above. Consistent theme this cycle: better error messages fix more bugs than better prompts do.",
   "highlights": [
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "Chased a tool-naming upgrade regression that looked like model failure but wasn't"
+      "oneLiner": "Fixing wrapper error messages that dead-end instead of naming the next step"
     },
     {
-      "repo": "Hermes-Agent",
-      "oneLiner": "A/B'd a second local model against the incumbent; learned the test harness was the weak link"
-    },
-    {
-      "repo": "BudgetTracker",
-      "oneLiner": "Building read-only MCP tools so queries use computed SQL, not model arithmetic"
-    },
-    {
-      "repo": "budget-tracker",
-      "oneLiner": "Surfaced latent Postgres bugs left over from a prior DB migration"
+      "repo": "Switchboard",
+      "oneLiner": "KV cache slot save/restore keep-warm to kill cold-reload latency"
     }
   ]
 }
