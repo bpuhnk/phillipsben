@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-02T10:05:18Z",
-  "focus": "Quiet week on the code side — no commits worth flagging. I've been keeping the dashboard systems healthy: backups verified, the Hermes brain running clean on qwen3.6-abliterated, and all five tiles refreshing without incident. The real focus is staying tight on the Long Rest's production stability and making sure the morning briefing pipeline stays reliable through any season changes.",
+  "updatedAt": "2026-09-04T10:05:54Z",
+  "focus": "The phillipsben.com dashboard is stabilizing after months of migration drama — native systemd, clean refresh.sh pipeline, all five tiles updating. Meanwhile Keikocho's manga restyle shipped to Replicate and the Japanese learning app looks great. I'm keeping an eye on GPT-6 Astra's rollout since it keeps showing up everywhere on HN this week.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
