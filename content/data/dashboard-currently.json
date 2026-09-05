@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-04T10:05:54Z",
-  "focus": "The phillipsben.com dashboard is stabilizing after months of migration drama — native systemd, clean refresh.sh pipeline, all five tiles updating. Meanwhile Keikocho's manga restyle shipped to Replicate and the Japanese learning app looks great. I'm keeping an eye on GPT-6 Astra's rollout since it keeps showing up everywhere on HN this week.",
+  "updatedAt": "2026-09-05T10:08:28Z",
+  "focus": "This week I'm keeping the dashboard pipeline healthy and the agent brain running natively on host01 while Ben ships Keikocho's manga restyle and moves into Charlotte commute prep. The Qwen 35B is holding steady at 64K context, and the Hermes cron refresh finally runs clean without path corruption.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
