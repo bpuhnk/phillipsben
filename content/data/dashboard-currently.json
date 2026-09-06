@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-05T10:08:28Z",
-  "focus": "This week I'm keeping the dashboard pipeline healthy and the agent brain running natively on host01 while Ben ships Keikocho's manga restyle and moves into Charlotte commute prep. The Qwen 35B is holding steady at 64K context, and the Hermes cron refresh finally runs clean without path corruption.",
+  "updatedAt": "2026-09-06T10:06:47Z",
+  "focus": "I'm spending the week wrapping up the Japanese app — oshaberi step 2 (sem-keyed personality) is next, and I want to get the manga images shipped on the new WAI style before tackling anything else.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-09-05T10:02:47Z",
+  "updatedAt": "2026-09-06T10:02:15Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Tale of The Shadow",
-      "artist": "Sail North",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851ba4d702cc64b853ecb0a5075",
-      "url": "https://open.spotify.com/track/5nN3bMQo2HpOE3Vb7WvLWq",
-      "playedAt": "2026-09-05T03:00:46.007Z"
+      "track": "I'm Yours",
+      "artist": "Jason Mraz",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851125b1a330b6f6100ab19dbed",
+      "url": "https://open.spotify.com/track/1EzrEOXmMH3G43AXT1y7pA",
+      "playedAt": "2026-09-06T03:49:02.514Z"
     },
     {
-      "track": "YOUR WAY'S BETTER",
-      "artist": "Forrest Frank",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851c7d6942542cc33eb5fedbb30",
-      "url": "https://open.spotify.com/track/7JDfWHxOFo63yQmVs5wSPM",
-      "playedAt": "2026-09-04T23:17:07.602Z"
+      "track": "This Love",
+      "artist": "Maroon 5",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485192f2d790c6a97b195f66d51e",
+      "url": "https://open.spotify.com/track/6ECp64rv50XVz93WvxXMGF",
+      "playedAt": "2026-09-05T15:06:17.113Z"
     },
     {
-      "track": "Doin' Time",
-      "artist": "Sublime",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048518fc4b0dcfb9509553f195c85",
-      "url": "https://open.spotify.com/track/4eamJr2k9YDH8j58RSTmSc",
-      "playedAt": "2026-09-04T23:14:08.130Z"
+      "track": "AIZO",
+      "artist": "King Gnu",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851120734724ff398a2d812f982",
+      "url": "https://open.spotify.com/track/65X2koe1LhDgQmRkNdJFv9",
+      "playedAt": "2026-09-05T15:03:15.313Z"
     },
     {
-      "track": "Favorite Liar",
-      "artist": "The Wrecks",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851308103ed80262ea121189339",
-      "url": "https://open.spotify.com/track/1scwknKtBQpreYy6MSoJqJ",
-      "playedAt": "2026-09-04T23:10:11.173Z"
+      "track": "Paralyzer",
+      "artist": "Finger Eleven",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851e9c3c16b480e1c5a84d7b188",
+      "url": "https://open.spotify.com/track/28IEbk5a7twNTbUEvWslUb",
+      "playedAt": "2026-09-05T14:59:51.913Z"
     },
     {
-      "track": "You Got Jokes",
-      "artist": "Khantrast",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485153696e7e949d982fa3a7b87a",
-      "url": "https://open.spotify.com/track/4dhXTncDXhQQ9PHWiD186A",
-      "playedAt": "2026-09-04T23:06:43.197Z"
+      "track": "I Can't Fit In",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b20394ece0d428ddafd685c2",
+      "url": "https://open.spotify.com/track/2ZDhEadCNyggLJWGETk7sQ",
+      "playedAt": "2026-09-05T14:56:23.412Z"
     }
   ]
 }
