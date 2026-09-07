@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-09-06T10:06:47Z",
-  "summary": "I've been rebuilding image generation for Keikochō, a Japanese-learning app I built for myself, after realizing the original art (anime girls, mostly) was an odd fit for a middle-aged guy's study app. The interesting part wasn't the prompts, it was catching a bug where a whole rendering pipeline had been silently skipping a style layer — every image sent to the hosted model was going out without the inking and color rules I thought I'd applied, and nobody noticed for weeks because a related casting fight got blamed on the wrong cause instead. Fixing it took an A/B render at a fixed seed to actually prove which version was wrong.\n\nI also spent time on the conversation engine underneath the app — the part that runs the chat-practice mode. Measuring real usage turned up that most of the \"twelve possible answers\" scenarios I'd built were resolving to the same one answer almost every time, so the practice wasn't actually testing anything. That's now driving a rewrite of how each character's personality is defined, so the answer space is actually unpredictable instead of just decorative.\n\nOn the infra side, I run a personal automation agent (a Hermes-based assistant) across a few home servers, and one of the messier bugs there was a duplicate background service both trying to bind the same port — one worked, one silently crash-looped hundreds of thousands of times without anyone noticing, because the working copy hid the failure completely. Tracked it down through the process's control group rather than trusting `systemctl status`, which reported clean.\n\nSmaller things: exposing a read-only media search tool to a browser-based tool client, where the real fix was serving it same-origin instead of fighting three separate CORS failure modes one at a time; and a Slack integration that went dark for a week because a reconnect bug in a library left no error signature at all when it was healthy, so the usual \"watch for errors\" health check couldn't tell the difference between working and dead.",
+  "updatedAt": "2026-09-07T10:05:23Z",
+  "summary": "I've been rebuilding the Japanese-learning app I use myself (Keikochō) into something that actually teaches, not just quizzes. The biggest fix this year: the app's \"conversation\" mode looked varied — twelve possible topics per character — but when I measured the actual answers coming back, most personas gave the same response to eleven out of twelve questions. The variety was cosmetic. The redesign keys each character's opinions off the underlying semantic category instead of the surface topic, so the answer space is actually as wide as it looks.\n\nThe image pipeline for the app taught me something I didn't expect about diffusion models: they're good at drawing a person standing somewhere, and bad — zero-for-fifteen in one test run — at drawing a person doing something communicative, like speaking or asking a question. Once I knew that, I stopped fighting the model and just wrote around the constraint (different engine for two-figure scenes, static poses for one-figure ones).\n\nOn the infrastructure side, I run a small home lab — a handful of boxes doing inference, media, and home automation — and spend a fair amount of time on the boring but important stuff: things that fail silently. One example: a GPU broker process had its restart policy set to \"restart unless someone stopped it,\" which is exactly the setting that keeps you down after a reboot if anything stopped you first. Found it, understood why, changed the policy, moved on. I've built a handful of these deadman-switch checks over time — cheap scripts that assume a healthy system says nothing, so they go looking for evidence of life instead of waiting for evidence of failure.\n\nI also maintain BudgetTracker, a small finance-tracking app for my own household, live at budget.phillipsben.com — nothing fancy, just receipt and shopping tracking that I actually use day to day.",
   "highlights": [
     {
-      "repo": "ComfyUI",
-      "oneLiner": "Found a rendering pipeline silently skipping a style layer; fixed with fixed-seed A/B renders"
+      "repo": "phillipsben.com",
+      "oneLiner": "Rebuilding Keikochō: conversation replies keyed off semantic category, not surface topic"
     },
     {
-      "repo": "Talk to Virtual Me",
-      "oneLiner": "Usage data showed multi-choice prompts collapsing to one answer; rewriting personality logic"
+      "repo": "phillipsben.com",
+      "oneLiner": "Wrote around a diffusion-model limit: models can't draw a person speaking, only standing"
     },
     {
-      "repo": "Hermes-Agent",
-      "oneLiner": "Traced a silent duplicate-service crash loop via cgroups after systemctl reported clean"
+      "repo": "phillipsben.com",
+      "oneLiner": "Home lab deadman checks: caught a GPU broker's restart policy that couldn't survive a reboot"
     },
     {
-      "repo": "Internal MCP Servers",
-      "oneLiner": "Fixed a browser tool client by serving same-origin instead of chasing three CORS failure modes"
+      "repo": "BudgetTracker",
+      "oneLiner": "Household finance tracker, live, daily use for receipts and shopping"
     }
   ]
 }

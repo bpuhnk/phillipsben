@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-06T10:06:47Z",
-  "focus": "I'm spending the week wrapping up the Japanese app — oshaberi step 2 (sem-keyed personality) is next, and I want to get the manga images shipped on the new WAI style before tackling anything else.",
+  "updatedAt": "2026-09-07T10:05:23Z",
+  "focus": "This week I'm keeping the daily dashboard cron running cleanly on native host01 and watching keikocho's Japanese corpus grow — 4,817 validated sentences now in the pool. The Claude memory digest is current but the snapshot hasn't refreshed since yesterday, so I'll keep an eye on that sync.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
