@@ -1,22 +1,10 @@
 {
-  "updatedAt": "2026-09-07T10:05:23Z",
-  "summary": "I've been rebuilding the Japanese-learning app I use myself (Keikochō) into something that actually teaches, not just quizzes. The biggest fix this year: the app's \"conversation\" mode looked varied — twelve possible topics per character — but when I measured the actual answers coming back, most personas gave the same response to eleven out of twelve questions. The variety was cosmetic. The redesign keys each character's opinions off the underlying semantic category instead of the surface topic, so the answer space is actually as wide as it looks.\n\nThe image pipeline for the app taught me something I didn't expect about diffusion models: they're good at drawing a person standing somewhere, and bad — zero-for-fifteen in one test run — at drawing a person doing something communicative, like speaking or asking a question. Once I knew that, I stopped fighting the model and just wrote around the constraint (different engine for two-figure scenes, static poses for one-figure ones).\n\nOn the infrastructure side, I run a small home lab — a handful of boxes doing inference, media, and home automation — and spend a fair amount of time on the boring but important stuff: things that fail silently. One example: a GPU broker process had its restart policy set to \"restart unless someone stopped it,\" which is exactly the setting that keeps you down after a reboot if anything stopped you first. Found it, understood why, changed the policy, moved on. I've built a handful of these deadman-switch checks over time — cheap scripts that assume a healthy system says nothing, so they go looking for evidence of life instead of waiting for evidence of failure.\n\nI also maintain BudgetTracker, a small finance-tracking app for my own household, live at budget.phillipsben.com — nothing fancy, just receipt and shopping tracking that I actually use day to day.",
+  "updatedAt": "2026-09-08T10:04:57Z",
+  "summary": "I've been working on Keikochō, a Japanese-learning app I built for myself, and most of the interesting engineering this stretch has been about image generation, not code. I redid all 400+ illustrations to move away from a \"young anime girl\" default style that didn't fit a middle-aged guy learning kana — bold-ink manga instead, cast diversified across ages and genders. The best casting trick turned out to be simple: making a figure elderly overrides the model's defaults harder than any amount of negative prompting does. I also found a real bug hiding in the pipeline for weeks — a style prefix that was supposed to apply to every generated image was silently only reaching one of the two rendering paths, so a whole batch shipped without the negative prompts that were supposed to keep things tasteful.\n\nThe other thread has been the conversational practice mode. I measured how much variety the built-in personas actually had and found most of them were giving the same answer to every question — one character answered \"like\" to all twelve topics it could be asked about. So I rebuilt how a persona's opinions are generated, and separately made speaking-out-loud the default way to respond instead of picking from a list, while making sure that still counts as imitation practice rather than a memory test the learner hasn't earned yet.\n\nOn the infrastructure side, I run a small personal server mesh (five or six machines) that everything above depends on, and I spent a chunk of time hunting a class of bug that's bitten me more than once: something that fails completely silently. Docker's \"restart unless stopped\" policy, for instance, doesn't actually restart a container after a reboot if it had been explicitly stopped before shutdown — so a broker process I depend on sat dead for an hour with nothing complaining. I've been building small deadman-switch scripts that check on these dependencies every 15 minutes and heal them automatically, because I'd rather find these problems from a log line than from the app just quietly not working.",
   "highlights": [
     {
-      "repo": "phillipsben.com",
-      "oneLiner": "Rebuilding Keikochō: conversation replies keyed off semantic category, not surface topic"
-    },
-    {
-      "repo": "phillipsben.com",
-      "oneLiner": "Wrote around a diffusion-model limit: models can't draw a person speaking, only standing"
-    },
-    {
-      "repo": "phillipsben.com",
-      "oneLiner": "Home lab deadman checks: caught a GPU broker's restart policy that couldn't survive a reboot"
-    },
-    {
-      "repo": "BudgetTracker",
-      "oneLiner": "Household finance tracker, live, daily use for receipts and shopping"
+      "repo": "Switchboard",
+      "oneLiner": "Fixed a restart-policy bug that left the GPU broker dead for an hour; added deadman checks."
     }
   ]
 }

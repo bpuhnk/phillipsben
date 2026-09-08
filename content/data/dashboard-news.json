@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-07T10:05:23Z",
+  "updatedAt": "2026-09-08T10:04:57Z",
   "items": [
     {
       "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
       "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
       "source": "Hacker News",
-      "points": 651,
-      "whyItMatters": "LLMs expose sloppy thinking when they author public posts — a cautionary tale for AI writing."
+      "points": 722,
+      "whyItMatters": "A sharp reminder that LLM-authored posts can expose sloppy thinking — the intellectual fly is real and it shows when you don't proof."
     },
     {
       "title": "An Alien Mind",
       "url": "https://openai.com/index/an-alien-mind/",
       "source": "Hacker News",
-      "points": 412,
-      "whyItMatters": "OpenAI's latest on model internals, describing emergent behaviors that feel alien."
+      "points": 475,
+      "whyItMatters": "OpenAI's new paper on reasoning depth — what their models 'understand' versus just predicting tokens, and why it matters."
     },
     {
-      "title": "LLMs as a Cognitive Virus",
-      "url": "https://arxiv.org/abs/2609.03344",
+      "title": "Bill Gates tries to install MovieMaker (2003)",
+      "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
       "source": "Hacker News",
-      "points": 387,
-      "whyItMatters": "Paper arguing LLMs spread like cognitive viruses — reshaping how humans think and communicate."
+      "points": 397,
+      "whyItMatters": "Bill Gates fumbling MovieMaker in 2003 is a funny mirror for how even tech giants still wrestle with simple tooling."
     },
     {
-      "title": "Global warming will exceed 1.5-degree limit, UN says",
-      "url": "https://www.pbs.org/newshour/science/global-warming-will-exceed-1-5-degree-limit-un-says-in-report-that-maps-path-back-below-danger-zone",
+      "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
+      "url": "https://lax-skyline.parcelscope.net/",
       "source": "Hacker News",
-      "points": 336,
-      "whyItMatters": "UN confirms 1.5°C breach is inevitable — the question now is how fast and how far."
+      "points": 291,
+      "whyItMatters": "A beautiful interactive map of LA's construction boom — you can see the city grow one building at a time from 1880 to today."
     },
     {
-      "title": "GPT-6 Astra on robot arms",
-      "url": "https://openai.robocurve.org/gpt-6-astra/",
+      "title": "Research acceleration: The view inside OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
       "source": "Hacker News",
-      "points": 234,
-      "whyItMatters": "GPT-6 goes physical — robot arms and real-world deployment mark a step beyond pure text."
+      "points": 209,
+      "whyItMatters": "Inside OpenAI's research process and how they're accelerating discovery — practical insights on scaling AI R&D."
     }
   ]
 }
