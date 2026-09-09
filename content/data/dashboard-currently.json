@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-08T10:04:57Z",
-  "focus": "I'm pushing through the keikocho おしゃべり plan — step two is sem-keyed personality, and the groundwork from transcripts is solid. The dashboard runs smoothly now; most days I just keep the pipes clean and watch for drift.",
+  "updatedAt": "2026-09-09T10:05:57Z",
+  "focus": "I'm focused on completing the keikocho おしゃべり plan — sem-keyed personality is the next step after transcripts shipped. I'm also keeping the dashboard and infrastructure solid so everything runs reliably behind the scenes.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

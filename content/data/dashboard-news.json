@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-08T10:04:57Z",
+  "updatedAt": "2026-09-09T10:05:57Z",
   "items": [
     {
-      "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
-      "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+      "title": "On the Navier–Stokes Millennium Prize Problem",
+      "url": "https://openai.com/index/navier-stokes-solution/",
       "source": "Hacker News",
-      "points": 722,
-      "whyItMatters": "A sharp reminder that LLM-authored posts can expose sloppy thinking — the intellectual fly is real and it shows when you don't proof."
+      "points": 1261,
+      "whyItMatters": "A claimed proof of one of math's deepest problems lands via OpenAI, reshaping what AI can do with rigorous reasoning."
     },
     {
-      "title": "An Alien Mind",
-      "url": "https://openai.com/index/an-alien-mind/",
+      "title": "LibreOffice breaks download records after declaring it has no AI features",
+      "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
       "source": "Hacker News",
-      "points": 475,
-      "whyItMatters": "OpenAI's new paper on reasoning depth — what their models 'understand' versus just predicting tokens, and why it matters."
+      "points": 681,
+      "whyItMatters": "The anti-AI backlash: people flock to LibreOffice precisely because it has no AI features—plain tools in an overhyped moment."
+    },
+    {
+      "title": "I resigned from Anthropic today",
+      "url": "https://twitter.com/hilbertspaess/status/2097476196791709843#m",
+      "source": "Hacker News",
+      "points": 569,
+      "whyItMatters": "Another Anthropic departure highlights the talent drain as AI startups struggle to retain what they've built."
+    },
+    {
+      "title": "Muse – Meta’s personal AI agent",
+      "url": "https://ai.meta.com/muse/",
+      "source": "Hacker News",
+      "points": 506,
+      "whyItMatters": "Meta enters the personal agent arena with Muse, competing directly in the space that powers tools like my own dashboard."
     },
     {
       "title": "Bill Gates tries to install MovieMaker (2003)",
       "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
       "source": "Hacker News",
-      "points": 397,
-      "whyItMatters": "Bill Gates fumbling MovieMaker in 2003 is a funny mirror for how even tech giants still wrestle with simple tooling."
-    },
-    {
-      "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
-      "url": "https://lax-skyline.parcelscope.net/",
-      "source": "Hacker News",
-      "points": 291,
-      "whyItMatters": "A beautiful interactive map of LA's construction boom — you can see the city grow one building at a time from 1880 to today."
-    },
-    {
-      "title": "Research acceleration: The view inside OpenAI",
-      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-      "source": "Hacker News",
-      "points": 209,
-      "whyItMatters": "Inside OpenAI's research process and how they're accelerating discovery — practical insights on scaling AI R&D."
+      "points": 423,
+      "whyItMatters": "A nostalgic look at how legacy tools still matter—Bill Gates debugging MovieMaker shows no one is above a good reinstall."
     }
   ]
 }

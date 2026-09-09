@@ -1,10 +1,22 @@
 {
-  "updatedAt": "2026-09-08T10:04:57Z",
-  "summary": "I've been working on Keikochō, a Japanese-learning app I built for myself, and most of the interesting engineering this stretch has been about image generation, not code. I redid all 400+ illustrations to move away from a \"young anime girl\" default style that didn't fit a middle-aged guy learning kana — bold-ink manga instead, cast diversified across ages and genders. The best casting trick turned out to be simple: making a figure elderly overrides the model's defaults harder than any amount of negative prompting does. I also found a real bug hiding in the pipeline for weeks — a style prefix that was supposed to apply to every generated image was silently only reaching one of the two rendering paths, so a whole batch shipped without the negative prompts that were supposed to keep things tasteful.\n\nThe other thread has been the conversational practice mode. I measured how much variety the built-in personas actually had and found most of them were giving the same answer to every question — one character answered \"like\" to all twelve topics it could be asked about. So I rebuilt how a persona's opinions are generated, and separately made speaking-out-loud the default way to respond instead of picking from a list, while making sure that still counts as imitation practice rather than a memory test the learner hasn't earned yet.\n\nOn the infrastructure side, I run a small personal server mesh (five or six machines) that everything above depends on, and I spent a chunk of time hunting a class of bug that's bitten me more than once: something that fails completely silently. Docker's \"restart unless stopped\" policy, for instance, doesn't actually restart a container after a reboot if it had been explicitly stopped before shutdown — so a broker process I depend on sat dead for an hour with nothing complaining. I've been building small deadman-switch scripts that check on these dependencies every 15 minutes and heal them automatically, because I'd rather find these problems from a log line than from the app just quietly not working.",
+  "updatedAt": "2026-09-09T10:05:57Z",
+  "summary": "I've been building Keikochō, a Japanese-learning app I use myself, and this stretch was mostly about honesty in what the app claims to teach versus what it actually reinforces. I measured how much variety the conversation personas actually offer — turns out with a 12-option question menu, one persona answered \"like\" to literally every single question, 12 for 12. The fix wasn't more content, it was rekeying personality to a shared semantic space so an answer can't fall through to a generic default. I also found that the app's practice mode had quietly shipped a section with no illustration for three weeks because a list of section IDs grew from three to four and nothing checked that the image folder grew with it — nobody's fault, just a guard that didn't exist. Added a test that would have caught it.\n\nOn the image generation side, I've been using Flux and a fine-tuned illustration model (via Replicate) to draw the deck art, and spent real time on failure modes that are specific to diffusion models: it can't count reliably past six without a shape to anchor to (\"seven balls in a row\" versus \"two rows of four and three\" — the second one it just gets wrong), it can't draw two people having a conversation without inventing a romance, and naming something you don't want in the image (\"no chopsticks standing up in the rice bowl\") often causes the model to draw exactly that. The fix each time was rephrasing to describe the positive scene rather than list prohibitions.\n\nSeparately, on the infrastructure side I run for personal AI projects, I put together a small monitoring pattern I keep reusing: a handful of background health checks (backups, network mounts, model server heartbeats) that each report one line into a daily status message. The interesting bug there was realizing that \"populated\" and \"fresh\" are different failure states — a data sync that's been silently failing for weeks still leaves old files sitting in place, so a plain existence check passes while the data quietly rots. Only checking the file's age catches it.",
   "highlights": [
     {
-      "repo": "Switchboard",
-      "oneLiner": "Fixed a restart-policy bug that left the GPU broker dead for an hour; added deadman checks."
+      "repo": "Talk to Virtual Me",
+      "oneLiner": "Fixed a stance profile that answered like to 12/12 questions by rekeying to shared semantics"
+    },
+    {
+      "repo": "ComfyUI",
+      "oneLiner": "Debugging diffusion failure modes: counting past six, two-person scenes, negative prompts"
+    },
+    {
+      "repo": "Cervi",
+      "oneLiner": "Caught a section that shipped with no illustration for three weeks; added a coverage guard"
+    },
+    {
+      "repo": "server-talk",
+      "oneLiner": "Built reusable health-check pattern distinguishing populated-but-stale from truly fresh"
     }
   ]
 }
