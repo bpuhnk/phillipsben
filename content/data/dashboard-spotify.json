@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-09-09T10:02:40Z",
+  "updatedAt": "2026-09-10T10:02:14Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "Prodigal",
+      "artist": "Poor Man's Poison",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048513afa7a7f3afe95f9de7d0da1",
+      "url": "https://open.spotify.com/track/3FY6oOfIR1MatJFM8ShOYt",
+      "playedAt": "2026-09-09T09:15:01.379Z"
+    },
     {
       "track": "Libertango - Arr. for Orchestra",
       "artist": "Nike Hutchisson, Pavel Lyubomudrov, Metamorphose String Orchestra",
@@ -29,13 +36,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d00004851bac9bf5e83e0111d61f6b289",
       "url": "https://open.spotify.com/track/3xavvpT54qq3TZJLNjBn7Z",
       "playedAt": "2026-09-08T22:43:18.670Z"
-    },
-    {
-      "track": "Face Down",
-      "artist": "The Red Jumpsuit Apparatus",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851f98edbc89407338a90437d34",
-      "url": "https://open.spotify.com/track/4wzjNqjKAKDU82e8uMhzmr",
-      "playedAt": "2026-09-08T22:36:03.051Z"
     }
   ]
 }

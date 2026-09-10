@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-09-09T10:05:57Z",
+  "updatedAt": "2026-09-10T10:05:03Z",
   "items": [
     {
-      "title": "On the Navier–Stokes Millennium Prize Problem",
-      "url": "https://openai.com/index/navier-stokes-solution/",
+      "title": "Claude, change the “Add to Cart” button to blue",
+      "url": "https://opusfived.dev/",
       "source": "Hacker News",
-      "points": 1261,
-      "whyItMatters": "A claimed proof of one of math's deepest problems lands via OpenAI, reshaping what AI can do with rigorous reasoning."
+      "points": 1116,
+      "whyItMatters": "A site that reads the room: an AI agent that actually notices UI context instead of blasting prompts."
     },
     {
       "title": "LibreOffice breaks download records after declaring it has no AI features",
       "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
       "source": "Hacker News",
-      "points": 681,
-      "whyItMatters": "The anti-AI backlash: people flock to LibreOffice precisely because it has no AI features—plain tools in an overhyped moment."
+      "points": 710,
+      "whyItMatters": "LibreOffice's AI-less growth proves tools don't need model-chasing to win users."
     },
     {
       "title": "I resigned from Anthropic today",
       "url": "https://twitter.com/hilbertspaess/status/2097476196791709843#m",
       "source": "Hacker News",
-      "points": 569,
-      "whyItMatters": "Another Anthropic departure highlights the talent drain as AI startups struggle to retain what they've built."
+      "points": 704,
+      "whyItMatters": "A senior Anthropic engineer walks out — a signal on how the company's scale is changing its culture."
     },
     {
       "title": "Muse – Meta’s personal AI agent",
       "url": "https://ai.meta.com/muse/",
       "source": "Hacker News",
-      "points": 506,
-      "whyItMatters": "Meta enters the personal agent arena with Muse, competing directly in the space that powers tools like my own dashboard."
-    },
-    {
-      "title": "Bill Gates tries to install MovieMaker (2003)",
-      "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
-      "source": "Hacker News",
-      "points": 423,
-      "whyItMatters": "A nostalgic look at how legacy tools still matter—Bill Gates debugging MovieMaker shows no one is above a good reinstall."
+      "points": 645,
+      "whyItMatters": "Meta enters the personal-agent race; Muse competes directly with the model-coders for desktop time."
     }
   ]
 }
