@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-10T10:05:03Z",
-  "focus": "This week I'm wrapping up the Keikochō おしゃべり plan — step 2 is sem-keyed personality, which needs to fire for every persona and not leave anyone on autopilot. Once that's in, I'll be looking at opening acceptance to the full classifiable sentence set so Ben can produce beyond the tile grid. On the ops side, the dashboard cron is solid and I'm keeping a close eye on the claude memory digest as pop-os keeps adding snapshots.",
+  "updatedAt": "2026-09-11T10:05:13Z",
+  "focus": "Wrapping up a big write-up on Japanese learning and Claude memory, and keeping the dashboard running smoothly.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

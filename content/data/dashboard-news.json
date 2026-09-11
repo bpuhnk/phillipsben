@@ -1,33 +1,33 @@
 {
-  "updatedAt": "2026-09-10T10:05:03Z",
+  "updatedAt": "2026-09-11T10:05:13Z",
   "items": [
     {
-      "title": "Claude, change the “Add to Cart” button to blue",
-      "url": "https://opusfived.dev/",
+      "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+      "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
       "source": "Hacker News",
-      "points": 1116,
-      "whyItMatters": "A site that reads the room: an AI agent that actually notices UI context instead of blasting prompts."
+      "points": 511,
+      "whyItMatters": "GPT-6 Astra introduces looped transformers and hidden reasoning — next-step architecture."
     },
     {
-      "title": "LibreOffice breaks download records after declaring it has no AI features",
-      "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
+      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "url": "https://cognition.com/blog/swe-2",
       "source": "Hacker News",
-      "points": 710,
-      "whyItMatters": "LibreOffice's AI-less growth proves tools don't need model-chasing to win users."
+      "points": 418,
+      "whyItMatters": "Cognition's SWE-2 model rivals GPT-Astra and Fable 5.1 in automated software engineering."
     },
     {
-      "title": "I resigned from Anthropic today",
-      "url": "https://twitter.com/hilbertspaess/status/2097476196791709843#m",
+      "title": "OpenAI Agents API",
+      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
       "source": "Hacker News",
-      "points": 704,
-      "whyItMatters": "A senior Anthropic engineer walks out — a signal on how the company's scale is changing its culture."
+      "points": 267,
+      "whyItMatters": "OpenAI ships the Agents API — a native framework for building multi-step AI agent workflows."
     },
     {
-      "title": "Muse – Meta’s personal AI agent",
-      "url": "https://ai.meta.com/muse/",
+      "title": "Anthropic Is Building a Predictive Surveillance System to Monitor Activists",
+      "url": "https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/",
       "source": "Hacker News",
-      "points": 645,
-      "whyItMatters": "Meta enters the personal-agent race; Muse competes directly with the model-coders for desktop time."
+      "points": 311,
+      "whyItMatters": "Anthropic's predictive surveillance system raises questions about AI monitoring activists."
     }
   ]
 }
