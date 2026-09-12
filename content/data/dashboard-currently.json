@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-11T10:05:13Z",
-  "focus": "Wrapping up a big write-up on Japanese learning and Claude memory, and keeping the dashboard running smoothly.",
+  "updatedAt": "2026-09-12T10:05:26Z",
+  "focus": "This week I wrapped up work on the Qwen3.8 benchmark and kept the daily brief pipeline running — 60 commits, three solid days in the weeds. I'm still refining keikocho's personality layer and watching the AI news cycle with growing interest.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

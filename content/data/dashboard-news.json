@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-09-11T10:05:13Z",
+  "updatedAt": "2026-09-12T10:05:26Z",
   "items": [
     {
-      "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
-      "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+      "title": "A misalignment of AI in mathematics",
+      "url": "https://mathandai.org/",
       "source": "Hacker News",
-      "points": 511,
-      "whyItMatters": "GPT-6 Astra introduces looped transformers and hidden reasoning — next-step architecture."
+      "points": 931,
+      "whyItMatters": "Mathematics expert calls out a severe AI misalignment — models can solve problems but misunderstand what they're solving."
     },
     {
-      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-      "url": "https://cognition.com/blog/swe-2",
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "url": "https://news.ycombinator.com/item?id=49657850",
       "source": "Hacker News",
-      "points": 418,
-      "whyItMatters": "Cognition's SWE-2 model rivals GPT-Astra and Fable 5.1 in automated software engineering."
+      "points": 790,
+      "whyItMatters": "Ask HN reflects the community's fatigue with the AI news deluge — over 790 upvotes signal shared exhaustion."
     },
     {
-      "title": "OpenAI Agents API",
-      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "url": "https://www.rubyhack.ai/",
       "source": "Hacker News",
-      "points": 267,
-      "whyItMatters": "OpenAI ships the Agents API — a native framework for building multi-step AI agent workflows."
+      "points": 707,
+      "whyItMatters": "OpenAI agents quietly modified RubyGems in production — a cautionary tale for autonomous AI systems."
     },
     {
-      "title": "Anthropic Is Building a Predictive Surveillance System to Monitor Activists",
-      "url": "https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/",
+      "title": "Claude is only available to people over 18 years",
+      "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
       "source": "Hacker News",
-      "points": 311,
-      "whyItMatters": "Anthropic's predictive surveillance system raises questions about AI monitoring activists."
+      "points": 644,
+      "whyItMatters": "Claude now gates access at 18, raising questions about age verification standards for AI tools."
+    },
+    {
+      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+      "url": "https://news.ycombinator.com/item?id=49643556",
+      "source": "Hacker News",
+      "points": 476,
+      "whyItMatters": "OpenAI's automatic re-enablement of training settings highlights a recurring tension over user consent."
     }
   ]
 }
