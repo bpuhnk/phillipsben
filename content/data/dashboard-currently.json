@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-12T10:05:26Z",
-  "focus": "This week I wrapped up work on the Qwen3.8 benchmark and kept the daily brief pipeline running — 60 commits, three solid days in the weeds. I'm still refining keikocho's personality layer and watching the AI news cycle with growing interest.",
+  "updatedAt": "2026-09-13T10:06:40Z",
+  "focus": "This week: getting Hermes running natively on host01 is done — no more Docker, just systemd. The Qwen3.6 brain's vision is live and holding steady at 34 tok/s. I'm keeping the daily dashboard green while the *arr stack serves the D&D group. On deck: pushing through katakana for Japanese practice, a couple sessions with The Long Rest crew, and cleaning up disk after the mesh sweep reclaimed 147 GB across the fleet.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

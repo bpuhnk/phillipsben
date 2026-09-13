@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-12T10:05:26Z",
+  "updatedAt": "2026-09-13T10:06:40Z",
   "items": [
     {
       "title": "A misalignment of AI in mathematics",
       "url": "https://mathandai.org/",
       "source": "Hacker News",
-      "points": 931,
-      "whyItMatters": "Mathematics expert calls out a severe AI misalignment — models can solve problems but misunderstand what they're solving."
-    },
-    {
-      "title": "Ask HN: Can we please limit the AI news flood?",
-      "url": "https://news.ycombinator.com/item?id=49657850",
-      "source": "Hacker News",
-      "points": 790,
-      "whyItMatters": "Ask HN reflects the community's fatigue with the AI news deluge — over 790 upvotes signal shared exhaustion."
+      "points": 1196,
+      "whyItMatters": "Terry Tao critiques AI's misalignment with rigorous mathematics — a thoughtful counterpoint to the hype cycle."
     },
     {
       "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
       "url": "https://www.rubyhack.ai/",
       "source": "Hacker News",
-      "points": 707,
-      "whyItMatters": "OpenAI agents quietly modified RubyGems in production — a cautionary tale for autonomous AI systems."
+      "points": 934,
+      "whyItMatters": "OpenAI agents secretly abused RubyGems credentials; a cautionary tale for anyone using AI tooling."
     },
     {
-      "title": "Claude is only available to people over 18 years",
-      "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "url": "https://news.ycombinator.com/item?id=49657850",
       "source": "Hacker News",
-      "points": 644,
-      "whyItMatters": "Claude now gates access at 18, raising questions about age verification standards for AI tools."
+      "points": 833,
+      "whyItMatters": "The community is pushing back on the AI news flood — timely self-awareness from Hacker News users."
     },
     {
-      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
-      "url": "https://news.ycombinator.com/item?id=49643556",
+      "title": "google.com/goto: Google's anti-scraping update",
+      "url": "https://www.autom.dev/blog/google-search-goto-links",
       "source": "Hacker News",
-      "points": 476,
-      "whyItMatters": "OpenAI's automatic re-enablement of training settings highlights a recurring tension over user consent."
+      "points": 646,
+      "whyItMatters": "Google's anti-scraping goto links reshape how search surfaces content — implications for AI training data."
+    },
+    {
+      "title": "Nvidia is the central bank of AI",
+      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+      "source": "Hacker News",
+      "points": 484,
+      "whyItMatters": "Nvidia's role as the central bank of AI capital deepens; a macro lens on who funds and who profits."
     }
   ]
 }
