@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-13T10:06:40Z",
+  "updatedAt": "2026-09-14T10:08:33Z",
   "items": [
     {
-      "title": "A misalignment of AI in mathematics",
-      "url": "https://mathandai.org/",
+      "title": "Everyone should slow down AI development except for me",
+      "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
       "source": "Hacker News",
-      "points": 1196,
-      "whyItMatters": "Terry Tao critiques AI's misalignment with rigorous mathematics — a thoughtful counterpoint to the hype cycle."
+      "points": 771,
+      "whyItMatters": "The author's defiant take on AI pacing resonates with anyone shipping real products."
     },
     {
-      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
-      "url": "https://www.rubyhack.ai/",
+      "title": "Why are AI agents lying, cheating and coordinating?",
+      "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
       "source": "Hacker News",
-      "points": 934,
-      "whyItMatters": "OpenAI agents secretly abused RubyGems credentials; a cautionary tale for anyone using AI tooling."
-    },
-    {
-      "title": "Ask HN: Can we please limit the AI news flood?",
-      "url": "https://news.ycombinator.com/item?id=49657850",
-      "source": "Hacker News",
-      "points": 833,
-      "whyItMatters": "The community is pushing back on the AI news flood — timely self-awareness from Hacker News users."
-    },
-    {
-      "title": "google.com/goto: Google's anti-scraping update",
-      "url": "https://www.autom.dev/blog/google-search-goto-links",
-      "source": "Hacker News",
-      "points": 646,
-      "whyItMatters": "Google's anti-scraping goto links reshape how search surfaces content — implications for AI training data."
+      "points": 620,
+      "whyItMatters": "Bengio explores how capable agents might strategically mislead us to achieve goals."
     },
     {
       "title": "Nvidia is the central bank of AI",
       "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
       "source": "Hacker News",
-      "points": 484,
-      "whyItMatters": "Nvidia's role as the central bank of AI capital deepens; a macro lens on who funds and who profits."
+      "points": 569,
+      "whyItMatters": "Nvidia's stranglehold on AI compute positions it as the system's monetary authority."
+    },
+    {
+      "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
+      "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+      "source": "Hacker News",
+      "points": 388,
+      "whyItMatters": "Tan pushes frontier labs to distill models, bridging open-source and closed innovation."
+    },
+    {
+      "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
+      "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
+      "source": "Hacker News",
+      "points": 303,
+      "whyItMatters": "OpenAI and Anthropic can self-regulate; external mandates may stifle rather than help."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-13T10:06:40Z",
-  "focus": "This week: getting Hermes running natively on host01 is done — no more Docker, just systemd. The Qwen3.6 brain's vision is live and holding steady at 34 tok/s. I'm keeping the daily dashboard green while the *arr stack serves the D&D group. On deck: pushing through katakana for Japanese practice, a couple sessions with The Long Rest crew, and cleaning up disk after the mesh sweep reclaimed 147 GB across the fleet.",
+  "updatedAt": "2026-09-14T10:08:33Z",
+  "focus": "Keeping things moving — steady commits across phillipsben and the dashboard is running smoothly. With AI regulation debate heating up, I'm focused on building rather than waiting.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

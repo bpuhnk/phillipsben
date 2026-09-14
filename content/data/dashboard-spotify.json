@@ -1,46 +1,41 @@
 {
-  "updatedAt": "2026-09-13T10:03:16Z",
-  "nowPlaying": {
-    "track": "Brown Noise for Baby Sleep Pt.7",
-    "artist": "Brown Noise for Baby Sleep Tight",
-    "albumArt": "https://i.scdn.co/image/ab67616d00004851d993c7bf98a49487812175a8",
-    "url": "https://open.spotify.com/track/3lYyB10lwbGg3P3kl9Iw4Y"
-  },
+  "updatedAt": "2026-09-14T10:03:40Z",
+  "nowPlaying": null,
   "recent": [
     {
-      "track": "Brown Noise for Baby Sleep Pt.6",
-      "artist": "Brown Noise for Baby Sleep Tight",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851d993c7bf98a49487812175a8",
-      "url": "https://open.spotify.com/track/7qJgU9t1mlIu3htFdDv7cZ",
-      "playedAt": "2026-09-13T10:01:54.261Z"
+      "track": "White Noise Dreams",
+      "artist": "Espacious",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485135c39cb86454d1e96872122f",
+      "url": "https://open.spotify.com/track/6rezpVnAch4797LUXkicT1",
+      "playedAt": "2026-09-14T01:13:28.387Z"
     },
     {
-      "track": "Brown Noise for Baby Sleep Pt.5",
-      "artist": "Brown Noise for Baby Sleep Tight",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851d993c7bf98a49487812175a8",
-      "url": "https://open.spotify.com/track/1vOnFspHUeSwZvNVWmlHK3",
-      "playedAt": "2026-09-13T10:00:28.060Z"
+      "track": "Black Noise Zen",
+      "artist": "Mahalo Halo",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b5533107ad099a8da9937b00",
+      "url": "https://open.spotify.com/track/5mTbrj4kqNZ1LJP4mfkI5z",
+      "playedAt": "2026-09-13T11:53:29.477Z"
     },
     {
-      "track": "Brown Noise for Baby Sleep Pt.4",
-      "artist": "Brown Noise for Baby Sleep Tight",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851d993c7bf98a49487812175a8",
-      "url": "https://open.spotify.com/track/6Uj52kivcwbQIaxXFyP01e",
-      "playedAt": "2026-09-13T09:59:06.169Z"
+      "track": "Floating In Womb",
+      "artist": "Calm 'N' Cosy",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851679433b0ed67d1c8935b456e",
+      "url": "https://open.spotify.com/track/7IVFUCCX7n6ZPccqXfswEV",
+      "playedAt": "2026-09-13T11:50:00.800Z"
     },
     {
-      "track": "Brown Noise for Baby Sleep Pt.3",
-      "artist": "Brown Noise for Baby Sleep Tight",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851d993c7bf98a49487812175a8",
-      "url": "https://open.spotify.com/track/5hNm6MQDB6ild6DnPxu566",
-      "playedAt": "2026-09-13T09:57:44.165Z"
+      "track": "Deepest Noise",
+      "artist": "BCCF",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b9d390245ccdffdf563e60df",
+      "url": "https://open.spotify.com/track/6NYm34wUWYLtFANueUqjkc",
+      "playedAt": "2026-09-13T11:47:07.534Z"
     },
     {
-      "track": "Brown Noise for Baby Sleep Pt.2",
-      "artist": "Brown Noise for Baby Sleep Tight",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851d993c7bf98a49487812175a8",
-      "url": "https://open.spotify.com/track/057EHFsxRGMJWZ02JKtw5I",
-      "playedAt": "2026-09-13T09:56:20.865Z"
+      "track": "clear waters - noise",
+      "artist": "kindred clouds",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851df4eafca6273f98fa91eaae7",
+      "url": "https://open.spotify.com/track/1l2kI0S56lWUm7SZc1lPwx",
+      "playedAt": "2026-09-13T11:44:35.122Z"
     }
   ]
 }
