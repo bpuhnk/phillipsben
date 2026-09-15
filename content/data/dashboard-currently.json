@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-14T10:08:33Z",
-  "focus": "Keeping things moving — steady commits across phillipsben and the dashboard is running smoothly. With AI regulation debate heating up, I'm focused on building rather than waiting.",
+  "updatedAt": "2026-09-15T10:06:49Z",
+  "focus": "This week I shipped the intranet-dashboard to host01 with systemd and Gitea CI, and got the Q3.6 vision wired up for production on the P100 — the brain can see images now for free. Spent the rest of the days tuning the AI stack: verified the pop-os hardware mapping (NVMe nodes flipped again), retired the Qwen3.8-27B to save 25 GB, and confirmed the dashboard cron runs cleanly end-to-end after fixing the DRY sampler path corruption.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
