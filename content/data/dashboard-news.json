@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-15T10:06:49Z",
+  "updatedAt": "2026-09-16T10:06:55Z",
   "items": [
+    {
+      "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
+      "url": "https://www.effort.news/irregular",
+      "source": "Hacker News",
+      "points": 617,
+      "whyItMatters": "One company behind the hacking scandals at OpenAI, Anthropic, and Meta — reveals how AI compute demand concentrates."
+    },
     {
       "title": "OpenAI bots knew about the RubyGems caching vulnerability",
       "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
       "source": "Hacker News",
-      "points": 463,
-      "whyItMatters": "OpenAI's bots spotted a RubyGems cache vulnerability before the public knew — real-time monitoring is working."
+      "points": 507,
+      "whyItMatters": "OpenAI's bots detected the RubyGems cache vulnerability before humans did, showing autonomous system awareness."
     },
     {
-      "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
-      "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+      "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
+      "url": "https://codyho.dev/blog/gpu-driver/",
       "source": "Hacker News",
-      "points": 409,
-      "whyItMatters": "Y Combinator's Garry Tan pushes US open-weight labs to distill frontier models — a signal for the open AI ecosystem."
+      "points": 322,
+      "whyItMatters": "A single developer built a Linux GPU driver for Apple's M4 in just one month — a challenge that stumped industry giants."
     },
     {
-      "title": "Apple's Siri AI Can Be Swapped Out for Claude, ChatGPT, Code Shows",
-      "url": "https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/",
+      "title": "We got admin access to Baseten's production GitHub",
+      "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
       "source": "Hacker News",
-      "points": 222,
-      "whyItMatters": "Siri's AI backend is now swappable — Claude or ChatGPT can replace Apple's default, opening the door to better voice assistants."
+      "points": 278,
+      "whyItMatters": "Baseten's production GitHub was compromised, showing how long-lived tokens remain an attack surface even after rotation."
     },
     {
-      "title": "Houthis used Claude Code to develop missile guidance software: Anthropic",
-      "url": "https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
       "source": "Hacker News",
-      "points": 102,
-      "whyItMatters": "Anthropic confirms Houthis used Claude Code for missile guidance software — AI tools crossing from dev desks to defense."
-    },
-    {
-      "title": "Big AI sets out its terms for regulatory capture",
-      "url": "https://www.theregister.com/ai-and-ml/2026/09/14/big-ai-sets-out-its-terms-for-regulatory-capture-and-calls-it-pace-the-frontier/5296067",
-      "source": "Hacker News",
-      "points": 117,
-      "whyItMatters": "Big AI lobbies for self-pacing regulation — a move that could shape how frontier models get governed going forward."
+      "points": 231,
+      "whyItMatters": "A mathematical physicist argues LLM progress is slowing despite hardware gains, challenging the current investment narrative."
     }
   ]
 }
