@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-16T10:06:55Z",
+  "updatedAt": "2026-09-17T10:09:26Z",
   "items": [
     {
-      "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
-      "url": "https://www.effort.news/irregular",
+      "title": "Nvidia announces native GPU programming in Rust",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
       "source": "Hacker News",
-      "points": 617,
-      "whyItMatters": "One company behind the hacking scandals at OpenAI, Anthropic, and Meta — reveals how AI compute demand concentrates."
+      "points": 689,
+      "whyItMatters": "Nvidia brings CUDA to Rust — native GPU programming without the C++ pain."
     },
     {
-      "title": "OpenAI bots knew about the RubyGems caching vulnerability",
-      "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
+      "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
+      "url": "https://mistral.ai/news/mistral-x-mozilla/",
       "source": "Hacker News",
-      "points": 507,
-      "whyItMatters": "OpenAI's bots detected the RubyGems cache vulnerability before humans did, showing autonomous system awareness."
+      "points": 565,
+      "whyItMatters": "Private multilingual browsing AI from Mistral + Mozilla, keeping data local and multilingual."
     },
     {
-      "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
-      "url": "https://codyho.dev/blog/gpu-driver/",
+      "title": "Hackers Got Inside a Flock Camera",
+      "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
       "source": "Hacker News",
-      "points": 322,
-      "whyItMatters": "A single developer built a Linux GPU driver for Apple's M4 in just one month — a challenge that stumped industry giants."
-    },
-    {
-      "title": "We got admin access to Baseten's production GitHub",
-      "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
-      "source": "Hacker News",
-      "points": 278,
-      "whyItMatters": "Baseten's production GitHub was compromised, showing how long-lived tokens remain an attack surface even after rotation."
+      "points": 528,
+      "whyItMatters": "Flock camera hack reveals how the system works end-to-end — privacy implications for smart homes."
     },
     {
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
       "source": "Hacker News",
-      "points": 231,
-      "whyItMatters": "A mathematical physicist argues LLM progress is slowing despite hardware gains, challenging the current investment narrative."
+      "points": 473,
+      "whyItMatters": "Thoughtful bear case on LLMs after the Navier-Stokes paper — questioning whether scaling holds."
+    },
+    {
+      "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
+      "url": "https://codyho.dev/blog/gpu-driver/",
+      "source": "Hacker News",
+      "points": 413,
+      "whyItMatters": "Linux GPU driver for M4 Mac Mini built in a month — proves open-source can move fast on Apple silicon."
     }
   ]
 }

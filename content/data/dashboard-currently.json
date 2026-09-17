@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-16T10:06:55Z",
-  "focus": "I'm keeping the Hermes dashboard pipeline running smoothly on host01 after the native migration, while pushing intranet-dashboard toward its Gitea CI deployment — just waiting on two pending items before it ships. On the pop-os side, the VPN/Tailscale DNS conflict that was tripping up daily workflow is finally resolved, and I'm keeping an eye on how the mesh's split-horizon DNS affects our dev tools.",
+  "updatedAt": "2026-09-17T10:09:26Z",
+  "focus": "I'm finishing the intranet-dashboard deployment and hardening host01's cron jobs after the big migration — getting everything automated so I can stop babysitting scripts. Still keeping an eye on pop-os AI stack and the D&D manager app as things settle.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
