@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-17T10:09:26Z",
-  "focus": "I'm finishing the intranet-dashboard deployment and hardening host01's cron jobs after the big migration — getting everything automated so I can stop babysitting scripts. Still keeping an eye on pop-os AI stack and the D&D manager app as things settle.",
+  "updatedAt": "2026-09-18T10:08:47Z",
+  "focus": "I'm wrapping up the intranet-dashboard deployment and stabilizing host01's cron jobs after the migration. Still watching pop-os and the D&D manager app as they settle in.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

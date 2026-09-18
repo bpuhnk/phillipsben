@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-17T10:09:26Z",
+  "updatedAt": "2026-09-18T10:08:47Z",
   "items": [
     {
       "title": "Nvidia announces native GPU programming in Rust",
       "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
       "source": "Hacker News",
-      "points": 689,
+      "points": 944,
       "whyItMatters": "Nvidia brings CUDA to Rust — native GPU programming without the C++ pain."
-    },
-    {
-      "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-      "url": "https://mistral.ai/news/mistral-x-mozilla/",
-      "source": "Hacker News",
-      "points": 565,
-      "whyItMatters": "Private multilingual browsing AI from Mistral + Mozilla, keeping data local and multilingual."
     },
     {
       "title": "Hackers Got Inside a Flock Camera",
       "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
       "source": "Hacker News",
-      "points": 528,
+      "points": 574,
       "whyItMatters": "Flock camera hack reveals how the system works end-to-end — privacy implications for smart homes."
     },
     {
-      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
+      "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+      "url": "https://bend-lang.com/",
       "source": "Hacker News",
-      "points": 473,
-      "whyItMatters": "Thoughtful bear case on LLMs after the Navier-Stokes paper — questioning whether scaling holds."
+      "points": 467,
+      "whyItMatters": "Bend blocks AI programming mistakes via mathematical proofs on both CPU and GPU."
     },
     {
-      "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
-      "url": "https://codyho.dev/blog/gpu-driver/",
+      "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+      "url": "https://www.hacktron.ai/blog/hacking-openai",
       "source": "Hacker News",
-      "points": 413,
-      "whyItMatters": "Linux GPU driver for M4 Mac Mini built in a month — proves open-source can move fast on Apple silicon."
+      "points": 357,
+      "whyItMatters": "A heap overflow and SSO flaw let hackers access OpenAI's internal repos directly."
+    },
+    {
+      "title": "PS5 Linux lead quits: \"a bunch of noobs using LLMs\" that \"they don't understand\"",
+      "url": "https://frvr.com/blog/news/ps5-linux-lead-quits-as-open-source-projects-have-become-a-bunch-of-noobs-using-llms-that-they-dont-even-understand/",
+      "source": "Hacker News",
+      "points": 328,
+      "whyItMatters": "The PS5 Linux lead's departure underscores the growing tension between open source and AI-assisted development."
     }
   ]
 }
