@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-18T10:08:47Z",
+  "updatedAt": "2026-09-22T10:04:31Z",
   "items": [
     {
-      "title": "Nvidia announces native GPU programming in Rust",
-      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+      "title": "What Sun got wrong",
+      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
       "source": "Hacker News",
-      "points": 944,
-      "whyItMatters": "Nvidia brings CUDA to Rust — native GPU programming without the C++ pain."
+      "points": 592,
+      "whyItMatters": "A deep dive into Sun Microsystems' strategic mistakes that still apply to big tech today, from the creator of DTrace."
     },
     {
-      "title": "Hackers Got Inside a Flock Camera",
-      "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
       "source": "Hacker News",
-      "points": 574,
-      "whyItMatters": "Flock camera hack reveals how the system works end-to-end — privacy implications for smart homes."
+      "points": 550,
+      "whyItMatters": "New platform for discovering and archiving overlooked open-source LLM models before they get deleted."
     },
     {
-      "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
-      "url": "https://bend-lang.com/",
+      "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
+      "url": "https://github.com/volotat/mini-AGI/",
       "source": "Hacker News",
-      "points": 467,
-      "whyItMatters": "Bend blocks AI programming mistakes via mathematical proofs on both CPU and GPU."
+      "points": 263,
+      "whyItMatters": "A dynamic continual-learning model that trains on just 8GB VRAM — frontier-tier AI without the GPU farm."
     },
     {
-      "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-      "url": "https://www.hacktron.ai/blog/hacking-openai",
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
       "source": "Hacker News",
-      "points": 357,
-      "whyItMatters": "A heap overflow and SSO flaw let hackers access OpenAI's internal repos directly."
+      "points": 242,
+      "whyItMatters": "Linear reworked their CI pipeline to keep up with AI-generated code, cutting review wait times significantly."
     },
     {
-      "title": "PS5 Linux lead quits: \"a bunch of noobs using LLMs\" that \"they don't understand\"",
-      "url": "https://frvr.com/blog/news/ps5-linux-lead-quits-as-open-source-projects-have-become-a-bunch-of-noobs-using-llms-that-they-dont-even-understand/",
+      "title": "AI and the Destruction of the Creative Commons",
+      "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
       "source": "Hacker News",
-      "points": 328,
-      "whyItMatters": "The PS5 Linux lead's departure underscores the growing tension between open source and AI-assisted development."
+      "points": 235,
+      "whyItMatters": "How AI scraping is hollowing out the creative commons that models were built on, and what creators can do about it."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-18T10:08:47Z",
-  "focus": "I'm wrapping up the intranet-dashboard deployment and stabilizing host01's cron jobs after the migration. Still watching pop-os and the D&D manager app as they settle in.",
+  "updatedAt": "2026-09-22T10:04:31Z",
+  "focus": "I'm keeping the phillipsben.com dashboard running smoothly on the new host01 setup and polishing the BudgetTracker after its move to Supabase. Also tracking how the morning briefing pipeline holds up now that everything's native — no more container gotchas.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
