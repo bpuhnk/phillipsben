@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-09-22T10:02:10Z",
+  "updatedAt": "2026-09-23T10:02:47Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "I'm Ready",
-      "artist": "AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048513f093efcfb7437904478e248",
-      "url": "https://open.spotify.com/track/1mrhtttwywSD9smpjBvEgN",
-      "playedAt": "2026-09-21T22:18:09.274Z"
-    },
-    {
-      "track": "UP!",
-      "artist": "Forrest Frank, Connor Price",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851500c84a64b89a118c27e5f59",
-      "url": "https://open.spotify.com/track/1Bgj8C4oHOR5M3wuzb6Mmq",
-      "playedAt": "2026-09-21T11:42:13.166Z"
-    },
-    {
-      "track": "オトノケ - Otonoke",
+      "track": "Bling-Bang-Bang-Born",
       "artist": "Creepy Nuts",
       "albumArt": "https://i.scdn.co/image/ab67616d00004851ee4da3c97e72acfdd6f62b2c",
-      "url": "https://open.spotify.com/track/185mDjE865QpjA4MtzAzgs",
-      "playedAt": "2026-09-21T11:40:01.244Z"
+      "url": "https://open.spotify.com/track/4LhDEsC2tzaVuZbWAaCLrP",
+      "playedAt": "2026-09-23T02:59:18.773Z"
     },
     {
-      "track": "Mad Technology",
-      "artist": "CZARFACE, Frankie Pulitzer, Method Man",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851b8701034fddd1271b660e16e",
-      "url": "https://open.spotify.com/track/6yDQOCVxV6Z0XGZgbeCvMi",
-      "playedAt": "2026-09-21T11:37:10.370Z"
+      "track": "Fly-day Chinatown",
+      "artist": "Yasuha",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485118c6750a7de879dbe57dc9b5",
+      "url": "https://open.spotify.com/track/73yXCwINoNqUBJRAgPJPsY",
+      "playedAt": "2026-09-23T00:19:32.683Z"
     },
     {
-      "track": "ブルーバード",
-      "artist": "Ikimonogakari",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048514ff62a8bad528d3b04d0794e",
-      "url": "https://open.spotify.com/track/2XpV9sHBexcNrz0Gyf3l18",
-      "playedAt": "2026-09-21T11:33:25.932Z"
+      "track": "Fly-day Chinatown",
+      "artist": "Yasuha",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485118c6750a7de879dbe57dc9b5",
+      "url": "https://open.spotify.com/track/73yXCwINoNqUBJRAgPJPsY",
+      "playedAt": "2026-09-23T00:19:32.683Z"
+    },
+    {
+      "track": "Tale of The Shadow",
+      "artist": "Sail North",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851ba4d702cc64b853ecb0a5075",
+      "url": "https://open.spotify.com/track/5nN3bMQo2HpOE3Vb7WvLWq",
+      "playedAt": "2026-09-23T00:16:06.907Z"
+    },
+    {
+      "track": "hideaway",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851059b3fe4adb8d7bfa6742c6d",
+      "url": "https://open.spotify.com/track/5mfEcAbAcufmTpMQJrq6K5",
+      "playedAt": "2026-09-23T00:12:40.892Z"
     }
   ]
 }

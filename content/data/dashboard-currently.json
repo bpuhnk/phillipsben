@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T10:04:31Z",
-  "focus": "I'm keeping the phillipsben.com dashboard running smoothly on the new host01 setup and polishing the BudgetTracker after its move to Supabase. Also tracking how the morning briefing pipeline holds up now that everything's native — no more container gotchas.",
+  "updatedAt": "2026-09-23T10:07:38Z",
+  "focus": "Shipping steady despite a quiet week — no new commits but the underlying systems are holding. Looking at Claude Opus 5.5 and GPT-6 while keeping an eye on how AI coding tools reshape CI pipelines.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

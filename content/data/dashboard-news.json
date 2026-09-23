@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-22T10:04:31Z",
+  "updatedAt": "2026-09-23T10:07:38Z",
   "items": [
+    {
+      "title": "Claude Opus 5.5",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "source": "Hacker News",
+      "points": 273,
+      "whyItMatters": "Opus 5.5 arrives with a Max tier — real model upgrade, not just a price bump."
+    },
+    {
+      "title": "GPT-6 Sol and Luna",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "source": "Hacker News",
+      "points": 1534,
+      "whyItMatters": "GPT-6 split into Sol (general) and Luna (lightweight) — a two-model strategy for cost vs capability."
+    },
     {
       "title": "What Sun got wrong",
       "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
       "source": "Hacker News",
-      "points": 592,
-      "whyItMatters": "A deep dive into Sun Microsystems' strategic mistakes that still apply to big tech today, from the creator of DTrace."
-    },
-    {
-      "title": "Pirate Face Rescues LLM Models from Deletion",
-      "url": "https://pirateface.co/",
-      "source": "Hacker News",
-      "points": 550,
-      "whyItMatters": "New platform for discovering and archiving overlooked open-source LLM models before they get deleted."
-    },
-    {
-      "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
-      "url": "https://github.com/volotat/mini-AGI/",
-      "source": "Hacker News",
-      "points": 263,
-      "whyItMatters": "A dynamic continual-learning model that trains on just 8GB VRAM — frontier-tier AI without the GPU farm."
+      "points": 676,
+      "whyItMatters": "Sun's architectural tradeoffs on reasoning and context window, with data to back the critique."
     },
     {
       "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
       "url": "https://linear.app/now/ci-bottleneck-reworked",
       "source": "Hacker News",
-      "points": 242,
-      "whyItMatters": "Linear reworked their CI pipeline to keep up with AI-generated code, cutting review wait times significantly."
+      "points": 311,
+      "whyItMatters": "Linear reworked CI specifically for AI coding volume — practical patterns any team can adapt."
     },
     {
-      "title": "AI and the Destruction of the Creative Commons",
-      "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
+      "title": "OpenAI is well positioned to fast-follow Jev",
+      "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
       "source": "Hacker News",
-      "points": 235,
-      "whyItMatters": "How AI scraping is hollowing out the creative commons that models were built on, and what creators can do about it."
+      "points": 294,
+      "whyItMatters": "OpenAI well positioned to follow up on Jev's results — competitive dynamics shaping the next model race."
     }
   ]
 }
