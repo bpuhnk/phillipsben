@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-23T10:07:38Z",
+  "updatedAt": "2026-09-24T10:07:19Z",
   "items": [
     {
       "title": "Claude Opus 5.5",
       "url": "https://www.anthropic.com/claude-opus-5-5",
       "source": "Hacker News",
       "points": 273,
-      "whyItMatters": "Opus 5.5 arrives with a Max tier — real model upgrade, not just a price bump."
+      "whyItMatters": "Opus 5.5 brings the biggest jump in quality-to-cost yet; the price analysis on Artificial Analysis breaks down what that means for inference budgets."
     },
     {
       "title": "GPT-6 Sol and Luna",
       "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
       "source": "Hacker News",
-      "points": 1534,
-      "whyItMatters": "GPT-6 split into Sol (general) and Luna (lightweight) — a two-model strategy for cost vs capability."
+      "points": 1750,
+      "whyItMatters": "GPT-6 ships with two variants — Sol for quality, Luna for speed — a new stratified release model that could simplify model selection."
     },
     {
-      "title": "What Sun got wrong",
-      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
+      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
+      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
       "source": "Hacker News",
-      "points": 676,
-      "whyItMatters": "Sun's architectural tradeoffs on reasoning and context window, with data to back the critique."
+      "points": 912,
+      "whyItMatters": "A Pentagon report credits AI overreliance in a real combat decision — the kind of case study that's going to shape procurement for years."
     },
     {
-      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
-      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
       "source": "Hacker News",
-      "points": 311,
-      "whyItMatters": "Linear reworked CI specifically for AI coding volume — practical patterns any team can adapt."
+      "points": 727,
+      "whyItMatters": "GPT-6 Astra cracked a cryptographic message that held since 2005, showing a new kind of symbolic-reasoning capability beyond pattern matching."
     },
     {
-      "title": "OpenAI is well positioned to fast-follow Jev",
-      "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
       "source": "Hacker News",
-      "points": 294,
-      "whyItMatters": "OpenAI well positioned to follow up on Jev's results — competitive dynamics shaping the next model race."
+      "points": 652,
+      "whyItMatters": "Claude found a genuinely novel enzyme system with CRISPR-like repeats — not just summarizing papers but contributing to the scientific record."
     }
   ]
 }

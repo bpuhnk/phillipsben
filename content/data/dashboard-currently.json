@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-23T10:07:38Z",
-  "focus": "Shipping steady despite a quiet week — no new commits but the underlying systems are holding. Looking at Claude Opus 5.5 and GPT-6 while keeping an eye on how AI coding tools reshape CI pipelines.",
+  "updatedAt": "2026-09-24T10:07:19Z",
+  "focus": "Shipping the fleet monitoring dashboard with agentless SSH collection across four hosts, and watching AI shift from benchmarks to real-world decisions — Opus 5.5 and GPT-6 both landed this week, Claude just found a novel enzyme system.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
