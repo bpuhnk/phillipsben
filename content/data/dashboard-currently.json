@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-24T10:07:19Z",
-  "focus": "Shipping the fleet monitoring dashboard with agentless SSH collection across four hosts, and watching AI shift from benchmarks to real-world decisions — Opus 5.5 and GPT-6 both landed this week, Claude just found a novel enzyme system.",
+  "updatedAt": "2026-09-25T10:06:42Z",
+  "focus": "I'm keeping the dashboard pipeline healthy — refactoring refresh scripts after the Docker migration, and getting pop-os back up to speed post-PSU swap. Also pushing steady dev commits across my repos as I navigate the shift from .NET to Node/React at Regions.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

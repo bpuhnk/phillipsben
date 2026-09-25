@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-09-24T10:02:10Z",
+  "updatedAt": "2026-09-25T10:03:09Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "You Got Jokes",
-      "artist": "Khantrast",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485153696e7e949d982fa3a7b87a",
-      "url": "https://open.spotify.com/track/4dhXTncDXhQQ9PHWiD186A",
-      "playedAt": "2026-09-23T11:54:50.988Z"
+      "track": "Jolene",
+      "artist": "Dolly Parton",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485114021e9ab9da5813bc6791cb",
+      "url": "https://open.spotify.com/track/5fdhThPDe6jQQDqCyWrdAn",
+      "playedAt": "2026-09-25T05:45:38.142Z"
     },
     {
-      "track": "GOOD DAY",
-      "artist": "Forrest Frank",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851500c84a64b89a118c27e5f59",
-      "url": "https://open.spotify.com/track/0vC82BouGPXm6X2K60RfQw",
-      "playedAt": "2026-09-23T11:52:35.386Z"
+      "track": "I'm Yours",
+      "artist": "Jason Mraz",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851125b1a330b6f6100ab19dbed",
+      "url": "https://open.spotify.com/track/1EzrEOXmMH3G43AXT1y7pA",
+      "playedAt": "2026-09-25T00:11:04.820Z"
     },
     {
-      "track": "Suzume",
-      "artist": "RADWIMPS, Toaka",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851bc16d1eefe86b079c8805f8f",
-      "url": "https://open.spotify.com/track/1n1y2kFPISpF9WGD3JaFo5",
-      "playedAt": "2026-09-23T11:49:18.985Z"
+      "track": "Just A Girl",
+      "artist": "No Doubt",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048516ebd5e789646a833b8f7d4ba",
+      "url": "https://open.spotify.com/track/5lWRaa0fBxDE5yU91npPq7",
+      "playedAt": "2026-09-25T00:07:18.800Z"
     },
     {
-      "track": "Down The Road",
-      "artist": "Inpatient, Ren, Chris Webby",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048513ea3d226dea9a97e7931abdc",
-      "url": "https://open.spotify.com/track/4RscD3y82dik8xnf9zvZqF",
-      "playedAt": "2026-09-23T11:45:33.383Z"
+      "track": "No Diggity",
+      "artist": "Blackstreet, Dr. Dre, Queen Pen",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485103ca37157b9ceefbe8fe225b",
+      "url": "https://open.spotify.com/track/6MdqqkQ8sSC0WB4i8PyRuQ",
+      "playedAt": "2026-09-25T00:04:11.797Z"
     },
     {
-      "track": "Bang!",
-      "artist": "AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e7a3a891ae555b0a46a131ed",
-      "url": "https://open.spotify.com/track/4SQLQfcR0vhyIN4uPBlc0d",
-      "playedAt": "2026-09-23T11:35:45.197Z"
+      "track": "Record Player",
+      "artist": "Daisy the Great, AJR",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851436132f24b5a9ff1605b86bb",
+      "url": "https://open.spotify.com/track/7Gk8IPlFTLUcoIH3mtASI0",
+      "playedAt": "2026-09-24T23:57:18.671Z"
     }
   ]
 }

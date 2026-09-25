@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-24T10:07:19Z",
+  "updatedAt": "2026-09-25T10:06:42Z",
   "items": [
-    {
-      "title": "Claude Opus 5.5",
-      "url": "https://www.anthropic.com/claude-opus-5-5",
-      "source": "Hacker News",
-      "points": 273,
-      "whyItMatters": "Opus 5.5 brings the biggest jump in quality-to-cost yet; the price analysis on Artificial Analysis breaks down what that means for inference budgets."
-    },
-    {
-      "title": "GPT-6 Sol and Luna",
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-      "source": "Hacker News",
-      "points": 1750,
-      "whyItMatters": "GPT-6 ships with two variants — Sol for quality, Luna for speed — a new stratified release model that could simplify model selection."
-    },
-    {
-      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
-      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
-      "source": "Hacker News",
-      "points": 912,
-      "whyItMatters": "A Pentagon report credits AI overreliance in a real combat decision — the kind of case study that's going to shape procurement for years."
-    },
-    {
-      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
-      "source": "Hacker News",
-      "points": 727,
-      "whyItMatters": "GPT-6 Astra cracked a cryptographic message that held since 2005, showing a new kind of symbolic-reasoning capability beyond pattern matching."
-    },
     {
       "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
       "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
       "source": "Hacker News",
-      "points": 652,
-      "whyItMatters": "Claude found a genuinely novel enzyme system with CRISPR-like repeats — not just summarizing papers but contributing to the scientific record."
+      "points": 766,
+      "whyItMatters": "Anthropic's AI finds a real scientific discovery — not just benchmark points."
+    },
+    {
+      "title": "Meta takes down a critical video about meta AI Glasses after filming at Meta",
+      "url": "https://www.reddit.com/r/facebook/comments/1wotwrk/meta_takes_down_a_critical_video_about_meta_ai/",
+      "source": "Hacker News",
+      "points": 611,
+      "whyItMatters": "Classic tech-company overreach moment; goes viral, then gets removed."
+    },
+    {
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "source": "Hacker News",
+      "points": 480,
+      "whyItMatters": "Surprising gating of a config file on telemetry status — raises transparency questions."
+    },
+    {
+      "title": "Feds Target AI Critics as \"Foreign Agents\"",
+      "url": "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign",
+      "source": "Hacker News",
+      "points": 380,
+      "whyItMatters": "Federal strategy shifts from 'AI as tool' to 'AI critics are foreign agents.'"
+    },
+    {
+      "title": "GPT-6 Astra has gained the ability to drive a car",
+      "url": "https://drivingbench.com/",
+      "source": "Hacker News",
+      "points": 308,
+      "whyItMatters": "GPT-6 driving a car — AI models leaving the screen and getting behind the wheel."
     }
   ]
 }
