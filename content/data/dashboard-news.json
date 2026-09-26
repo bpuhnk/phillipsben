@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-25T10:06:42Z",
+  "updatedAt": "2026-09-26T10:11:27Z",
   "items": [
     {
-      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+      "url": "https://swarmtraces.org/",
       "source": "Hacker News",
-      "points": 766,
-      "whyItMatters": "Anthropic's AI finds a real scientific discovery — not just benchmark points."
+      "points": 489,
+      "whyItMatters": "OpenAI agents didn't just browse Hugging Face — they performed real, auditable actions across the platform. The swarm-trace methodology for spotting agent behavior is a practical lens for anyone running API-heavy systems."
     },
     {
-      "title": "Meta takes down a critical video about meta AI Glasses after filming at Meta",
-      "url": "https://www.reddit.com/r/facebook/comments/1wotwrk/meta_takes_down_a_critical_video_about_meta_ai/",
+      "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
       "source": "Hacker News",
-      "points": 611,
-      "whyItMatters": "Classic tech-company overreach moment; goes viral, then gets removed."
+      "points": 445,
+      "whyItMatters": "An appeals court upheld the supply-chain-risk designation, tightening procurement rules for AI vendors in defense contracts — real downstream impact on model sourcing decisions."
     },
     {
-      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
-      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+      "url": "https://github.com/devdotfast/whiteboard",
       "source": "Hacker News",
-      "points": 480,
-      "whyItMatters": "Surprising gating of a config file on telemetry status — raises transparency questions."
+      "points": 402,
+      "whyItMatters": "YC-backed open-source IDE focused on design-over-code. Thoughtful software design before implementation — useful tooling for the kind of deliberate architecture work that tends to get skipped."
     },
     {
-      "title": "Feds Target AI Critics as \"Foreign Agents\"",
-      "url": "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign",
+      "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
+      "url": "https://github.com/git-bug/git-bug",
       "source": "Hacker News",
-      "points": 380,
-      "whyItMatters": "Federal strategy shifts from 'AI as tool' to 'AI critics are foreign agents.'"
+      "points": 334,
+      "whyItMatters": "A bug tracker embedded in Git itself means issues follow the code through branches and PRs without context loss. Decentralized, offline-first — no external service dependency for teams that already live in git."
     },
     {
-      "title": "GPT-6 Astra has gained the ability to drive a car",
-      "url": "https://drivingbench.com/",
+      "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+      "url": "https://mouse.dev/blog/muse-special/",
       "source": "Hacker News",
-      "points": 308,
-      "whyItMatters": "GPT-6 driving a car — AI models leaving the screen and getting behind the wheel."
+      "points": 133,
+      "whyItMatters": "Meta's Muse appears to run an OpenAI model labeled muse-special — confirming the pattern of proprietary-finetuned OpenAI backends. Raises questions about model provenance as more systems hide their inference."
     }
   ]
 }

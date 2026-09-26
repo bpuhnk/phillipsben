@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T10:06:42Z",
-  "focus": "I'm keeping the dashboard pipeline healthy — refactoring refresh scripts after the Docker migration, and getting pop-os back up to speed post-PSU swap. Also pushing steady dev commits across my repos as I navigate the shift from .NET to Node/React at Regions.",
+  "updatedAt": "2026-09-26T10:11:27Z",
+  "focus": "Shipping 17 commits and pushing out 9 PRs this week across the board — keeping the momentum going. The Hugging Face agent story has me thinking about how much automation is happening under the hood in systems I rely on, so I'm paying closer attention to that layer.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
