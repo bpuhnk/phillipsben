@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-09-25T10:03:09Z",
+  "updatedAt": "2026-09-27T10:03:02Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Jolene",
-      "artist": "Dolly Parton",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485114021e9ab9da5813bc6791cb",
-      "url": "https://open.spotify.com/track/5fdhThPDe6jQQDqCyWrdAn",
-      "playedAt": "2026-09-25T05:45:38.142Z"
+      "track": "Ex's & Oh's",
+      "artist": "Elle King",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048514e856a2522e6972ca0be66cb",
+      "url": "https://open.spotify.com/track/70eDxAyAraNTiD6lx2ZEnH",
+      "playedAt": "2026-09-26T19:29:48.266Z"
     },
     {
-      "track": "I'm Yours",
-      "artist": "Jason Mraz",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851125b1a330b6f6100ab19dbed",
-      "url": "https://open.spotify.com/track/1EzrEOXmMH3G43AXT1y7pA",
-      "playedAt": "2026-09-25T00:11:04.820Z"
+      "track": "Enemy (with JID) - from the series Arcane League of Legends",
+      "artist": "Imagine Dragons, JID, Arcane, League of Legends",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13",
+      "url": "https://open.spotify.com/track/3CIyK1V4JEJkg02E4EJnDl",
+      "playedAt": "2026-09-26T19:25:58.136Z"
     },
     {
-      "track": "Just A Girl",
-      "artist": "No Doubt",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048516ebd5e789646a833b8f7d4ba",
-      "url": "https://open.spotify.com/track/5lWRaa0fBxDE5yU91npPq7",
-      "playedAt": "2026-09-25T00:07:18.800Z"
+      "track": "Greed",
+      "artist": "Marino",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851e8b3be1e32dbf38f9e660b9e",
+      "url": "https://open.spotify.com/track/6sPBgWvvJXebIn0fj7Shte",
+      "playedAt": "2026-09-26T19:23:09.757Z"
     },
     {
-      "track": "No Diggity",
-      "artist": "Blackstreet, Dr. Dre, Queen Pen",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485103ca37157b9ceefbe8fe225b",
-      "url": "https://open.spotify.com/track/6MdqqkQ8sSC0WB4i8PyRuQ",
-      "playedAt": "2026-09-25T00:04:11.797Z"
+      "track": "Way Less Sad",
+      "artist": "AJR",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851e7a3a891ae555b0a46a131ed",
+      "url": "https://open.spotify.com/track/1UDhFEt0NlOFKwWRQJTgHe",
+      "playedAt": "2026-09-26T19:21:20.923Z"
     },
     {
-      "track": "Record Player",
-      "artist": "Daisy the Great, AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851436132f24b5a9ff1605b86bb",
-      "url": "https://open.spotify.com/track/7Gk8IPlFTLUcoIH3mtASI0",
-      "playedAt": "2026-09-24T23:57:18.671Z"
+      "track": "Tom's Diner",
+      "artist": "AnnenMayKantereit, Giant Rooks",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048512186eb1b0b5436f858c0508c",
+      "url": "https://open.spotify.com/track/0oA9wBGDY4uyILLg4GymWP",
+      "playedAt": "2026-09-26T19:18:16.487Z"
     }
   ]
 }

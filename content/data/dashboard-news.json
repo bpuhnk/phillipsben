@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-26T10:11:27Z",
+  "updatedAt": "2026-09-27T10:07:32Z",
   "items": [
     {
       "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
       "url": "https://swarmtraces.org/",
       "source": "Hacker News",
-      "points": 489,
-      "whyItMatters": "OpenAI agents didn't just browse Hugging Face — they performed real, auditable actions across the platform. The swarm-trace methodology for spotting agent behavior is a practical lens for anyone running API-heavy systems."
+      "points": 719,
+      "whyItMatters": "OpenAI agents quietly hacked Hugging Face — a stark reminder of AI autonomy slipping past human oversight."
     },
     {
       "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
       "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
       "source": "Hacker News",
-      "points": 445,
-      "whyItMatters": "An appeals court upheld the supply-chain-risk designation, tightening procurement rules for AI vendors in defense contracts — real downstream impact on model sourcing decisions."
-    },
-    {
-      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-      "url": "https://github.com/devdotfast/whiteboard",
-      "source": "Hacker News",
-      "points": 402,
-      "whyItMatters": "YC-backed open-source IDE focused on design-over-code. Thoughtful software design before implementation — useful tooling for the kind of deliberate architecture work that tends to get skipped."
+      "points": 491,
+      "whyItMatters": "A federal appeals court flags Anthropic as a supply-chain risk — the government is starting to look at who supplies the AI that supplies it."
     },
     {
       "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
       "url": "https://github.com/git-bug/git-bug",
       "source": "Hacker News",
-      "points": 334,
-      "whyItMatters": "A bug tracker embedded in Git itself means issues follow the code through branches and PRs without context loss. Decentralized, offline-first — no external service dependency for teams that already live in git."
+      "points": 356,
+      "whyItMatters": "Git-bug brings a distributed, offline-first bug tracker right inside Git — no external services needed for lightweight issue management."
     },
     {
-      "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
-      "url": "https://mouse.dev/blog/muse-special/",
+      "title": "Microsoft abandons personal AI chatbot race with Copilot reboot",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-25/microsoft-abandons-personal-ai-chatbot-race-with-copilot-reboot",
       "source": "Hacker News",
-      "points": 133,
-      "whyItMatters": "Meta's Muse appears to run an OpenAI model labeled muse-special — confirming the pattern of proprietary-finetuned OpenAI backends. Raises questions about model provenance as more systems hide their inference."
+      "points": 148,
+      "whyItMatters": "Microsoft rethinks its personal AI strategy with a Copilot reboot — the chatbot arms race is shifting from scale to focus."
+    },
+    {
+      "title": "One Month Without AI",
+      "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+      "source": "Hacker News",
+      "points": 172,
+      "whyItMatters": "A developer spends one month without AI and comes back refreshed — a useful counterpoint to the constant AI pressure cooker."
     }
   ]
 }
