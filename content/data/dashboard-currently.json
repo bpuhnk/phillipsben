@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-27T10:07:32Z",
-  "focus": "I'm keeping the dashboard pipeline solid and watching how OpenAI's agent antics play out across government sites and Hugging Face. On the workbench, I'm tidying up the phillipsben repo — 17 commits this week with a batch of PRs landing — and thinking about what matters in AI infrastructure as the supply-chain risks start showing up in court documents.",
+  "updatedAt": "2026-09-28T10:07:16Z",
+  "focus": "I'm keeping the dashboard pipeline lean and the brain on qwen3.6-abliterated for heavy lifting. Pop-os is back online after the PSU swap, and I'm monitoring how that holds up under sustained load this week.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

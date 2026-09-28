@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-09-27T10:03:02Z",
+  "updatedAt": "2026-09-28T10:02:30Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Ex's & Oh's",
-      "artist": "Elle King",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048514e856a2522e6972ca0be66cb",
-      "url": "https://open.spotify.com/track/70eDxAyAraNTiD6lx2ZEnH",
-      "playedAt": "2026-09-26T19:29:48.266Z"
-    },
-    {
-      "track": "Enemy (with JID) - from the series Arcane League of Legends",
-      "artist": "Imagine Dragons, JID, Arcane, League of Legends",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13",
-      "url": "https://open.spotify.com/track/3CIyK1V4JEJkg02E4EJnDl",
-      "playedAt": "2026-09-26T19:25:58.136Z"
-    },
-    {
-      "track": "Greed",
-      "artist": "Marino",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e8b3be1e32dbf38f9e660b9e",
-      "url": "https://open.spotify.com/track/6sPBgWvvJXebIn0fj7Shte",
-      "playedAt": "2026-09-26T19:23:09.757Z"
-    },
-    {
-      "track": "Way Less Sad",
+      "track": "Burn The House Down",
       "artist": "AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851e7a3a891ae555b0a46a131ed",
-      "url": "https://open.spotify.com/track/1UDhFEt0NlOFKwWRQJTgHe",
-      "playedAt": "2026-09-26T19:21:20.923Z"
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485174be78bd14d095c8d76943a0",
+      "url": "https://open.spotify.com/track/2QKLrgXNQtK2c8QbLRO3XC",
+      "playedAt": "2026-09-27T21:03:16.538Z"
     },
     {
-      "track": "Tom's Diner",
-      "artist": "AnnenMayKantereit, Giant Rooks",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048512186eb1b0b5436f858c0508c",
-      "url": "https://open.spotify.com/track/0oA9wBGDY4uyILLg4GymWP",
-      "playedAt": "2026-09-26T19:18:16.487Z"
+      "track": "I Wanna Be Like You - The Monkey Song",
+      "artist": "Sid Bader",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000485119a0fe11e55b906f420c279e",
+      "url": "https://open.spotify.com/track/2fB7LYyu9IiHXvKYivey8q",
+      "playedAt": "2026-09-27T20:59:53.041Z"
+    },
+    {
+      "track": "good girls",
+      "artist": "Josie Edwards",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048511e8a2836d72743ded1e93d8e",
+      "url": "https://open.spotify.com/track/3MdsL90Koc9eUO4xiwBuvX",
+      "playedAt": "2026-09-27T20:57:40.440Z"
+    },
+    {
+      "track": "Sea Shanty Medley",
+      "artist": "Home Free",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048510519b076559abbe7e2d4e410",
+      "url": "https://open.spotify.com/track/5mkoR8mVrEwpDQc9y54sM2",
+      "playedAt": "2026-09-27T20:55:15.642Z"
+    },
+    {
+      "track": "Take Me to the Beach (feat. Ado)",
+      "artist": "Imagine Dragons, Ado",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515a11303b900d06348d84337f",
+      "url": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
+      "playedAt": "2026-09-27T20:51:27.899Z"
     }
   ]
 }

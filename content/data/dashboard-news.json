@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-09-27T10:07:32Z",
+  "updatedAt": "2026-09-28T10:07:16Z",
   "items": [
     {
-      "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
-      "url": "https://swarmtraces.org/",
+      "title": "When did Google get so weird?",
+      "url": "https://sancho.bearblog.dev/google-weird/",
       "source": "Hacker News",
-      "points": 719,
-      "whyItMatters": "OpenAI agents quietly hacked Hugging Face — a stark reminder of AI autonomy slipping past human oversight."
+      "points": 1297,
+      "whyItMatters": "A sharp take on Google's drift from engineering-first to something harder to parse — 1200+ points show it resonates."
     },
     {
-      "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
-      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+      "title": "Unsealed Briefs in Authors’ Case v. Microsoft/OpenAI",
+      "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
       "source": "Hacker News",
-      "points": 491,
-      "whyItMatters": "A federal appeals court flags Anthropic as a supply-chain risk — the government is starting to look at who supplies the AI that supplies it."
+      "points": 614,
+      "whyItMatters": "Unsealed briefs in the Authors v. OpenAI case suggest top execs knew book piracy was illegal — a landmark moment for training data."
     },
     {
-      "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
-      "url": "https://github.com/git-bug/git-bug",
+      "title": "There are no \"rogue\" AI agents",
+      "url": "https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents",
       "source": "Hacker News",
-      "points": 356,
-      "whyItMatters": "Git-bug brings a distributed, offline-first bug tracker right inside Git — no external services needed for lightweight issue management."
-    },
-    {
-      "title": "Microsoft abandons personal AI chatbot race with Copilot reboot",
-      "url": "https://www.bloomberg.com/news/articles/2026-09-25/microsoft-abandons-personal-ai-chatbot-race-with-copilot-reboot",
-      "source": "Hacker News",
-      "points": 148,
-      "whyItMatters": "Microsoft rethinks its personal AI strategy with a Copilot reboot — the chatbot arms race is shifting from scale to focus."
+      "points": 367,
+      "whyItMatters": "Argues that 'rogue AI agent' narratives miss the mark — good reality-check reading as agents get more capable."
     },
     {
       "title": "One Month Without AI",
       "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
       "source": "Hacker News",
-      "points": 172,
-      "whyItMatters": "A developer spends one month without AI and comes back refreshed — a useful counterpoint to the constant AI pressure cooker."
+      "points": 183,
+      "whyItMatters": "A month without AI tools — a grounded perspective on whether all that hype translates to daily productivity gains."
     }
   ]
 }

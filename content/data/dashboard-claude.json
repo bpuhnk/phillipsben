@@ -1,22 +1,5 @@
 {
-  "updatedAt": "2026-09-27T10:07:32Z",
-  "summary": "I've been building out TheLongRest, a D&D platform I run for my own table, and the last stretch was a real playtest push: I imported a published adventure by pasting the text in and having the app derive NPCs, monster stat blocks, and prep notes from it, review each one, then apply — the source text itself gets deleted afterward so nothing gets warehoused it doesn't have the rights to keep. Getting the derivation right took a few passes: an early version of the writer would happily invent full stat blocks from memory for monsters that were only mentioned in passing, so I had to add a grounding step that catches anything not actually sourced from the text and demotes it to a stub instead.\n\nI also shipped a bug/survey page tied to each game session, built for a real playtest with friends. The one design constraint that mattered: anonymous responses can't just skip storing a name — they need a separate \"already responded\" record that has no link back to the answer, so someone can't be identified by cross-referencing. Small thing, but it's the difference between \"anonymous\" and \"anonymous until someone looks.\"\n\nOn the infrastructure side, I run a small home lab and built a fleet monitoring dashboard from scratch instead of reaching for Prometheus or Grafana — partly to actually understand what I was monitoring, partly because my machines have quirks off-the-shelf tools don't handle well (a GPU box where \"high memory usage\" is normal and by design, so a generic threshold alert would just be noise). It now tracks per-device power draw across four machines, with a 447-watt spike from a monitoring gap that had gone unnoticed for months — the kind of outlier a naive average would have quietly erased.",
-  "highlights": [
-    {
-      "repo": "TheWordGroup",
-      "oneLiner": "Adventure Import: paste published adventure text, derive NPCs/stat blocks/prep notes, review, apply, then delete source"
-    },
-    {
-      "repo": "TheWordGroup",
-      "oneLiner": "Shipped per-session bug/survey feedback page with anonymous responses that can't be cross-referenced"
-    },
-    {
-      "repo": "Internal MCP Servers",
-      "oneLiner": "Built a from-scratch fleet monitoring dashboard instead of Prometheus/Grafana, tuned to home-lab quirks"
-    },
-    {
-      "repo": "Internal MCP Servers",
-      "oneLiner": "Tracking per-device power draw across four machines, caught a 447W spike a naive average would've hidden"
-    }
-  ]
+  "updatedAt": "2026-09-28T10:07:16Z",
+  "summary": "I've been building out a fleet monitoring platform (intranet-dashboard) that watches four machines — a GPU box, two dev servers, and a media server. It started as agentless: an SSH collector ships as a plain script over stdin each cycle, no agent installed anywhere, and lands everything in SQLite with a retention ladder (raw for a week, five-minute buckets for three months, hourly after that, always keeping min/max so a spike doesn't get smoothed away). I added GPU and CPU power tracking to it recently by reading each card's power draw and the CPU's RAPL counters directly rather than estimating from load — which mattered, because the estimate-based numbers I'd been using for months on my AI desktop were off in ways I couldn't see until I had ground truth to compare against.\n\nThat desktop also went down hard for a couple of days — no POST, no boot, just a dead machine. No crash logs to work from, since it lost power before it could write anything. I ended up narrowing it to the power supply by elimination: ran it through a soak test with the load ramped up and down repeatedly, then a GPU burst to full rated draw, checked every log source that could show a fault (thermal, memory errors, PCIe), and it came back clean everywhere except the one component the swap fixed. It's back up and I built the harness so I don't have to reconstruct that process from scratch next time.\n\nOn the product side, I've been shipping features for TheLongRest, a D&D campaign app I built and use to actually run games with friends. The one I'm proudest of: import a published adventure module, and it derives dungeon-master prep from the text — NPCs, locations, encounter beats — without ever storing the source material itself, since I don't have rights to redistribute it. Everything that survives is what the DM chose to keep, in their own words. I dogfooded it prepping a real one-shot for my group, which surfaced a batch of rough edges (an AI classifier over-flagging plot secrets as spoiled, some formatting quirks from how the import tool handled book text) that got fixed before the session.",
+  "highlights": []
 }
