@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-09-28T10:07:16Z",
+  "updatedAt": "2026-09-29T10:05:25Z",
   "items": [
     {
       "title": "When did Google get so weird?",
       "url": "https://sancho.bearblog.dev/google-weird/",
       "source": "Hacker News",
-      "points": 1297,
-      "whyItMatters": "A sharp take on Google's drift from engineering-first to something harder to parse — 1200+ points show it resonates."
+      "points": 1886,
+      "whyItMatters": "A sharp look at why Google's direction keeps catching people off guard."
     },
     {
-      "title": "Unsealed Briefs in Authors’ Case v. Microsoft/OpenAI",
-      "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+      "title": "Sonnet 5.5",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
       "source": "Hacker News",
-      "points": 614,
-      "whyItMatters": "Unsealed briefs in the Authors v. OpenAI case suggest top execs knew book piracy was illegal — a landmark moment for training data."
+      "points": 786,
+      "whyItMatters": "Sonnet 5.5 lands — more capable, same sweet spot for daily use."
     },
     {
-      "title": "There are no \"rogue\" AI agents",
-      "url": "https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents",
+      "title": "It's Time to Investigate the AI Labs",
+      "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
       "source": "Hacker News",
-      "points": 367,
-      "whyItMatters": "Argues that 'rogue AI agent' narratives miss the mark — good reality-check reading as agents get more capable."
+      "points": 498,
+      "whyItMatters": "Cal Newport argues we should study AI labs like we study ourselves."
     },
     {
-      "title": "One Month Without AI",
-      "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+      "title": "Anthropic's IPO prospectus shows AI vision, surging costs",
+      "url": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/",
       "source": "Hacker News",
-      "points": 183,
-      "whyItMatters": "A month without AI tools — a grounded perspective on whether all that hype translates to daily productivity gains."
+      "points": 105,
+      "whyItMatters": "Anthropic's IPO prospectus reveals the real cost behind AI vision."
+    },
+    {
+      "title": "Nvidia wants to put a watchdog chip next to every AI agent",
+      "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "source": "Hacker News",
+      "points": 174,
+      "whyItMatters": "Nvidia wants watchdog chips beside every AI agent — hardware-level guardrails."
     }
   ]
 }

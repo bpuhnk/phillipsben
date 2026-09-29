@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-09-28T10:02:30Z",
+  "updatedAt": "2026-09-29T10:03:03Z",
   "nowPlaying": null,
   "recent": [
+    {
+      "track": "Beggin'",
+      "artist": "Måneskin",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851fa0ab3a28b5c52d8a5f97045",
+      "url": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e",
+      "playedAt": "2026-09-29T03:55:14.841Z"
+    },
     {
       "track": "Burn The House Down",
       "artist": "AJR",
@@ -29,13 +36,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d000048510519b076559abbe7e2d4e410",
       "url": "https://open.spotify.com/track/5mkoR8mVrEwpDQc9y54sM2",
       "playedAt": "2026-09-27T20:55:15.642Z"
-    },
-    {
-      "track": "Take Me to the Beach (feat. Ado)",
-      "artist": "Imagine Dragons, Ado",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048515a11303b900d06348d84337f",
-      "url": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
-      "playedAt": "2026-09-27T20:51:27.899Z"
     }
   ]
 }
