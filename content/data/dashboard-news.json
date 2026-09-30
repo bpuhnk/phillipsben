@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-09-29T10:05:25Z",
+  "updatedAt": "2026-09-30T10:08:00Z",
   "items": [
     {
-      "title": "When did Google get so weird?",
-      "url": "https://sancho.bearblog.dev/google-weird/",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
       "source": "Hacker News",
-      "points": 1886,
-      "whyItMatters": "A sharp look at why Google's direction keeps catching people off guard."
+      "points": 945,
+      "whyItMatters": "Near-Astra-level reasoning at a fifth the price — shifts the cost/performance ceiling for agentic work."
     },
     {
       "title": "Sonnet 5.5",
       "url": "https://www.anthropic.com/claude-sonnet-5-5",
       "source": "Hacker News",
-      "points": 786,
-      "whyItMatters": "Sonnet 5.5 lands — more capable, same sweet spot for daily use."
+      "points": 876,
+      "whyItMatters": "Sonnet's mid-cycle refresh narrows the gap to top-tier models without going full cost upgrade."
     },
     {
       "title": "It's Time to Investigate the AI Labs",
       "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
       "source": "Hacker News",
-      "points": 498,
-      "whyItMatters": "Cal Newport argues we should study AI labs like we study ourselves."
+      "points": 606,
+      "whyItMatters": "Timely call for empirical audits of AI lab claims — relevant as the industry scales toward $6T revenue targets."
     },
     {
-      "title": "Anthropic's IPO prospectus shows AI vision, surging costs",
-      "url": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/",
+      "title": "DraftKings is using AI to behaviorally target chronic gamblers",
+      "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
       "source": "Hacker News",
-      "points": 105,
-      "whyItMatters": "Anthropic's IPO prospectus reveals the real cost behind AI vision."
+      "points": 543,
+      "whyItMatters": "Real-world AI behavioral targeting raises privacy questions as the tech moves from ads into health and finance."
     },
     {
-      "title": "Nvidia wants to put a watchdog chip next to every AI agent",
-      "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "title": "macOS Golden Gate Is a Buggy Mess",
+      "url": "https://www.squareorbits.com/blog/2026/09/macos-golden-gate-is-a-buggy-mess/",
       "source": "Hacker News",
-      "points": 174,
-      "whyItMatters": "Nvidia wants watchdog chips beside every AI agent — hardware-level guardrails."
+      "points": 457,
+      "whyItMatters": "Golden Gate's rough launch highlights the cost of rushing macOS releases — relevant for any dev on Apple silicon."
     }
   ]
 }
