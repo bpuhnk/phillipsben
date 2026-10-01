@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-30T10:08:00Z",
-  "focus": "Finishing up the dashboard refresh pipeline and tightening fleet monitoring across all four hosts. Qwen3.6 brain is holding steady on the P100, and I'm keeping an eye on the data center revenue numbers while things run smoothly behind the scenes.",
+  "updatedAt": "2026-10-01T10:08:12Z",
+  "focus": "Shipping The Long Rest for Foundry VTT v0.1.5 — adventure import, photo support, and a nasty in-place mutation bug I found by dogfooding inside a real install. Switchboard's GPU lease semantics finally clicked after the ComfyUI dead-end; adding --no-mmap gave me 7x cold-gen speeds on Pascal.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

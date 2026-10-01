@@ -1,40 +1,33 @@
 {
-  "updatedAt": "2026-09-30T10:08:00Z",
+  "updatedAt": "2026-10-01T10:08:12Z",
   "items": [
     {
       "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
       "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
       "source": "Hacker News",
-      "points": 945,
-      "whyItMatters": "Near-Astra-level reasoning at a fifth the price — shifts the cost/performance ceiling for agentic work."
+      "points": 1053,
+      "whyItMatters": "GPT 6.1 Sol delivers near-Astra-level performance at roughly a fifth of the price — strong signal on the cost/performance curve for production inference."
     },
     {
-      "title": "Sonnet 5.5",
-      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "title": "GLM-5.3 and the spread of advanced cyber capabilities",
+      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
       "source": "Hacker News",
-      "points": 876,
-      "whyItMatters": "Sonnet's mid-cycle refresh narrows the gap to top-tier models without going full cost upgrade."
+      "points": 247,
+      "whyItMatters": "GLM-5.3 and the spread of advanced AI capabilities — not just another model drop, but a look at how capability diffusion is reshaping the competitive landscape."
     },
     {
-      "title": "It's Time to Investigate the AI Labs",
-      "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
+      "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
+      "url": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
       "source": "Hacker News",
-      "points": 606,
-      "whyItMatters": "Timely call for empirical audits of AI lab claims — relevant as the industry scales toward $6T revenue targets."
+      "points": 155,
+      "whyItMatters": "Deep dive into SDF vs MSDF vs Slug for GPU text rendering — practical tradeoffs that matter for anyone building high-performance UIs with canvas/WebGL."
     },
     {
-      "title": "DraftKings is using AI to behaviorally target chronic gamblers",
-      "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
+      "title": "AI needs $6T in annual revenue to justify data centre boom",
+      "url": "https://www.thenationalnews.com/future/technology/2026/09/29/ai-industry-needs-to-earn-6-trillion-by-2031-to-justify-data-centres/",
       "source": "Hacker News",
-      "points": 543,
-      "whyItMatters": "Real-world AI behavioral targeting raises privacy questions as the tech moves from ads into health and finance."
-    },
-    {
-      "title": "macOS Golden Gate Is a Buggy Mess",
-      "url": "https://www.squareorbits.com/blog/2026/09/macos-golden-gate-is-a-buggy-mess/",
-      "source": "Hacker News",
-      "points": 457,
-      "whyItMatters": "Golden Gate's rough launch highlights the cost of rushing macOS releases — relevant for any dev on Apple silicon."
+      "points": 220,
+      "whyItMatters": "AI needs $6T in annual revenue to justify the data centre boom — a reality check on whether the current capex cycle matches the addressable market."
     }
   ]
 }
