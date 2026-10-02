@@ -1,33 +1,40 @@
 {
-  "updatedAt": "2026-10-01T10:08:12Z",
+  "updatedAt": "2026-10-02T10:05:23Z",
   "items": [
     {
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "title": "Show HN: Open-source model routing for coding agents at Astra-level performance",
+      "url": "https://news.ycombinator.com/item?id=49911500",
       "source": "Hacker News",
-      "points": 1053,
-      "whyItMatters": "GPT 6.1 Sol delivers near-Astra-level performance at roughly a fifth of the price — strong signal on the cost/performance curve for production inference."
+      "points": 102,
+      "whyItMatters": "Open-source model routing for coding agents — directly applicable to building multi-model inference pipelines without vendor lock-in."
     },
     {
-      "title": "GLM-5.3 and the spread of advanced cyber capabilities",
-      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+      "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
       "source": "Hacker News",
-      "points": 247,
-      "whyItMatters": "GLM-5.3 and the spread of advanced AI capabilities — not just another model drop, but a look at how capability diffusion is reshaping the competitive landscape."
+      "points": 178,
+      "whyItMatters": "Frontier AI models applied to chip design — a concrete example of large models moving beyond text into engineering workflows."
     },
     {
-      "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
-      "url": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
+      "title": "The AI Race Just Got Awkward",
+      "url": "https://insufferable.dev/posts/the-ai-race-just-got-awkward/",
       "source": "Hacker News",
-      "points": 155,
-      "whyItMatters": "Deep dive into SDF vs MSDF vs Slug for GPU text rendering — practical tradeoffs that matter for anyone building high-performance UIs with canvas/WebGL."
+      "points": 409,
+      "whyItMatters": "A candid look at how AI progress benchmarks are shifting — important context for anyone tracking model capabilities versus marketing claims."
     },
     {
-      "title": "AI needs $6T in annual revenue to justify data centre boom",
-      "url": "https://www.thenationalnews.com/future/technology/2026/09/29/ai-industry-needs-to-earn-6-trillion-by-2031-to-justify-data-centres/",
+      "title": "Vote on which of Hacker News' challenges for AI have been met",
+      "url": "https://stoppels.ch/goalposts/",
       "source": "Hacker News",
-      "points": 220,
-      "whyItMatters": "AI needs $6T in annual revenue to justify the data centre boom — a reality check on whether the current capex cycle matches the addressable market."
+      "points": 143,
+      "whyItMatters": "Community-voted take on which AI challenges have been met — a practical framework for separating real progress from goalpost movement."
+    },
+    {
+      "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
+      "url": "https://blog.gitbutler.com/git-3-sha-256",
+      "source": "Hacker News",
+      "points": 380,
+      "whyItMatters": "Git 3.0's SHA-256 default debate matters for AI-era dev workflows — the cost of upgrading source control when models generate code at scale."
     }
   ]
 }

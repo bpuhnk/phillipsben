@@ -1,41 +1,41 @@
 {
-  "updatedAt": "2026-09-29T10:03:03Z",
+  "updatedAt": "2026-10-02T10:01:02Z",
   "nowPlaying": null,
   "recent": [
     {
-      "track": "Beggin'",
-      "artist": "Måneskin",
-      "albumArt": "https://i.scdn.co/image/ab67616d00004851fa0ab3a28b5c52d8a5f97045",
-      "url": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e",
-      "playedAt": "2026-09-29T03:55:14.841Z"
+      "track": "Medusa",
+      "artist": "Zak Azoury",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851b8682ef09d46ca6d37e26a3b",
+      "url": "https://open.spotify.com/track/5Ij2rHvymdJwxs5B8Bi21I",
+      "playedAt": "2026-10-01T22:53:20.019Z"
     },
     {
-      "track": "Burn The House Down",
-      "artist": "AJR",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485174be78bd14d095c8d76943a0",
-      "url": "https://open.spotify.com/track/2QKLrgXNQtK2c8QbLRO3XC",
-      "playedAt": "2026-09-27T21:03:16.538Z"
+      "track": "Still Waiting",
+      "artist": "Sum 41",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048515f897ffe64efe64404d7a8a6",
+      "url": "https://open.spotify.com/track/2OMqSRS11ly56zg9u5za6c",
+      "playedAt": "2026-10-01T22:50:25.519Z"
     },
     {
-      "track": "I Wanna Be Like You - The Monkey Song",
-      "artist": "Sid Bader",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000485119a0fe11e55b906f420c279e",
-      "url": "https://open.spotify.com/track/2fB7LYyu9IiHXvKYivey8q",
-      "playedAt": "2026-09-27T20:59:53.041Z"
+      "track": "BANG",
+      "artist": "Unroyal",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851fb70b585a72bafa3bfe5b945",
+      "url": "https://open.spotify.com/track/46YcPxEL3WYvHQE2nAd0T3",
+      "playedAt": "2026-10-01T22:47:46.886Z"
     },
     {
-      "track": "good girls",
-      "artist": "Josie Edwards",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048511e8a2836d72743ded1e93d8e",
-      "url": "https://open.spotify.com/track/3MdsL90Koc9eUO4xiwBuvX",
-      "playedAt": "2026-09-27T20:57:40.440Z"
+      "track": "Teenagers",
+      "artist": "My Chemical Romance",
+      "albumArt": "https://i.scdn.co/image/ab67616d00004851663b6ce496144fa5c3670ac0",
+      "url": "https://open.spotify.com/track/7j31rVgGX9Q2blT92VBEA0",
+      "playedAt": "2026-10-01T22:46:00.221Z"
     },
     {
-      "track": "Sea Shanty Medley",
-      "artist": "Home Free",
-      "albumArt": "https://i.scdn.co/image/ab67616d000048510519b076559abbe7e2d4e410",
-      "url": "https://open.spotify.com/track/5mkoR8mVrEwpDQc9y54sM2",
-      "playedAt": "2026-09-27T20:55:15.642Z"
+      "track": "Just A Girl",
+      "artist": "No Doubt",
+      "albumArt": "https://i.scdn.co/image/ab67616d000048516ebd5e789646a833b8f7d4ba",
+      "url": "https://open.spotify.com/track/5lWRaa0fBxDE5yU91npPq7",
+      "playedAt": "2026-10-01T22:43:28.025Z"
     }
   ]
 }

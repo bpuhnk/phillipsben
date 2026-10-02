@@ -1,22 +1,18 @@
 {
-  "updatedAt": "2026-10-01T10:08:12Z",
-  "summary": "I've been building a module that connects a D&D campaign app of mine to Foundry, and it's now public. The part that shaped the design: Foundry sends GM-only documents to every player's browser, so anything hidden stays in my app until the DM reveals it. I tested it inside a real Foundry install, which turned up a bug the unit tests couldn't. Foundry edits the objects you pass to its create calls in place, so my code was reading fields that had already been deleted. The final run passed 27 of 27 checks, and releases ship as a single squashed commit after a leak scan.\n\nThe same app got an import feature for adventures. You paste in a book you own, it proposes NPCs, monsters, store items and a beat list, and the source text is deleted once you've reviewed and applied the result. I then added photo input and ran the same three pages through two models. Haiku made four silent wrong values, in table cells and a dice count, and never flagged one as illegible. Sonnet made none. It costs a few cents a page instead of about one, and I took the cost. Anthropic's content filter also refuses to transcribe published prose, so photos are for homebrew, tables and stat blocks, and the UI says so.\n\nOn the GPU side, Switchboard is the small proxy that lets ComfyUI and several local language models take turns on one 16 GB card. Two things bit me this month. If anything else holds a GPU lease under the wrong client name, Switchboard evicts ComfyUI as \"everyone else\". ComfyUI then blocks inside its own event loop and the whole server goes quiet until the lease times out. Separately, adding `--no-mmap` to the model launchers took cold generation from 4.6 to 32 tokens a second, because experts were paging off disk mid-token.\n\nSmaller items: a realtime bug where about ten components shared one channel per campaign, so closing any one of them silently cut live updates for the whole page. I also spent a day on an inference engine experiment that ended in a dead end. The card is too old for the compiler to build the kernels it needs, and more RAM wasn't going to fix that. I cleaned up and moved on.",
+  "updatedAt": "2026-10-02T10:05:23Z",
+  "summary": "I've spent the last stretch on the GPU plumbing behind my local AI setup. Several models share one 16 GB Tesla P100, so Switchboard sits in front as a proxy that decides who gets the card. A request for one model evicts whichever model is loaded, waits for VRAM to settle, then streams the response. ComfyUI renders can't hold a lock, since they run asynchronously. So a custom node leases the GPU and releases it when the queue drains. The trap I found: if anything else grabs a lease under a different name, the broker evicts ComfyUI itself. Its coordinator then blocks inside its own event loop, and the whole server goes dark until the lease times out. I also added a long-context endpoint that fits a full 256K window by compressing the KV cache.\n\nOn The Long Rest, my D&D campaign manager, I mostly shipped things around a Foundry VTT module. The module pulls a session package into Foundry and pushes dice rolls and reveals back. The bug I enjoyed most: Foundry mutates the objects you hand to its create calls, deleting undefined fields in place. My reveal poller was reading its own inputs after the create and silently losing keys. It looked like a hung call until I traced it. Separately, I fixed a leak where the campaign endpoint returned entire database rows to every member. Those rows included encrypted provider keys and everyone's emails. It now uses explicit selects, and tests scan the serialized JSON for secret keys.\n\nAlso on The Long Rest, I added a character relationships feature: org charts and family trees that stay DM-only unless both ends are visible to players. For prep I built an importer that derives a campaign's notes, NPCs and beats from an adventure you paste in. It deliberately never stores the source text.\n\nOn the Hermes-Agent side, one fix was worth the time. The agent kept writing its own scripts instead of using its tools. The model wasn't disobeying. A circuit breaker was counting a tool's 404s as server failures, then telling the model to \"use alternative approaches.\"",
   "highlights": [
     {
       "repo": "Switchboard",
-      "oneLiner": "Found a stray lease made the proxy evict ComfyUI and hang it until timeout."
-    },
-    {
-      "repo": "ComfyUI",
-      "oneLiner": "Renders hold the shared GPU through a lease; one bad client name froze it."
-    },
-    {
-      "repo": "Internal MCP Servers",
-      "oneLiner": "Added power counters to internal fleet monitoring; one box is 85% of draw."
+      "oneLiner": "Proxy that decides which model gets the P100; found the ComfyUI lease deadlock."
     },
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "Agent brain now loads fully into RAM; cold generation went 4.6 to 32 tok/s."
+      "oneLiner": "Circuit breaker was counting 404s as outages, so the agent kept writing scripts."
+    },
+    {
+      "repo": "ComfyUI",
+      "oneLiner": "Renders lease the GPU through a custom node and release when the queue drains."
     }
   ]
 }

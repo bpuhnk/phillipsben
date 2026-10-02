@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-01T10:08:12Z",
-  "focus": "Shipping The Long Rest for Foundry VTT v0.1.5 — adventure import, photo support, and a nasty in-place mutation bug I found by dogfooding inside a real install. Switchboard's GPU lease semantics finally clicked after the ComfyUI dead-end; adding --no-mmap gave me 7x cold-gen speeds on Pascal.",
+  "updatedAt": "2026-10-02T10:05:23Z",
+  "focus": "Shipping steady releases for The Long Rest for Foundry VTT — v0.1.7 landed this week with five commits and six active days. Also keeping an eye on how the AI landscape is reshaping both development tooling and engineering workflows beyond just chat interfaces.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

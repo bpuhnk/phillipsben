@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-01T10:08:12Z",
-  "weekStart": "2026-09-24",
+  "updatedAt": "2026-10-02T10:05:23Z",
+  "weekStart": "2026-09-25",
   "totals": {
-    "commits": 123,
-    "prs": 63,
+    "commits": 133,
+    "prs": 72,
     "repos": 1,
     "activeDays": 6
   },
@@ -11,8 +11,8 @@
     {
       "name": "bpuhnk/thelongrest-foundry",
       "url": "https://github.com/bpuhnk/thelongrest-foundry",
-      "commits": 3,
-      "summary": "The Long Rest for Foundry VTT hit v0.1.5 with adventure import, photo support, and a Foundry in-place mutation bug fix — 27/27 tests pass."
+      "commits": 5,
+      "summary": "The Long Rest for Foundry VTT v0.1.7 shipped; steady incremental releases this week with five commits across six active days."
     }
   ]
 }
