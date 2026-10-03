@@ -1,18 +1,22 @@
 {
-  "updatedAt": "2026-10-02T10:05:23Z",
-  "summary": "I've spent the last stretch on the GPU plumbing behind my local AI setup. Several models share one 16 GB Tesla P100, so Switchboard sits in front as a proxy that decides who gets the card. A request for one model evicts whichever model is loaded, waits for VRAM to settle, then streams the response. ComfyUI renders can't hold a lock, since they run asynchronously. So a custom node leases the GPU and releases it when the queue drains. The trap I found: if anything else grabs a lease under a different name, the broker evicts ComfyUI itself. Its coordinator then blocks inside its own event loop, and the whole server goes dark until the lease times out. I also added a long-context endpoint that fits a full 256K window by compressing the KV cache.\n\nOn The Long Rest, my D&D campaign manager, I mostly shipped things around a Foundry VTT module. The module pulls a session package into Foundry and pushes dice rolls and reveals back. The bug I enjoyed most: Foundry mutates the objects you hand to its create calls, deleting undefined fields in place. My reveal poller was reading its own inputs after the create and silently losing keys. It looked like a hung call until I traced it. Separately, I fixed a leak where the campaign endpoint returned entire database rows to every member. Those rows included encrypted provider keys and everyone's emails. It now uses explicit selects, and tests scan the serialized JSON for secret keys.\n\nAlso on The Long Rest, I added a character relationships feature: org charts and family trees that stay DM-only unless both ends are visible to players. For prep I built an importer that derives a campaign's notes, NPCs and beats from an adventure you paste in. It deliberately never stores the source text.\n\nOn the Hermes-Agent side, one fix was worth the time. The agent kept writing its own scripts instead of using its tools. The model wasn't disobeying. A circuit breaker was counting a tool's 404s as server failures, then telling the model to \"use alternative approaches.\"",
+  "updatedAt": "2026-10-03T10:04:48Z",
+  "summary": "I've spent the last few weeks on a Foundry VTT module for The Long Rest, my D&D campaign manager. The app builds a session package of NPCs, reveals and encounter monsters, and the module imports it into the table's world. The rule that shaped the design is that Foundry sends GM-only documents to every player's browser. Hidden NPCs therefore never leave the app, and an NPC's numbers can cross while its prose can't. Testing ran against a real Foundry server in short windows. One run turned up a bug where Foundry strips undefined fields from the objects you pass to a create call, so the module was reading its own inputs after they'd been mutated. That bug was why the reveal poller kept stalling. The module is public now, and I've shipped several releases since.\n\nAround that, I've been building the NPC side of The Long Rest. A DM can now link characters with relationships (leads, serves, parent, rival) and see them as an org chart and a family tree. Links are DM-only by default, and a player sees one only if it's shared and both ends are visible to them. There's also a stat-block builder that mixes parts from the SRD bestiary, with per-part attribution. While doing that I found a leak. Marked DM-only text in NPC backstories was reaching players, and so was the search index behind the Oracle, so I changed the redaction to deny by default.\n\nThe scariest find was a campaign endpoint that was returning whole database rows to any member. That meant encrypted provider keys and everyone's email address. It's now a select-only view, with emails shown to DMs only. In the same pass I found the public database API serving tables to anyone holding the anon key. I turned that off and added a migration that revokes access and enables row-level security everywhere. A later outage looked like a code problem and turned out to be the database's disk IO budget running out.\n\nOn the hardware side, I tracked down a P100 fan that seemed to blink on and off every couple of seconds. A four-hertz log showed the P100's fan holding steady. The culprit was the neighbouring GPU, whose zero-RPM mode kept toggling right at its start threshold. I also fixed the Hermes tooling that silently lost its sessions on every restart. The MCP servers were stateful by default, and making them stateless means a restart no longer breaks the client.",
   "highlights": [
     {
+      "repo": "TheWordGroup",
+      "oneLiner": "Not the focus; skipped"
+    },
+    {
       "repo": "Switchboard",
-      "oneLiner": "Proxy that decides which model gets the P100; found the ComfyUI lease deadlock."
+      "oneLiner": "Tracked a blinking P100 fan to the neighbouring GPU's zero-RPM mode."
     },
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "Circuit breaker was counting 404s as outages, so the agent kept writing scripts."
+      "oneLiner": "Made its MCP servers stateless so restarts stop dropping sessions."
     },
     {
-      "repo": "ComfyUI",
-      "oneLiner": "Renders lease the GPU through a custom node and release when the queue drains."
+      "repo": "Internal MCP Servers",
+      "oneLiner": "Stateless by default now; a restart no longer breaks the client."
     }
   ]
 }

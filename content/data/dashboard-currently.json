@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T10:05:23Z",
-  "focus": "Shipping steady releases for The Long Rest for Foundry VTT — v0.1.7 landed this week with five commits and six active days. Also keeping an eye on how the AI landscape is reshaping both development tooling and engineering workflows beyond just chat interfaces.",
+  "updatedAt": "2026-10-03T10:04:48Z",
+  "focus": "I'm wrapping up character relationships and NPC stat-block work on The Long Rest, with the Foundry module v0.1.7 live. Also watching the Git SHA-256 debate and local LLM tooling as I keep pushing toward a stable release cadence.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
