@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-03T10:04:48Z",
-  "focus": "I'm wrapping up character relationships and NPC stat-block work on The Long Rest, with the Foundry module v0.1.7 live. Also watching the Git SHA-256 debate and local LLM tooling as I keep pushing toward a stable release cadence.",
+  "updatedAt": "2026-10-04T10:05:11Z",
+  "focus": "Shipping another round of Foundry VTT updates for The Long Rest — NPC mechanics and the stat-block builder are now live. Still keeping an eye on how the community's using them in actual sessions.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

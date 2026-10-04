@@ -1,40 +1,26 @@
 {
-  "updatedAt": "2026-10-03T10:04:48Z",
+  "updatedAt": "2026-10-04T10:05:11Z",
   "items": [
     {
-      "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
-      "url": "https://blog.gitbutler.com/git-3-sha-256",
+      "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
+      "url": "https://tej.as/blog/aleph-alpha-kolibri",
       "source": "Hacker News",
-      "points": 551,
-      "whyItMatters": "Git 3.0's SHA-256 default could break tooling — highly voted take on a fundamental shift."
-    },
-    {
-      "title": "Cops Can Bypass iPhone's Automatic Reboot to Get into Locked Phones",
-      "url": "https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/",
-      "source": "Hacker News",
-      "points": 284,
-      "whyItMatters": "Cops bypass iPhone's auto-reboot forensics feature — directly relevant to device security."
-    },
-    {
-      "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
-      "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
-      "source": "Hacker News",
-      "points": 241,
-      "whyItMatters": "Greg Kroah-Hartman on security in the LLM era — Linux kernel maintainer weighs in on AI risk."
+      "points": 413,
+      "whyItMatters": "German sovereign LLM with on-prem deployment — a practical alternative when cloud providers, data residency, or cost become constraints."
     },
     {
       "title": "From the creator of Redis; run LLM locally with ds4",
       "url": "https://dwarfstar.sh/",
       "source": "Hacker News",
-      "points": 241,
-      "whyItMatters": "Redis creator's new tool for running local LLMs — fits the on-device inference trend."
+      "points": 350,
+      "whyItMatters": "Redis creator's new entrant in local LLM inference — same attention to simplicity and ergonomics that made Redis stick."
     },
     {
-      "title": "With most information hidden, the game Stratego had stumped AI until now",
-      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+      "title": "FTL: A new operating system for clouds",
+      "url": "https://ftl-os.org/",
       "source": "Hacker News",
-      "points": 216,
-      "whyItMatters": "AI finally beats the best Stratego player — partial information reasoning milestone."
+      "points": 173,
+      "whyItMatters": "Cloud-native OS built from scratch — aims to replace the Linux monolith for cloud workloads with a minimal, fast boot image."
     }
   ]
 }

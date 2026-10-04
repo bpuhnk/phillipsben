@@ -1,22 +1,14 @@
 {
-  "updatedAt": "2026-10-03T10:04:48Z",
-  "summary": "I've spent the last few weeks on a Foundry VTT module for The Long Rest, my D&D campaign manager. The app builds a session package of NPCs, reveals and encounter monsters, and the module imports it into the table's world. The rule that shaped the design is that Foundry sends GM-only documents to every player's browser. Hidden NPCs therefore never leave the app, and an NPC's numbers can cross while its prose can't. Testing ran against a real Foundry server in short windows. One run turned up a bug where Foundry strips undefined fields from the objects you pass to a create call, so the module was reading its own inputs after they'd been mutated. That bug was why the reveal poller kept stalling. The module is public now, and I've shipped several releases since.\n\nAround that, I've been building the NPC side of The Long Rest. A DM can now link characters with relationships (leads, serves, parent, rival) and see them as an org chart and a family tree. Links are DM-only by default, and a player sees one only if it's shared and both ends are visible to them. There's also a stat-block builder that mixes parts from the SRD bestiary, with per-part attribution. While doing that I found a leak. Marked DM-only text in NPC backstories was reaching players, and so was the search index behind the Oracle, so I changed the redaction to deny by default.\n\nThe scariest find was a campaign endpoint that was returning whole database rows to any member. That meant encrypted provider keys and everyone's email address. It's now a select-only view, with emails shown to DMs only. In the same pass I found the public database API serving tables to anyone holding the anon key. I turned that off and added a migration that revokes access and enables row-level security everywhere. A later outage looked like a code problem and turned out to be the database's disk IO budget running out.\n\nOn the hardware side, I tracked down a P100 fan that seemed to blink on and off every couple of seconds. A four-hertz log showed the P100's fan holding steady. The culprit was the neighbouring GPU, whose zero-RPM mode kept toggling right at its start threshold. I also fixed the Hermes tooling that silently lost its sessions on every restart. The MCP servers were stateful by default, and making them stateless means a restart no longer breaks the client.",
+  "updatedAt": "2026-10-04T10:05:11Z",
+  "summary": "I've spent the last couple of weeks on The Long Rest's tooling: getting its character data into Foundry, a tabletop game client. The app generates a session package for each game, with NPCs, reveals and stat blocks. A browser module imports that package into Foundry. The module went public after a leak scan over its whole history, and it ships through a script that builds one squashed commit per release. Testing it against a real Foundry server turned up a bug I liked. Foundry edits the objects you hand it while creating documents, so my own plan lost a key I needed afterwards. That stalled the reveal poller and looked like a hung call. Capturing the key before the create fixed it.\n\nA security pass came out of the same stretch. The campaign endpoint was returning whole database rows to every member, including encrypted provider tokens and everyone's email address. It now selects explicit fields, and a test scans the serialized JSON for anything that shouldn't be there. A related fix turned off the public database API and locked the schema down, and the deploy script now checks for that exposure on every run. A separate bug crashed the character sheet for starter NPCs. They had been stored with only a name and a backstory. Every read now goes through one normalizer instead of a scattering of optional chaining.\n\nOn the AI side, an adventure importer takes pasted or photographed adventure text and proposes NPCs, monsters, beats and a prep outline. The DM reviews the proposals before anything is applied, and the source text is deleted afterward. Photo transcription turned out to depend on the model. A smaller model misread table values without flagging them, and a larger one did not. Published prose gets refused by the provider's content filter, so I left that alone and pointed photos at homebrew, tables and stat blocks.\n\nI also added a relationship graph for characters, with an org chart and a family tree, and a DM-only default so a link never reveals a hidden NPC. Elsewhere I've been working on Hermes-Agent's tool plumbing, where a failing tool made the local model improvise instead of stopping. The fix was making the services restart-safe.",
   "highlights": [
     {
-      "repo": "TheWordGroup",
-      "oneLiner": "Not the focus; skipped"
-    },
-    {
-      "repo": "Switchboard",
-      "oneLiner": "Tracked a blinking P100 fan to the neighbouring GPU's zero-RPM mode."
-    },
-    {
       "repo": "Hermes-Agent",
-      "oneLiner": "Made its MCP servers stateless so restarts stop dropping sessions."
+      "oneLiner": "Made its MCP services restart-safe so a failing tool stops the model improvising."
     },
     {
-      "repo": "Internal MCP Servers",
-      "oneLiner": "Stateless by default now; a restart no longer breaks the client."
+      "repo": "phillipsben.com",
+      "oneLiner": "Still publishing the daily Claude work tile alongside the rest of the site."
     }
   ]
 }
