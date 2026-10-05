@@ -1,14 +1,18 @@
 {
-  "updatedAt": "2026-10-04T10:05:11Z",
-  "summary": "I've spent the last couple of weeks on The Long Rest's tooling: getting its character data into Foundry, a tabletop game client. The app generates a session package for each game, with NPCs, reveals and stat blocks. A browser module imports that package into Foundry. The module went public after a leak scan over its whole history, and it ships through a script that builds one squashed commit per release. Testing it against a real Foundry server turned up a bug I liked. Foundry edits the objects you hand it while creating documents, so my own plan lost a key I needed afterwards. That stalled the reveal poller and looked like a hung call. Capturing the key before the create fixed it.\n\nA security pass came out of the same stretch. The campaign endpoint was returning whole database rows to every member, including encrypted provider tokens and everyone's email address. It now selects explicit fields, and a test scans the serialized JSON for anything that shouldn't be there. A related fix turned off the public database API and locked the schema down, and the deploy script now checks for that exposure on every run. A separate bug crashed the character sheet for starter NPCs. They had been stored with only a name and a backstory. Every read now goes through one normalizer instead of a scattering of optional chaining.\n\nOn the AI side, an adventure importer takes pasted or photographed adventure text and proposes NPCs, monsters, beats and a prep outline. The DM reviews the proposals before anything is applied, and the source text is deleted afterward. Photo transcription turned out to depend on the model. A smaller model misread table values without flagging them, and a larger one did not. Published prose gets refused by the provider's content filter, so I left that alone and pointed photos at homebrew, tables and stat blocks.\n\nI also added a relationship graph for characters, with an org chart and a family tree, and a DM-only default so a link never reveals a hidden NPC. Elsewhere I've been working on Hermes-Agent's tool plumbing, where a failing tool made the local model improvise instead of stopping. The fix was making the services restart-safe.",
+  "updatedAt": "2026-10-05T10:05:45Z",
+  "summary": "I've been working on a few things at once, and the most interesting one is the integration between The Long Rest, a campaign manager for tabletop D&D, and Foundry. I wrote a Foundry module that pulls a session's NPCs, reveals and rolls out of the app, then published it through a script that builds one squashed, leak-scanned commit per release. The hard part was testing it. Foundry strips undefined fields from the objects you hand it on create, so my own reveal keys vanished mid-import. For a while I thought a call had hung. It turned out to be a one-minute error back-off.\n\nAround that I've been tightening the app's privacy rules. Players only see NPC text that has passed through a single redaction layer, and the Oracle's search index follows the same rules. I also found that the campaign endpoint was sending every member the full campaign and member rows, which included encrypted provider tokens and everyone's email. It now returns only the fields each role is supposed to see. I checked the fix on the live site with two real accounts.\n\nI added a way to import a published adventure by pasting it in. The model derives Codex, bestiary and prep-tome proposals, the DM reviews them, and the source text is deleted once they're applied. Photo import came next. It runs into a content filter that refuses to transcribe copyrighted prose. It handles tables and stat blocks fine, so I scoped it to those. Haiku also got numbers wrong in photographed tables without flagging them, so transcription runs on a bigger model.\n\nOn the home side, the GPU that runs my local models was loud even when idle. Two fan controllers were fighting over the same channel. The loud part was the card sitting warm with a model loaded, not the card being busy. I also built a hallway light that turns red during meetings, so my family knows when I'm on a call.",
   "highlights": [
     {
-      "repo": "Hermes-Agent",
-      "oneLiner": "Made its MCP services restart-safe so a failing tool stops the model improvising."
+      "repo": "Internal MCP Servers",
+      "oneLiner": "Foundry module pulls a session's NPCs, reveals and rolls out of the app."
     },
     {
-      "repo": "phillipsben.com",
-      "oneLiner": "Still publishing the daily Claude work tile alongside the rest of the site."
+      "repo": "Switchboard",
+      "oneLiner": "Tracked a loud idle GPU to two fan controllers fighting over one channel."
+    },
+    {
+      "repo": "Hermes-Agent",
+      "oneLiner": "Tightening redaction so players only see NPC text that passed one layer."
     }
   ]
 }

@@ -1,26 +1,40 @@
 {
-  "updatedAt": "2026-10-04T10:05:11Z",
+  "updatedAt": "2026-10-05T10:05:45Z",
   "items": [
+    {
+      "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
+      "source": "Hacker News",
+      "points": 476,
+      "whyItMatters": "Valve's AMD GPU work is directly relevant for any Linux AI workstation — better drivers mean more VRAM efficiency on older cards like the P100."
+    },
     {
       "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
       "url": "https://tej.as/blog/aleph-alpha-kolibri",
       "source": "Hacker News",
-      "points": 413,
-      "whyItMatters": "German sovereign LLM with on-prem deployment — a practical alternative when cloud providers, data residency, or cost become constraints."
+      "points": 419,
+      "whyItMatters": "Sovereign LLM architecture with practical deployment patterns — useful reference for running your own models without cloud lock-in."
     },
     {
-      "title": "From the creator of Redis; run LLM locally with ds4",
-      "url": "https://dwarfstar.sh/",
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
       "source": "Hacker News",
-      "points": 350,
-      "whyItMatters": "Redis creator's new entrant in local LLM inference — same attention to simplicity and ergonomics that made Redis stick."
+      "points": 235,
+      "whyItMatters": "Practical guidance on Opus 5.5 prompt strategies and parameter tuning — directly applicable to cost/performance optimization in production workflows."
     },
     {
-      "title": "FTL: A new operating system for clouds",
-      "url": "https://ftl-os.org/",
+      "title": "We want you to build the next Git platform on Cloudflare",
+      "url": "https://blog.cloudflare.com/next-git-platform-on-cloudflare/",
       "source": "Hacker News",
-      "points": 173,
-      "whyItMatters": "Cloud-native OS built from scratch — aims to replace the Linux monolith for cloud workloads with a minimal, fast boot image."
+      "points": 217,
+      "whyItMatters": "Git platform on Cloudflare edges out CDN infrastructure for developer tooling — could simplify CI/CD pipelines if you're already on their stack."
+    },
+    {
+      "title": "Show HN: AI search for every photo and every frame of video on macOS",
+      "url": "https://github.com/allenv0/SCM",
+      "source": "Hacker News",
+      "points": 153,
+      "whyItMatters": "AI-powered search across photos and video frames on macOS — relevant for vision-based workflows and local-first AI tooling patterns."
     }
   ]
 }

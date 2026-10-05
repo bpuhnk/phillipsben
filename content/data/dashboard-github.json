@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-10-04T10:05:11Z",
-  "weekStart": "2026-09-27",
+  "updatedAt": "2026-10-05T10:05:45Z",
+  "weekStart": "2026-09-28",
   "totals": {
-    "commits": 118,
-    "prs": 70,
+    "commits": 110,
+    "prs": 68,
     "repos": 1,
-    "activeDays": 6
+    "activeDays": 5
   },
   "repos": [
     {
       "name": "bpuhnk/thelongrest-foundry",
       "url": "https://github.com/bpuhnk/thelongrest-foundry",
       "commits": 5,
-      "summary": "The Long Rest for Foundry VTT v0.1.7 shipped — NPC mechanics, stat-block builder, and legacy resources landed in rapid succession across the last week."
+      "summary": "Released v0.1.7 with NPC stat-block builder (VTT stats for card-only NPCs), org chart + family tree, and relationships track — steady weekly releases across the v0.1.x series."
     }
   ]
 }
