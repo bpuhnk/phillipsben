@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-10-05T10:05:45Z",
+  "updatedAt": "2026-10-07T10:05:16Z",
   "items": [
     {
-      "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
-      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
+      "title": "Sharing AI progress in mathematics",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
       "source": "Hacker News",
-      "points": 476,
-      "whyItMatters": "Valve's AMD GPU work is directly relevant for any Linux AI workstation — better drivers mean more VRAM efficiency on older cards like the P100."
+      "points": 919,
+      "whyItMatters": "OpenAI showcases a major AI breakthrough in mathematics — relevant to the field's progress."
     },
     {
-      "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
-      "url": "https://tej.as/blog/aleph-alpha-kolibri",
+      "title": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
+      "url": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
       "source": "Hacker News",
-      "points": 419,
-      "whyItMatters": "Sovereign LLM architecture with practical deployment patterns — useful reference for running your own models without cloud lock-in."
+      "points": 299,
+      "whyItMatters": ""
     },
     {
-      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
-      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+      "title": "Decisions API is in public beta",
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
       "source": "Hacker News",
-      "points": 235,
-      "whyItMatters": "Practical guidance on Opus 5.5 prompt strategies and parameter tuning — directly applicable to cost/performance optimization in production workflows."
+      "points": 299,
+      "whyItMatters": "OpenAI's new Decisions API in public beta could change how clients interact with model outputs."
     },
     {
-      "title": "We want you to build the next Git platform on Cloudflare",
-      "url": "https://blog.cloudflare.com/next-git-platform-on-cloudflare/",
+      "title": "OpenTPU – An open-source AI accelerator, developed by AI",
+      "url": "https://github.com/FeSens/openTPU",
       "source": "Hacker News",
-      "points": 217,
-      "whyItMatters": "Git platform on Cloudflare edges out CDN infrastructure for developer tooling — could simplify CI/CD pipelines if you're already on their stack."
+      "points": 289,
+      "whyItMatters": "Open-source AI accelerator developed by AI — open-source angle on hardware for the community."
     },
     {
-      "title": "Show HN: AI search for every photo and every frame of video on macOS",
-      "url": "https://github.com/allenv0/SCM",
+      "title": "Tell HN: GitHub refuses to remove cracked copies of my software after a month",
+      "url": "https://news.ycombinator.com/item?id=49982498",
       "source": "Hacker News",
-      "points": 153,
-      "whyItMatters": "AI-powered search across photos and video frames on macOS — relevant for vision-based workflows and local-first AI tooling patterns."
+      "points": 245,
+      "whyItMatters": "GitHub's stance on cracked software copies sparks debate among developers about enforcement."
     }
   ]
 }

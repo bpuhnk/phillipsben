@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-05T10:05:45Z",
-  "focus": "Shipping The Long Rest Foundry module v0.1.7 with NPC mechanics to the VTT and relationships tracking — steady progress on the D&D platform while keeping the Foundry integration production-ready.",
+  "updatedAt": "2026-10-07T10:05:16Z",
+  "focus": "The Long Rest for Foundry VTT v0.1.7 shipped with NPC mechanics and stat-block builder — the last piece of the NPC VTT track. I'm wrapping up the Foundry module work, preparing the next batch of P7 UI refinements, and tracking Doc's integration across the fleet.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",

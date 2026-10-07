@@ -1,18 +1,22 @@
 {
-  "updatedAt": "2026-10-05T10:05:45Z",
-  "summary": "I've been working on a few things at once, and the most interesting one is the integration between The Long Rest, a campaign manager for tabletop D&D, and Foundry. I wrote a Foundry module that pulls a session's NPCs, reveals and rolls out of the app, then published it through a script that builds one squashed, leak-scanned commit per release. The hard part was testing it. Foundry strips undefined fields from the objects you hand it on create, so my own reveal keys vanished mid-import. For a while I thought a call had hung. It turned out to be a one-minute error back-off.\n\nAround that I've been tightening the app's privacy rules. Players only see NPC text that has passed through a single redaction layer, and the Oracle's search index follows the same rules. I also found that the campaign endpoint was sending every member the full campaign and member rows, which included encrypted provider tokens and everyone's email. It now returns only the fields each role is supposed to see. I checked the fix on the live site with two real accounts.\n\nI added a way to import a published adventure by pasting it in. The model derives Codex, bestiary and prep-tome proposals, the DM reviews them, and the source text is deleted once they're applied. Photo import came next. It runs into a content filter that refuses to transcribe copyrighted prose. It handles tables and stat blocks fine, so I scoped it to those. Haiku also got numbers wrong in photographed tables without flagging them, so transcription runs on a bigger model.\n\nOn the home side, the GPU that runs my local models was loud even when idle. Two fan controllers were fighting over the same channel. The loud part was the card sitting warm with a model loaded, not the card being busy. I also built a hallway light that turns red during meetings, so my family knows when I'm on a call.",
+  "updatedAt": "2026-10-07T10:05:16Z",
+  "summary": "I've spent the past couple of weeks replacing Hermes-Agent with a personal assistant built on the Claude Agent SDK. The trigger was a small skill, turning on a light when a meeting starts, that the local Qwen model couldn't do. It made 65 tool calls and never ran the command. The new version talks to me over Telegram and sends anything private to a narrow local-model lane. The boundaries are enforced with separate unix users, not by asking the model to behave. Adding five tool servers cost 83.5K tokens per session, and one network server was about 65K of that. I deferred that server, which brought the cost back to about 21K.\n\nThen I gave it a web app, installable on a phone. Most of the work was iPhone quirks. Safari won't play Ogg Opus, so the app serves MP3. Audio created after a reply arrives gets blocked, so one audio element is unlocked on a tap and reused. In standalone mode on iOS 18, the layout height came up 62 pixels short and iOS painted the gap. I added a launch log that reports the real viewport numbers, so I stopped guessing at the fix. Sonnet agents wrote most of the UI overnight, each in its own worktree. I orchestrated, merged and deployed, and the suite sat at 964 tests by the end.\n\nOn the tabletop side, I built a public Foundry module that imports sessions from a D&D companion app. The worst bug was a reveal poller that stalled and looked like a hung call. The real cause was that Foundry cleans creation data in place, deleting undefined fields from the objects you pass in, including the key the plan used later. The fix was to capture keys before the create and pass copies. After that the module passed 27 of 27 checks against a real Foundry install, and the secret-leak gates all stayed green.\n\nAmong the Internal MCP Servers, the useful find was why the assistant kept \"ignoring instructions\" and writing its own scripts. FastMCP defaults to stateful sessions, so any restart gave the next call \"Session not found\". The model was handed a broken tool and improvised around it. I set stateless mode on the three servers and restarted each a few times to confirm the sessions survived.",
   "highlights": [
     {
+      "repo": "Hermes-Agent",
+      "oneLiner": "Replaced it with a Claude Agent SDK assistant after Qwen made 65 calls, ran nothing."
+    },
+    {
       "repo": "Internal MCP Servers",
-      "oneLiner": "Foundry module pulls a session's NPCs, reveals and rolls out of the app."
+      "oneLiner": "Stateless mode fixed 'Session not found'; model stopped improvising around dead tools."
     },
     {
       "repo": "Switchboard",
-      "oneLiner": "Tracked a loud idle GPU to two fan controllers fighting over one channel."
+      "oneLiner": "Routes private requests to a narrow local-model lane, kept apart by unix users."
     },
     {
-      "repo": "Hermes-Agent",
-      "oneLiner": "Tightening redaction so players only see NPC text that passed one layer."
+      "repo": "TheWordGroup",
+      "oneLiner": "Rebuilding the platform on Fastify, TypeScript and Postgres."
     }
   ]
 }
