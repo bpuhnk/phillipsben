@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-10-07T10:05:16Z",
+  "updatedAt": "2026-10-08T10:05:36Z",
   "items": [
     {
       "title": "Sharing AI progress in mathematics",
       "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
       "source": "Hacker News",
-      "points": 919,
-      "whyItMatters": "OpenAI showcases a major AI breakthrough in mathematics — relevant to the field's progress."
+      "points": 1280,
+      "whyItMatters": "OpenAI shares new math results — AI's pushing into formal reasoning beyond just code."
     },
     {
-      "title": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
-      "url": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+      "title": "Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
       "source": "Hacker News",
-      "points": 299,
-      "whyItMatters": ""
+      "points": 880,
+      "whyItMatters": "Claude Haiku 5.5 lands — faster, cheaper tier for the model that runs most of my background work."
     },
     {
-      "title": "Decisions API is in public beta",
-      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "title": "GPT‑6 and Intelligent UI for everyone",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
       "source": "Hacker News",
-      "points": 299,
-      "whyItMatters": "OpenAI's new Decisions API in public beta could change how clients interact with model outputs."
+      "points": 635,
+      "whyItMatters": "GPT-6 public with Intelligent UI — bigger shifts in how models surface options before you ask."
     },
     {
       "title": "OpenTPU – An open-source AI accelerator, developed by AI",
       "url": "https://github.com/FeSens/openTPU",
       "source": "Hacker News",
-      "points": 289,
-      "whyItMatters": "Open-source AI accelerator developed by AI — open-source angle on hardware for the community."
+      "points": 339,
+      "whyItMatters": "Open-source AI accelerator built by AI — cheap inference path if hardware gets serious."
     },
     {
-      "title": "Tell HN: GitHub refuses to remove cracked copies of my software after a month",
-      "url": "https://news.ycombinator.com/item?id=49982498",
+      "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+      "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
       "source": "Hacker News",
-      "points": 245,
-      "whyItMatters": "GitHub's stance on cracked software copies sparks debate among developers about enforcement."
+      "points": 342,
+      "whyItMatters": "Big tech pulling back on Claude — signals pricing or capacity pressure at the top of the stack."
     }
   ]
 }

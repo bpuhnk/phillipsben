@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-07T10:05:16Z",
-  "weekStart": "2026-09-30",
+  "updatedAt": "2026-10-08T10:05:36Z",
+  "weekStart": "2026-10-01",
   "totals": {
-    "commits": 49,
-    "prs": 30,
+    "commits": 36,
+    "prs": 20,
     "repos": 1,
     "activeDays": 4
   },
@@ -11,8 +11,8 @@
     {
       "name": "bpuhnk/thelongrest-foundry",
       "url": "https://github.com/bpuhnk/thelongrest-foundry",
-      "commits": 5,
-      "summary": "The Long Rest for Foundry VTT reached v0.1.7 with NPC stat-block builder, loot tracking, and v14.368 / dnd5e 6 compatibility; Foundry module deployed."
+      "commits": 2,
+      "summary": "Released v0.1.7 with NPC stat-block builder and VTT mechanics; v0.1.6 shipped previous round."
     }
   ]
 }

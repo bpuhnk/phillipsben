@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-10-07T10:05:16Z",
-  "summary": "I've spent the past couple of weeks replacing Hermes-Agent with a personal assistant built on the Claude Agent SDK. The trigger was a small skill, turning on a light when a meeting starts, that the local Qwen model couldn't do. It made 65 tool calls and never ran the command. The new version talks to me over Telegram and sends anything private to a narrow local-model lane. The boundaries are enforced with separate unix users, not by asking the model to behave. Adding five tool servers cost 83.5K tokens per session, and one network server was about 65K of that. I deferred that server, which brought the cost back to about 21K.\n\nThen I gave it a web app, installable on a phone. Most of the work was iPhone quirks. Safari won't play Ogg Opus, so the app serves MP3. Audio created after a reply arrives gets blocked, so one audio element is unlocked on a tap and reused. In standalone mode on iOS 18, the layout height came up 62 pixels short and iOS painted the gap. I added a launch log that reports the real viewport numbers, so I stopped guessing at the fix. Sonnet agents wrote most of the UI overnight, each in its own worktree. I orchestrated, merged and deployed, and the suite sat at 964 tests by the end.\n\nOn the tabletop side, I built a public Foundry module that imports sessions from a D&D companion app. The worst bug was a reveal poller that stalled and looked like a hung call. The real cause was that Foundry cleans creation data in place, deleting undefined fields from the objects you pass in, including the key the plan used later. The fix was to capture keys before the create and pass copies. After that the module passed 27 of 27 checks against a real Foundry install, and the secret-leak gates all stayed green.\n\nAmong the Internal MCP Servers, the useful find was why the assistant kept \"ignoring instructions\" and writing its own scripts. FastMCP defaults to stateful sessions, so any restart gave the next call \"Session not found\". The model was handed a broken tool and improvised around it. I set stateless mode on the three servers and restarted each a few times to confirm the sessions survived.",
+  "updatedAt": "2026-10-08T10:05:36Z",
+  "summary": "I've been building a personal assistant to replace the agent I'd been running at home. It's a Telegram bot with a small browser app on top. Models run on my own hardware for anything private, and Claude handles the rest. The line between the two is enforced by separate unix users on each machine, not by a prompt asking nicely. Private answers can come back, but the raw messages and mail stay with the local model. The first version took a night. The second night went to a client API, a phone UI with voice, and a pairing flow. A 48-character token is hard to type on a phone, so the app takes a six-digit code instead.\n\nMost of the hard bugs were small and specific. A Python SDK quietly loaded every tool server configured for my own account, so each turn carried roughly 190K tokens of context I never asked for. Strict mode fixed that. One tool server alone cost about 65K tokens per session, so I deferred it and kept the rest near 21K. On the phone, iOS Safari wouldn't play Opus audio, so the app serves MP3 and Telegram keeps Opus for voice notes. Home-screen apps also came up 62 pixels short of the screen, and the fix was a single CSS rule for standalone mode.\n\nOn TheWordGroup, I've been rebuilding it on Fastify, TypeScript and Postgres.\n\nI also spent time on a D&D campaign tool, mostly access rules. A character sheet can now carry a hidden relationship, like a lieutenant secretly serving a villain, and players only see a link when both ends are visible to them. The database enforces the rule, not just the UI. I also fixed a Select component that showed raw IDs instead of labels, then added a lint rule so a new one can't ship the same way.\n\nOn the infrastructure side, I wrote a small deadman check for Syncthing after a full disk left it dead for nine days without anyone noticing. It now runs every fifteen minutes, and the morning briefing reports on it daily.",
   "highlights": [
     {
       "repo": "Hermes-Agent",
-      "oneLiner": "Replaced it with a Claude Agent SDK assistant after Qwen made 65 calls, ran nothing."
-    },
-    {
-      "repo": "Internal MCP Servers",
-      "oneLiner": "Stateless mode fixed 'Session not found'; model stopped improvising around dead tools."
+      "oneLiner": "Retired its Claude auth, moved every model role onto the local brain."
     },
     {
       "repo": "Switchboard",
-      "oneLiner": "Routes private requests to a narrow local-model lane, kept apart by unix users."
+      "oneLiner": "Routes private model work to the local GPU, keeping raw messages off Claude."
     },
     {
-      "repo": "TheWordGroup",
-      "oneLiner": "Rebuilding the platform on Fastify, TypeScript and Postgres."
+      "repo": "theword-group",
+      "oneLiner": "Rebuilding on Fastify, TypeScript and Postgres, phases 0 to 3 done."
+    },
+    {
+      "repo": "server-talk",
+      "oneLiner": "Added a Syncthing deadman check after a full disk left sync dead nine days."
     }
   ]
 }

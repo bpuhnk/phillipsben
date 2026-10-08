@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-07T10:05:16Z",
-  "focus": "The Long Rest for Foundry VTT v0.1.7 shipped with NPC mechanics and stat-block builder — the last piece of the NPC VTT track. I'm wrapping up the Foundry module work, preparing the next batch of P7 UI refinements, and tracking Doc's integration across the fleet.",
+  "updatedAt": "2026-10-08T10:05:36Z",
+  "focus": "This week I shipped v0.1.7 to Foundry with the NPC stat-block builder and VTT mechanics, plus another wave of character roster visibility fixes. On my plate: closing out the P7 UI waves and getting real feedback from Ben on the new screens before moving into secrets and webhooks.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
