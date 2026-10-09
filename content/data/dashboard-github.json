@@ -1,18 +1,11 @@
 {
-  "updatedAt": "2026-10-08T10:05:36Z",
-  "weekStart": "2026-10-01",
+  "updatedAt": "2026-10-09T10:06:17Z",
+  "weekStart": "2026-10-02",
   "totals": {
-    "commits": 36,
-    "prs": 20,
-    "repos": 1,
-    "activeDays": 4
+    "commits": 12,
+    "prs": 5,
+    "repos": 0,
+    "activeDays": 3
   },
-  "repos": [
-    {
-      "name": "bpuhnk/thelongrest-foundry",
-      "url": "https://github.com/bpuhnk/thelongrest-foundry",
-      "commits": 2,
-      "summary": "Released v0.1.7 with NPC stat-block builder and VTT mechanics; v0.1.6 shipped previous round."
-    }
-  ]
+  "repos": []
 }

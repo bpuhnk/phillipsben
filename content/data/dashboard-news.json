@@ -1,40 +1,40 @@
 {
-  "updatedAt": "2026-10-08T10:05:36Z",
+  "updatedAt": "2026-10-09T10:06:17Z",
   "items": [
-    {
-      "title": "Sharing AI progress in mathematics",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-      "source": "Hacker News",
-      "points": 1280,
-      "whyItMatters": "OpenAI shares new math results — AI's pushing into formal reasoning beyond just code."
-    },
     {
       "title": "Claude Haiku 5.5",
       "url": "https://www.anthropic.com/claude-haiku-5-5",
       "source": "Hacker News",
-      "points": 880,
-      "whyItMatters": "Claude Haiku 5.5 lands — faster, cheaper tier for the model that runs most of my background work."
+      "points": 1039,
+      "whyItMatters": "Claude Haiku 5.5 lands — faster, cheaper inference for high-volume tool-calling workloads without the latency hit."
     },
     {
       "title": "GPT‑6 and Intelligent UI for everyone",
       "url": "https://openai.com/index/gpt-6-for-everyone/",
       "source": "Hacker News",
-      "points": 635,
-      "whyItMatters": "GPT-6 public with Intelligent UI — bigger shifts in how models surface options before you ask."
+      "points": 748,
+      "whyItMatters": "GPT-6 democratizes the latest generation with smarter UI primitives and lower cost for everyday integrations."
     },
     {
-      "title": "OpenTPU – An open-source AI accelerator, developed by AI",
-      "url": "https://github.com/FeSens/openTPU",
+      "title": "OpenAI annualised revenues $20B less than previously signalled",
+      "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
       "source": "Hacker News",
-      "points": 339,
-      "whyItMatters": "Open-source AI accelerator built by AI — cheap inference path if hardware gets serious."
+      "points": 391,
+      "whyItMatters": "OpenAI's actual revenue ($20B annualized) is materially less than previously signalled — real numbers vs hype."
     },
     {
-      "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
-      "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+      "title": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
+      "url": "https://github.com/pingdotgg/ts-rust",
       "source": "Hacker News",
-      "points": 342,
-      "whyItMatters": "Big tech pulling back on Claude — signals pricing or capacity pressure at the top of the stack."
+      "points": 111,
+      "whyItMatters": "LLM-port of the full TypeScript compiler, type checker, and LSP to Rust — a stress test for AI-generated systems code."
+    },
+    {
+      "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
+      "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
+      "source": "Hacker News",
+      "points": 181,
+      "whyItMatters": "Astronomer found a previously unknown planet using Claude Code as an analysis tool — practical LLM utility beyond software."
     }
   ]
 }

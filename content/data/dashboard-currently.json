@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T10:05:36Z",
-  "focus": "This week I shipped v0.1.7 to Foundry with the NPC stat-block builder and VTT mechanics, plus another wave of character roster visibility fixes. On my plate: closing out the P7 UI waves and getting real feedback from Ben on the new screens before moving into secrets and webhooks.",
+  "updatedAt": "2026-10-09T10:06:17Z",
+  "focus": "Keeping the phillipsben.com dashboard on autopilot — twelve commits, five PRs this week across the stack. Shipped the daily refresh pipeline so it fetches, writes artifacts, validates, and pushes without any of my intervention. Now turning to the news feed for what actually matters: Haiku 5.5, GPT-6, and real-world AI stories that don't read like press releases.",
   "reading": {
     "title": "Designing Data-Intensive Applications",
     "author": "Martin Kleppmann",
